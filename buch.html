@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Buch – Verlagshaus Rathmer</title>
+  <link rel="stylesheet" href="styles.css?v=11">
+  <style>
+    .buch-detail {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .buch-cover-col {
+      position: sticky;
+      top: 1.5rem;
+    }
+    .buch-cover-col img {
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 8px 32px rgba(44,42,39,0.18);
+      display: block;
+    }
+    .buch-cover-placeholder {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: var(--mint-tint);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--mint);
+    }
+    .buch-info-col {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .buch-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+    }
+    .buch-back:hover { text-decoration: underline; }
+    .buch-format {
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mint);
+      font-weight: 600;
+      margin: 0;
+    }
+    .buch-title {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 500;
+      line-height: 1.25;
+      color: var(--anthracite);
+      margin: 0;
+    }
+    .buch-desc {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #4a4845;
+      margin: 0;
+    }
+    .buch-price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--anthracite);
+      font-family: 'EB Garamond', Georgia, serif;
+      margin: 0;
+    }
+    .buch-order-section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1.5rem;
+      background: var(--mint-tint);
+      border-radius: 8px;
+      border: 1px solid var(--mint-border);
+    }
+    .buch-order-section .btn-primary {
+      align-self: flex-start;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+    }
+    .buch-order-note {
+      font-size: 0.8rem;
+      color: #6a6866;
+      margin: 0;
+    }
+    .buch-not-found {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--anthracite);
+    }
+    .buch-gallery {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .buch-gallery-main {
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 8px 32px rgba(44,42,39,0.18);
+      display: block;
+      cursor: zoom-in;
+      transition: opacity 0.2s;
+    }
+    .buch-gallery-main:hover { opacity: 0.92; }
+    .buch-gallery-thumbs {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .buch-gallery-thumb {
+      width: calc(33.33% - 0.35rem);
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: 3px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color 0.15s, opacity 0.15s;
+      opacity: 0.7;
+    }
+    .buch-gallery-thumb:hover { opacity: 1; }
+    .buch-gallery-thumb.active {
+      border-color: var(--gold);
+      opacity: 1;
+    }
+    .buch-lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.88);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-out;
+    }
+    .buch-lightbox.open { display: flex; }
+    .buch-lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 4px;
+      box-shadow: 0 8px 48px rgba(0,0,0,0.6);
+    }
+    .buch-lightbox-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+      opacity: 0.7;
+    }
+    .buch-lightbox-close:hover { opacity: 1; }
+    @media (max-width: 640px) {
+      .buch-detail {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 1rem 3rem;
+      }
+      .buch-cover-col {
+        position: static;
+        max-width: 220px;
+        margin: 0 auto;
+      }
+      .buch-gallery-thumb { width: calc(33.33% - 0.35rem); }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="Logo-vr.png" alt="VR" class="nav-logo-img"><span class="nav-logo-text">Verlagshaus <span class="nav-logo-name">Rathmer</span><span class="nav-logo-url">www.verlagshausrathmer.com</span></span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-has-dropdown active">
+        <button class="nav-dropdown-toggle" id="buecher-toggle">Bücher <span class="nav-caret">▾</span></button>
+        <ul class="nav-dropdown">
+          <li><a href="neuerscheinungen.html">Neuerscheinungen</a></li>
+          <li><a href="enneagramm.html">Enneagramm</a></li>
+          <li><a href="homoeopathie.html">Homöopathie &amp; Naturheilkunde</a></li>
+          <li><a href="persoenliche-entwicklung.html">Persönliche Entwicklung</a></li>
+          <li><a href="kalender.html">Kalender</a></li>
+        </ul>
+      </li>
+      <li><a href="geschenkideen.html">Geschenkideen</a></li>
+      <li><a href="seminare.html">Seminare &amp; Ausbildungen</a></li>
+      <li><a href="ueber-den-autor.html">Über den Autor</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <div class="site-switcher">
+      <button class="site-switcher__btn">⇄&thinsp;Praxis</button>
+      <div class="site-switcher__card">
+        <p class="site-switcher__label">Weitere Website</p>
+        <p class="site-switcher__name">Naturheilpraxis Detlef Rathmer</p>
+        <p class="site-switcher__desc">Klassische Homöopathie, Enneagramm &amp; psychologische Beratung in Billerbeck.</p>
+        <a href="https://psychologische-homoeopathie.de" class="site-switcher__link">&#8594;&ensp;Zur Praxis</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="buch-container">
+  <div class="buch-not-found" style="display:none" id="not-found">
+    <h2>Buch nicht gefunden</h2>
+    <p><a href="index.html">Zurück zur Startseite</a></p>
+  </div>
+</div>
+
+<div id="buch-lightbox" class="buch-lightbox" onclick="document.getElementById('buch-lightbox').classList.remove('open')">
+  <span class="buch-lightbox-close">×</span>
+  <img src="" alt="Buchbild groß">
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-logo"><img src="Logo-vr.png" alt="VR" class="footer-logo-img">Verlagshaus Rathmer</span>
+    <ul class="footer-links">
+      <li><a href="impressum.html">Impressum</a></li>
+      <li><a href="agb.html">AGB</a></li>
+      <li><a href="widerruf.html">Widerruf</a></li>
+      <li><a href="datenschutz.html">Datenschutz</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">© 2026 Verlagshaus Rathmer · Detlef Rathmer · Molkereiweg 9 · 48727 Billerbeck</div>
+</footer>
+
+<script src="buecher-daten.js"></script>
+<script>
+  // Nav toggles
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.getElementById('buecher-toggle').addEventListener('click', function() {
+    this.closest('.nav-has-dropdown').classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-has-dropdown')) {
+      document.querySelectorAll('.nav-has-dropdown.open').forEach(function(el) {
+        el.classList.remove('open');
+      });
+    }
+  });
+
+  // Category labels
+  var CAT_LABELS = {
+    'enneagramm': 'Enneagramm',
+    'homoeopathie': 'Homöopathie & Naturheilkunde',
+    'persoenliche-entwicklung': 'Persönliche Entwicklung',
+    'kalender': 'Kalender',
+    'neuerscheinungen': 'Neuerscheinungen'
+  };
+  var CAT_URLS = {
+    'enneagramm': 'enneagramm.html',
+    'homoeopathie': 'homoeopathie.html',
+    'persoenliche-entwicklung': 'persoenliche-entwicklung.html',
+    'kalender': 'kalender.html',
+    'neuerscheinungen': 'neuerscheinungen.html'
+  };
+
+  function buildOrderButton(book) {
+    var t = book.orderType;
+    var deliveryNote = book.delivery
+      ? '<p class="buch-order-note" style="color:var(--anthracite);font-weight:500;">' + book.delivery + '</p>'
+      : '';
+    if (t === 'stripe') {
+      var url = 'stripe-checkout.html?product=' + encodeURIComponent(book.stripeKey)
+              + '&price=' + book.stripePrice
+              + '&title=' + encodeURIComponent(book.title);
+      return '<a href="' + url + '" class="btn-primary">Direkt bestellen</a>'
+           + deliveryNote
+           + '<p class="buch-order-note">Sichere Zahlung über <strong style="color:#6772E5;">Stripe</strong> · Kreditkarte, SEPA-Überweisung</p>';
+    }
+    if (t === 'bod') {
+      var noEbook = ['wer-du-wirklich-bist-band-1','7-wege-zu-dir-selbst-lebenskunst-fuer-den-alltag'];
+      var ebookNote = noEbook.indexOf(slug) === -1
+        ? '<p class="buch-order-note" style="color:var(--mint);font-weight:600;">E-Book-Version ebenfalls bei BoD erhältlich</p>'
+        : '';
+      return '<a href="' + book.bodUrl + '" target="_blank" rel="noopener" class="btn-primary">Bei BoD bestellen</a>'
+           + ebookNote
+           + '<p class="buch-order-note">Bestellung über <strong>Books on Demand</strong> · Buchshop</p>';
+    }
+    if (t === 'amazon') {
+      return '<a href="' + book.orderUrl + '" target="_blank" rel="noopener" class="btn-primary">Bei Amazon bestellen</a>'
+           + '<p class="buch-order-note">E-Book-Version ebenfalls erhältlich · Weiterleitung zu Amazon</p>';
+    }
+    if (t === 'digistore') {
+      return '<a href="' + book.orderUrl + '" target="_blank" rel="noopener" class="btn-primary">Jetzt herunterladen</a>'
+           + '<p class="buch-order-note">Digitaler Download · sofort verfügbar</p>';
+    }
+    if (t === 'extern') {
+      return '<a href="' + book.orderUrl + '" target="_blank" rel="noopener" class="btn-primary">Beim Verlag bestellen</a>'
+           + '<p class="buch-order-note">Externes Werk – Bestellung beim Herausgeber</p>';
+    }
+    return '<p class="buch-order-note">Bestellung auf Anfrage – <a href="kontakt.html">Kontakt aufnehmen</a></p>';
+  }
+
+  function renderDesc(text) {
+    if (!text) return '';
+    var paras = text.split(/\n\n+/);
+    return paras.map(function(p) {
+      return '<p class="buch-desc">' + p.trim() + '</p>';
+    }).join('');
+  }
+
+  function buildGallery(book) {
+    if (!book.cover) return '';
+    var extras = book.gallery || [];
+    var coverHtml = '<img src="' + book.cover + '"'
+      + (book.coverFallback ? ' onerror="this.onerror=null;this.src=\'' + book.coverFallback + '\'"' : '')
+      + ' alt="' + (book.coverAlt || '').replace(/"/g,'&quot;') + '" loading="lazy"';
+    if (extras.length === 0) {
+      return coverHtml + '>';
+    }
+    var thumbsHtml = extras.map(function(url, i) {
+      return '<img src="' + url + '" class="buch-gallery-thumb"'
+        + ' alt="Bild ' + (i+2) + '" loading="lazy"'
+        + ' onclick="gallerySetMain(' + JSON.stringify(url) + ', this)">';
+    }).join('');
+    return '<div class="buch-gallery">'
+      + coverHtml + ' class="buch-gallery-main" onclick="openLightbox(this.src)">'
+      + '<div class="buch-gallery-thumbs">' + thumbsHtml + '</div>'
+      + '</div>';
+  }
+
+  function gallerySetMain(url, thumbEl) {
+    var main = document.querySelector('.buch-gallery-main');
+    if (main) main.src = url;
+    document.querySelectorAll('.buch-gallery-thumb').forEach(function(t) { t.classList.remove('active'); });
+    thumbEl.classList.add('active');
+  }
+
+  function openLightbox(src) {
+    var lb = document.getElementById('buch-lightbox');
+    lb.querySelector('img').src = src;
+    lb.classList.add('open');
+  }
+
+  function render(book, slug) {
+    var catLabel = CAT_LABELS[book.category] || 'Bücher';
+    var catUrl = CAT_URLS[book.category] || 'index.html';
+
+    var html = '<div class="buch-detail">'
+      + '<div class="buch-cover-col">' + buildGallery(book) + '</div>'
+      + '<div class="buch-info-col">'
+      + '<a href="' + catUrl + '" class="buch-back">← ' + catLabel + '</a>'
+      + (book.format ? '<p class="buch-format">' + book.format + '</p>' : '')
+      + '<h1 class="buch-title">' + book.title + '</h1>'
+      + renderDesc(book.desc)
+      + (book.price ? '<p class="buch-price">' + book.price + '</p>' : '')
+      + '<div class="buch-order-section">' + buildOrderButton(book) + '</div>'
+      + '</div>'
+      + '</div>';
+
+    document.getElementById('buch-container').innerHTML = html;
+    document.title = book.title + ' – Verlagshaus Rathmer';
+  }
+
+  var params = new URLSearchParams(window.location.search);
+  var slug = params.get('slug');
+  var book = slug && BUECHER_DATEN[slug];
+
+  if (book) {
+    render(book, slug);
+  } else {
+    document.getElementById('not-found').style.display = 'block';
+  }
+</script>
+<script src="animations.js?v=3"></script>
+</body>
+</html>

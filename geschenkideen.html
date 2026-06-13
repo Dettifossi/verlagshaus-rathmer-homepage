@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geschenkideen – Verlagshaus Rathmer</title>
+  <link rel="stylesheet" href="styles.css?v=11">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="Logo-vr.png" alt="VR" class="nav-logo-img"><span class="nav-logo-text">Verlagshaus <span class="nav-logo-name">Rathmer</span><span class="nav-logo-url">www.verlagshausrathmer.com</span></span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-has-dropdown">
+        <button class="nav-dropdown-toggle" id="buecher-toggle">Bücher <span class="nav-caret">▾</span></button>
+        <ul class="nav-dropdown">
+          <li><a href="neuerscheinungen.html">Neuerscheinungen</a></li>
+          <li><a href="enneagramm.html">Enneagramm</a></li>
+          <li><a href="homoeopathie.html">Homöopathie &amp; Naturheilkunde</a></li>
+          <li><a href="persoenliche-entwicklung.html">Persönliche Entwicklung</a></li>
+          <li><a href="kalender.html">Kalender</a></li>
+        </ul>
+      </li>
+      <li><a href="geschenkideen.html" class="active">Geschenkideen</a></li>
+      <li><a href="seminare.html">Seminare &amp; Ausbildungen</a></li>
+      <li><a href="ueber-den-autor.html">Über den Autor</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <div class="site-switcher">
+      <button class="site-switcher__btn">⇄&thinsp;Praxis</button>
+      <div class="site-switcher__card">
+        <p class="site-switcher__label">Weitere Website</p>
+        <p class="site-switcher__name">Naturheilpraxis Detlef Rathmer</p>
+        <p class="site-switcher__desc">Klassische Homöopathie, Enneagramm &amp; psychologische Beratung in Billerbeck.</p>
+        <a href="https://psychologische-homoeopathie.de" class="site-switcher__link">&#8594;&ensp;Zur Praxis</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <img class="hero-deco hero-deco-bl" src="deco-spines.svg" alt="" aria-hidden="true">
+  <img class="hero-deco hero-deco-br" src="deco-spines.svg" alt="" aria-hidden="true">
+  <p class="eyebrow">Verlagshaus Rathmer</p>
+  <h1>Geschenkideen</h1>
+  <p>Enneagramm-Designs auf Alltagsgegenständen – T-Shirts, Poster, Sticker, Tassen und mehr. Das Enneagramm nicht nur lesen, sondern leben.</p>
+</header>
+
+<section class="section">
+  <div class="section-inner">
+
+    <div class="gift-grid gift-grid--single">
+
+      <div class="gift-card">
+        <div class="gift-icon">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="56" height="56" rx="12" fill="#EAF3EF"/>
+            <path d="M14 22h28v20a2 2 0 0 1-2 2H16a2 2 0 0 1-2-2V22z" stroke="#9CC3B4" stroke-width="2" fill="none"/>
+            <path d="M10 16h36a2 2 0 0 1 2 2v4H8v-4a2 2 0 0 1 2-2z" stroke="#C9A84C" stroke-width="2" fill="none"/>
+            <line x1="28" y1="22" x2="28" y2="44" stroke="#C9A84C" stroke-width="2"/>
+            <path d="M28 16c0 0-4-6-8-4s-2 6 8 6" stroke="#C9A84C" stroke-width="2" fill="none"/>
+            <path d="M28 16c0 0 4-6 8-4s2 6-8 6" stroke="#C9A84C" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <h2>Redbubble</h2>
+        <p>Weitere Enneagramm-Designs auf Postern, Stickern, Kissen und vielem mehr – das perfekte Geschenk für Enneagramm-Begeisterte.</p>
+        <a href="https://www.redbubble.com/de/people/DetlefRathmer/shop" class="btn-gift" target="_blank" rel="noopener">Zum Redbubble-Shop →</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-logo"><img src="Logo-vr.png" alt="VR" class="footer-logo-img">Verlagshaus Rathmer</span>
+    <ul class="footer-links">
+      <li><a href="impressum.html">Impressum</a></li>
+      <li><a href="agb.html">AGB</a></li>
+      <li><a href="widerruf.html">Widerruf</a></li>
+      <li><a href="datenschutz.html">Datenschutz</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">© 2026 Verlagshaus Rathmer · Detlef Rathmer · Molkereiweg 9 · 48727 Billerbeck</div>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.getElementById('buecher-toggle').addEventListener('click', function() {
+    this.closest('.nav-has-dropdown').classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-has-dropdown')) {
+      document.querySelectorAll('.nav-has-dropdown.open').forEach(function(el) {
+        el.classList.remove('open');
+      });
+    }
+  });
+</script>
+<script src="animations.js?v=3"></script>
+</body>
+</html>

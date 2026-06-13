@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bestellung – Verlagshaus Rathmer</title>
+  <link rel="stylesheet" href="styles.css?v=11">
+  <style>
+    .checkout-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 4rem 2rem 5rem;
+    }
+
+    .checkout-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--gray-mid);
+      margin-bottom: 2.5rem;
+      transition: color 0.2s;
+    }
+    .checkout-back:hover { color: var(--gold); }
+
+    .checkout-product {
+      display: flex;
+      gap: 1.8rem;
+      align-items: flex-start;
+      background: var(--white);
+      border: 1px solid var(--gray-light);
+      padding: 1.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .checkout-product-icon {
+      width: 80px;
+      height: 80px;
+      background: #EDE9E1;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 1.8rem;
+    }
+
+    .checkout-product-info h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--anthracite);
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+
+    .checkout-product-price {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin-top: 0.6rem;
+    }
+
+    /* Stripe Payment Button Block */
+    .stripe-block {
+      background: var(--white);
+      border: 1px solid var(--gray-light);
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .stripe-block-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .stripe-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #6772E5;
+      color: white;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.3rem 0.8rem;
+      letter-spacing: 0.06em;
+    }
+
+    .stripe-block h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--anthracite);
+    }
+
+    .stripe-block p {
+      font-size: 0.9rem;
+      color: var(--gray-mid);
+      line-height: 1.65;
+      margin-bottom: 1.4rem;
+    }
+
+    .stripe-pay-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      width: 100%;
+      padding: 1rem 2rem;
+      background: #6772E5;
+      color: white;
+      font-family: var(--font);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .stripe-pay-btn:hover { background: #5469D4; color: white; }
+
+    .stripe-setup-note {
+      background: #F0F0FF;
+      border: 1px solid #D0D0FF;
+      padding: 1rem 1.2rem;
+      font-size: 0.82rem;
+      color: #4A4A8A;
+      line-height: 1.6;
+      margin-top: 1rem;
+    }
+
+    .stripe-setup-note strong { color: #3A3A7A; }
+
+    /* Divider */
+    .or-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      color: var(--gray-light);
+      font-size: 0.85rem;
+      color: var(--gray-mid);
+    }
+    .or-divider::before, .or-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--gray-light);
+    }
+
+    /* Alternative: E-Mail-Bestellung */
+    .alt-block {
+      background: var(--white);
+      border: 1px solid var(--gray-light);
+      padding: 2rem;
+    }
+
+    .alt-block h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--anthracite);
+      margin-bottom: 0.7rem;
+    }
+
+    .alt-block p {
+      font-size: 0.9rem;
+      color: var(--gray-mid);
+      line-height: 1.65;
+      margin-bottom: 1.2rem;
+    }
+
+    .alt-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .alt-contact a {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 0.92rem;
+      color: var(--gold);
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--gray-light);
+      transition: all 0.2s;
+    }
+    .alt-contact a:hover {
+      border-color: var(--gold);
+      background: #FDF9F0;
+    }
+
+    .security-note {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: var(--gray-mid);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="Logo-vr.png" alt="VR" class="nav-logo-img"><span class="nav-logo-text">Verlagshaus <span class="nav-logo-name">Rathmer</span><span class="nav-logo-url">www.verlagshausrathmer.com</span></span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-has-dropdown">
+        <button class="nav-dropdown-toggle" id="buecher-toggle">Bücher <span class="nav-caret">▾</span></button>
+        <ul class="nav-dropdown">
+          <li><a href="neuerscheinungen.html">Neuerscheinungen</a></li>
+          <li><a href="enneagramm.html">Enneagramm</a></li>
+          <li><a href="homoeopathie.html">Homöopathie &amp; Naturheilkunde</a></li>
+          <li><a href="persoenliche-entwicklung.html">Persönliche Entwicklung</a></li>
+          <li><a href="kalender.html">Kalender</a></li>
+        </ul>
+      </li>
+      <li><a href="geschenkideen.html">Geschenkideen</a></li>
+      <li><a href="seminare.html">Seminare &amp; Ausbildungen</a></li>
+      <li><a href="ueber-den-autor.html">Über den Autor</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <div class="site-switcher">
+      <button class="site-switcher__btn">⇄&thinsp;Praxis</button>
+      <div class="site-switcher__card">
+        <p class="site-switcher__label">Weitere Website</p>
+        <p class="site-switcher__name">Naturheilpraxis Detlef Rathmer</p>
+        <p class="site-switcher__desc">Klassische Homöopathie, Enneagramm &amp; psychologische Beratung in Billerbeck.</p>
+        <a href="https://psychologische-homoeopathie.de" class="site-switcher__link">&#8594;&ensp;Zur Praxis</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="checkout-wrap">
+
+  <a href="javascript:history.back()" class="checkout-back">← Zurück zur Produktseite</a>
+
+  <!-- Produktinfo (wird per JavaScript aus URL-Parametern befüllt) -->
+  <div class="checkout-product" id="checkoutProduct">
+    <div class="checkout-product-icon">◎</div>
+    <div class="checkout-product-info">
+      <p style="font-size:0.75rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:0.3rem;">Ihre Bestellung</p>
+      <h2 id="productTitle">Produkt wird geladen …</h2>
+      <p class="checkout-product-price" id="productPrice"></p>
+    </div>
+  </div>
+
+  <!-- Stripe-Zahlung -->
+  <div class="stripe-block">
+    <div class="stripe-block-header">
+      <span class="stripe-logo">stripe</span>
+      <h3>Sichere Online-Zahlung</h3>
+    </div>
+    <p>Zahlen Sie sicher mit Kreditkarte, Debitkarte oder SEPA-Lastschrift – verschlüsselt und geschützt über Stripe, den weltweit führenden Zahlungsanbieter.</p>
+    <p id="shippingInfo" style="font-size:0.84rem; color:var(--gray-mid); background:#FBF9F4; border:1px solid var(--gray-light); padding:0.8rem 1rem; margin-bottom:1.2rem;">
+      <strong style="color:var(--anthracite);">Versand:</strong> Deutschland kostenlos · Österreich 25,49 € · Schweiz 29,99 €. Die Versandkosten werden im nächsten Schritt nach Wahl des Lieferlandes angezeigt.
+    </p>
+    <div id="digitalConsent" style="display:none; margin-bottom:1.1rem; background:#FBF9F4; border:1px solid var(--gray-light); padding:0.85rem 1rem;">
+      <label style="display:flex; gap:0.6rem; align-items:flex-start; font-size:0.84rem; color:var(--gray-mid); cursor:pointer; line-height:1.55;">
+        <input type="checkbox" id="digitalConsentCheck" style="margin-top:0.2rem; flex-shrink:0;">
+        <span>Ich verlange ausdrücklich, dass mit der Ausführung des Vertrags (Bereitstellung des digitalen Inhalts) bereits vor Ablauf der Widerrufsfrist begonnen wird. Mir ist bekannt, dass ich mit Beginn der Ausführung mein <a href="widerruf.html" target="_blank" rel="noopener" style="color:var(--gold);">Widerrufsrecht</a> verliere.</span>
+      </label>
+    </div>
+    <a href="#" class="stripe-pay-btn" id="stripePayBtn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+      Zahlungspflichtig bestellen
+    </a>
+    <div class="stripe-setup-note" id="stripeSetupNote" style="display:none;">
+      <strong>⚙ Stripe-Konfiguration erforderlich:</strong> Um die Stripe-Zahlung zu aktivieren, legen Sie im <a href="https://dashboard.stripe.com/payment-links" target="_blank" rel="noopener" style="color:#6772E5;">Stripe Dashboard</a> einen Payment Link für dieses Produkt an und tragen Sie die URL in <code>stripe-links.js</code> ein. Bis dahin nutzen Kunden bitte den alternativen Bestellweg unten.
+    </div>
+  </div>
+
+  <div class="or-divider">oder alternativ</div>
+
+  <!-- Alternative: direkte Kontaktbestellung -->
+  <div class="alt-block">
+    <h3>Direkt beim Autor bestellen</h3>
+    <p>Schreiben Sie eine kurze Nachricht mit dem Titel des gewünschten Buches – Sie erhalten umgehend Rückmeldung zu Verfügbarkeit, Versandkosten und Zahlungsmodalitäten.</p>
+    <div class="alt-contact" id="altContact">
+      <a href="#" id="emailLink">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+        Per E-Mail bestellen: detlefrathmer@t-online.de
+      </a>
+      <a href="https://wa.me/4915758786201?text=Ich%20m%C3%B6chte%20bestellen%3A%20" id="whatsappLink" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        Per WhatsApp bestellen: 01575-8786201
+      </a>
+    </div>
+  </div>
+
+  <p class="security-note">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    Ihre Daten sind sicher. Zahlungen über Stripe werden verschlüsselt verarbeitet. Der Verlag erhält keine Kartendaten. Versand innerhalb Deutschlands zzgl. Porto – Einzelheiten erhalten Sie nach der Bestellung per E-Mail.
+  </p>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-logo"><img src="Logo-vr.png" alt="VR" class="footer-logo-img">Verlagshaus Rathmer</span>
+    <ul class="footer-links">
+      <li><a href="impressum.html">Impressum</a></li>
+      <li><a href="agb.html">AGB</a></li>
+      <li><a href="widerruf.html">Widerruf</a></li>
+      <li><a href="datenschutz.html">Datenschutz</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">© 2026 Verlagshaus Rathmer · Detlef Rathmer · Molkereiweg 9 · 48727 Billerbeck</div>
+</footer>
+
+<!-- Stripe Payment Links – hier die echten Links eintragen (Stripe Dashboard → Payment Links) -->
+<script>
+const STRIPE_LINKS = {
+  "bundle-gesichter": "https://buy.stripe.com/8x214n9sQ8WualAanp4gg3w",
+  "gesichter-inneres-feuer": "https://buy.stripe.com/5kQbJ1awU6Om51g8fh4gg2E",
+  "27-gesichter-seele": "https://buy.stripe.com/cNifZhdJ6c8G0L02UX4gg2F",
+  "wer-du-wirklich-bist-1": "https://buy.stripe.com/fZu00j6gE8WubpE9jl4gg2G",
+  "wer-du-2": "https://buy.stripe.com/7sYcN58oMa0y9hw7bd4gg2H",
+  "praxis-tb": "https://buy.stripe.com/14A00jcF2b4C0L05354gg2I",
+  "praxis-geb": "https://buy.stripe.com/cNifZh8oM0pY2T88fh4gg2J",
+  "rathmers-typentest": "https://buy.stripe.com/fZu8wPawUfkS3XcdzB4gg2K",
+  "motivationaler": "https://buy.stripe.com/4gM28r20o1u2alAfHJ4gg2L",
+  "motivational-en": "https://buy.stripe.com/bJecN57kIa0ydxM9jl4gg2M",
+  "die-27-persoenlichkeiten": "https://buy.stripe.com/28EdR9fRec8GfFU3Z14gg2N",
+  "lexikon-geb": "https://buy.stripe.com/00waEX0Wkc8G65kgLN4gg2O",
+  "lexikon-tb": "https://buy.stripe.com/cNidR9bAYfkSfFU5354gg2P",
+  "rep-hervor-geb": "https://buy.stripe.com/14A28rdJ65KigJYanp4gg2Q",
+  "rep-hervor-ebook": "https://buy.stripe.com/5kQ00j48wfkSdxMfHJ4gg2R",
+  "homoeop-arzneimittellehre": "https://buy.stripe.com/00w9AT34sgoW1P4cvx4gg2S",
+  "kern-geb": "https://buy.stripe.com/7sYdR948wa0y2T8anp4gg2T",
+  "kern-ebook": "https://buy.stripe.com/fZudR96gEa0ydxM0MP4gg2U",
+  "dynamik-geb": "https://buy.stripe.com/bJeaEXawUegO1P45354gg2V",
+  "dynamik-ebook": "https://buy.stripe.com/bJe8wP0Wkb4CdxM0MP4gg2W",
+  "lehrbuch-b1-tb": "https://buy.stripe.com/5kQ14n48wa0yalA7bd4gg2X",
+  "lehrbuch-b2-tb": "https://buy.stripe.com/cNi00j34sfkSeBQ6794gg2Y",
+  "lehrbuch-b3-tb": "https://buy.stripe.com/9B6fZhcF20pYeBQ5354gg2Z",
+  "lehrbuch-b1-ebook": "https://buy.stripe.com/3cI3cveNa7Sq2T83Z14gg30",
+  "lehrbuch-b2-ebook": "https://buy.stripe.com/fZu8wPgVi3Ca2T85354gg31",
+  "lehrbuch-b3-ebook": "https://buy.stripe.com/cNiaEX0Wk7SqeBQ8fh4gg32",
+  "sei-still": "https://buy.stripe.com/eVq6oHfRe4Ge65k6794gg33",
+  "rathmers-repertorium-gebunden": "https://buy.stripe.com/dRm8wP34s5Ki0L01QT4gg34",
+  "rathmers-repertorium-ebook": "https://buy.stripe.com/4gM14nfRe7SqgJYanp4gg35",
+  "eh-band1": "https://buy.stripe.com/5kQfZh5cA8WuctI1QT4gg36",
+  "eh-band2": "https://buy.stripe.com/14A5kD0Wka0y3XcfHJ4gg37",
+  "eh-ebook": "https://buy.stripe.com/9B63cv34sc8GgJYbrt4gg38",
+  "eh-repertorium-ebook": "https://buy.stripe.com/eVqfZh9sQb4C8dsbrt4gg39",
+  "sehgal-skript": "https://buy.stripe.com/cNicN50Wk8WubpE3Z14gg3a",
+  "gesetzeskunde-hp": "https://buy.stripe.com/3cIbJ1eNa5KifFU8fh4gg3b",
+  "eh-unterrichtsmaterial": "https://buy.stripe.com/9B69AT7kIb4CalAgLN4gg3c",
+  "enneagrammatische-hom": "https://buy.stripe.com/cNi28r6gE4GectI8fh4gg3d",
+  "7-wege": "https://buy.stripe.com/6oU00jgVi8Wu2T80MP4gg3e",
+  "kalender-typ1": "https://buy.stripe.com/eVq5kD5cAa0ydxM6794gg3f",
+  "kalender-typ2": "https://buy.stripe.com/bJe5kD20oc8GbpEeDF4gg3g",
+  "kalender-typ3": "https://buy.stripe.com/6oUbJ1dJ6a0ydxMfHJ4gg3h",
+  "kalender-typ4": "https://buy.stripe.com/3cI5kDfRe6OmctIdzB4gg3i",
+  "kalender-typ5": "https://buy.stripe.com/28E5kDdJ6dcK3Xc9jl4gg3j",
+  "kalender-typ6": "https://buy.stripe.com/fZudR948w0pY51g9jl4gg3k",
+  "kalender-typ7": "https://buy.stripe.com/9B6aEXdJ6a0y79o2UX4gg3l",
+  "kalender-typ8": "https://buy.stripe.com/28E8wP20o6OmgJY9jl4gg3m",
+  "kalender-typ9": "https://buy.stripe.com/8x2fZh48wfkSctIbrt4gg3n",
+  "kalender-wandxxl": "https://buy.stripe.com/3cIaEXdJ6dcK9hwfHJ4gg3o",
+  "kalender-wand": "https://buy.stripe.com/9B63cv7kI2y60L05354gg3p",
+  "kalender-tisch": "https://buy.stripe.com/14A4gz20oa0y8ds8fh4gg3q",
+  "kalender-kueche": "https://buy.stripe.com/aFafZhdJ67Sq65kanp4gg3r",
+  "kalender-english": "https://buy.stripe.com/8x214n8oM2y62T8dzB4gg3s",
+  "kalender-selbsterkenntnis": "https://buy.stripe.com/7sYdR98oM6Om9hwdzB4gg3t",
+  "kalender-naturwunder": "https://buy.stripe.com/aFadR9fRe1u265kgLN4gg3u",
+  "kalender-liebe": "https://buy.stripe.com/4gM4gz9sQa0y3Xc6794gg3v"
+};
+
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const product = params.get('product') || '';
+  const priceRaw = parseInt(params.get('price') || '0');
+  const title = params.get('title') ? decodeURIComponent(params.get('title')) : 'Produkt';
+
+  // Digitale Produkte (kein Versand, Widerruf erlischt nach ausdrücklicher Zustimmung)
+  const DIGITAL = ['bundle-gesichter','rathmers-repertorium-ebook','eh-ebook','eh-repertorium-ebook','sehgal-skript','gesetzeskunde-hp','eh-unterrichtsmaterial','enneagrammatische-hom','rep-hervor-ebook','kern-ebook','dynamik-ebook','lehrbuch-b1-ebook','lehrbuch-b2-ebook','lehrbuch-b3-ebook'];
+  const isDigital = DIGITAL.indexOf(product) !== -1;
+  if (isDigital) {
+    const si = document.getElementById('shippingInfo');
+    if (si) si.style.display = 'none';
+    const cb = document.getElementById('digitalConsent');
+    if (cb) cb.style.display = 'block';
+  }
+
+  // Titel und Preis anzeigen
+  document.getElementById('productTitle').textContent = title;
+  if (priceRaw > 0) {
+    const euros = (priceRaw / 100).toFixed(2).replace('.', ',');
+    document.getElementById('productPrice').textContent = euros + ' €';
+  }
+
+  // Stripe-Link suchen
+  const stripeLink = STRIPE_LINKS[product];
+  const btn = document.getElementById('stripePayBtn');
+  const note = document.getElementById('stripeSetupNote');
+
+  if (stripeLink && stripeLink !== '') {
+    btn.href = stripeLink;
+    // Bei digitalen Inhalten: Bezahl-Button erst nach Widerrufs-Zustimmung freigeben
+    if (isDigital) {
+      const consentCheck = document.getElementById('digitalConsentCheck');
+      const sync = function() {
+        if (consentCheck.checked) {
+          btn.style.pointerEvents = '';
+          btn.style.opacity = '';
+          btn.removeAttribute('aria-disabled');
+        } else {
+          btn.style.pointerEvents = 'none';
+          btn.style.opacity = '0.5';
+          btn.setAttribute('aria-disabled', 'true');
+        }
+      };
+      sync();
+      consentCheck.addEventListener('change', sync);
+    }
+  } else {
+    // Kein Stripe-Link konfiguriert – Hinweis zeigen
+    btn.href = '#';
+    btn.addEventListener('click', function(e) { e.preventDefault(); });
+    btn.style.opacity = '0.55';
+    btn.style.cursor = 'not-allowed';
+    note.style.display = 'block';
+  }
+
+  // WhatsApp-Link mit Produktname befüllen
+  const waLink = document.getElementById('whatsappLink');
+  waLink.href = 'https://wa.me/4915758786201?text=' + encodeURIComponent('Ich möchte bestellen: ' + title);
+
+  // E-Mail-Link
+  const emailLink = document.getElementById('emailLink');
+  emailLink.href = 'mailto:detlefrathmer@t-online.de?subject=' + encodeURIComponent('Bestellung: ' + title) + '&body=' + encodeURIComponent('Hallo,\n\nich möchte folgendes Produkt bestellen:\n\n' + title + '\n\nBitte teilen Sie mir Versandkosten und Zahlungsmodalitäten mit.\n\nMit freundlichen Grüßen');
+})();
+</script>
+
+
+
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.getElementById('buecher-toggle').addEventListener('click', function() {
+    this.closest('.nav-has-dropdown').classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-has-dropdown')) {
+      document.querySelectorAll('.nav-has-dropdown.open').forEach(function(el) {
+        el.classList.remove('open');
+      });
+    }
+  });
+</script>
+<script src="animations.js?v=3"></script>
+</body>
+</html>

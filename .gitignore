@@ -1,0 +1,22 @@
+# Niemals den API-Schlüssel oder Abhängigkeiten committen
+.env
+node_modules/
+stripe-links.json
+
+# Stripe-Skript mit API-Keys
+create-stripe-products.js
+create_stripe_products.py
+
+# Python-Hilfsskripte
+crawl*.py
+apply_links.py
+old-links.json
+
+# Claude Code interne Konfiguration
+.claude/
+
+# macOS
+.DS_Store
+
+# Screenshots / Arbeitsfotos
+Foto Praxis-Homepage*.PNG
