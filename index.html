@@ -198,6 +198,30 @@
   </div>
 </section>
 
+<!-- ==================== ALLE BÜCHER (GALERIE) ==================== -->
+<section class="section section--books-all">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Alle Bücher im Überblick</h2>
+      <div class="divider"></div>
+      <p class="books-all-intro">Das gesamte Verlagsprogramm zum Stöbern – geordnet nach Themenbereichen. Tippen Sie auf ein Cover, um mehr über das Buch zu erfahren.</p>
+    </div>
+    <div id="alleBuecherListe" class="books-all"></div>
+  </div>
+</section>
+
+<style>
+  .books-all-intro { max-width: 600px; margin: 1rem auto 0; color: var(--gray-mid); text-align: center; line-height: 1.7; }
+  .books-all-cat { font-size: 1.5rem; font-weight: 600; color: var(--anthracite); margin: 3.2rem 0 1.4rem; padding-bottom: 0.55rem; border-bottom: 2px solid var(--gold); }
+  .books-all-cat:first-child { margin-top: 1.5rem; }
+  .books-all-cat span { font-size: 0.9rem; font-weight: 400; color: var(--gold-dark); letter-spacing: 0.04em; }
+  .books-all-grid { margin-bottom: 0.5rem; }
+  .books-all .book-card h3 { font-size: 1rem; line-height: 1.35; margin: 0 0 0.45rem; }
+  .books-all .book-card h3 a { color: var(--anthracite); text-decoration: none; }
+  .books-all .book-card h3 a:hover { color: var(--gold-dark); }
+  .books-all .book-body { padding: 1rem 1.1rem 1.2rem; }
+</style>
+
 <!-- ==================== ÜBER DEN AUTOR ==================== -->
 <section class="about-strip">
   <div class="about-inner">
@@ -269,6 +293,57 @@
       });
     }
   });
+</script>
+<script src="buecher-daten.js"></script>
+<script>
+(function(){
+  if (typeof BUECHER_DATEN === 'undefined') return;
+  var order = [
+    ['neuerscheinungen', 'Neuerscheinungen'],
+    ['enneagramm', 'Enneagramm'],
+    ['homoeopathie', 'Homöopathie &amp; Naturheilkunde'],
+    ['persoenliche-entwicklung', 'Persönliche Entwicklung'],
+    ['kalender', 'Kalender']
+  ];
+  var byCat = {};
+  Object.keys(BUECHER_DATEN).forEach(function(slug){
+    var b = BUECHER_DATEN[slug];
+    if (!b || !b.cover) return;
+    (byCat[b.category] = byCat[b.category] || []).push([slug, b]);
+  });
+  function esc(s){ return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
+  function fallback(src){ return src.replace(/(\.[a-zA-Z0-9]+)$/, '-300x300$1'); }
+  var out = '';
+  order.forEach(function(c){
+    var list = byCat[c[0]];
+    if (!list || !list.length) return;
+    out += '<h3 class="books-all-cat">' + c[1] + ' <span>(' + list.length + ')</span></h3>';
+    out += '<div class="book-grid books-all-grid">';
+    list.forEach(function(it){
+      var slug = it[0], b = it[1];
+      var href = 'buch.html?slug=' + encodeURIComponent(slug);
+      out += '<div class="book-card">'
+        + '<div class="book-cover"><a href="' + href + '"><img src="' + esc(b.cover) + '" onerror="this.onerror=null;this.src=\'' + fallback(b.cover) + '\';" alt="' + esc(b.coverAlt || b.title) + '" loading="lazy"></a></div>'
+        + '<div class="book-body">'
+        + '<h3><a href="' + href + '">' + esc(b.title) + '</a></h3>'
+        + (b.price ? '<p class="book-price">' + esc(b.price) + '</p>' : '')
+        + '<div class="book-actions"><a href="' + href + '" class="btn-sm">Mehr erfahren →</a></div>'
+        + '</div></div>';
+    });
+    out += '</div>';
+  });
+  var el = document.getElementById('alleBuecherListe');
+  if (!el) return;
+  el.innerHTML = out;
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
+    el.querySelectorAll('.book-card').forEach(function(card){ io.observe(card); });
+  } else {
+    el.querySelectorAll('.book-card').forEach(function(card){ card.classList.add('visible'); });
+  }
+})();
 </script>
 <script src="animations.js?v=3"></script>
 </body>
