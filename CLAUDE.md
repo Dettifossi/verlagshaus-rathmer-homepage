@@ -28,9 +28,8 @@ Querverlinkt mit der Naturheilpraxis-Website (Site-Switcher).
 - Footer-Rechtslinks: Impressum · AGB · Widerruf · Datenschutz · Kontakt
 - Hinweis: solide Standardtexte, **kein Ersatz für eine anwaltliche Prüfung**.
 
-## Deploy (Netlify) — WICHTIG für Build-Minuten
-- Gehostet auf **Netlify**, deployt automatisch bei `git push` auf `main`. **Kein Build-Befehl** (reine Datei-Auslieferung).
-- Netlify-Gratistarif: **300 Build-Minuten/Monat** (Reset monatlich). Jeder Push = ein Deploy = Repo-Klon.
-- **Änderungen bündeln und nur EINMAL pro Arbeitsblock pushen** — nicht nach jeder Kleinigkeit.
-- Das Repo wurde bewusst **squash-bereinigt** (Historie zu 1 Commit), um die Klon-Größe zu senken.
-  **Keine großen Bild-Archive oder Dubletten committen.**
+## Deploy (GitHub Pages)
+- Gehostet auf **GitHub Pages** (Repo `Dettifossi/verlagshaus-rathmer-homepage`), Domain über die `CNAME`-Datei (`www.verlagshausrathmer.com`). Deployt automatisch bei `git push` auf `main`. **Kein Build-Befehl** (reine Datei-Auslieferung).
+- GitHub Pages ist kostenlos und hat **keine monatliche Build-Minuten-Grenze** (anders als Netlify). Eine frühere, parallele Netlify-Anbindung wurde abgeklemmt — DNS zeigt auf GitHub Pages.
+- Trotzdem sinnvoll: **Änderungen bündeln** und das Repo **schlank halten** (Historie squash-bereinigt; keine großen Bild-Archive oder Dubletten committen).
+- `robots.txt` + `sitemap.xml` vorhanden — bei neuen Inhaltsseiten die Sitemap ergänzen.
