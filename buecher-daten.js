@@ -773,6 +773,8 @@ const BUECHER_DATEN = {
     orderType: "bod",
     bodUrl: "https://buchshop.bod.de/in-der-tiefe-der-zeit-detlef-rathmer-9783695143122",
     gallery: ["images/2026/05/Werbung-In-der-Tiefe-der-Zeit.jpg", "images/2025/09/WERBUNG-IN-DER-TIEFE-DER-ZEIT-MIT-AUTOR.jpg"],
+    youtubeId: "KA1l-Az0ec0",
+    youtubeShort: true,
   },
 
   "das-seminar-wenn-masken-fallen": {
