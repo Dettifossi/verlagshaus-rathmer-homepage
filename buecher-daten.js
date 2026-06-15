@@ -1035,6 +1035,7 @@ const BUECHER_DATEN = {
     orderType: "bod",
     bodUrl: "https://buchshop.bod.de/meta-intelligenz-detlef-rathmer-9783695735082",
     gallery: ["images/2026/05/METAINTELLIGENZ-BUCH-MIT-AUTOR.jpg"],
+    youtubeId: "gAl9bDh1jHM",
   },
 
   "meta-intelligenz-das-hoerbuch": {

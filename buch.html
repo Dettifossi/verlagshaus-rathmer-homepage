@@ -100,6 +100,22 @@
       color: #6a6866;
       margin: 0;
     }
+    .buch-video {
+      margin: 2rem 0;
+    }
+    .buch-video-wrap {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+    .buch-video-wrap iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
     .buch-not-found {
       text-align: center;
       padding: 4rem 2rem;
@@ -489,6 +505,7 @@
       + (book.format ? '<p class="buch-format">' + book.format + '</p>' : '')
       + '<h1 class="buch-title">' + book.title + '</h1>'
       + renderDesc(book.desc)
+      + (book.youtubeId ? '<div class="buch-video"><div class="buch-video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/' + book.youtubeId + '?rel=0" loading="lazy" allowfullscreen title="' + book.title + ' – Video"></iframe></div></div>' : '')
       + (book.price ? '<p class="buch-price">' + book.price + '</p>' : '')
       + '<div class="buch-order-section">' + buildOrderButton(book) + '</div>'
       + '</div>'
