@@ -1049,6 +1049,7 @@ const BUECHER_DATEN = {
     orderType: "digistore",
     orderUrl: "https://www.checkout-ds24.com/product/677420",
     gallery: ["images/2026/03/META-INTELLIGENZ-HOeRBUCH-MIT-AUTOR.jpg"],
+    youtubeId: "gAl9bDh1jHM",
   },
 
   "fuehrung-mit-fundament": {
