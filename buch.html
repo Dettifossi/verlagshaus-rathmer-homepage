@@ -19,12 +19,6 @@
       position: sticky;
       top: 1.5rem;
     }
-    .buch-cover-col img {
-      width: 100%;
-      border-radius: 4px;
-      box-shadow: 0 8px 32px rgba(44,42,39,0.18);
-      display: block;
-    }
     .buch-cover-placeholder {
       width: 100%;
       aspect-ratio: 3/4;
@@ -108,17 +102,52 @@
       margin-top: 1rem;
       display: flex;
       flex-direction: column;
-      gap: 0.6rem;
+      gap: 0.7rem;
     }
-    .buch-gallery-main {
+    .buch-carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 4px;
+      scrollbar-width: none;
+    }
+    .buch-carousel::-webkit-scrollbar { display: none; }
+    .buch-slide {
+      flex: 0 0 100%;
+      scroll-snap-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .buch-slide img {
       width: 100%;
       border-radius: 4px;
       box-shadow: 0 8px 32px rgba(44,42,39,0.18);
       display: block;
       cursor: zoom-in;
-      transition: opacity 0.2s;
     }
-    .buch-gallery-main:hover { opacity: 0.92; }
+    .buch-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.45rem;
+    }
+    .buch-dot {
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      border: none;
+      border-radius: 50%;
+      background: var(--gray-mid);
+      opacity: 0.4;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s, background 0.2s;
+    }
+    .buch-dot.active {
+      opacity: 1;
+      background: var(--gold);
+      transform: scale(1.3);
+    }
     .buch-gallery-thumbs {
       display: flex;
       gap: 0.5rem;
@@ -322,29 +351,69 @@
 
   function buildGallery(book) {
     if (!book.cover) return '';
-    var extras = book.gallery || [];
-    var coverHtml = '<img src="' + book.cover + '"'
-      + (book.coverFallback ? ' onerror="this.onerror=null;this.src=\'' + book.coverFallback + '\'"' : '')
-      + ' alt="' + (book.coverAlt || '').replace(/"/g,'&quot;') + '" loading="lazy"';
-    if (extras.length === 0) {
-      return coverHtml + '>';
-    }
-    var thumbsHtml = extras.map(function(url, i) {
-      return '<img src="' + url + '" class="buch-gallery-thumb"'
-        + ' alt="Bild ' + (i+2) + '" loading="lazy"'
-        + ' onclick="gallerySetMain(' + JSON.stringify(url) + ', this)">';
+    var images = [book.cover].concat(book.gallery || []);
+    var alt = (book.coverAlt || '').replace(/"/g, '&quot;');
+
+    var slidesHtml = images.map(function(url, i) {
+      var fb = (i === 0 && book.coverFallback)
+        ? ' onerror="this.onerror=null;this.src=\'' + book.coverFallback + '\'"' : '';
+      return '<div class="buch-slide"><img src="' + url + '"' + fb
+        + ' alt="' + alt + (i > 0 ? ' – Bild ' + (i + 1) : '') + '"'
+        + ' onclick="openLightbox(this.src)"></div>';
     }).join('');
+
+    // Nur ein Bild: schlichtes Karussell ohne Navigation
+    if (images.length === 1) {
+      return '<div class="buch-gallery"><div class="buch-carousel" id="buchCarousel">' + slidesHtml + '</div></div>';
+    }
+
+    var dotsHtml = images.map(function(url, i) {
+      return '<button class="buch-dot' + (i === 0 ? ' active' : '') + '"'
+        + ' onclick="galleryGoTo(' + i + ')" aria-label="Bild ' + (i + 1) + '"></button>';
+    }).join('');
+
+    var thumbsHtml = images.map(function(url, i) {
+      var fb = (i === 0 && book.coverFallback)
+        ? ' onerror="this.onerror=null;this.src=\'' + book.coverFallback + '\'"' : '';
+      return '<img src="' + url + '"' + fb + ' class="buch-gallery-thumb' + (i === 0 ? ' active' : '') + '"'
+        + ' alt="Bild ' + (i + 1) + '" loading="lazy" onclick="galleryGoTo(' + i + ')">';
+    }).join('');
+
     return '<div class="buch-gallery">'
-      + coverHtml + ' class="buch-gallery-main" onclick="openLightbox(this.src)">'
+      + '<div class="buch-carousel" id="buchCarousel">' + slidesHtml + '</div>'
+      + '<div class="buch-dots">' + dotsHtml + '</div>'
       + '<div class="buch-gallery-thumbs">' + thumbsHtml + '</div>'
       + '</div>';
   }
 
-  function gallerySetMain(url, thumbEl) {
-    var main = document.querySelector('.buch-gallery-main');
-    if (main) main.src = url;
-    document.querySelectorAll('.buch-gallery-thumb').forEach(function(t) { t.classList.remove('active'); });
-    thumbEl.classList.add('active');
+  function galleryGoTo(i) {
+    var car = document.getElementById('buchCarousel');
+    if (!car) return;
+    car.scrollTo({ left: i * car.clientWidth, behavior: 'smooth' });
+    gallerySetActive(i);
+  }
+
+  function gallerySetActive(i) {
+    document.querySelectorAll('.buch-dot').forEach(function(d, idx) {
+      d.classList.toggle('active', idx === i);
+    });
+    document.querySelectorAll('.buch-gallery-thumb').forEach(function(t, idx) {
+      t.classList.toggle('active', idx === i);
+    });
+  }
+
+  function initCarousel() {
+    var car = document.getElementById('buchCarousel');
+    if (!car) return;
+    var ticking = false;
+    car.addEventListener('scroll', function() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function() {
+        gallerySetActive(Math.round(car.scrollLeft / car.clientWidth));
+        ticking = false;
+      });
+    }, { passive: true });
   }
 
   function openLightbox(src) {
@@ -371,6 +440,7 @@
 
     document.getElementById('buch-container').innerHTML = html;
     document.title = book.title + ' – Verlagshaus Rathmer';
+    initCarousel();
   }
 
   var params = new URLSearchParams(window.location.search);
