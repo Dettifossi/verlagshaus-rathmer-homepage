@@ -1038,6 +1038,7 @@ const BUECHER_DATEN = {
     bodUrl: "https://buchshop.bod.de/meta-intelligenz-detlef-rathmer-9783695735082",
     gallery: ["images/2026/05/METAINTELLIGENZ-BUCH-MIT-AUTOR.jpg"],
     youtubeId: "gAl9bDh1jHM",
+    youtubeShort: true,
   },
 
   "meta-intelligenz-das-hoerbuch": {
@@ -1052,6 +1053,7 @@ const BUECHER_DATEN = {
     orderUrl: "https://www.checkout-ds24.com/product/677420",
     gallery: ["images/2026/03/META-INTELLIGENZ-HOeRBUCH-MIT-AUTOR.jpg"],
     youtubeId: "gAl9bDh1jHM",
+    youtubeShort: true,
   },
 
   "fuehrung-mit-fundament": {
