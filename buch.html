@@ -209,6 +209,55 @@
       }
       .buch-gallery-thumb { width: calc(33.33% - 0.35rem); }
     }
+    /* ── Sticky Buy Bar ─────────────────────────────────────────── */
+    .sticky-buy-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 950;
+      background: var(--anthracite);
+      border-top: 1px solid rgba(201,168,76,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.75rem 1.5rem;
+      box-shadow: 0 -4px 24px rgba(44,42,39,0.22);
+      transform: translateY(100%);
+      transition: transform 0.35s ease;
+    }
+    .sticky-buy-bar.visible { transform: translateY(0); }
+    .sticky-buy-price {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.35rem;
+      color: var(--cream);
+      white-space: nowrap;
+    }
+    .sticky-buy-price strong { color: var(--gold); }
+    .sticky-buy-btn {
+      background: var(--gold);
+      color: var(--anthracite);
+      border: none;
+      border-radius: 4px;
+      padding: 0.65rem 1.4rem;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      white-space: nowrap;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .sticky-buy-btn:hover { background: var(--gold-dark); transform: translateY(-1px); }
+    /* Scroll-to-top: über dem Sticky-Bar */
+    body.has-sticky-bar #back-to-top { bottom: calc(4.5rem + 1.5rem); }
+    @media (max-width: 480px) {
+      .sticky-buy-bar { padding: 0.65rem 1rem; }
+      .sticky-buy-price { font-size: 1.1rem; }
+      .sticky-buy-btn { padding: 0.6rem 1rem; font-size: 0.82rem; }
+    }
   </style>
 </head>
 <body>
@@ -441,6 +490,48 @@
     document.getElementById('buch-container').innerHTML = html;
     document.title = book.title + ' – Verlagshaus Rathmer';
     initCarousel();
+    initStickyBar(book);
+  }
+
+  function buildStickyBtn(book) {
+    if (book.orderType === 'stripe') {
+      return '<a href="stripe-checkout.html?slug=' + (book.stripeKey || '') + '" class="sticky-buy-btn">Jetzt kaufen →</a>';
+    }
+    if (book.orderType === 'whatsapp') {
+      var msg = encodeURIComponent('Ich möchte bestellen: ' + book.title);
+      return '<a href="https://wa.me/4915758786201?text=' + msg + '" target="_blank" rel="noopener" class="sticky-buy-btn">Jetzt bestellen →</a>';
+    }
+    if (book.orderType === 'email') {
+      return '<a href="mailto:9Rathmer@gmail.com?subject=' + encodeURIComponent('Bestellung: ' + book.title) + '" class="sticky-buy-btn">Jetzt bestellen →</a>';
+    }
+    return '';
+  }
+
+  function initStickyBar(book) {
+    if (!book.price) return;
+    var btn = buildStickyBtn(book);
+    if (!btn) return;
+
+    var bar = document.createElement('div');
+    bar.className = 'sticky-buy-bar';
+    bar.innerHTML = '<span class="sticky-buy-price">Preis: <strong>' + book.price + '</strong></span>' + btn;
+    document.body.appendChild(bar);
+    document.body.classList.add('has-sticky-bar');
+
+    var orderSection = document.querySelector('.buch-order-section');
+    var showThreshold = 300;
+
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        var y = window.scrollY;
+        var hideY = orderSection ? (orderSection.getBoundingClientRect().top + y - window.innerHeight + 60) : showThreshold;
+        bar.classList.toggle('visible', y > showThreshold && y < hideY + window.innerHeight);
+        ticking = false;
+      });
+    }, { passive: true });
   }
 
   var params = new URLSearchParams(window.location.search);
