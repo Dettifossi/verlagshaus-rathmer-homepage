@@ -53,6 +53,8 @@ const BUECHER_DATEN = {
     orderType: "bod",
     bodUrl: "https://buchshop.bod.de/die-verborgene-dynamik-der-27-subtypen-detlef-rathmer-9783695741359",
     gallery: ["images/2026/05/Werbung-Die-verborgene-Dynamik-der-27-Subtypen.jpg", "images/2026/05/VERBORGENE-DYNAMIK-27-SUBTYPEN-MIT-AUTOR.jpg", "images/2026/05/DIE-VERBORGENE-DYNAMIK-DER-27-SUBTYPEN-DES-ENNEAGRAMMS-MIT-AUTOR.jpg", "images/2026/05/WERBUNG-DIE-VERBORGENE-DYNAMIK-DER-27-SUBTPEN-MIT-AUTOR.jpg"],
+    youtubeId: "xo2hmB2LwYc",
+    youtubeShort: true,
   },
 
   "wer-du-wirklich-bist-band-1": {
