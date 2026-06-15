@@ -216,10 +216,6 @@
   .books-all-cat:first-child { margin-top: 1.5rem; }
   .books-all-cat span { font-size: 0.9rem; font-weight: 400; color: var(--gold-dark); letter-spacing: 0.04em; }
   .books-all-grid { margin-bottom: 0.5rem; }
-  .books-all .book-card h3 { font-size: 1rem; line-height: 1.35; margin: 0 0 0.45rem; }
-  .books-all .book-card h3 a { color: var(--anthracite); text-decoration: none; }
-  .books-all .book-card h3 a:hover { color: var(--gold-dark); }
-  .books-all .book-body { padding: 1rem 1.1rem 1.2rem; }
 </style>
 
 <!-- ==================== ÜBER DEN AUTOR ==================== -->
@@ -294,52 +290,50 @@
     }
   });
 </script>
-<script src="buecher-daten.js"></script>
 <script>
-(function(){
-  if (typeof BUECHER_DATEN === 'undefined') return;
-  // Reihenfolge exakt wie auf den jeweiligen Kategorieseiten (inkl. Mehrfachnennung
-  // von Buechern, die z. B. zugleich Neuerscheinung UND Enneagramm sind).
-  var SECTIONS = [
-    ['Neuerscheinungen', ["gesichter-des-inneren-feuers-das-neue-enneagramm-buch","die-27-gesichter-der-seele-ein-psychologischer-subtypenroman","die-verborgene-dynamik-der-27-subtypen","the-hidden-dynamics-of-the-27-subtypes","meta-intelligenz","meta-intelligenz-das-hoerbuch","fuehrung-mit-fundament","du-bist-nicht-dein-zweifel","der-code-deiner-persoenlichkeit","in-der-tiefe-der-zeit","das-seminar-wenn-masken-fallen","die-sprache-unserer-beziehungen","die-sprache-unserer-sexualitaet"]],
-    ['Enneagramm', ["gesichter-des-inneren-feuers-das-neue-enneagramm-buch","die-27-gesichter-der-seele-ein-psychologischer-subtypenroman","die-verborgene-dynamik-der-27-subtypen","the-hidden-dynamics-of-the-27-subtypes","die-27-persoenlichkeiten-des-enneagramms","wer-du-wirklich-bist-band-1","wer-du-wirklich-bist-band-2","wer-du-wirklich-bist-band-3","die-praxis-der-typbestimmung-taschenbuch","die-praxis-der-typbestimmung-gebundene-ausgabe","rathmer-s-enneagramm-typentest","motivationaler-enneagramm-typentest","motivational-enneagram-type-test-english","der-code-deiner-persoenlichkeit","the-code-of-your-personality","rathmer-s-grosses-enneagramm-lexikon-von-a-z-hardcover","rathmer-s-grosses-enneagramm-lexikon-von-a-z-taschenbuch","enneagramm-zoo","archetypen-der-tiere-im-enneagramm","chrono-ennea-typ-ernaehrung-im-rhythmus-der-organe","enneagramm-biochemie","enneagramm-bachblueten-therapie","du-bist-nicht-dein-zweifel","heilung-als-erinnerung","leidenschaft-und-heilung","die-sprache-unserer-beziehungen","die-sprache-unserer-sexualitaet","in-der-tiefe-der-zeit","das-seminar-wenn-masken-fallen"]],
-    ['Homöopathie &amp; Naturheilkunde', ["rathmer-s-repertorium-gebundene-ausgabe","rathmer-s-repertorium-ebook-version","repertorium-der-hervorstechenden-gemuetsrubriken-gebundene-a","repertorium-der-hervorstechenden-gemuetsrubriken-ebook","homoeopathische-arzneimittellehre-der-single-rubriken-aus-de","der-kern-der-heilmittel-the-core-of-the-remedies-gebunden","der-kern-der-heilmittel-the-core-of-the-remedies-ebook","enneagramm-homoeopathie-band-1","enneagramm-homoeopathie-band-2","enneagramm-homoeopathie-ebook-version","die-enneagrammatische-homoeopathie-ebook","die-dynamik-der-9-enneagramm-heilmittel-gebundene-ausgabe","die-dynamik-der-9-enneagramm-heilmittel-ebook","enneagramm-homoeopathie-repertorium-ebook-version","das-grosse-eh-repertorium-gebunden","das-grosse-eh-repertorium-ebook","lehrbuch-der-enneagramm-homoeopathie-band-1-taschenbuch","lehrbuch-der-enneagramm-homoeopathie-band-2-taschenbuch","lehrbuch-der-enneagramm-homoeopathie-band-3-taschenbuch","lehrbuch-der-enneagramm-homoeopathie-band-1-ebook","lehrbuch-der-enneagramm-homoeopathie-band-2-ebook","lehrbuch-der-enneagramm-homoeopathie-band-3-ebook","das-unterrichtsskript-zur-sehgal-ausbildung-ebook","die-enneagramm-homoeopathie-unterrichtsmaterial","fallanalyse-in-der-homoeopathie-nach-sehgal","gesetzeskunde-fuer-heilpraktiker","enneagramm-biochemie","enneagramm-bachblueten-therapie","chrono-ennea-typ-ernaehrung-im-rhythmus-der-organe","leidenschaft-und-heilung","heilung-als-erinnerung"]],
-    ['Persönliche Entwicklung', ["du-bist-nicht-dein-zweifel","nichts-und-alles","der-raum-hinter-allem","sei-still-und-wisse-ich-bin-gott","heilung-als-erinnerung","7-wege-zu-dir-selbst-lebenskunst-fuer-den-alltag","leidenschaft-und-heilung","die-sprache-unserer-beziehungen","die-sprache-unserer-sexualitaet","der-code-deiner-persoenlichkeit","the-code-of-your-personality","in-der-tiefe-der-zeit","das-seminar-wenn-masken-fallen"]],
-    ['Kalender', ["der-weltweit-erste-enneagramm-wandkalender-xxl-a3","der-weltweit-erste-enneagramm-wandkalender","der-weltweit-erste-enneagramm-tischkalender","der-weltweit-erste-enneagramm-kuechenkalender","the-eternal-enneagramm-wall-calendar","typ-1-die-ewige-suche-nach-vollkommenheit","typ-2-die-ewige-suche-nach-liebe","typ-3-die-ewige-suche-nach-erfolg","typ-4-die-ewige-suche-nach-individualitaet","typ-5-die-ewige-suche-nach-wissen","typ-6-die-ewige-suche-nach-sicherheit","typ-7-die-ewige-suche-nach-lebensfreude","typ-8-die-ewige-suche-nach-macht","typ-9-die-ewige-suche-nach-harmonie","der-ewige-kalender-der-selbsterkenntnis","der-ewige-kalender-der-naturwunder","der-ewige-kalender-der-liebe"]]
+(function () {
+  var PAGES = [
+    ['Neuerscheinungen', 'neuerscheinungen.html'],
+    ['Enneagramm', 'enneagramm.html'],
+    ['Hom\u00f6opathie &amp; Naturheilkunde', 'homoeopathie.html'],
+    ['Pers\u00f6nliche Entwicklung', 'persoenliche-entwicklung.html'],
+    ['Kalender', 'kalender.html']
   ];
-  function esc(s){ return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
-  function fallback(src){ return src.replace(/(\.[a-zA-Z0-9]+)$/, '-300x300$1'); }
-  var out = '';
-  SECTIONS.forEach(function(sec){
-    var label = sec[0];
-    var items = sec[1].filter(function(s){ return BUECHER_DATEN[s] && BUECHER_DATEN[s].cover; });
-    if (!items.length) return;
-    out += '<h3 class="books-all-cat">' + label + ' <span>(' + items.length + ')</span></h3>';
-    out += '<div class="book-grid books-all-grid">';
-    items.forEach(function(slug){
-      var b = BUECHER_DATEN[slug];
-      var href = 'buch.html?slug=' + encodeURIComponent(slug);
-      out += '<div class="book-card">'
-        + '<div class="book-cover"><a href="' + href + '"><img src="' + esc(b.cover) + '" onerror="this.onerror=null;this.src=\'' + fallback(b.cover) + '\';" alt="' + esc(b.coverAlt || b.title) + '" loading="lazy"></a></div>'
-        + '<div class="book-body">'
-        + '<h3><a href="' + href + '">' + esc(b.title) + '</a></h3>'
-        + (b.price ? '<p class="book-price">' + esc(b.price) + '</p>' : '')
-        + '<div class="book-actions"><a href="' + href + '" class="btn-sm">Mehr erfahren →</a></div>'
-        + '</div></div>';
+  var container = document.getElementById('alleBuecherListe');
+  if (!container) return;
+  Promise.all(PAGES.map(function (p) {
+    return fetch(p[1])
+      .then(function (r) { return r.ok ? r.text() : ''; })
+      .then(function (html) { return [p[0], html]; })
+      .catch(function () { return [p[0], '']; });
+  })).then(function (results) {
+    var frag = document.createDocumentFragment();
+    results.forEach(function (res) {
+      var label = res[0], html = res[1];
+      if (!html) return;
+      var doc = new DOMParser().parseFromString(html, 'text/html');
+      var cards = doc.querySelectorAll('.book-grid .book-card');
+      if (!cards.length) return;
+      var h = document.createElement('h3');
+      h.className = 'books-all-cat';
+      h.innerHTML = label + ' <span>(' + cards.length + ')</span>';
+      frag.appendChild(h);
+      var grid = document.createElement('div');
+      grid.className = 'book-grid books-all-grid';
+      cards.forEach(function (card) { grid.appendChild(document.importNode(card, true)); });
+      frag.appendChild(grid);
     });
-    out += '</div>';
+    container.appendChild(frag);
+    var all = container.querySelectorAll('.book-card');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+      }, { threshold: 0.04, rootMargin: '0px 0px -20px 0px' });
+      all.forEach(function (c) { io.observe(c); });
+    } else {
+      all.forEach(function (c) { c.classList.add('visible'); });
+    }
   });
-  var el = document.getElementById('alleBuecherListe');
-  if (!el) return;
-  el.innerHTML = out;
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-    }, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
-    el.querySelectorAll('.book-card').forEach(function(card){ io.observe(card); });
-  } else {
-    el.querySelectorAll('.book-card').forEach(function(card){ card.classList.add('visible'); });
-  }
 })();
 </script>
 <script src="animations.js?v=3"></script>
