@@ -236,6 +236,8 @@ const BUECHER_DATEN = {
     orderType: "bod",
     bodUrl: "https://buchshop.bod.de/enneagramm-zoo-detlef-rathmer-9783695143856",
     gallery: ["images/2025/11/Werbung-Enneagramm-Zoo.jpg", "images/2025/11/ENNEAGRAMM-ZOO-MIT-AUTOR.jpg"],
+    youtubeId: "8PJamrmpTnI",
+    youtubeShort: true,
   },
 
   "archetypen-der-tiere-im-enneagramm": {
