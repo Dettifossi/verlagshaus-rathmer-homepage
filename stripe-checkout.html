@@ -266,6 +266,12 @@
         <span>Ich verlange ausdrücklich, dass mit der Ausführung des Vertrags (Bereitstellung des digitalen Inhalts) bereits vor Ablauf der Widerrufsfrist begonnen wird. Mir ist bekannt, dass ich mit Beginn der Ausführung mein <a href="widerruf.html" target="_blank" rel="noopener" style="color:var(--gold);">Widerrufsrecht</a> verliere.</span>
       </label>
     </div>
+    <div id="madeToOrderConsent" style="display:none; margin-bottom:1.1rem; background:#FBF9F4; border:1px solid var(--gray-light); padding:0.85rem 1rem;">
+      <label style="display:flex; gap:0.6rem; align-items:flex-start; font-size:0.84rem; color:var(--gray-mid); cursor:pointer; line-height:1.55;">
+        <input type="checkbox" id="madeToOrderConsentCheck" style="margin-top:0.2rem; flex-shrink:0;">
+        <span>Ich nehme zur Kenntnis, dass dieser Kalender als <strong>Einzelanfertigung auf meine Bestellung</strong> gedruckt wird. Gemäß § 312g Abs. 2 Nr. 1 BGB besteht daher <strong>kein Widerrufsrecht</strong>. Weitere Informationen in unserer <a href="widerruf.html" target="_blank" rel="noopener" style="color:var(--gold);">Widerrufsbelehrung</a>.</span>
+      </label>
+    </div>
     <a href="#" class="stripe-pay-btn" id="stripePayBtn">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
       Zahlungspflichtig bestellen
@@ -390,6 +396,14 @@ const STRIPE_LINKS = {
     if (cb) cb.style.display = 'block';
   }
 
+  // Kalender: Einzelanfertigung auf Bestellung, kein Widerrufsrecht (§312g Abs. 2 Nr. 1 BGB)
+  const MADE_TO_ORDER = ['kalender-wandxxl','kalender-wand','kalender-tisch','kalender-kueche','kalender-english','kalender-typ1','kalender-typ2','kalender-typ3','kalender-typ4','kalender-typ5','kalender-typ6','kalender-typ7','kalender-typ8','kalender-typ9','kalender-selbsterkenntnis','kalender-naturwunder','kalender-liebe'];
+  const isMadeToOrder = MADE_TO_ORDER.indexOf(product) !== -1;
+  if (isMadeToOrder) {
+    const cb = document.getElementById('madeToOrderConsent');
+    if (cb) cb.style.display = 'block';
+  }
+
   // Titel und Preis anzeigen
   document.getElementById('productTitle').textContent = title;
   if (priceRaw > 0) {
@@ -404,9 +418,10 @@ const STRIPE_LINKS = {
 
   if (stripeLink && stripeLink !== '') {
     btn.href = stripeLink;
-    // Bei digitalen Inhalten: Bezahl-Button erst nach Widerrufs-Zustimmung freigeben
-    if (isDigital) {
-      const consentCheck = document.getElementById('digitalConsentCheck');
+    // Bei digitalen Inhalten oder Einzelanfertigungen: Button erst nach Zustimmung freigeben
+    if (isDigital || isMadeToOrder) {
+      const checkId = isDigital ? 'digitalConsentCheck' : 'madeToOrderConsentCheck';
+      const consentCheck = document.getElementById(checkId);
       const sync = function() {
         if (consentCheck.checked) {
           btn.style.pointerEvents = '';
