@@ -1069,6 +1069,8 @@ const BUECHER_DATEN = {
     orderType: "bod",
     bodUrl: "https://buchshop.bod.de/fuehrung-mit-fundament-david-l-rathmer-9783695196197",
     gallery: ["images/2026/05/Werbung-FmF-Seite-2.jpg", "images/2026/05/Werbung-FmF-Seite-3.jpg", "images/2026/05/FUeHRUNG-MIT-FUNDAMENT-MIT-AUTOREN.jpg"],
+    youtubeId: "OHqzLopmL7Q",
+    youtubeShort: true,
   },
 
 };
