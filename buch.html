@@ -524,6 +524,60 @@
 
     document.getElementById('buch-container').innerHTML = html;
     document.title = book.title + ' – Verlagshaus Rathmer';
+
+    // Dynamic SEO meta tags
+    var canonical = 'https://www.verlagshausrathmer.com/buch.html?slug=' + slug;
+    var descRaw = (book.desc || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    var descShort = descRaw.length > 155 ? descRaw.slice(0, 152) + '…' : descRaw;
+    var coverAbs = book.cover ? 'https://www.verlagshausrathmer.com/' + book.cover : 'https://www.verlagshausrathmer.com/Logo-vr.png';
+
+    function setMeta(sel, attr, val) {
+      var el = document.querySelector(sel) || document.createElement('meta');
+      el.setAttribute(attr === 'content' ? (el.tagName === 'LINK' ? 'href' : 'content') : attr, val);
+      if (!el.parentNode) document.head.appendChild(el);
+    }
+    function ensureMeta(attrs) {
+      var key = Object.keys(attrs)[0];
+      var val = attrs[key];
+      var el = document.querySelector('meta[' + key + '="' + val + '"]');
+      if (!el) { el = document.createElement('meta'); el.setAttribute(key, val); document.head.appendChild(el); }
+      Object.keys(attrs).forEach(function(k) { el.setAttribute(k, attrs[k]); });
+      return el;
+    }
+
+    // Canonical
+    var canonEl = document.querySelector('link[rel="canonical"]') || document.createElement('link');
+    canonEl.rel = 'canonical'; canonEl.href = canonical;
+    if (!canonEl.parentNode) document.head.appendChild(canonEl);
+
+    // Meta description
+    ensureMeta({'name':'description', 'content': descShort});
+    // og: tags
+    ensureMeta({'property':'og:title',       'content': book.title + ' – Verlagshaus Rathmer'});
+    ensureMeta({'property':'og:description', 'content': descShort});
+    ensureMeta({'property':'og:url',         'content': canonical});
+    ensureMeta({'property':'og:type',        'content': 'book'});
+    ensureMeta({'property':'og:image',       'content': coverAbs});
+    ensureMeta({'property':'og:locale',      'content': 'de_DE'});
+    ensureMeta({'property':'og:site_name',   'content': 'Verlagshaus Rathmer'});
+
+    // JSON-LD Book schema
+    var ldEl = document.getElementById('ld-book');
+    if (!ldEl) { ldEl = document.createElement('script'); ldEl.type = 'application/ld+json'; ldEl.id = 'ld-book'; document.head.appendChild(ldEl); }
+    var ld = {
+      '@context': 'https://schema.org',
+      '@type': 'Book',
+      'name': book.title,
+      'author': {'@type':'Person','name':'Detlef Rathmer','url':'https://www.verlagshausrathmer.com/ueber-den-autor.html'},
+      'publisher': {'@type':'Organization','name':'Verlagshaus Rathmer','url':'https://www.verlagshausrathmer.com'},
+      'url': canonical,
+      'image': coverAbs
+    };
+    if (book.isbn) ld['isbn'] = book.isbn;
+    if (descShort) ld['description'] = descShort;
+    if (book.price) ld['offers'] = {'@type':'Offer','price': book.price.replace(/[^0-9,\.]/g,'').replace(',','.'), 'priceCurrency':'EUR', 'availability':'https://schema.org/InStock', 'url': canonical};
+    ldEl.textContent = JSON.stringify(ld);
+
     initCarousel();
     initStickyBar(book);
   }
