@@ -982,8 +982,7 @@ const BUECHER_DATEN = {
 
   "der-ewige-kalender-der-selbsterkenntnis": {
     title: "Der ewige Kalender der Selbsterkenntnis",
-    cover: "images/2019/05/A-Cover-Der-ewige-Kalender-der-Selbsterkenntnis.jpg",
-    coverFallback: "images/2019/05/Werbung-Selbsterkenntnis-Kalender.jpg",
+    cover: "images/2019/05/Werbung-Selbsterkenntnis-Kalender.jpg",
     coverAlt: "Der ewige Kalender der Selbsterkenntnis",
     format: "Themenkalender · Selbsterkenntnis",
     desc: "VERSCHÖNERN SIE IHR LEBEN UND SCHMÜCKEN SIE IHR HEIM – MIT DEM EWIGEN KALENDER DER SELBSTERKENNTNIS AUS DEM VERLAGSHAUS RATHMER – Ihrem freundlichen Buchverlag!\n\nDieser liebevoll gestaltete „SELBSTERKENNTNIS-KALENDER“ (A4-Hochformat, matt, 21 x 30 cm, Spiralbindung mit Aufhänger) mit stimmungsvollen Abbildungen und zeitlosen Weisheiten rund um den Erdball hängt vielleicht schon bald bei Ihnen zu Hause an der Wand!\n\n12 Kalenderblätter plus einem eindrucksvollen Kalender-Cover mit äußerst stimmungsvollen Fotografien, die auf einzigartige Weise mit den tiefsten Wahrheiten des menschlichen Daseins eine ästhetisch-formvollendete Einheit ergeben.\n\nStilvoll und ausdrucksstark, abwechslungsreich und auf die Jahreszeiten abgestimmt enthält dieser Kalender jahretausendealte Weisheiten zur Erkenntnis der eigenen inneren Wahrheit. In einem qualitativ hochwertigen Druckverfahren aufbereitet begleitet Sie der „ewige Kalender der Selbsterkenntnis“ das ganze Jahr hindurch und erinnern Sie stets daran, wer Sie wirklich jenseits der Formen dieser Welt sind.\n\nDer Kalender ist ein sog. immerwährender Kalender (= Jedes-Jahr-Kalender, ewiger Kalender) und kann für Sie und Ihre Lieben daher für viele, viele Jahre ein treuer Wegbegleiter werden. Sie können Ihren Selbsterkenntnis-Kalender daher zu jeder Zeit des Jahres in Gebrauch nehmen – als ewiger Kalender „verjährt“ er niemals!\n\nKreative & künstlerische Gestaltung: Detlef Rathmer\n\n12 Kalenderseiten plus Deckblatt\n\nBeschenken Sie sich selbst oder Ihre Familie und Freunde – es gibt immer einen Anlass zum Schenken!\n\nLieferzeit: Ca. eine Woche (5-7 Arbeitstage)\n\nPreis: 22,95 Euro versandkostenfrei innerhalb von Deutschland\n\nBestellungen ins Ausland benötigen je nach Land eine etwas längere Lieferzeit (ca. 7-14 Tage) und können aufgrund des zusätzlich anfallenden deutlich höheren Portos leider nicht versandkostenfrei verschickt werden.",
@@ -992,7 +991,6 @@ const BUECHER_DATEN = {
     orderType: "stripe",
     stripeKey: "kalender-selbsterkenntnis",
     stripePrice: 2495,
-    gallery: ["images/2019/05/Werbung-Selbsterkenntnis-Kalender.jpg"],
   },
 
   "der-ewige-kalender-der-naturwunder": {
