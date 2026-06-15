@@ -1058,6 +1058,7 @@ const BUECHER_DATEN = {
     gallery: ["images/2026/03/META-INTELLIGENZ-HOeRBUCH-MIT-AUTOR.jpg"],
     youtubeId: "gAl9bDh1jHM",
     youtubeShort: true,
+    hoerprobeId: "DkdJRpRnd2k",
   },
 
   "fuehrung-mit-fundament": {
