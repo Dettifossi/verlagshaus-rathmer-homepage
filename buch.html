@@ -88,6 +88,13 @@
       padding: 0.75rem 2rem;
       font-size: 1rem;
     }
+    @media (max-width: 640px) {
+      .buch-order-section .btn-primary {
+        align-self: stretch;
+        text-align: center;
+        justify-content: center;
+      }
+    }
     .buch-order-note {
       font-size: 0.8rem;
       color: #6a6866;
@@ -495,7 +502,16 @@
 
   function buildStickyBtn(book) {
     if (book.orderType === 'stripe') {
-      return '<a href="stripe-checkout.html?slug=' + (book.stripeKey || '') + '" class="sticky-buy-btn">Jetzt kaufen →</a>';
+      var url = 'stripe-checkout.html?product=' + encodeURIComponent(book.stripeKey || '')
+              + '&price=' + (book.stripePrice || '')
+              + '&title=' + encodeURIComponent(book.title);
+      return '<a href="' + url + '" class="sticky-buy-btn">Jetzt kaufen →</a>';
+    }
+    if (book.orderType === 'bod') {
+      return '<a href="' + book.bodUrl + '" target="_blank" rel="noopener" class="sticky-buy-btn">Bei BoD bestellen →</a>';
+    }
+    if (book.orderType === 'amazon') {
+      return '<a href="' + book.orderUrl + '" target="_blank" rel="noopener" class="sticky-buy-btn">Bei Amazon →</a>';
     }
     if (book.orderType === 'whatsapp') {
       var msg = encodeURIComponent('Ich möchte bestellen: ' + book.title);
