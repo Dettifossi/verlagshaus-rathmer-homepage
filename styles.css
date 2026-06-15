@@ -1216,6 +1216,7 @@ img { display: block; max-width: 100%; }
   .hero { padding: 4rem 1.5rem; }
   .section { padding: 3.5rem 1.5rem; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
+  .footer-links { flex-wrap: wrap; gap: 0.75rem 1.25rem; }
   .site-switcher__card { right: 0; width: min(210px, calc(100vw - 2rem)); }
 }
 
