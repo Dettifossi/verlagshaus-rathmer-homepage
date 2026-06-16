@@ -214,6 +214,7 @@
         <ul class="nav-dropdown">
           <li><a href="neuerscheinungen.html">Neuerscheinungen</a></li>
           <li><a href="enneagramm.html">Enneagramm</a></li>
+          <li><a href="einzelstudien.html">Literarische Porträts (27)</a></li>
           <li><a href="homoeopathie.html">Homöopathie &amp; Naturheilkunde</a></li>
           <li><a href="persoenliche-entwicklung.html">Persönliche Entwicklung</a></li>
           <li><a href="kalender.html">Kalender</a></li>
@@ -377,7 +378,8 @@ const STRIPE_LINKS = {
   "kalender-english": "https://buy.stripe.com/8x214n8oM2y62T8dzB4gg3s",
   "kalender-selbsterkenntnis": "https://buy.stripe.com/7sYdR98oM6Om9hwdzB4gg3t",
   "kalender-naturwunder": "https://buy.stripe.com/aFadR9fRe1u265kgLN4gg3u",
-  "kalender-liebe": "https://buy.stripe.com/4gM4gz9sQa0y3Xc6794gg3v"
+  "kalender-liebe": "https://buy.stripe.com/4gM4gz9sQa0y3Xc6794gg3v",
+  "einzelstudie": "https://buy.stripe.com/5kQ14n5cA2y6bpE5354gg3x"
 };
 
 (function() {
@@ -387,7 +389,7 @@ const STRIPE_LINKS = {
   const title = params.get('title') ? decodeURIComponent(params.get('title')) : 'Produkt';
 
   // Digitale Produkte (kein Versand, Widerruf erlischt nach ausdrücklicher Zustimmung)
-  const DIGITAL = ['bundle-gesichter','gesichter-inneres-feuer','27-gesichter-seele','rathmers-repertorium-ebook','eh-ebook','eh-repertorium-ebook','sehgal-skript','gesetzeskunde-hp','eh-unterrichtsmaterial','enneagrammatische-hom','rep-hervor-ebook','kern-ebook','dynamik-ebook','lehrbuch-b1-ebook','lehrbuch-b2-ebook','lehrbuch-b3-ebook'];
+  const DIGITAL = ['bundle-gesichter','gesichter-inneres-feuer','27-gesichter-seele','rathmers-repertorium-ebook','eh-ebook','eh-repertorium-ebook','sehgal-skript','gesetzeskunde-hp','eh-unterrichtsmaterial','enneagrammatische-hom','rep-hervor-ebook','kern-ebook','dynamik-ebook','lehrbuch-b1-ebook','lehrbuch-b2-ebook','lehrbuch-b3-ebook','einzelstudie'];
   const isDigital = DIGITAL.indexOf(product) !== -1;
   if (isDigital) {
     const si = document.getElementById('shippingInfo');

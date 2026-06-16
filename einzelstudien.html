@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Literarische Porträts – 27 Subtypen-Einzelstudien | Verlagshaus Rathmer</title>
+  <meta name="description" content="27 literarische Porträts der Enneagramm-Subtypen – aus »Gesichter des inneren Feuers«. Psychologische Romane, personalisiert auf Ihren Namen, inkl. 3 Subtypen-Songs & 100 Affirmationen. Je 14,95 €.">
+  <meta name="author" content="Detlef Rathmer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="canonical" href="https://www.verlagshausrathmer.com/einzelstudien.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Verlagshaus Rathmer">
+  <meta property="og:title" content="Literarische Porträts – 27 Subtypen | Verlagshaus Rathmer">
+  <meta property="og:description" content="27 psychologische Romanporträts der Enneagramm-Subtypen – personalisiert, mit Songs und Affirmationen.">
+  <meta property="og:url" content="https://www.verlagshausrathmer.com/einzelstudien.html">
+  <meta property="og:image" content="https://www.verlagshausrathmer.com/Logo-vr.png">
+  <link rel="stylesheet" href="styles.css?v=12">
+  <style>
+    .es-hero {
+      background: var(--anthracite);
+      padding: 4rem 1.5rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .es-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .es-hero-ornament {
+      color: var(--gold);
+      font-size: 1.2rem;
+      letter-spacing: 0.5em;
+      opacity: 0.6;
+      margin-bottom: 1.2rem;
+    }
+    .es-hero h1 {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--cream);
+      margin: 0 0 0.6rem;
+      font-weight: 400;
+    }
+    .es-hero h1 em {
+      color: var(--gold);
+      font-style: italic;
+    }
+    .es-hero-sub {
+      color: rgba(245,239,224,0.7);
+      font-size: 1.05rem;
+      max-width: 620px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.6;
+    }
+    .es-hero-price {
+      display: inline-block;
+      background: rgba(197,166,95,0.12);
+      border: 1px solid rgba(197,166,95,0.3);
+      color: var(--gold);
+      padding: 0.4rem 1.2rem;
+      border-radius: 20px;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+    }
+    .es-intro {
+      background: var(--cream);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .es-intro p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--anthracite);
+      line-height: 1.75;
+      font-size: 1.02rem;
+    }
+    .es-intro strong { color: var(--gold-dark); }
+    .es-hint {
+      background: #fffbf0;
+      border: 1px solid rgba(197,166,95,0.4);
+      border-radius: 8px;
+      padding: 1rem 1.4rem;
+      max-width: 620px;
+      margin: 1.5rem auto 0;
+      font-size: 0.93rem;
+      color: #555;
+      line-height: 1.6;
+    }
+    .es-hint strong { color: var(--anthracite); }
+
+    .es-section {
+      padding: 3rem 1.5rem;
+    }
+    .es-section:nth-child(odd) { background: #faf9f6; }
+    .es-section:nth-child(even) { background: var(--cream); }
+    .es-section-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .es-section-tag {
+      display: inline-block;
+      background: var(--anthracite);
+      color: var(--gold);
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.3rem 1rem;
+      border-radius: 3px;
+      margin-bottom: 0.7rem;
+    }
+    .es-section-header h2 {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      color: var(--anthracite);
+      font-weight: 400;
+      margin: 0 0 0.4rem;
+    }
+    .es-section-header p {
+      color: #666;
+      font-size: 0.93rem;
+    }
+
+    .es-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1.2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .es-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+    }
+    .es-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+    .es-card-img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      display: block;
+    }
+    .es-card-body {
+      padding: 0.7rem 0.8rem 0.9rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .es-card-code {
+      font-size: 0.72rem;
+      color: var(--gold-dark);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+    }
+    .es-card-title {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 0.97rem;
+      color: var(--anthracite);
+      line-height: 1.3;
+      flex: 1;
+      margin-bottom: 0.6rem;
+    }
+    .es-card-pages {
+      font-size: 0.78rem;
+      color: #888;
+      margin-bottom: 0.6rem;
+    }
+    .es-card-btn {
+      display: block;
+      background: var(--anthracite);
+      color: var(--gold);
+      text-align: center;
+      padding: 0.45rem;
+      border-radius: 5px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .es-card-btn:hover { background: #1a1a1a; }
+
+    .es-full-book {
+      background: var(--anthracite);
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    .es-full-book-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .es-full-book h2 {
+      font-family: 'EB Garamond', Georgia, serif;
+      color: var(--cream);
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin: 0 0 0.8rem;
+    }
+    .es-full-book p {
+      color: rgba(245,239,224,0.75);
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+      font-size: 0.97rem;
+    }
+    .es-full-book .btn-gold {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--anthracite);
+      padding: 0.8rem 2rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+    }
+    .es-full-book .btn-gold:hover { background: var(--gold-dark); }
+
+    @media (max-width: 480px) {
+      .es-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="Logo-vr.png" alt="VR" class="nav-logo-img"><span class="nav-logo-text">Verlagshaus <span class="nav-logo-name">Rathmer</span><span class="nav-logo-url">www.verlagshausrathmer.com</span></span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-has-dropdown">
+        <button class="nav-dropdown-toggle" id="buecher-toggle">Bücher <span class="nav-caret">▾</span></button>
+        <ul class="nav-dropdown">
+          <li><a href="neuerscheinungen.html">Neuerscheinungen</a></li>
+          <li><a href="enneagramm.html">Enneagramm</a></li>
+          <li><a href="homoeopathie.html">Homöopathie &amp; Naturheilkunde</a></li>
+          <li><a href="persoenliche-entwicklung.html">Persönliche Entwicklung</a></li>
+          <li><a href="kalender.html">Kalender</a></li>
+        </ul>
+      </li>
+      <li><a href="geschenkideen.html">Geschenkideen</a></li>
+      <li><a href="seminare.html">Seminare &amp; Ausbildungen</a></li>
+      <li><a href="ueber-den-autor.html">Über den Autor</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <div class="site-switcher">
+      <button class="site-switcher__btn">⇄&thinsp;Praxis</button>
+      <div class="site-switcher__card">
+        <p class="site-switcher__label">Weitere Website</p>
+        <p class="site-switcher__name">Naturheilpraxis Detlef Rathmer</p>
+        <p class="site-switcher__desc">Klassische Homöopathie, Enneagramm &amp; psychologische Beratung in Billerbeck.</p>
+        <a href="https://psychologische-homoeopathie.de" class="site-switcher__link">&#8594;&ensp;Zur Praxis</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="es-hero">
+  <div class="es-hero-ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+  <h1>27 Literarische Porträts<br><em>aus »Gesichter des inneren Feuers«</em></h1>
+  <p class="es-hero-sub">Jedes Porträt ist ein eigenständiger psychologischer Roman – tief, präzise, auf Ihren Namen lizenziert. Mit Zugang zu 3 Subtypen-Songs und 100 Affirmationen.</p>
+  <span class="es-hero-price">Je 14,95 € · E-Book · PDF · personalisiert</span>
+</div>
+
+<!-- INTRO -->
+<div class="es-intro">
+  <p>Das Gesamtwerk <strong>»Gesichter des inneren Feuers«</strong> umfasst auf 1036 Seiten alle 27 Subtypen-Porträts. Hier erhalten Sie jedes Porträt auch <strong>einzeln</strong> – als eigenständiges E-Book, direkt auf Ihren Namen ausgestellt.</p>
+  <div class="es-hint">
+    <strong>So bestellen Sie:</strong> Klicken Sie auf den gewünschten Subtyp und schließen Sie die Zahlung ab. Im Stripe-Bestellformular gibt es ein Feld – tragen Sie dort bitte Ihren <strong>vollständigen Namen</strong> und den <strong>Subtyp-Code</strong> (z.&thinsp;B. <em>»SO4 – Maria Muster«</em>) ein. Das E-Book wird dann persönlich auf Sie lizenziert und per E-Mail zugesandt.
+  </div>
+</div>
+
+<!-- SE-SECTION -->
+<div class="es-section">
+  <div class="es-section-header">
+    <span class="es-section-tag">SE · Selbsterhaltung</span>
+    <h2>Die selbsterhaltenden Subtypen</h2>
+    <p>Fokus auf Sicherheit, Stabilität und das eigene Wohlergehen</p>
+  </div>
+  <div class="es-grid">
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SE1">
+      <img src="images/einzelstudien/einzelstudie-se1.jpg" alt="Literarisches Porträt SE1 – Die selbsterhaltende Eins" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SE1</div>
+        <div class="es-card-title">Die selbsterhaltende Eins</div>
+        <div class="es-card-pages">67 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SE2">
+      <img src="images/einzelstudien/einzelstudie-se2.jpg" alt="Literarisches Porträt SE2 – Die selbsterhaltende Zwei" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SE2</div>
+        <div class="es-card-title">Die selbsterhaltende Zwei</div>
+        <div class="es-card-pages">62 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SE3">
+      <img src="images/einzelstudien/einzelstudie-se3.jpg" alt="Literarisches Porträt SE3 – Die selbsterhaltende Drei" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SE3</div>
+        <div class="es-card-title">Die selbsterhaltende Drei</div>
+        <div class="es-card-pages">64 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SE4">
+      <img src="images/einzelstudien/einzelstudie-se4.jpg" alt="Literarisches Porträt SE4 – Die selbsterhaltende Vier" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SE4</div>
+        <div class="es-card-title">Die selbsterhaltende Vier</div>
+        <div class="es-card-pages">67 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SE5">
+      <img src="images/einzelstudien/einzelstudie-se5.jpg" alt="Literarisches Porträt SE5 – Die selbsterhaltende Fünf" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SE5</div>
+        <div class="es-card-title">Die selbsterhaltende Fünf</div>
+        <div class="es-card-pages">69 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SE6">
+      <img src="images/einzelstudien/einzelstudie-se6.jpg" alt="Literarisches Porträt SE6 – Die selbsterhaltende Sechs" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SE6</div>
+        <div class="es-card-title">Die selbsterhaltende Sechs</div>
+        <div class="es-card-pages">72 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SE7">
+      <img src="images/einzelstudien/einzelstudie-se7.jpg" alt="Literarisches Porträt SE7 – Die selbsterhaltende Sieben" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SE7</div>
+        <div class="es-card-title">Die selbsterhaltende Sieben</div>
+        <div class="es-card-pages">69 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SE8">
+      <img src="images/einzelstudien/einzelstudie-se8.jpg" alt="Literarisches Porträt SE8 – Die selbsterhaltende Acht" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SE8</div>
+        <div class="es-card-title">Die selbsterhaltende Acht</div>
+        <div class="es-card-pages">66 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SE9">
+      <img src="images/einzelstudien/einzelstudie-se9.jpg" alt="Literarisches Porträt SE9 – Die selbsterhaltende Neun" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SE9</div>
+        <div class="es-card-title">Die selbsterhaltende Neun</div>
+        <div class="es-card-pages">67 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- SO-SECTION -->
+<div class="es-section">
+  <div class="es-section-header">
+    <span class="es-section-tag">SO · Sozial</span>
+    <h2>Die sozialen Subtypen</h2>
+    <p>Fokus auf Gemeinschaft, Zugehörigkeit und soziale Verbindung</p>
+  </div>
+  <div class="es-grid">
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SO1">
+      <img src="images/einzelstudien/einzelstudie-so1.jpg" alt="Literarisches Porträt SO1 – Die soziale Eins" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SO1</div>
+        <div class="es-card-title">Die soziale Eins</div>
+        <div class="es-card-pages">64 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SO2">
+      <img src="images/einzelstudien/einzelstudie-so2.jpg" alt="Literarisches Porträt SO2 – Die soziale Zwei" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SO2</div>
+        <div class="es-card-title">Die soziale Zwei</div>
+        <div class="es-card-pages">64 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SO3">
+      <img src="images/einzelstudien/einzelstudie-so3.jpg" alt="Literarisches Porträt SO3 – Die soziale Drei" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SO3</div>
+        <div class="es-card-title">Die soziale Drei</div>
+        <div class="es-card-pages">68 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SO4">
+      <img src="images/einzelstudien/einzelstudie-so4.jpg" alt="Literarisches Porträt SO4 – Die soziale Vier" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SO4</div>
+        <div class="es-card-title">Die soziale Vier</div>
+        <div class="es-card-pages">76 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SO5">
+      <img src="images/einzelstudien/einzelstudie-so5.jpg" alt="Literarisches Porträt SO5 – Die soziale Fünf" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SO5</div>
+        <div class="es-card-title">Die soziale Fünf</div>
+        <div class="es-card-pages">68 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SO6">
+      <img src="images/einzelstudien/einzelstudie-so6.jpg" alt="Literarisches Porträt SO6 – Die soziale Sechs" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SO6</div>
+        <div class="es-card-title">Die soziale Sechs</div>
+        <div class="es-card-pages">75 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SO7">
+      <img src="images/einzelstudien/einzelstudie-so7.jpg" alt="Literarisches Porträt SO7 – Die soziale Sieben" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SO7</div>
+        <div class="es-card-title">Die soziale Sieben</div>
+        <div class="es-card-pages">68 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SO8">
+      <img src="images/einzelstudien/einzelstudie-so8.jpg" alt="Literarisches Porträt SO8 – Die soziale Acht" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SO8</div>
+        <div class="es-card-title">Die soziale Acht</div>
+        <div class="es-card-pages">70 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SO9">
+      <img src="images/einzelstudien/einzelstudie-so9.jpg" alt="Literarisches Porträt SO9 – Die soziale Neun" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SO9</div>
+        <div class="es-card-title">Die soziale Neun</div>
+        <div class="es-card-pages">69 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- SX-SECTION -->
+<div class="es-section">
+  <div class="es-section-header">
+    <span class="es-section-tag">SX · Sexuell / 1:1</span>
+    <h2>Die sexuellen Subtypen</h2>
+    <p>Fokus auf intensive Verbindung, Anziehung und tiefe 1:1-Beziehungen</p>
+  </div>
+  <div class="es-grid">
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SX1">
+      <img src="images/einzelstudien/einzelstudie-sx1.jpg" alt="Literarisches Porträt SX1 – Die sexuelle Eins" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SX1</div>
+        <div class="es-card-title">Die sexuelle Eins</div>
+        <div class="es-card-pages">60 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SX2">
+      <img src="images/einzelstudien/einzelstudie-sx2.jpg" alt="Literarisches Porträt SX2 – Die sexuelle Zwei" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SX2</div>
+        <div class="es-card-title">Die sexuelle Zwei</div>
+        <div class="es-card-pages">68 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SX3">
+      <img src="images/einzelstudien/einzelstudie-sx3.jpg" alt="Literarisches Porträt SX3 – Die sexuelle Drei" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SX3</div>
+        <div class="es-card-title">Die sexuelle Drei</div>
+        <div class="es-card-pages">70 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SX4">
+      <img src="images/einzelstudien/einzelstudie-sx4.jpg" alt="Literarisches Porträt SX4 – Die sexuelle Vier" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SX4</div>
+        <div class="es-card-title">Die sexuelle Vier</div>
+        <div class="es-card-pages">69 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SX5">
+      <img src="images/einzelstudien/einzelstudie-sx5.jpg" alt="Literarisches Porträt SX5 – Die sexuelle Fünf" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SX5</div>
+        <div class="es-card-title">Die sexuelle Fünf</div>
+        <div class="es-card-pages">76 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SX6">
+      <img src="images/einzelstudien/einzelstudie-sx6.jpg" alt="Literarisches Porträt SX6 – Die sexuelle Sechs" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SX6</div>
+        <div class="es-card-title">Die sexuelle Sechs</div>
+        <div class="es-card-pages">68 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SX7">
+      <img src="images/einzelstudien/einzelstudie-sx7.jpg" alt="Literarisches Porträt SX7 – Die sexuelle Sieben" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SX7</div>
+        <div class="es-card-title">Die sexuelle Sieben</div>
+        <div class="es-card-pages">65 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SX8">
+      <img src="images/einzelstudien/einzelstudie-sx8.jpg" alt="Literarisches Porträt SX8 – Die sexuelle Acht" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SX8</div>
+        <div class="es-card-title">Die sexuelle Acht</div>
+        <div class="es-card-pages">69 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+    <a class="es-card" href="stripe-checkout.html?product=einzelstudie&price=1495&title=Literarisches%20Portr%C3%A4t%20SX9">
+      <img src="images/einzelstudien/einzelstudie-sx9.jpg" alt="Literarisches Porträt SX9 – Die sexuelle Neun" class="es-card-img" loading="lazy">
+      <div class="es-card-body">
+        <div class="es-card-code">SX9</div>
+        <div class="es-card-title">Die sexuelle Neun</div>
+        <div class="es-card-pages">68 Seiten</div>
+        <span class="es-card-btn">14,95 € bestellen</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- FULL BOOK CTA -->
+<div class="es-full-book">
+  <div class="es-full-book-inner">
+    <h2>Alle 27 Porträts in einem Werk</h2>
+    <p>Das Gesamtwerk »Gesichter des inneren Feuers« vereint alle 27 literarischen Porträts auf über 1036 Seiten – das umfassendste psychologische Romanwerk zu den Enneagramm-Subtypen.</p>
+    <a href="buch.html?id=gesichter-des-inneren-feuers-das-neue-enneagramm-buch" class="btn-gold">Zum Gesamtwerk · 99,95 €</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-logo"><img src="Logo-vr.png" alt="VR" class="footer-logo-img" loading="lazy">Verlagshaus Rathmer</span>
+    <ul class="footer-links">
+      <li><a href="impressum.html">Impressum</a></li>
+      <li><a href="agb.html">AGB</a></li>
+      <li><a href="widerruf.html">Widerruf</a></li>
+      <li><a href="datenschutz.html">Datenschutz</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">© 2026 Verlagshaus Rathmer · Detlef Rathmer · Molkereiweg 9 · 48727 Billerbeck</div>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open'); this.classList.toggle('open');
+  });
+  document.getElementById('buecher-toggle').addEventListener('click', function() {
+    this.closest('.nav-has-dropdown').classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-has-dropdown')) {
+      document.querySelectorAll('.nav-has-dropdown.open').forEach(function(el) {
+        el.classList.remove('open');
+      });
+    }
+  });
+</script>
+</body>
+</html>
