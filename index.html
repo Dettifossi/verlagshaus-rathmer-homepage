@@ -268,36 +268,48 @@
 </section>
 
 <!-- ==================== NEWSLETTER ==================== -->
-<section class="section" style="background:var(--anthracite);border-top:2px solid var(--gold);">
-  <div class="section-inner" style="max-width:600px;text-align:center;">
-    <p class="eyebrow-style" style="color:var(--gold);">Kostenlos & jederzeit abbestellbar</p>
-    <h2 style="color:var(--cream);font-size:1.8rem;margin-bottom:0.75rem;">Newsletter von Detlef Rathmer</h2>
-    <p style="color:#bbb;line-height:1.75;margin-bottom:1.5rem;">Neue Bücher, Enneagramm-Wissen, Homöopathie-Einblicke und persönliche Gedanken — direkt in Ihr Postfach. Keine Werbung, kein Spam.</p>
-    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+<section style="background:var(--anthracite);padding:4rem 1.5rem;position:relative;overflow:hidden;">
+  <!-- Dekorative Goldlinie oben -->
+  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);"></div>
+  <!-- Dekoratives Ornament -->
+  <div style="text-align:center;color:var(--gold);font-size:1.4rem;letter-spacing:0.4em;margin-bottom:1rem;opacity:0.6;">✦ ✦ ✦</div>
+  <div style="max-width:560px;margin:0 auto;text-align:center;">
+    <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin:0 0 0.6rem;">Kostenlos &amp; jederzeit abbestellbar</p>
+    <h2 style="color:var(--cream);font-family:'EB Garamond',serif;font-size:2rem;font-weight:400;margin:0 0 1rem;line-height:1.25;">Newsletter von<br>Detlef Rathmer</h2>
+    <p style="color:#c8bfb0;line-height:1.8;margin:0 0 2rem;font-size:1rem;">Neue Bücher, Enneagramm-Wissen, Homöopathie-Einblicke<br>und persönliche Gedanken — direkt in Ihr Postfach.<br><em style="color:#a89880;">Keine Werbung, kein Spam.</em></p>
+
     <style>
-      #mc_embed_signup { background: transparent !important; }
-      #mc_embed_signup form { padding: 0 !important; }
-      #mc_embed_signup h2 { display: none; }
-      #mc_embed_signup .indicates-required { display: none; }
-      #mc_embed_signup .mc-field-group { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 0.75rem; }
-      #mc_embed_signup .mc-field-group label { display: none; }
-      #mc_embed_signup input.email { background: #fff; border: 1px solid var(--gold); border-radius: 4px; padding: 0.65rem 1rem; font-size: 1rem; width: 280px; color: var(--anthracite); }
-      #mc_embed_signup input.button { background: var(--gold); color: #fff; border: none; border-radius: 4px; padding: 0.65rem 1.5rem; font-size: 1rem; font-family: inherit; cursor: pointer; font-weight: 600; letter-spacing: 0.05em; }
-      #mc_embed_signup input.button:hover { background: var(--gold-dark, #8a6f3a); }
-      #mc_embed_signup .foot { justify-content: center !important; }
-      #mc_embed_signup .refferal_badge { display: none !important; }
-      #mc_embed_signup p[style] { display: none !important; }
-      #mce-responses { margin-top: 0.5rem; }
-      #mce-success-response { color: #6fcf97; }
-      #mce-error-response { color: #ff6b6b; }
+      #mc_embed_signup { background:transparent !important; }
+      #mc_embed_signup form { padding:0 !important; }
+      #mc_embed_signup h2, #mc_embed_signup .indicates-required { display:none !important; }
+      #mc_embed_signup .mc-field-group { margin:0 !important; }
+      #mc_embed_signup .mc-field-group label { display:none; }
+      .nl-row { display:flex; gap:0; max-width:460px; margin:0 auto 0.75rem; border-radius:6px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.4); }
+      #mce-EMAIL { flex:1; border:none; padding:0.9rem 1.2rem; font-size:1rem; color:var(--anthracite); background:#fff; outline:none; min-width:0; }
+      #mce-EMAIL::placeholder { color:#999; }
+      #mc-embedded-subscribe { border:none; background:var(--gold); color:#fff; padding:0.9rem 1.4rem; font-size:0.95rem; font-family:inherit; font-weight:700; letter-spacing:0.06em; cursor:pointer; white-space:nowrap; transition:background 0.2s; }
+      #mc-embedded-subscribe:hover { background:var(--gold-dark,#8a6f3a); }
+      #mc_embed_signup .foot, #mc_embed_signup p[style] { display:none !important; }
+      #mc_embed_signup .refferal_badge { display:none !important; }
+      #mce-responses { margin-top:0.75rem; font-size:0.9rem; }
+      #mce-success-response { color:#a8d8a8; }
+      #mce-error-response { color:#ffaaaa; }
+      @media(max-width:480px){
+        .nl-row { flex-direction:column; border-radius:6px; }
+        #mce-EMAIL { border-radius:6px 6px 0 0; text-align:center; }
+        #mc-embedded-subscribe { border-radius:0 0 6px 6px; width:100%; padding:1rem; }
+      }
     </style>
+
     <div id="mc_embed_signup">
       <form action="https://psychologische-homoeopathie.us18.list-manage.com/subscribe/post?u=647fcca0d4b01379d1f0866c4&amp;id=8e9fede1d7&amp;f_id=0096ade6f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
         <div id="mc_embed_signup_scroll">
           <div class="mc-field-group">
             <label for="mce-EMAIL">E-Mail-Adresse</label>
-            <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required placeholder="Ihre E-Mail-Adresse">
-            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Anmelden">
+            <div class="nl-row">
+              <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required placeholder="Ihre E-Mail-Adresse">
+              <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Anmelden →">
+            </div>
           </div>
           <div id="mce-responses" class="clear">
             <div class="response" id="mce-error-response" style="display:none;"></div>
@@ -311,7 +323,11 @@
     </div>
     <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
     <script type="text/javascript">(function($){window.fnames=new Array();window.ftypes=new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj=jQuery.noConflict(true);</script>
+
+    <p style="margin:1.5rem 0 0;font-size:0.8rem;color:#6b6055;">Bereits über 295 Leserinnen und Leser erhalten diesen Newsletter.</p>
   </div>
+  <!-- Dekorative Goldlinie unten -->
+  <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);"></div>
 </section>
 
 <!-- ==================== FOOTER ==================== -->
