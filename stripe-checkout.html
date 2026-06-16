@@ -413,6 +413,15 @@ const STRIPE_LINKS = {
     document.getElementById('productPrice').textContent = euros + ' €';
   }
 
+  // Einzelstudie: Hinweis auf Subtyp-Eingabe anzeigen
+  if (product === 'einzelstudie') {
+    const hint = document.createElement('div');
+    hint.style.cssText = 'background:#fffbf0;border:1px solid #c9a84c;border-radius:6px;padding:1rem 1.2rem;margin-bottom:1.2rem;font-size:0.93rem;line-height:1.65;color:#444;';
+    hint.innerHTML = '<strong style="color:#2c2c2c;">Wichtiger Hinweis:</strong> Auf der Stripe-Zahlungsseite gibt es ein Pflichtfeld. Tragen Sie dort bitte ein: <strong>Ihren gewünschten Subtyp und Ihren Namen</strong> – z.&thinsp;B. <em>»SO4 – Maria Muster«</em>. Das E-Book wird dann persönlich auf Sie lizenziert.';
+    const block = document.querySelector('.stripe-block');
+    if (block) block.insertBefore(hint, block.firstChild);
+  }
+
   // Stripe-Link suchen
   const stripeLink = STRIPE_LINKS[product];
   const btn = document.getElementById('stripePayBtn');
