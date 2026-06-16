@@ -127,6 +127,8 @@
   <!-- Bücherregal -->
   <div class="hero-shelf">
     <div class="hero-shelf-row">
+      <a href="buch.html?slug=der-code-deiner-persoenlichkeit" class="shelf-vol" title="Der Code deiner Persönlichkeit"><img src="images/2025/09/89ff581c-5628-41e8-9297-f9de3c22ac64.jpeg" alt="Der Code deiner Persönlichkeit" loading="lazy"></a>
+      <a href="buch.html?slug=die-sprache-unserer-beziehungen" class="shelf-vol" title="Die Sprache unserer Beziehungen"><img src="images/2025/12/Die_Sprache_unserer_Beziehungen.webp" alt="Die Sprache unserer Beziehungen" loading="lazy"></a>
       <a href="enneagramm.html" class="shelf-vol" title="Die verborgene Dynamik der 27 Subtypen"><img src="images/2026/05/Die_verborgene_Dynamik_der_27_Subtypen.webp" onerror="this.onerror=null;this.src='images/2026/05/Die_verborgene_Dynamik_der_27_Subtypen-300x300.webp';" alt="Die verborgene Dynamik der 27 Subtypen" loading="lazy"></a>
       <a href="neuerscheinungen.html" class="shelf-vol" title="Führung mit Fundament"><img src="images/2026/05/Fuehrung_mit_Fundament.webp" onerror="this.onerror=null;this.src='images/2026/05/Fuehrung_mit_Fundament-300x300.webp';" alt="Führung mit Fundament" loading="lazy"></a>
       <a href="persoenliche-entwicklung.html" class="shelf-vol" title="Heilung als Erinnerung"><img src="images/2026/03/Heilung_als_Erinnerung.webp" onerror="this.onerror=null;this.src='images/2026/03/Heilung_als_Erinnerung-300x300.webp';" alt="Heilung als Erinnerung" loading="lazy"></a>
@@ -134,6 +136,9 @@
       <a href="persoenliche-entwicklung.html" class="shelf-vol" title="Du bist nicht dein Zweifel"><img src="images/2026/03/Du_bist_nicht_dein_Zweifel.webp" onerror="this.onerror=null;this.src='images/2026/03/Du_bist_nicht_dein_Zweifel-300x300.webp';" alt="Du bist nicht dein Zweifel" loading="lazy"></a>
       <a href="enneagramm.html" class="shelf-vol" title="Enneagramm-Zoo"><img src="images/2025/11/Enneagramm-Zoo.webp" onerror="this.onerror=null;this.src='images/2025/11/Enneagramm-Zoo-300x300.webp';" alt="Enneagramm-Zoo" loading="lazy"></a>
       <a href="persoenliche-entwicklung.html" class="shelf-vol" title="Leidenschaft und Heilung"><img src="images/2025/10/Leidenschaft_und_Heilung.webp" onerror="this.onerror=null;this.src='images/2025/10/Leidenschaft_und_Heilung-300x300.webp';" alt="Leidenschaft und Heilung" loading="lazy"></a>
+      <a href="buch.html?slug=das-seminar-wenn-masken-fallen" class="shelf-vol" title="Das Seminar – Wenn Masken fallen"><img src="images/2025/09/c47f43b0-fbb1-4990-81fb-e36730c29ee4.jpeg" alt="Das Seminar – Wenn Masken fallen" loading="lazy"></a>
+      <a href="buch.html?slug=die-sprache-unserer-sexualitaet" class="shelf-vol" title="Die Sprache unserer Sexualität"><img src="images/2025/10/Die_Sprache_unserer_Sexualitaet.webp" alt="Die Sprache unserer Sexualität" loading="lazy"></a>
+      <a href="buch.html?slug=chrono-ennea-typ-ernaehrung-im-rhythmus-der-organe" class="shelf-vol" title="Chrono-Ennea-Typ"><img src="images/2025/08/IMG_3816-2.webp" alt="Chrono-Ennea-Typ" loading="lazy"></a>
     </div>
     <div class="hero-shelf-plank"></div>
   </div>
@@ -425,5 +430,37 @@
 })();
 </script>
 <script src="animations.js?v=3"></script>
+<script>
+(function() {
+  var row = document.querySelector('.hero-shelf-row');
+  if (!row) return;
+  var isDown = false, startX, scrollLeft, moved = false;
+  row.addEventListener('mousedown', function(e) {
+    isDown = true; moved = false;
+    startX = e.pageX - row.offsetLeft;
+    scrollLeft = row.scrollLeft;
+    row.classList.add('grabbing');
+  });
+  row.addEventListener('mouseleave', function() { isDown = false; row.classList.remove('grabbing'); });
+  row.addEventListener('mouseup', function() { isDown = false; row.classList.remove('grabbing'); });
+  row.addEventListener('mousemove', function(e) {
+    if (!isDown) return;
+    e.preventDefault();
+    var x = e.pageX - row.offsetLeft;
+    var walk = (x - startX) * 1.5;
+    if (Math.abs(walk) > 4) moved = true;
+    row.scrollLeft = scrollLeft - walk;
+  });
+  row.addEventListener('click', function(e) {
+    if (moved) e.preventDefault();
+  }, true);
+  // Beim Laden zur Mitte scrollen (Wer du wirklich bist zentriert)
+  var tall = row.querySelector('.tall');
+  if (tall) {
+    var offset = tall.offsetLeft - (row.offsetWidth / 2) + (tall.offsetWidth / 2);
+    row.scrollLeft = offset;
+  }
+})();
+</script>
 </body>
 </html>
