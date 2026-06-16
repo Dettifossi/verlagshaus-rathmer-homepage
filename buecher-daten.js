@@ -775,6 +775,7 @@ const BUECHER_DATEN = {
     gallery: ["images/2026/05/Werbung-In-der-Tiefe-der-Zeit.jpg", "images/2025/09/WERBUNG-IN-DER-TIEFE-DER-ZEIT-MIT-AUTOR.jpg"],
     youtubeId: "KA1l-Az0ec0",
     youtubeShort: true,
+    giftTip: "Ein wunderbares Geschenk für Menschen, die tiefer schauen möchten. Einfach beim Besteller eine Lieferadresse des Beschenkten angeben.",
   },
 
   "das-seminar-wenn-masken-fallen": {
@@ -788,6 +789,7 @@ const BUECHER_DATEN = {
     orderType: "bod",
     bodUrl: "https://buchshop.bod.de/das-seminar-wenn-masken-fallen-detlef-rathmer-9783819225871",
     gallery: ["images/2026/05/Werbung-Das-Seminar-wenn-Masken-fallen.jpg", "images/2025/09/WERBUNG-DAS-SEMINAR-AUTOR.jpg"],
+    giftTip: "Ein außergewöhnliches Geschenk für Menschen, die psychologische Tiefe und packende Geschichten lieben. Einfach beim Bestellen eine Lieferadresse des Beschenkten angeben.",
   },
 
   "der-weltweit-erste-enneagramm-wandkalender-xxl-a3": {

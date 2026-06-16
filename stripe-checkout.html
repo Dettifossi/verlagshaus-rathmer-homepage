@@ -429,7 +429,7 @@ const STRIPE_LINKS = {
   if (product === 'einzelstudie') {
     const hint = document.createElement('div');
     hint.style.cssText = 'background:#fffbf0;border:1px solid #c9a84c;border-radius:6px;padding:1rem 1.2rem;margin-bottom:1.2rem;font-size:0.93rem;line-height:1.65;color:#444;';
-    hint.innerHTML = '<strong style="color:#2c2c2c;">Wichtiger Hinweis:</strong> Auf der Stripe-Zahlungsseite gibt es ein Pflichtfeld. Tragen Sie dort bitte ein: <strong>Ihren gewünschten Subtyp und Ihren Namen</strong> – z.&thinsp;B. <em>»SO4 – Maria Muster«</em>. Das E-Book wird dann persönlich auf Sie lizenziert.';
+    hint.innerHTML = '<strong style="color:#2c2c2c;">Wichtiger Hinweis:</strong> Auf der Stripe-Zahlungsseite gibt es ein Pflichtfeld. Tragen Sie dort bitte ein: <strong>Subtyp und Name</strong> – z.&thinsp;B. <em>»SO4 – Maria Muster«</em>. Das E-Book wird dann persönlich auf diesen Namen lizenziert.<br><span style="margin-top:0.5rem;display:block;">🎁 <strong>Als Geschenk?</strong> Einfach den <strong>Namen des Beschenkten</strong> eintragen – das Porträt wird auf ihn/sie ausgestellt. Ein einzigartiges, persönliches Geschenk.</span>';
     const block = document.querySelector('.stripe-block');
     if (block) block.insertBefore(hint, block.firstChild);
   }
