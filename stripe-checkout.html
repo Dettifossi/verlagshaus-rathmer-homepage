@@ -396,6 +396,18 @@ const STRIPE_LINKS = {
     if (si) si.style.display = 'none';
     const cb = document.getElementById('digitalConsent');
     if (cb) cb.style.display = 'block';
+
+    // Texte anpassen: kein Versand, kein Porto bei E-Books
+    const altDesc = document.querySelector('.alt-block p');
+    if (altDesc) altDesc.textContent = 'Schreiben Sie eine kurze Nachricht mit dem Titel des gewünschten E-Books – Sie erhalten umgehend Rückmeldung zu Zahlungsmodalitäten.';
+
+    const secNote = document.querySelector('.security-note');
+    if (secNote) {
+      const svg = secNote.querySelector('svg');
+      secNote.textContent = '';
+      if (svg) secNote.appendChild(svg);
+      secNote.appendChild(document.createTextNode(' Ihre Daten sind sicher. Zahlungen über Stripe werden verschlüsselt verarbeitet. Der Verlag erhält keine Kartendaten. Lieferung als PDF per SwissTransfer nach Zahlungseingang – kein Versand, keine Portkosten.'));
+    }
   }
 
   // Kalender: Einzelanfertigung auf Bestellung, kein Widerrufsrecht (§312g Abs. 2 Nr. 1 BGB)
@@ -462,7 +474,10 @@ const STRIPE_LINKS = {
 
   // E-Mail-Link
   const emailLink = document.getElementById('emailLink');
-  emailLink.href = 'mailto:detlefrathmer@t-online.de?subject=' + encodeURIComponent('Bestellung: ' + title) + '&body=' + encodeURIComponent('Hallo,\n\nich möchte folgendes Produkt bestellen:\n\n' + title + '\n\nBitte teilen Sie mir Versandkosten und Zahlungsmodalitäten mit.\n\nMit freundlichen Grüßen');
+  const emailBody = isDigital
+    ? 'Hallo,\n\nich möchte folgendes E-Book bestellen:\n\n' + title + '\n\nBitte teilen Sie mir die Zahlungsmodalitäten mit.\n\nMit freundlichen Grüßen'
+    : 'Hallo,\n\nich möchte folgendes Produkt bestellen:\n\n' + title + '\n\nBitte teilen Sie mir Versandkosten und Zahlungsmodalitäten mit.\n\nMit freundlichen Grüßen';
+  emailLink.href = 'mailto:detlefrathmer@t-online.de?subject=' + encodeURIComponent('Bestellung: ' + title) + '&body=' + encodeURIComponent(emailBody);
 })();
 </script>
 
