@@ -184,6 +184,7 @@ const BUECHER_DATEN = {
     category: "enneagramm",
     orderType: "bod",
     bodUrl: "https://buchshop.bod.de/der-code-deiner-persoenlichkeit-detlef-rathmer-9783695192557",
+    giftTip: "Ein wertvolles Geschenk für Menschen, die sich selbst und andere besser verstehen möchten – ideal für alle, die ihren Enneagramm-Typ noch suchen.",
   },
 
   "rathmer-s-grosses-enneagramm-lexikon-von-a-z-hardcover": {
@@ -238,6 +239,7 @@ const BUECHER_DATEN = {
     gallery: ["images/2025/11/Werbung-Enneagramm-Zoo.jpg", "images/2025/11/ENNEAGRAMM-ZOO-MIT-AUTOR.jpg"],
     youtubeId: "8PJamrmpTnI",
     youtubeShort: true,
+    giftTip: "Ein wunderbares, humorvolles Geschenk für alle, die sich selbst und andere besser verstehen möchten – zugänglich und tiefgründig zugleich.",
   },
 
   "archetypen-der-tiere-im-enneagramm": {
@@ -721,6 +723,7 @@ const BUECHER_DATEN = {
     category: "persoenliche-entwicklung",
     orderType: "bod",
     bodUrl: "https://buchshop.bod.de/die-sprache-unserer-beziehungen-detlef-rathmer-9783695162215",
+    giftTip: "Ein einfühlsames Geschenk für Paare, Freunde oder Menschen, die ihre Beziehungen tiefer verstehen möchten.",
   },
 
   "leidenschaft-und-heilung": {
@@ -747,6 +750,7 @@ const BUECHER_DATEN = {
     orderType: "bod",
     bodUrl: "https://buchshop.bod.de/die-sprache-unserer-sexualitaet-detlef-rathmer-9783695158706",
     gallery: ["images/2026/05/Werbung-Die-Sprache-unserer-Sexualitaet.jpg", "images/2025/10/DIE-SPRACHE-UNSERER-SEXUALITAeT-MIT-AUTOR.jpg", "images/2025/10/DIE-SPRACHE-UNSERER-SEXUALITAeT-OHNE-AUTOR.jpg"],
+    giftTip: "Ein besonderes Geschenk für Partner oder enge Vertraute – tiefgründig, ehrlich und einladend zugleich.",
   },
 
   "the-code-of-your-personality": {
