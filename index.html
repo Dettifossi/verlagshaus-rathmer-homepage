@@ -150,8 +150,8 @@
     <div class="vr-sa-slider">
       <div class="vr-sa-slider__track" id="saTrack">
         <a href="buch.html?slug=wer-du-wirklich-bist-band-1" class="vr-sa-slider__slide" style="transform:translateX(0%)"><img src="images/2019/05/A-Cover-Wer-du-wirklich-bist.jpg" alt="Wer du wirklich bist – Cover"></a>
-        <a href="buch.html?slug=wer-du-wirklich-bist-band-1" class="vr-sa-slider__slide" style="transform:translateX(100%)"><img src="images/2019/01/Werbung-Wer-du-wirklich-bist.jpg" alt="Wer du wirklich bist – Innenansicht"></a>
-        <a href="buch.html?slug=wer-du-wirklich-bist-band-1" class="vr-sa-slider__slide" style="transform:translateX(200%)"><img src="images/2019/01/WER-DU-WIRKLICH-BIST-BAND-1-MIT-AUTOR.jpg" alt="Wer du wirklich bist – mit Autor"></a>
+        <a href="buch.html?slug=wer-du-wirklich-bist-band-1" class="vr-sa-slider__slide" style="transform:translateX(0%)"><img src="images/2019/01/Werbung-Wer-du-wirklich-bist.jpg" alt="Wer du wirklich bist – Innenansicht" style="object-fit:contain;background:#f5f0e8"></a>
+        <a href="buch.html?slug=wer-du-wirklich-bist-band-1" class="vr-sa-slider__slide" style="transform:translateX(0%)"><img src="images/2019/01/WER-DU-WIRKLICH-BIST-BAND-1-MIT-AUTOR.jpg" alt="Wer du wirklich bist – mit Autor"></a>
       </div>
       <div class="vr-sa-slider__dots" id="saDots">
         <button class="vr-sa-dot active" data-i="0" aria-label="Bild 1"></button>
@@ -472,7 +472,7 @@
   var cur = 0, startX = 0, dragging = false;
   function goTo(i) {
     cur = (i + slides.length) % slides.length;
-    slides.forEach(function(s, idx) { s.style.transform = 'translateX(' + ((idx - cur) * 100) + '%)'; });
+    slides.forEach(function(s) { s.style.transform = 'translateX(' + (-cur * 100) + '%)'; });
     dots.forEach(function(d, idx) { d.classList.toggle('active', idx === cur); });
   }
   goTo(0);
