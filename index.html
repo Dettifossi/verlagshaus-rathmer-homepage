@@ -516,6 +516,7 @@
   var row = document.querySelector('.hero-shelf-row');
   if (!row) return;
 
+  // Klonen
   var origItems = Array.from(row.children);
   var origCount = origItems.length;
   origItems.forEach(function(item) {
@@ -529,25 +530,31 @@
   var paused = false;
   var resumeTimer = null;
 
-  function setPos(p) {
-    if (halfWidth > 0) p = ((p % halfWidth) + halfWidth) % halfWidth;
-    pos = p;
+  // Bilder sollen Drag nicht stören
+  row.style.userSelect = 'none';
+  row.querySelectorAll('img').forEach(function(img) { img.draggable = false; });
+
+  function wrap(p) {
+    if (halfWidth <= 0) return p;
+    return ((p % halfWidth) + halfWidth) % halfWidth;
+  }
+
+  function applyPos() {
     row.style.transform = 'translateX(-' + (pos | 0) + 'px)';
   }
 
-  function pause() {
-    paused = true;
+  function resumeAfter(ms) {
     clearTimeout(resumeTimer);
-    resumeTimer = setTimeout(function() { paused = false; }, 2000);
+    resumeTimer = setTimeout(function() { paused = false; }, ms);
   }
 
   function measureHalfWidth() {
-    // Kurz transform auf 0 setzen, dann mit getBoundingClientRect messen
-    row.style.transform = 'translateX(0px)';
+    var saved = row.style.transform;
+    row.style.transform = 'none';
     var rowLeft = row.getBoundingClientRect().left;
     var firstClone = row.children[origCount];
-    var w = firstClone ? (firstClone.getBoundingClientRect().left - rowLeft) : 0;
-    row.style.transform = 'translateX(-' + (pos | 0) + 'px)';
+    var w = firstClone ? firstClone.getBoundingClientRect().left - rowLeft : 0;
+    row.style.transform = saved;
     return w;
   }
 
@@ -558,7 +565,7 @@
       if (!paused) {
         pos += 0.8;
         if (pos >= halfWidth) pos -= halfWidth;
-        row.style.transform = 'translateX(-' + (pos | 0) + 'px)';
+        applyPos();
       }
       requestAnimationFrame(step);
     }
@@ -571,45 +578,42 @@
     window.addEventListener('load', function() { setTimeout(startScroll, 100); });
   }
 
-  // Maus-Drag
-  row.style.userSelect = 'none';
-  var moved = false;
-  row.addEventListener('mousedown', function(e) {
-    var startX = e.clientX, startPos = pos;
-    moved = false;
-    pause();
-    row.style.cursor = 'grabbing';
-    function onMove(e) {
-      var dx = startX - e.clientX;
-      if (Math.abs(dx) > 4) moved = true;
-      setPos(startPos + dx);
-    }
-    function onUp() {
-      window.removeEventListener('mousemove', onMove);
-      window.removeEventListener('mouseup', onUp);
-      row.style.cursor = 'grab';
-    }
-    window.addEventListener('mousemove', onMove);
-    window.addEventListener('mouseup', onUp);
-  });
-  row.addEventListener('click', function(e) {
-    if (moved) { e.preventDefault(); moved = false; }
-  }, true);
+  // Pointer Events (Maus + Touch in einem)
+  var dragging = false, startX = 0, startPos = 0, totalDx = 0;
 
-  // Touch-Drag
-  row.addEventListener('touchstart', function(e) {
-    var startX = e.touches[0].clientX, startPos = pos;
-    pause();
-    function onMove(e) {
-      setPos(startPos + (startX - e.touches[0].clientX));
-    }
-    function onEnd() {
-      row.removeEventListener('touchmove', onMove);
-      row.removeEventListener('touchend', onEnd);
-    }
-    row.addEventListener('touchmove', onMove, {passive:true});
-    row.addEventListener('touchend', onEnd, {passive:true});
-  }, {passive:true});
+  row.addEventListener('pointerdown', function(e) {
+    dragging = true;
+    paused = true;
+    clearTimeout(resumeTimer);
+    startX = e.clientX;
+    startPos = pos;
+    totalDx = 0;
+    row.setPointerCapture(e.pointerId);
+    row.style.cursor = 'grabbing';
+    e.preventDefault();
+  });
+
+  row.addEventListener('pointermove', function(e) {
+    if (!dragging) return;
+    var dx = startX - e.clientX;
+    totalDx = dx;
+    pos = wrap(startPos + dx);
+    applyPos();
+  });
+
+  function onDragEnd(e) {
+    if (!dragging) return;
+    dragging = false;
+    row.style.cursor = 'grab';
+    resumeAfter(2000);
+  }
+  row.addEventListener('pointerup', onDragEnd);
+  row.addEventListener('pointercancel', onDragEnd);
+
+  // Klick auf Buchcover trotzdem erlauben (wenn kaum bewegt)
+  row.addEventListener('click', function(e) {
+    if (Math.abs(totalDx) > 8) e.preventDefault();
+  }, true);
 })();
 </script>
 </body>
