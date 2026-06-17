@@ -306,6 +306,11 @@ img { display: block; max-width: 100%; }
   overflow: hidden;
 }
 
+@keyframes shelfScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-1 * var(--shelf-w, 4000px))); }
+}
+
 .hero-shelf-row {
   display: flex;
   align-items: flex-end;
@@ -314,9 +319,14 @@ img { display: block; max-width: 100%; }
   min-height: 240px;
   overflow-x: visible;
   padding: 0 2rem 0.5rem;
-  cursor: grab;
   will-change: transform;
   touch-action: pan-y;
+}
+
+/* Pause bei Hover (Desktop) und Touch (Mobil) */
+.hero-shelf:hover .hero-shelf-row,
+.hero-shelf:active .hero-shelf-row {
+  animation-play-state: paused;
 }
 .hero-shelf-row::-webkit-scrollbar { display: none; }
 .hero-shelf-row.grabbing { cursor: grabbing; }

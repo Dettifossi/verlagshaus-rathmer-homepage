@@ -18,7 +18,7 @@
   <meta property="og:url" content="https://www.verlagshausrathmer.com/">
   <meta property="og:image" content="https://www.verlagshausrathmer.com/Logo-vr.png">
   <meta name="twitter:card" content="summary">
-  <link rel="stylesheet" href="styles.css?v=16">
+  <link rel="stylesheet" href="styles.css?v=17">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -516,7 +516,7 @@
   var row = document.querySelector('.hero-shelf-row');
   if (!row) return;
 
-  // Klonen
+  // Klonen für Endlosschleife
   var origItems = Array.from(row.children);
   var origCount = origItems.length;
   origItems.forEach(function(item) {
@@ -525,95 +525,26 @@
     row.appendChild(clone);
   });
 
-  var pos = 0;
-  var halfWidth = 0;
-  var paused = false;
-  var resumeTimer = null;
-
-  // Bilder sollen Drag nicht stören
-  row.style.userSelect = 'none';
-  row.querySelectorAll('img').forEach(function(img) { img.draggable = false; });
-
-  function wrap(p) {
-    if (halfWidth <= 0) return p;
-    return ((p % halfWidth) + halfWidth) % halfWidth;
-  }
-
-  function applyPos() {
-    row.style.transform = 'translateX(-' + (pos | 0) + 'px)';
-  }
-
-  function resumeAfter(ms) {
-    clearTimeout(resumeTimer);
-    resumeTimer = setTimeout(function() { paused = false; }, ms);
-  }
-
-  function measureHalfWidth() {
-    var saved = row.style.transform;
-    row.style.transform = 'none';
-    var rowLeft = row.getBoundingClientRect().left;
+  function start() {
+    // Breite der Originale messen
+    row.style.animation = 'none';
     var firstClone = row.children[origCount];
-    var w = firstClone ? firstClone.getBoundingClientRect().left - rowLeft : 0;
-    row.style.transform = saved;
-    return w;
-  }
+    if (!firstClone) return;
+    var rowLeft = row.getBoundingClientRect().left;
+    var cloneLeft = firstClone.getBoundingClientRect().left;
+    var w = cloneLeft - rowLeft;
+    if (w < 100) { setTimeout(start, 400); return; }
 
-  function startScroll() {
-    halfWidth = measureHalfWidth();
-    if (halfWidth < 100) { setTimeout(startScroll, 400); return; }
-    function step() {
-      if (!paused) {
-        pos += 0.8;
-        if (pos >= halfWidth) pos -= halfWidth;
-        applyPos();
-      }
-      requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
+    // CSS-Variable setzen und Animation starten
+    row.style.setProperty('--shelf-w', w + 'px');
+    row.style.animation = 'shelfScroll 60s linear infinite';
   }
 
   if (document.readyState === 'complete') {
-    setTimeout(startScroll, 100);
+    setTimeout(start, 100);
   } else {
-    window.addEventListener('load', function() { setTimeout(startScroll, 100); });
+    window.addEventListener('load', function() { setTimeout(start, 100); });
   }
-
-  // Pointer Events (Maus + Touch in einem)
-  var dragging = false, startX = 0, startPos = 0, totalDx = 0;
-
-  row.addEventListener('pointerdown', function(e) {
-    dragging = true;
-    paused = true;
-    clearTimeout(resumeTimer);
-    startX = e.clientX;
-    startPos = pos;
-    totalDx = 0;
-    row.setPointerCapture(e.pointerId);
-    row.style.cursor = 'grabbing';
-    e.preventDefault();
-  });
-
-  row.addEventListener('pointermove', function(e) {
-    if (!dragging) return;
-    var dx = startX - e.clientX;
-    totalDx = dx;
-    pos = wrap(startPos + dx);
-    applyPos();
-  });
-
-  function onDragEnd(e) {
-    if (!dragging) return;
-    dragging = false;
-    row.style.cursor = 'grab';
-    resumeAfter(2000);
-  }
-  row.addEventListener('pointerup', onDragEnd);
-  row.addEventListener('pointercancel', onDragEnd);
-
-  // Klick auf Buchcover trotzdem erlauben (wenn kaum bewegt)
-  row.addEventListener('click', function(e) {
-    if (Math.abs(totalDx) > 8) e.preventDefault();
-  }, true);
 })();
 </script>
 </body>
