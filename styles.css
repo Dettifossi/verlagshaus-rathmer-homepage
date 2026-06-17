@@ -1338,9 +1338,8 @@ img { display: block; max-width: 100%; }
   .hero-shelf-row {
     justify-content: flex-start;
     gap: 1rem;
-    overflow-x: auto;
+    overflow-x: visible;
     padding-bottom: 0.5rem;
-    -webkit-overflow-scrolling: touch;
   }
   .shelf-vol img { height: 170px; }
   .shelf-vol.tall img { height: 190px; }
