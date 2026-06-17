@@ -516,7 +516,6 @@
   var row = document.querySelector('.hero-shelf-row');
   if (!row) return;
 
-  // Original-Anzahl merken, dann klonen
   var origItems = Array.from(row.children);
   var origCount = origItems.length;
   origItems.forEach(function(item) {
@@ -527,35 +526,40 @@
 
   var pos = 0;
   var halfWidth = 0;
-  var isDragging = false;
-  var dragStartX = 0;
-  var dragOffset = 0;
-  var moved = false;
+  var paused = false;
+  var resumeTimer = null;
+
+  function setPos(p) {
+    if (halfWidth > 0) p = ((p % halfWidth) + halfWidth) % halfWidth;
+    pos = p;
+    row.style.transform = 'translateX(-' + (pos | 0) + 'px)';
+  }
+
+  function pause() {
+    paused = true;
+    clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(function() { paused = false; }, 2000);
+  }
 
   function measureHalfWidth() {
-    // Zuverlässigste Methode: offsetLeft des ersten Klons = Ende der Originale
+    // Kurz transform auf 0 setzen, dann mit getBoundingClientRect messen
+    row.style.transform = 'translateX(0px)';
+    var rowLeft = row.getBoundingClientRect().left;
     var firstClone = row.children[origCount];
-    if (firstClone) {
-      var w = firstClone.offsetLeft;
-      if (w > 100) return w;
-    }
-    return 0;
+    var w = firstClone ? (firstClone.getBoundingClientRect().left - rowLeft) : 0;
+    row.style.transform = 'translateX(-' + (pos | 0) + 'px)';
+    return w;
   }
 
   function startScroll() {
     halfWidth = measureHalfWidth();
-    if (halfWidth < 100) {
-      // Noch nicht bereit, kurz warten
-      setTimeout(startScroll, 300);
-      return;
-    }
-
+    if (halfWidth < 100) { setTimeout(startScroll, 400); return; }
     function step() {
-      if (!isDragging) {
+      if (!paused) {
         pos += 0.8;
         if (pos >= halfWidth) pos -= halfWidth;
+        row.style.transform = 'translateX(-' + (pos | 0) + 'px)';
       }
-      row.style.transform = 'translateX(-' + (pos | 0) + 'px)';
       requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
@@ -568,36 +572,43 @@
   }
 
   // Maus-Drag
+  row.style.userSelect = 'none';
+  var moved = false;
   row.addEventListener('mousedown', function(e) {
-    isDragging = true; moved = false;
-    dragStartX = e.pageX; dragOffset = pos;
+    var startX = e.clientX, startPos = pos;
+    moved = false;
+    pause();
     row.style.cursor = 'grabbing';
-  });
-  window.addEventListener('mouseup', function() { isDragging = false; row.style.cursor = 'grab'; });
-  window.addEventListener('mousemove', function(e) {
-    if (!isDragging) return;
-    var dx = dragStartX - e.pageX;
-    if (Math.abs(dx) > 4) moved = true;
-    pos = ((dragOffset + dx) % halfWidth + halfWidth) % halfWidth;
+    function onMove(e) {
+      var dx = startX - e.clientX;
+      if (Math.abs(dx) > 4) moved = true;
+      setPos(startPos + dx);
+    }
+    function onUp() {
+      window.removeEventListener('mousemove', onMove);
+      window.removeEventListener('mouseup', onUp);
+      row.style.cursor = 'grab';
+    }
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseup', onUp);
   });
   row.addEventListener('click', function(e) {
     if (moved) { e.preventDefault(); moved = false; }
   }, true);
 
-  // Touch
-  var touchStartX = 0, touchPos = 0, resumeTimer = null;
+  // Touch-Drag
   row.addEventListener('touchstart', function(e) {
-    isDragging = true;
-    touchStartX = e.touches[0].clientX; touchPos = pos;
-    if (resumeTimer) clearTimeout(resumeTimer);
-  }, {passive:true});
-  row.addEventListener('touchmove', function(e) {
-    var dx = touchStartX - e.touches[0].clientX;
-    pos = ((touchPos + dx) % halfWidth + halfWidth) % halfWidth;
-  }, {passive:true});
-  row.addEventListener('touchend', function() {
-    // Nach 2 Sekunden Pause läuft der Autoscroll wieder weiter
-    resumeTimer = setTimeout(function() { isDragging = false; }, 2000);
+    var startX = e.touches[0].clientX, startPos = pos;
+    pause();
+    function onMove(e) {
+      setPos(startPos + (startX - e.touches[0].clientX));
+    }
+    function onEnd() {
+      row.removeEventListener('touchmove', onMove);
+      row.removeEventListener('touchend', onEnd);
+    }
+    row.addEventListener('touchmove', onMove, {passive:true});
+    row.addEventListener('touchend', onEnd, {passive:true});
   }, {passive:true});
 })();
 </script>
