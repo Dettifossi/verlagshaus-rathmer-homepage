@@ -350,6 +350,125 @@ img { display: block; max-width: 100%; }
 }
 
 /* === Zitat-Band === */
+/* ── Sonderangebot-Banner ── */
+.vr-sonderangebot-banner {
+  background: #FAF8F3;
+  border-top: 4px solid #C9A84C;
+  border-bottom: 1px solid #D4C9A8;
+}
+.vr-sonderangebot-banner__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.vr-sonderangebot-banner__cover-link { flex-shrink: 0; }
+.vr-sonderangebot-banner__cover {
+  height: 180px;
+  width: auto;
+  border-radius: 2px;
+  box-shadow: 0 8px 20px rgba(44,42,39,0.22);
+  transition: transform 0.3s ease;
+}
+.vr-sonderangebot-banner__cover:hover { transform: translateY(-4px); }
+.vr-sonderangebot-banner__body { flex: 1; }
+.vr-sonderangebot-banner__ribbon {
+  display: inline-block;
+  background: #C9A84C;
+  color: #FAF8F3;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.8rem;
+  border-radius: 2px;
+  margin-bottom: 0.6rem;
+}
+.vr-sonderangebot-banner__titel {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1A1A1A;
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+}
+.vr-sonderangebot-banner__untertitel {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: #6B5C3E;
+  margin-bottom: 0.7rem;
+}
+.vr-sonderangebot-banner__text {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.9rem;
+}
+.vr-sonderangebot-banner__preisblock {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  background: #F2EDD8;
+  border-left: 3px solid #C9A84C;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+}
+.vr-sonderangebot-banner__alt-preis {
+  font-size: 0.92rem;
+  color: #999;
+  text-decoration: line-through;
+  text-decoration-color: #C9A84C;
+}
+.vr-sonderangebot-banner__neu-preis {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1A1A1A;
+  line-height: 1;
+}
+.vr-sonderangebot-banner__badge {
+  background: #C9A84C;
+  color: #FAF8F3;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+}
+.vr-sonderangebot-banner__versand {
+  font-size: 0.8rem;
+  color: #888;
+  width: 100%;
+}
+.vr-sonderangebot-banner__cta {
+  display: inline-block;
+  background: #C9A84C;
+  color: #FAF8F3;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.75rem 1.8rem;
+  border-radius: 2px;
+  transition: background 0.2s ease;
+  margin-bottom: 0.6rem;
+}
+.vr-sonderangebot-banner__cta:hover { background: #A8883A; }
+.vr-sonderangebot-banner__hinweis {
+  font-size: 0.75rem;
+  color: #aaa;
+  font-style: italic;
+}
+@media (max-width: 600px) {
+  .vr-sonderangebot-banner__inner { flex-direction: column; gap: 1.2rem; }
+  .vr-sonderangebot-banner__cover { height: 140px; }
+  .vr-sonderangebot-banner__titel { font-size: 1.3rem; }
+}
+
 .quote-band {
   position: relative;
   overflow: hidden;

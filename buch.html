@@ -543,6 +543,7 @@
       + '<div class="buch-cover-col">' + buildGallery(book) + '</div>'
       + '<div class="buch-info-col">'
       + '<a href="' + catUrl + '" class="buch-back">← ' + catLabel + '</a>'
+      + (book.sonderangebot ? '<div style="background:#fffbf0;border:2px solid var(--gold);border-radius:6px;padding:0.8rem 1.1rem;margin-bottom:1rem;font-size:0.9rem;line-height:1.6;color:#444;"><strong style="color:#c9a84c;text-transform:uppercase;font-size:0.72rem;letter-spacing:0.1em;display:block;margin-bottom:0.2rem;">🏷 Sonderangebot · Lagerräumung</strong>' + book.sonderangebot + '</div>' : '')
       + (book.format ? '<p class="buch-format">' + book.format + '</p>' : '')
       + '<h1 class="buch-title">' + book.title + '</h1>'
       + renderDesc(book.desc)
