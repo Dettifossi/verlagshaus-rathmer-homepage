@@ -545,26 +545,14 @@
   var halfWidth = row.scrollWidth / 2;
   row.scrollLeft = 0;
 
-  var paused = false;
-  var speed = 0.6; // px pro Frame
-  var raf;
+  var speed = 0.5; // px pro Frame — gleichmäßig, immer
 
   function step() {
-    if (!paused) {
-      row.scrollLeft += speed;
-      if (row.scrollLeft >= halfWidth) row.scrollLeft -= halfWidth;
-    }
-    raf = requestAnimationFrame(step);
+    row.scrollLeft += speed;
+    if (row.scrollLeft >= halfWidth) row.scrollLeft -= halfWidth;
+    requestAnimationFrame(step);
   }
-  raf = requestAnimationFrame(step);
-
-  // Pause bei Hover und Touch
-  row.addEventListener('mouseenter', function() { paused = true; });
-  row.addEventListener('mouseleave', function() { paused = false; });
-  row.addEventListener('touchstart', function() { paused = true; }, {passive:true});
-  row.addEventListener('touchend', function() {
-    setTimeout(function() { paused = false; }, 2000);
-  }, {passive:true});
+  requestAnimationFrame(step);
 })();
 </script>
 </body>
