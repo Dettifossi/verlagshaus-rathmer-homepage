@@ -516,34 +516,44 @@
   var row = document.querySelector('.hero-shelf-row');
   if (!row) return;
 
-  // Bücher klonen für nahtlose Endlosschleife
+  // Original-Anzahl merken, dann klonen
   var origItems = Array.from(row.children);
+  var origCount = origItems.length;
   origItems.forEach(function(item) {
     var clone = item.cloneNode(true);
     clone.setAttribute('aria-hidden', 'true');
     row.appendChild(clone);
   });
 
-  // transform-basiertes Scrollen (funktioniert trotz overflow:hidden am Elternelement)
   var pos = 0;
   var halfWidth = 0;
-  var dragOffset = 0;
   var isDragging = false;
   var dragStartX = 0;
+  var dragOffset = 0;
   var moved = false;
 
-  var running = false;
+  function measureHalfWidth() {
+    // Zuverlässigste Methode: offsetLeft des ersten Klons = Ende der Originale
+    var firstClone = row.children[origCount];
+    if (firstClone) {
+      var w = firstClone.offsetLeft;
+      if (w > 100) return w;
+    }
+    return 0;
+  }
+
   function startScroll() {
-    // halfWidth erst messen, wenn alle Bilder geladen sind
-    halfWidth = row.scrollWidth / 2;
-    if (halfWidth < 200) return; // noch nicht bereit
-    row.style.transition = 'none';
-    if (running) return;
-    running = true;
+    halfWidth = measureHalfWidth();
+    if (halfWidth < 100) {
+      // Noch nicht bereit, kurz warten
+      setTimeout(startScroll, 300);
+      return;
+    }
+
     function step() {
       if (!isDragging) {
         pos += 0.8;
-        if (halfWidth > 0 && pos >= halfWidth) pos -= halfWidth;
+        if (pos >= halfWidth) pos -= halfWidth;
       }
       row.style.transform = 'translateX(-' + (pos | 0) + 'px)';
       requestAnimationFrame(step);
@@ -551,31 +561,19 @@
     requestAnimationFrame(step);
   }
 
-  // Erst nach vollständigem Laden messen (wichtig auf Mobilgeräten)
   if (document.readyState === 'complete') {
-    setTimeout(startScroll, 200);
+    setTimeout(startScroll, 100);
   } else {
-    window.addEventListener('load', function() { setTimeout(startScroll, 200); });
+    window.addEventListener('load', function() { setTimeout(startScroll, 100); });
   }
-  // Sicherheitsnetz: nach 2s noch einmal prüfen falls halfWidth falsch war
-  setTimeout(function() {
-    var measured = row.scrollWidth / 2;
-    if (measured > halfWidth + 100) {
-      halfWidth = measured; // korrigieren ohne Neustart
-    }
-  }, 2000);
 
-  // Drag zum manuellen Verschieben
+  // Maus-Drag
   row.addEventListener('mousedown', function(e) {
     isDragging = true; moved = false;
-    dragStartX = e.pageX;
-    dragOffset = pos;
+    dragStartX = e.pageX; dragOffset = pos;
     row.style.cursor = 'grabbing';
   });
-  window.addEventListener('mouseup', function() {
-    isDragging = false;
-    row.style.cursor = 'grab';
-  });
+  window.addEventListener('mouseup', function() { isDragging = false; row.style.cursor = 'grab'; });
   window.addEventListener('mousemove', function(e) {
     if (!isDragging) return;
     var dx = dragStartX - e.pageX;
@@ -586,11 +584,10 @@
     if (moved) { e.preventDefault(); moved = false; }
   }, true);
 
-  // Touch-Unterstützung
+  // Touch
   var touchStartX = 0, touchPos = 0;
   row.addEventListener('touchstart', function(e) {
-    touchStartX = e.touches[0].clientX;
-    touchPos = pos;
+    touchStartX = e.touches[0].clientX; touchPos = pos;
   }, {passive:true});
   row.addEventListener('touchmove', function(e) {
     var dx = touchStartX - e.touches[0].clientX;
