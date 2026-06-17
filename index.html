@@ -18,7 +18,7 @@
   <meta property="og:url" content="https://www.verlagshausrathmer.com/">
   <meta property="og:image" content="https://www.verlagshausrathmer.com/Logo-vr.png">
   <meta name="twitter:card" content="summary">
-  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="stylesheet" href="styles.css?v=15">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -535,12 +535,36 @@
   row.addEventListener('click', function(e) {
     if (moved) e.preventDefault();
   }, true);
-  // Beim Laden zur Mitte scrollen (Wer du wirklich bist zentriert)
-  var tall = row.querySelector('.tall');
-  if (tall) {
-    var offset = tall.offsetLeft - (row.offsetWidth / 2) + (tall.offsetWidth / 2);
-    row.scrollLeft = offset;
+  // Endlos-Autoscroll: Bücher klonen für nahtlose Schleife
+  var origItems = Array.from(row.children);
+  origItems.forEach(function(item) {
+    var clone = item.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    row.appendChild(clone);
+  });
+  var halfWidth = row.scrollWidth / 2;
+  row.scrollLeft = 0;
+
+  var paused = false;
+  var speed = 0.6; // px pro Frame
+  var raf;
+
+  function step() {
+    if (!paused) {
+      row.scrollLeft += speed;
+      if (row.scrollLeft >= halfWidth) row.scrollLeft -= halfWidth;
+    }
+    raf = requestAnimationFrame(step);
   }
+  raf = requestAnimationFrame(step);
+
+  // Pause bei Hover und Touch
+  row.addEventListener('mouseenter', function() { paused = true; });
+  row.addEventListener('mouseleave', function() { paused = false; });
+  row.addEventListener('touchstart', function() { paused = true; }, {passive:true});
+  row.addEventListener('touchend', function() {
+    setTimeout(function() { paused = false; }, 2000);
+  }, {passive:true});
 })();
 </script>
 </body>
