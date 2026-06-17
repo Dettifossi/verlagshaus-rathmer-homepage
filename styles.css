@@ -316,6 +316,7 @@ img { display: block; max-width: 100%; }
   padding: 0 2rem 0.5rem;
   cursor: grab;
   will-change: transform;
+  touch-action: pan-y;
 }
 .hero-shelf-row::-webkit-scrollbar { display: none; }
 .hero-shelf-row.grabbing { cursor: grabbing; }
