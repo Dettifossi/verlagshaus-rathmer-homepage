@@ -364,15 +364,44 @@ img { display: block; max-width: 100%; }
   gap: 2rem;
   align-items: center;
 }
-.vr-sonderangebot-banner__cover-link { flex-shrink: 0; }
-.vr-sonderangebot-banner__cover {
-  height: 180px;
-  width: auto;
-  border-radius: 2px;
-  box-shadow: 0 8px 20px rgba(44,42,39,0.22);
-  transition: transform 0.3s ease;
+.vr-sa-slider {
+  flex-shrink: 0;
+  width: 160px;
+  position: relative;
 }
-.vr-sonderangebot-banner__cover:hover { transform: translateY(-4px); }
+.vr-sa-slider__track {
+  display: flex;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0 8px 20px rgba(44,42,39,0.22);
+}
+.vr-sa-slider__slide {
+  flex: 0 0 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.vr-sa-slider__slide img {
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.vr-sa-slider__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+.vr-sa-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  border: none;
+  background: #d4c9a8;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+.vr-sa-dot.active { background: var(--gold); }
 .vr-sonderangebot-banner__body { flex: 1; }
 .vr-sonderangebot-banner__ribbon {
   display: inline-block;
