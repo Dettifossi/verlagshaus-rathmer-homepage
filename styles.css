@@ -419,6 +419,15 @@ img { display: block; max-width: 100%; }
   border-radius: 2px;
   margin-bottom: 0.6rem;
 }
+.vr-sonderangebot-banner__hinweis {
+  font-size: 0.8rem;
+  color: #7a5c2e;
+  background: #fdf6e3;
+  border-left: 3px solid #C9A84C;
+  padding: 0.4rem 0.7rem;
+  margin: 0.4rem 0 0.7rem;
+  line-height: 1.5;
+}
 .vr-sonderangebot-banner__titel {
   font-family: 'EB Garamond', Georgia, serif;
   font-size: 1.6rem;
