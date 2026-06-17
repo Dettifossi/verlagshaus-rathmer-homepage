@@ -303,6 +303,7 @@ img { display: block; max-width: 100%; }
   max-width: 1100px;
   margin: 1rem auto 0;
   padding: 0 2rem 3.5rem;
+  overflow: hidden;
 }
 
 .hero-shelf-row {
@@ -311,12 +312,10 @@ img { display: block; max-width: 100%; }
   justify-content: flex-start;
   gap: 1.4rem;
   min-height: 240px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  overflow-x: visible;
   padding: 0 2rem 0.5rem;
   cursor: grab;
+  will-change: transform;
 }
 .hero-shelf-row::-webkit-scrollbar { display: none; }
 .hero-shelf-row.grabbing { cursor: grabbing; }
