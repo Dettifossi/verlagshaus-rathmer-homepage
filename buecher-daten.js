@@ -70,6 +70,7 @@ const BUECHER_DATEN = {
     stripePrice: 1299,
     delivery: "Versand per Post nach Zahlungseingang · zzgl. 3,00 € Versandkosten",
     sonderangebot: "Lagerräumung – nur noch wenige Exemplare! Bisher 19,99 €, jetzt 9,99 € zzgl. 3,00 € Versand.",
+    giftTip: "Ein außergewöhnliches Geschenk für Menschen, die sich selbst und andere in farbigen Schaubildern verstehen möchten – einmalig gestaltet, 272 farbige Hochglanz-Übersichten auf 300 Seiten.",
     gallery: ["images/2019/01/Werbung-Wer-du-wirklich-bist.jpg", "images/2019/01/WER-DU-WIRKLICH-BIST-BAND-1-MIT-AUTOR.jpg"],
   },
 
