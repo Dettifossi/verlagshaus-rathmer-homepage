@@ -585,13 +585,19 @@
   }, true);
 
   // Touch
-  var touchStartX = 0, touchPos = 0;
+  var touchStartX = 0, touchPos = 0, resumeTimer = null;
   row.addEventListener('touchstart', function(e) {
+    isDragging = true;
     touchStartX = e.touches[0].clientX; touchPos = pos;
+    if (resumeTimer) clearTimeout(resumeTimer);
   }, {passive:true});
   row.addEventListener('touchmove', function(e) {
     var dx = touchStartX - e.touches[0].clientX;
     pos = ((touchPos + dx) % halfWidth + halfWidth) % halfWidth;
+  }, {passive:true});
+  row.addEventListener('touchend', function() {
+    // Nach 2 Sekunden Pause läuft der Autoscroll wieder weiter
+    resumeTimer = setTimeout(function() { isDragging = false; }, 2000);
   }, {passive:true});
 })();
 </script>
