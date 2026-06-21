@@ -571,6 +571,79 @@ img { display: block; max-width: 100%; }
   color: var(--gold);
 }
 
+/* ── Sonntagsgeschichte Opt-in ── */
+.sg-optin {
+  background: #f7f3ec;
+  border-top: 1px solid rgba(201,168,76,0.2);
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+  padding: 3rem 2rem;
+}
+.sg-optin__inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+.sg-optin__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin: 0 0 0.5rem;
+}
+.sg-optin__title {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: var(--anthracite);
+  margin: 0 0 0.8rem;
+}
+.sg-optin__desc {
+  font-size: 1rem;
+  color: #5a5650;
+  line-height: 1.65;
+  margin: 0 0 1.6rem;
+}
+.sg-optin__form {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 0.9rem;
+}
+.sg-optin__input {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1rem;
+  padding: 0.7rem 1.1rem;
+  border: 1px solid rgba(201,168,76,0.45);
+  border-radius: 3px;
+  background: #fff;
+  color: var(--anthracite);
+  width: 280px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.sg-optin__input:focus { border-color: var(--gold); }
+.sg-optin__btn {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1rem;
+  padding: 0.7rem 1.4rem;
+  background: var(--anthracite);
+  color: var(--gold);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: background 0.2s, color 0.2s;
+}
+.sg-optin__btn:hover { background: var(--gold-dark); color: #fff; }
+.sg-optin__hint {
+  font-size: 0.75rem;
+  color: #9a9490;
+  margin: 0;
+}
+.sg-optin__hint a { color: #9a9490; text-decoration: underline; }
+
 /* === Hero (Unterseiten – Alt, weiterhin genutzt) === */
 .hero {
   background: var(--cream);
