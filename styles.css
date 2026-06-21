@@ -300,9 +300,9 @@ img { display: block; max-width: 100%; }
 
 /* === Bücherregal === */
 .hero-shelf {
-  max-width: 1100px;
-  margin: 1rem auto 0;
-  padding: 0 2rem 3.5rem;
+  max-width: 100%;
+  margin: 0 auto 0;
+  padding: 0 0 3rem;
   overflow: hidden;
 }
 
@@ -338,7 +338,7 @@ img { display: block; max-width: 100%; }
 }
 
 .shelf-vol img {
-  height: 200px;
+  height: 280px;
   width: auto;
   max-width: none;
   display: block;
@@ -347,7 +347,7 @@ img { display: block; max-width: 100%; }
   transition: box-shadow 0.35s ease;
 }
 
-.shelf-vol.tall img { height: 230px; }
+.shelf-vol.tall img { height: 310px; }
 
 .shelf-vol:hover {
   transform: translateY(-10px) scale(1.04);
@@ -1352,8 +1352,8 @@ img { display: block; max-width: 100%; }
     overflow-x: visible;
     padding-bottom: 0.5rem;
   }
-  .shelf-vol img { height: 170px; }
-  .shelf-vol.tall img { height: 190px; }
+  .shelf-vol img { height: 220px; }
+  .shelf-vol.tall img { height: 250px; }
 }
 
 @media (max-width: 760px) {
