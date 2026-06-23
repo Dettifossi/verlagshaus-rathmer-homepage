@@ -366,6 +366,24 @@ const BUECHER_DATEN = {
     amazonUrl: "https://www.amazon.de/portal/customer-reviews/3000335617/ref=acr_search_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar",
   },
 
+  "rathmer-s-repertorium-opus-radar-zusatzmodul": {
+    title: "Rathmer's Repertorium – Zusatzmodul für Opus/Radar",
+    cover: "images/2019/05/A-Cover-RR-gebunden.jpg",
+    coverAlt: "Rathmer's Repertorium – Zusatzmodul für Opus/Radar – Detlef Rathmer – Buchcover",
+    format: "Elektronisches Zusatzmodul · Opus/Radar",
+    desc: "Rathmer's Repertorium steht als elektronisches Zusatzmodul für das weit verbreitete Homöopathie-Software-System Opus/Radar zur Verfügung. Für alle Homöopathen, die mit Radar Opus arbeiten, ermöglicht dieses Modul die direkte Integration des weltweit umfangreichsten Gemüts-Repertoriums in ihre gewohnte Software-Umgebung — mit allen Suchfunktionen und der vollständigen Rubrikenstruktur des Repertoriums.\n\nDas Modul kann direkt über den Anbieter Medicando erworben werden.",
+    price: "Preis auf Medicando",
+    category: "homoeopathie",
+    orderType: "extern",
+    orderUrl: "https://medicando.de/produkt/rathmers-repertorium-der-geistes-und-gemuetsrubriken",
+    reviews: [
+      { author: "SimonesSchneiderei", stars: 5, title: "Rathmers Repertorium – Die Antwort auf fast alle Fragen", text: "Mit diesem Repertorium zu arbeiten ist für mich eine große Freude. Es vereint Benutzerfreundlichkeit und inhaltliche Qualität durch große Schrift, Gliederung der Symptome, mehrere Lesebändchen und Untergliederung durch Hinweise. Es ist ähnlich aufgebaut wie eine gute Website mit vielen Verlinkungen, die einen quasi automatisch zu den richtigen Symptomen führen. Man muss nicht mehr die Nadel im Heuhaufen suchen, sondern kommt auf vielen Wegen effektiv und schnell zum Ziel. Also unbedingt empfehlenswert!" },
+      { author: "J.J.", stars: 5, title: "Das umfangreichste Gemüts-Repertorium der Welt!", text: "Dieses Buch gehört auf den Schreibtisch eines jeden Homöopathen. Der Autor versteht es, die über 20.000 Gemütsrubriken anwendungsnah zu erklären, damit man sie im Praxisalltag am Patienten korrekt anwenden kann. Es ist wirklich das umfangreichste Repertorium weltweit und alle deutschsprachigen Homöopathen können sich glücklich schätzen, dass der Autor es in Deutsch verfasst hat. Auch von der Ausstattung her hervorragend: Kunstledereinband mit Goldprägung und 5 Lesebändchen. Einfach klasse und sehr empfehlenswert!" },
+      { author: "wachstum01", stars: 5, title: "Sehr wertvolles Hilfsmittel", text: "Dieses wunderschön gebundene und mit Goldlettern versehene Repertorium benutze ich seit ca. 1 Jahr sowohl in Papier- als auch in elektronischer Form. Für alle, die Homöopathie nach Sehgal praktizieren, kann ich es nur empfehlen: Es enthält mehr Gemütsrubriken als alle anderen mir bekannten Repertorien. Rathmer nennt nicht nur die Mittel, sondern erklärt die Rubriken ausführlich, sodass sich auch Anfänger schneller in die Gemütsrubriken hineinversetzen können. Ein echtes Arbeitsgerät." },
+    ],
+    amazonUrl: "https://www.amazon.de/portal/customer-reviews/3000335617/ref=acr_search_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar",
+  },
+
   "repertorium-der-hervorstechenden-gemuetsrubriken-gebundene-a": {
     title: "Repertorium der hervorstechenden Gemütsrubriken – Gebundene Ausgabe",
     cover: "images/2019/05/A-Cover-Repertorium-der-hervorstechenden-Gemütsrubriken-gebunden.jpg",
