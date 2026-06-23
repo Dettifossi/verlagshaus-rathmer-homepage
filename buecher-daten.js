@@ -142,6 +142,12 @@ const BUECHER_DATEN = {
     orderType: "bod",
     bodUrl: "https://buchshop.bod.de/die-praxis-der-typbestimmung-detlef-rathmer-9783752870510",
     gallery: ["images/2019/01/Werbung-Die-Praxis-der-Typbestimmung-Seite-2-gebunden.jpg"],
+    reviews: [
+      { author: "Jochen Weiß", stars: 5, title: "Super eingängig geschrieben, verständlich und sachlich topp!", text: "Der Aufbau des Buchs und die Erläuterungen des Autors, die Verständlichkeit und Detailverliebtheit sind toll; es liest sich super und gibt einen guten Einblick in die Welt der Enneagramm-Typen!" },
+      { author: "Andreas Weinert", stars: 5, title: "Praxishilfe par excellence", text: "Praktiker des Enneagramms stoßen immer wieder auf Abgrenzungsschwierigkeiten. Welche Fragen kann ich dem Klienten in diesem Fall stellen, die weiterhelfen? Herr Rathmer hat es mit westfälischer Gründlichkeit unternommen, hier Abhilfe zu schaffen. Herausgekommen ist dabei ein kompaktes Buch, übersichtlich aufgebaut und praxisgerecht. Danke, gute Arbeit." },
+      { author: "T.K.", stars: 5, title: "Mehr über sich und Andere lernen", text: "Wer mehr über sein Verhalten und das Verhalten seiner Mitmenschen erfahren möchte, für den ist das Buch interessant." },
+    ],
+    amazonUrl: "https://www.amazon.com/portal/customer-reviews/375287760X/ref=acr_dpx_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar",
   },
 
   "rathmer-s-enneagramm-typentest": {
