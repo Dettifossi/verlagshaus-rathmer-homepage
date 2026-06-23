@@ -376,6 +376,7 @@ const BUECHER_DATEN = {
     category: "homoeopathie",
     orderType: "extern",
     orderUrl: "https://medicando.de/produkt/rathmers-repertorium-der-geistes-und-gemuetsrubriken",
+    gallery: ["images/2019/01/Werbung-RR-Seite-3.jpg"],
     reviews: [
       { author: "SimonesSchneiderei", stars: 5, title: "Rathmers Repertorium – Die Antwort auf fast alle Fragen", text: "Mit diesem Repertorium zu arbeiten ist für mich eine große Freude. Es vereint Benutzerfreundlichkeit und inhaltliche Qualität durch große Schrift, Gliederung der Symptome, mehrere Lesebändchen und Untergliederung durch Hinweise. Es ist ähnlich aufgebaut wie eine gute Website mit vielen Verlinkungen, die einen quasi automatisch zu den richtigen Symptomen führen. Man muss nicht mehr die Nadel im Heuhaufen suchen, sondern kommt auf vielen Wegen effektiv und schnell zum Ziel. Also unbedingt empfehlenswert!" },
       { author: "J.J.", stars: 5, title: "Das umfangreichste Gemüts-Repertorium der Welt!", text: "Dieses Buch gehört auf den Schreibtisch eines jeden Homöopathen. Der Autor versteht es, die über 20.000 Gemütsrubriken anwendungsnah zu erklären, damit man sie im Praxisalltag am Patienten korrekt anwenden kann. Es ist wirklich das umfangreichste Repertorium weltweit und alle deutschsprachigen Homöopathen können sich glücklich schätzen, dass der Autor es in Deutsch verfasst hat. Auch von der Ausstattung her hervorragend: Kunstledereinband mit Goldprägung und 5 Lesebändchen. Einfach klasse und sehr empfehlenswert!" },
