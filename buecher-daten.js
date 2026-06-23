@@ -97,6 +97,10 @@ const BUECHER_DATEN = {
     orderType: "bod",
     bodUrl: "https://buchshop.bod.de/wer-du-wirklich-bist-band-2-detlef-rathmer-9783749471133",
     gallery: ["images/2019/01/Werbung-Wer-du-wirklich-bist-Band-2.jpg", "images/2019/01/WER-DU-WIRKLICH-BIST-BAND-2-MIT-AUTOR.jpg"],
+    reviews: [
+      { author: "J.J.", stars: 5, title: "Ähnlich wie Band 1, aber...", text: "Dieses Buch ist nach fast 5 Jahren der Fortsetzungsband zu Band 1. Die Übersichten sind deutlich umfangreicher, sodass man durch jede Übersicht einen erhöhten Erkenntniswert bekommt. Das neue Buch ist auch noch ein wenig strukturierter und übersichtlicher — und kostet nur die Hälfte. Zum Ende des Buches beschäftigen sich verhältnismäßig viele Übersichten mit den sog. Subtypen des Enneagramms, was ich persönlich besonders spannend finde. Insgesamt durfte ich viel Neues und Wissenswertes erfahren. Klare Kaufempfehlung!" },
+    ],
+    amazonUrl: "https://www.amazon.de/product-reviews/3749471134/ref=cm_cr_dp_d_show_all_top?_encoding=UTF8&ie=UTF8&reviewerType=all_reviews",
   },
 
   "wer-du-wirklich-bist-band-3": {
