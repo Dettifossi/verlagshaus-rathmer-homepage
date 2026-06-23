@@ -417,6 +417,10 @@ const BUECHER_DATEN = {
     orderType: "bod",
     bodUrl: "https://buchshop.bod.de/enneagramm-homoeopathie-detlef-rathmer-9783749451531",
     gallery: ["images/2019/01/Werbung-EH-beide-Baende.jpg"],
+    reviews: [
+      { author: "Andreas Weinert", stars: 5, title: "Hilfe für viele", text: "Seit 35 Jahren arbeite ich im medizinischen Bereich. Das Enneagramm als Wegweiser und Ordnungssystem zu nutzen, um Klarheit zu schaffen, ist ein zukunftsweisender Ansatz. Herr Rathmer stellt die Möglichkeiten dieser Heilmethode umfassend und praxisgerecht dar. Dieses Buch und auch Band 2 ist so geschrieben, dass auch der medizinische Laie damit zurechtkommt und davon profitiert. Wer in die Tiefen seines Menschseins eintaucht, darf zurecht Heilung erwarten. Ich wünsche ihm eine weite Verbreitung." },
+    ],
+    amazonUrl: "https://www.amazon.de/portal/customer-reviews/3749451532/ref=acr_dpx_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar",
   },
 
   "enneagramm-homoeopathie-band-2": {
@@ -430,6 +434,10 @@ const BUECHER_DATEN = {
     orderType: "bod",
     bodUrl: "https://buchshop.bod.de/enneagramm-homoeopathie-band-2-detlef-rathmer-9783749465231",
     gallery: ["images/2019/01/Werbung-EH-beide-Baende.jpg"],
+    reviews: [
+      { author: "Andreas Weinert", stars: 5, title: "Hilfe für viele", text: "Seit 35 Jahren arbeite ich im medizinischen Bereich. Das Enneagramm als Wegweiser und Ordnungssystem zu nutzen, um Klarheit zu schaffen, ist ein zukunftsweisender Ansatz. Herr Rathmer stellt die Möglichkeiten dieser Heilmethode umfassend und praxisgerecht dar. Dieses Buch und auch Band 2 ist so geschrieben, dass auch der medizinische Laie damit zurechtkommt und davon profitiert. Wer in die Tiefen seines Menschseins eintaucht, darf zurecht Heilung erwarten. Ich wünsche ihm eine weite Verbreitung." },
+    ],
+    amazonUrl: "https://www.amazon.de/portal/customer-reviews/3749451532/ref=acr_dpx_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar",
   },
 
   "enneagramm-homoeopathie-ebook-version": {
