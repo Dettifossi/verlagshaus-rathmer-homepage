@@ -298,6 +298,10 @@ const BUECHER_DATEN = {
     youtubeId: "8PJamrmpTnI",
     youtubeShort: true,
     giftTip: "Ein wunderbares, humorvolles Geschenk für alle, die sich selbst und andere besser verstehen möchten – zugänglich und tiefgründig zugleich.",
+    reviews: [
+      { author: "Andreas Weinert", stars: 5, title: "Mein Lieblings-Enneagramm-Buch", text: "Dieses Buch ist mein absolutes Lieblings-Enneagramm-Buch! Die liebevoll gezeichneten Cartoons bringen mich immer zum Schmunzeln, und mit dieser Prise Humor lerne ich leichter. Es geht nicht um die Vermenschlichung von Tieren, sondern um die Enneagramm-Prinzipien – nicht nur beim Menschen, sondern auch bei anderen Lebewesen. Das finde ich großartig. Abends greife ich oft zum Buch, um Begegnungen des Tages zu reflektieren. Insbesondere hat mir dieses Buch geholfen, mein Verständnis der Subtypen im Enneagramm enorm zu vertiefen." },
+    ],
+    amazonUrl: "https://www.amazon.de/portal/customer-reviews/3695143851/ref=acr_dpx_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar",
   },
 
   "archetypen-der-tiere-im-enneagramm": {
