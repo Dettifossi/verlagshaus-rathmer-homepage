@@ -782,6 +782,10 @@ const BUECHER_DATEN = {
     orderType: "bod",
     bodUrl: "https://buchshop.bod.de/die-sprache-unserer-beziehungen-detlef-rathmer-9783695162215",
     giftTip: "Ein einfühlsames Geschenk für Paare, Freunde oder Menschen, die ihre Beziehungen tiefer verstehen möchten.",
+    reviews: [
+      { author: "wachstum01", stars: 5, title: "Sehr umfangreich und informativ", text: "Dieses Buch trifft mitten ins Herz, weil es das Enneagramm nicht als trockenes System, sondern als Schlüssel zu unseren tiefsten Beziehungserfahrungen begreift. Es zeigt auf eine bewegende Weise, dass wir in Liebe, Freundschaft und Familie oft nicht frei und spontan handeln, sondern von alten Mustern geleitet werden. Gerade darin liegt die große Stärke des Werks: Es macht Konflikte nicht kleiner, aber verstehbarer — und damit auch menschlicher. Besonders berührend ist die Einladung, andere Menschen nicht vorschnell zu bewerten, sondern hinter ihr Verhalten zu schauen und ihre innere Wahrheit mitzusehen. Das Buch hinterlässt das schmerzliche, aber auch hoffnungsvolle Gefühl, dass echte Nähe erst dort entsteht, wo wir anfangen, einander wirklich zu verstehen." },
+    ],
+    amazonUrl: "https://www.amazon.de/portal/customer-reviews/369516221X/ref=acr_dpx_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar",
   },
 
   "leidenschaft-und-heilung": {
