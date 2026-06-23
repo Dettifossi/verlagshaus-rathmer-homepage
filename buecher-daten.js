@@ -812,6 +812,12 @@ const BUECHER_DATEN = {
     stripeKey: "7-wege",
     stripePrice: 995,
     gallery: ["images/2019/02/Werbung-7-Wege-zu-dir-selbst.jpg"],
+    reviews: [
+      { author: "runnerga", stars: 5, title: "Dieses Buch ist jeden Cent wert", text: "Ich persönlich lese seit einem Jahr fast täglich in diesem Buch und benutze es als ständigen Wegbegleiter. Jeden Tag ein Kapitel, 7 Wege – 7 Tage, und wenn es nach 1 Woche wieder von vorne beginnt, entdecke ich bestimmt wieder eine neue Stelle. Insgesamt sehr zu empfehlen, leicht zu lesen und sehr aussagekräftig." },
+      { author: "Tanja T.", stars: 5, title: "Tolles Buch mit viel Inhalt", text: "Ein tolles Buch, das beschreibt, dass wir nur in uns selbst das finden, was wir brauchen, um glücklich zu sein. Mit 7 Übungen, die gut und ausführlich erklärt sind. Für jeden was dabei, seinen Weg zu sich selbst zu finden. Mit vielen tiefgreifenden Weisheiten." },
+      { author: "SBC", stars: 5, title: "Spirituelle Gedanken zeitlos formuliert", text: "Mit jeder Zeile bringt einen dieses Buch ins Hier-und-Jetzt, indem es anhand von 7 spirituellen Übungen das Wesentliche im Menschen hervorbringt. Es geht um Bewusstseinsübungen, die man jederzeit ohne zusätzlichen Zeitaufwand anwenden kann. Das Buch hat mich sehr berührt, weil ich durch die Lektüre immer wieder spüre, worauf es wirklich ankommt im Leben. Besonders geeignet für alle, die sich wahrhaft spirituell entwickeln möchten — nicht für diejenigen, die Verbesserungstechniken für ihre Lebensumstände suchen, denn es geht um Selbsterinnerung, nicht um Selbstverbesserung." },
+    ],
+    amazonUrl: "https://www.amazon.de/Wege-Dir-selbst-Lebenskunst-Alltag/dp/3938396237/",
   },
 
   "die-sprache-unserer-beziehungen": {
