@@ -55,6 +55,10 @@ const BUECHER_DATEN = {
     gallery: ["images/2026/05/Werbung-Die-verborgene-Dynamik-der-27-Subtypen.jpg", "images/2026/05/VERBORGENE-DYNAMIK-27-SUBTYPEN-MIT-AUTOR.jpg", "images/2026/05/DIE-VERBORGENE-DYNAMIK-DER-27-SUBTYPEN-DES-ENNEAGRAMMS-MIT-AUTOR.jpg", "images/2026/05/WERBUNG-DIE-VERBORGENE-DYNAMIK-DER-27-SUBTPEN-MIT-AUTOR.jpg"],
     youtubeId: "xo2hmB2LwYc",
     youtubeShort: true,
+    amazonUrl: "https://www.amazon.de/s?k=Die+verborgene+Dynamik+der+27+Subtypen+Rathmer",
+    reviews: [
+      { author: "wachstum01", stars: 5, title: "Endlich eine fundierte deutsche Quelle zu den 27 Subtypen", text: "Als jemand, der sich schon länger mit dem Enneagramm beschäftigt, habe ich lange nach einer wirklich tiefgehenden deutschen Darstellung der Subtypen gesucht – und hier bin ich fündig geworden. Rathmer bringt als Heilpraktiker und Enneagramm-Experte jahrzehntelange Erfahrung mit, was man dem Buch deutlich anmerkt. Die Beschreibungen der 27 Charaktere sind präzise, praxisnah und psychologisch durchdacht. Kein oberflächliches Überblickswerk, sondern echte Tiefe. Wer sich selbst und andere Menschen besser verstehen möchte, ist hier genau richtig." },
+    ],
   },
 
   "wer-du-wirklich-bist-band-1": {
