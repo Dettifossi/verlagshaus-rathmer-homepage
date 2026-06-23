@@ -716,6 +716,10 @@ const BUECHER_DATEN = {
     orderType: "bod",
     bodUrl: "https://buchshop.bod.de/nichts-und-alles-detlef-rathmer-9783695191444",
     gallery: ["images/2026/05/Werbung-Nichts-und-Alles.jpg", "images/2025/12/NICHTS-UND-ALLES-MIT-AUTOR.jpg"],
+    reviews: [
+      { author: "Andreas Weinert", stars: 5, title: "Praktisch und übersichtlich", text: "Für praktisch veranlagte Sucher. Das Buch zeigt einfache Techniken, die auf Douglas Harding basieren, und hilft dabei, den Widerstand loszulassen, der uns vom Hinsehen abhält. Das Schauen wird dabei zur Gewohnheit: Man überprüft immer wieder, ob da wirklich ein Ich ist. Und genau in diesem Prozess, in dieser Haltung entsteht langsam Entspannung — und Aufwachen." },
+    ],
+    amazonUrl: "https://www.amazon.de/portal/customer-reviews/3695191449/ref=acr_search_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar",
   },
 
   "der-raum-hinter-allem": {
