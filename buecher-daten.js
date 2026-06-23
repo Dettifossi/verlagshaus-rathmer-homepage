@@ -187,6 +187,12 @@ const BUECHER_DATEN = {
     orderType: "bod",
     bodUrl: "https://buchshop.bod.de/die-27-persoenlichkeiten-des-enneagramms-detlef-rathmer-9783746046600",
     gallery: ["images/2019/01/Werbung-Die-27-Persoenlichkeiten-des-Enneagramms.jpg", "images/2019/01/27-PERSOeNLICHKEITEN-DES-ENNEAGRAMMS-MIT-AUTOR.jpg", "images/2019/01/27-PERSOeNLICHKEITEN-MIT-AUTOR-SEITE-2.jpg"],
+    reviews: [
+      { author: "SBC", stars: 5, title: "Lebendiger Einblick in die menschliche Psyche", text: "Dieses Buch ist ein psychologischer Leckerbissen und führt einen sehr tief in das Labyrinth der menschlichen Psyche. Normalerweise geht es ja beim Enneagramm um 9 verschiedene Persönlichkeitsmuster, aber durch die Erweiterung auf 27 Persönlichkeitstypen bekommen die Beschreibungen der einzelnen Typen eine besondere Tiefe und Lebendigkeit. Empfehlenswert ist dieses Buch vor allem für diejenigen, die sich wirklich tiefgreifend mit dem Thema beschäftigen möchten. Insgesamt ein sehr spannendes und informatives Buch, was mich noch länger beschäftigen wird!" },
+      { author: "Manfred H.", stars: 5, title: "Wunderbar ausführliche Beschreibungen der Subtypen des Enneagramms", text: "Dieses Buch ist eine wunderbare Ergänzung zu „Rathmer's Enneagramm-Typentest” vom selben Autor. Nach der dortigen Typbestimmung kann man in diesem Buch die einzelnen Möglichkeiten/Variationen der einzelnen Enneagrammtypen genauestens nachlesen, was zu erheblichem Erkenntnisgewinn und auch Sicherheit in Bezug auf den eigenen Enneagrammtyp führt. Die Beschreibungen der 27 Untertypen ist auch sehr hilfreich bei der Bestimmung der Mitmenschen. Insgesamt höchst informative und ausführliche Darstellung der 27 Subtypen des Enneagramms in lebendiger, anschaulicher Sprache." },
+      { author: "Abendstern", stars: 5, title: "Informative Darstellung zu den 27 Subtypen", text: "Wer sich näher mit dem Enneagramm beschäftigen möchte und nicht nur oberflächlich, der kommt um die Subtypenlehre des Enneagramms bzw. auch dieses Buch nicht herum. Für mich sehr überzeugend stellt er zu den allgemein bekannten 9 Typen des Enneagramms kurz und prägnant das Wesentliche der sog. Subtypen vor. Für den Preis eine lohnende Anschaffung für alle Enneagramm-Begeisterten!" },
+    ],
+    amazonUrl: "https://www.amazon.de/portal/customer-reviews/3746046602/ref=cm_cr_getr_d_paging_btm_2?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews&sortBy=recent&pageNumber=2&nextPageToken=MjAyNi0wNi0yM1QwODo0ODozNC40MDM1ODI1MTBaADEw#reviews-filter-bar",
   },
 
   "der-code-deiner-persoenlichkeit": {
@@ -200,6 +206,11 @@ const BUECHER_DATEN = {
     orderType: "bod",
     bodUrl: "https://buchshop.bod.de/der-code-deiner-persoenlichkeit-detlef-rathmer-9783695192557",
     giftTip: "Ein wertvolles Geschenk für Menschen, die sich selbst und andere besser verstehen möchten – ideal für alle, die ihren Enneagramm-Typ noch suchen.",
+    reviews: [
+      { author: "Jürgen Krüger", stars: 5, title: "Empfehlenswert!!!!", text: "Empfehlenswertes Nachschlagewerk zum Enneagramm! Mit Grundlagen, weiterführenden Details zu den Subtypen, psychologische Einblicke, Infos zur Ennea-Homöopathie etc. Sehr viele Informationen für einen sehr günstigen Preis!!" },
+      { author: "Andreas Weinert", stars: 5, title: "Wunderbar", text: "Ein wunderbares Buch für Neueinsteiger und auch Fortgeschrittene im Enneagram. Es bietet den neusten Stand, wie zum Beispiel die Beurteilung der Blick Qualität – aufgebaut in Form einer Ermittlungsakte. Das zusätzliche Bonus Material, welches herunter geladen werden kann, lässt keine Wünsche mehr offen." },
+    ],
+    amazonUrl: "https://www.amazon.de/portal/customer-reviews/3695192550/ref=acr_dp_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar",
   },
 
   "rathmer-s-grosses-enneagramm-lexikon-von-a-z-hardcover": {
