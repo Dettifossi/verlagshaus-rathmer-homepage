@@ -891,6 +891,10 @@ const BUECHER_DATEN = {
     youtubeId: "KA1l-Az0ec0",
     youtubeShort: true,
     giftTip: "Ein wunderbares Geschenk für Menschen, die tiefer schauen möchten. Einfach beim Besteller eine Lieferadresse des Beschenkten angeben.",
+    reviews: [
+      { author: "Roland Schwenk", stars: 5, title: "Ein Buch voller Weisheit", text: "Ein wirklich großartiges Buch zu den 27 Subtypen des Enneagramms, welches mal nicht Wissen in den Vordergrund stellt, sondern die Menschen auf deren Reise vom Vergessen zum Erinnern begleitet, wie sie im Enneagramm beschrieben sind. So berührende Geschichten, jede einzelne voller Tiefe und Poesie. Eine mega Bereicherung in der Landschaft der Enneagramm-Bücher! Ein Meisterwerk!" },
+    ],
+    amazonUrl: "https://www.amazon.de/portal/customer-reviews/B0G1TGLMRH/ref=acr_dpx_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar",
   },
 
   "das-seminar-wenn-masken-fallen": {
