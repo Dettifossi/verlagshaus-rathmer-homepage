@@ -328,6 +328,10 @@ const BUECHER_DATEN = {
     orderType: "bod",
     bodUrl: "https://buchshop.bod.de/chrono-ennea-typ-detlef-rathmer-9783819277924",
     gallery: ["images/2025/08/Werbung-Chrono-Ennea-Typ.jpg", "images/2025/08/CHRONO-ENNEA-TYP-MIT-AUTOR.jpg"],
+    reviews: [
+      { author: "Andreas Weinert", stars: 5, title: "Kurz und praxisgerecht", text: "Dieses kleine aber famose Buch hat mir viele Fragen beantwortet, sowohl zum Enneagramm als auch zur chinesischen Organuhr. Es geht um Ernährung, aber nicht mit erhobenem Zeigefinger, sondern mit vielen Denkanstößen und Informationen historischer, allgemeiner und fachspezifischer Natur. Die Sprache ist einfach und gut formuliert, gut gemachte Übersichten schaffen visuelle Klarheit. Insbesondere wurde mir das nicht ganz einfache Thema der Untertypen im Enneagramm durch dieses Buch sehr viel klarer. Dafür ein großes Dankeschön an den Autor." },
+    ],
+    amazonUrl: "https://www.amazon.de/portal/customer-reviews/3819277927/ref=acr_search_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar",
   },
 
   "rathmer-s-repertorium-gebundene-ausgabe": {
