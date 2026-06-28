@@ -18,7 +18,7 @@
   <meta property="og:url" content="https://www.verlagshausrathmer.com/">
   <meta property="og:image" content="https://www.verlagshausrathmer.com/Logo-vr.png">
   <meta name="twitter:card" content="summary">
-  <link rel="stylesheet" href="styles.css?v=19">
+  <link rel="stylesheet" href="styles.css?v=20">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -561,6 +561,71 @@
   } else {
     window.addEventListener('load', function() { setTimeout(start, 100); });
   }
+})();
+</script>
+
+<!-- Musik-Player -->
+<div id="yt-player-wrap" style="display:none;"></div>
+<button id="music-btn" title="Jazz-Musik vom Autor Detlef Rathmer" aria-label="Musik ein/aus">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+  </svg>
+  <span class="music-label">Jazz-Musik</span>
+</button>
+<script>
+(function() {
+  var btn = document.getElementById('music-btn');
+  var player;
+  var playing = false;
+  var apiReady = false;
+  var PLAYLIST_ID = 'PLTDzuuiVuaI8o1UyclkxRxbTSOSvyR7mi';
+
+  function loadApi() {
+    if (document.getElementById('yt-api-script')) return;
+    var s = document.createElement('script');
+    s.id = 'yt-api-script';
+    s.src = 'https://www.youtube.com/iframe_api';
+    document.head.appendChild(s);
+  }
+
+  window.onYouTubeIframeAPIReady = function() {
+    apiReady = true;
+    player = new YT.Player('yt-player-wrap', {
+      height: '1', width: '1',
+      playerVars: {
+        listType: 'playlist',
+        list: PLAYLIST_ID,
+        autoplay: 1,
+        controls: 0,
+        loop: 1
+      },
+      events: {
+        onReady: function(e) { e.target.playVideo(); }
+      }
+    });
+    playing = true;
+    updateBtn();
+  };
+
+  function updateBtn() {
+    var iconOn = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>';
+    var iconOff = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>';
+    btn.querySelector('svg').innerHTML = playing ? iconOn : iconOff;
+    btn.querySelector('.music-label').textContent = playing ? 'Musik läuft' : 'Jazz-Musik';
+  }
+
+  btn.addEventListener('click', function() {
+    if (!player && !apiReady) {
+      loadApi();
+      return;
+    }
+    if (!player) return;
+    if (playing) { player.pauseVideo(); playing = false; }
+    else         { player.playVideo();  playing = true;  }
+    updateBtn();
+  });
 })();
 </script>
 </body>

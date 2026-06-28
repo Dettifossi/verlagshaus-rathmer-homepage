@@ -1582,3 +1582,28 @@ img { display: block; max-width: 100%; }
   background: var(--gold);
   color: var(--white) !important;
 }
+
+/* ── Musik-Player-Button ─────────────────────────────────── */
+#music-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--anthracite);
+  color: var(--cream);
+  border: 1px solid var(--gold-dark);
+  border-radius: 2rem;
+  padding: 0.45rem 0.85rem 0.45rem 0.7rem;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  opacity: 0.82;
+  transition: opacity 0.2s, background 0.2s;
+  line-height: 1.3;
+}
+#music-btn:hover { opacity: 1; background: var(--gold-dark); color: var(--cream); }
+#music-btn svg  { flex-shrink: 0; }
+#music-btn .music-label { white-space: nowrap; }
