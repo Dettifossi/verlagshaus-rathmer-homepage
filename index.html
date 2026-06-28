@@ -204,11 +204,29 @@
   </div>
 </section>
 
-<!-- ==================== ZITAT-BAND ==================== -->
-<div class="quote-band">
-  <p>Keine Ratgeber, keine Rezepte – sondern Bücher, die den Leser einladen,<br>tiefer zu schauen als bisher.</p>
-  <span>— Detlef Rathmer</span>
+<!-- ==================== ZITAT DES TAGES ==================== -->
+<div class="quote-band" id="tagesZitat">
+  <p id="tagesZitat-text">Keine Ratgeber, keine Rezepte – sondern Bücher, die den Leser einladen, tiefer zu schauen als bisher.</p>
+  <span id="tagesZitat-quelle">— Detlef Rathmer</span>
 </div>
+<script>
+(function() {
+  fetch('zitate.json?v=1')
+    .then(function(r){ return r.json(); })
+    .then(function(zitate) {
+      var tag = Math.floor(Date.now() / 86400000);
+      var z = zitate[tag % zitate.length];
+      document.getElementById('tagesZitat-text').textContent = z.quote;
+      var quelle = document.getElementById('tagesZitat-quelle');
+      if (z.bookUrl) {
+        quelle.innerHTML = '— aus: <a href="' + z.bookUrl + '" style="color:inherit;text-decoration:underline;text-underline-offset:3px">' + z.book + '</a>';
+      } else {
+        quelle.textContent = '— aus: ' + z.book;
+      }
+    })
+    .catch(function(){});
+})();
+</script>
 
 <!-- ==================== SONNTAGSGESCHICHTE OPT-IN ==================== -->
 <section class="sg-optin">
