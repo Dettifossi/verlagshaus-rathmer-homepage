@@ -133,7 +133,7 @@
     #wl-mob {
       display: none;
       text-align: center;
-      padding: 18px 20px 4px;
+      padding: 6px 24px 0;
     }
     #wl-mob::before {
       content: '\201E';
@@ -161,6 +161,7 @@
       font-style: normal;
       display: block;
       margin-top: 5px;
+      margin-bottom: 22px;
       letter-spacing: .02em;
       transition: opacity .5s ease;
     }
@@ -196,38 +197,39 @@
   </style>
   <script>
   (function(){
-    var el    = document.getElementById('wl-zitat');
-    var tEl   = document.getElementById('wl-text');
-    var aEl   = document.getElementById('wl-autor');
-    var elMob = document.getElementById('wl-mob');
-    var tMob  = document.getElementById('wl-mob-text');
-    var aMob  = document.getElementById('wl-mob-autor');
+    var el  = document.getElementById('wl-zitat');
+    var tEl = document.getElementById('wl-text');
+    var aEl = document.getElementById('wl-autor');
     var zitate = [], idx = 0;
     function show(i) {
       var q = zitate[i];
-      tEl.textContent  = '„' + q.t + '”';
-      aEl.textContent  = '— ' + q.a;
-      tMob.textContent = '„' + q.t + '”';
-      aMob.textContent = '— ' + q.a;
+      tEl.textContent = '„' + q.t + '”';
+      aEl.textContent = '— ' + q.a;
+      /* Mobile-Elemente: lazy lookup, da Script vor dem DOM-Element steht */
+      var tM = document.getElementById('wl-mob-text');
+      var aM = document.getElementById('wl-mob-autor');
+      if (tM) tM.textContent = '„' + q.t + '”';
+      if (aM) aM.textContent = '— ' + q.a;
     }
     function tick() {
       el.classList.add('fading');
-      elMob.classList.add('fading');
+      var eM = document.getElementById('wl-mob');
+      if (eM) eM.classList.add('fading');
       setTimeout(function(){
         idx = (idx + 1) % zitate.length;
         show(idx);
         el.classList.remove('fading');
-        elMob.classList.remove('fading');
+        if (eM) eM.classList.remove('fading');
       }, 530);
     }
-    fetch('weltliteratur.json?v=1')
+    fetch('weltliteratur.json?v=2')
       .then(function(r){ return r.json(); })
       .then(function(data){
         zitate = data;
         idx = Math.floor(Date.now() / 86400000) % zitate.length;
         show(idx);
         setInterval(tick, 12000);
-      }).catch(function(){ el.style.display = 'none'; elMob.style.display = 'none'; });
+      }).catch(function(){ el.style.display = 'none'; });
   })();
   </script>
 
