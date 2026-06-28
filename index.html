@@ -129,6 +129,50 @@
       padding: 13px 15px 11px;
       backdrop-filter: blur(5px);
     }
+    /* Mobile-Zitat */
+    #wl-mob {
+      display: none;
+      text-align: center;
+      padding: 18px 20px 4px;
+    }
+    #wl-mob::before {
+      content: '\201E';
+      display: block;
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 2.4rem;
+      line-height: 1;
+      color: var(--gold-dark, #8a6f3a);
+      opacity: .5;
+      margin-bottom: 2px;
+    }
+    #wl-mob-text {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 0.92rem;
+      font-style: italic;
+      line-height: 1.55;
+      color: var(--anthracite);
+      display: block;
+      transition: opacity .5s ease;
+    }
+    #wl-mob-autor {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 0.76rem;
+      color: var(--gold-dark, #8a6f3a);
+      font-style: normal;
+      display: block;
+      margin-top: 5px;
+      letter-spacing: .02em;
+      transition: opacity .5s ease;
+    }
+    #wl-mob.fading #wl-mob-text,
+    #wl-mob.fading #wl-mob-autor { opacity: 0; }
+    @media (max-width: 1099px) {
+      #wl-zitat { display: none !important; }
+      #wl-mob   { display: block; }
+    }
+    /* Desktop: keine doppelte Anzeige */
+    @media (min-width: 1100px) { #wl-mob { display: none !important; } }
+
     #wl-zitat blockquote {
       font-family: 'EB Garamond', Georgia, serif;
       font-size: 0.86rem;
@@ -152,21 +196,29 @@
   </style>
   <script>
   (function(){
-    var el = document.getElementById('wl-zitat');
-    var tEl = document.getElementById('wl-text');
-    var aEl = document.getElementById('wl-autor');
+    var el    = document.getElementById('wl-zitat');
+    var tEl   = document.getElementById('wl-text');
+    var aEl   = document.getElementById('wl-autor');
+    var elMob = document.getElementById('wl-mob');
+    var tMob  = document.getElementById('wl-mob-text');
+    var aMob  = document.getElementById('wl-mob-autor');
     var zitate = [], idx = 0;
     function show(i) {
-      tEl.textContent = '„' + zitate[i].t + '”';
-      aEl.textContent = '— ' + zitate[i].a;
+      var q = zitate[i];
+      tEl.textContent  = '„' + q.t + '”';
+      aEl.textContent  = '— ' + q.a;
+      tMob.textContent = '„' + q.t + '”';
+      aMob.textContent = '— ' + q.a;
     }
     function tick() {
       el.classList.add('fading');
+      elMob.classList.add('fading');
       setTimeout(function(){
         idx = (idx + 1) % zitate.length;
         show(idx);
         el.classList.remove('fading');
-      }, 580);
+        elMob.classList.remove('fading');
+      }, 530);
     }
     fetch('weltliteratur.json?v=1')
       .then(function(r){ return r.json(); })
@@ -175,11 +227,16 @@
         idx = Math.floor(Date.now() / 86400000) % zitate.length;
         show(idx);
         setInterval(tick, 12000);
-      }).catch(function(){ el.style.display = 'none'; });
+      }).catch(function(){ el.style.display = 'none'; elMob.style.display = 'none'; });
   })();
   </script>
 
   <div class="hero-home-center">
+    <!-- Weltliteratur-Zitat: Mobile-Version (zentriert über Eyebrow) -->
+    <div id="wl-mob" aria-hidden="true">
+      <span id="wl-mob-text"></span>
+      <cite id="wl-mob-autor"></cite>
+    </div>
     <p class="hero-eyebrow">Verlagshaus Rathmer</p>
     <h1>Bücher, die tiefer gehen.</h1>
     <p class="hero-sub">Enneagramm · Homöopathie · Persönliche Entwicklung</p>
