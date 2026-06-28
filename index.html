@@ -152,45 +152,30 @@
   </style>
   <script>
   (function(){
-    var zitate = [
-      {t:'Man sieht nur mit dem Herzen gut.', a:'Antoine de Saint-Exupéry'},
-      {t:'Das Schöne wird die Welt retten.', a:'Fjodor Dostojewski'},
-      {t:'Kenne dich selbst.', a:'Sokrates'},
-      {t:'Was mich nicht umbringt, macht mich stärker.', a:'Friedrich Nietzsche'},
-      {t:'Wer nichts weiß, muss alles glauben.', a:'Marie von Ebner-Eschenbach'},
-      {t:'In der Beschränkung zeigt sich erst der Meister.', a:'Johann Wolfgang von Goethe'},
-      {t:'Das Herz hat seine Gründe, die die Vernunft nicht kennt.', a:'Blaise Pascal'},
-      {t:'Der Zweck des Lebens ist das Leben selbst.', a:'Johann Wolfgang von Goethe'},
-      {t:'Die Grenzen meiner Sprache sind die Grenzen meiner Welt.', a:'Ludwig Wittgenstein'},
-      {t:'Werde, der du bist.', a:'Pindar'},
-      {t:'Das Glück deines Lebens hängt von der Güte deiner Gedanken ab.', a:'Marc Aurel'},
-      {t:'Der Mensch wird am Du zum Ich.', a:'Martin Buber'},
-      {t:'Die Wahrheit ist dem Menschen zumutbar.', a:'Ingeborg Bachmann'},
-      {t:'Das Leben ist kurz, die Kunst ist lang.', a:'Hippokrates'},
-      {t:'Es gibt mehr Dinge im Himmel und auf Erden, als Eure Schulweisheit sich träumt.', a:'William Shakespeare'},
-      {t:'Sei du selbst die Veränderung, die du dir wünschst für diese Welt.', a:'Mahatma Gandhi'},
-      {t:'Alles Gescheite ist schon gedacht worden — man muss nur versuchen, es noch einmal zu denken.', a:'Johann Wolfgang von Goethe'},
-      {t:'Ich denke, also bin ich.', a:'René Descartes'},
-      {t:'Der Mensch ist das Maß aller Dinge.', a:'Protagoras'},
-      {t:'Das einzig Beständige ist der Wandel.', a:'Heraklit'},
-    ];
-    var idx = Math.floor(Date.now() / 86400000) % zitate.length;
     var el = document.getElementById('wl-zitat');
     var tEl = document.getElementById('wl-text');
     var aEl = document.getElementById('wl-autor');
+    var zitate = [], idx = 0;
     function show(i) {
-      tEl.textContent = '„' + zitate[i].t + '“';
+      tEl.textContent = '„' + zitate[i].t + '”';
       aEl.textContent = '— ' + zitate[i].a;
     }
-    show(idx);
-    setInterval(function(){
+    function tick() {
       el.classList.add('fading');
       setTimeout(function(){
         idx = (idx + 1) % zitate.length;
         show(idx);
         el.classList.remove('fading');
       }, 580);
-    }, 12000);
+    }
+    fetch('weltliteratur.json?v=1')
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        zitate = data;
+        idx = Math.floor(Date.now() / 86400000) % zitate.length;
+        show(idx);
+        setInterval(tick, 12000);
+      }).catch(function(){ el.style.display = 'none'; });
   })();
   </script>
 
