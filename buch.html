@@ -450,7 +450,7 @@
         : '';
       return '<div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;">'
            + '<a href="' + book.bodUrl + '" target="_blank" rel="noopener" class="btn-primary">Jetzt bestellen bei BoD</a>'
-           + '<a href="' + book.bodUrl + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.55rem 1.1rem;border:2px solid var(--gold);border-radius:4px;color:var(--anthracite);font-weight:600;font-size:0.95rem;text-decoration:none;white-space:nowrap;">📖 Leseprobe lesen</a>'
+           + (book.bodSampleId ? '<a href="https://www.bod.de/booksample?id=' + book.bodSampleId + '&referrer=shop" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.55rem 1.1rem;border:2px solid var(--gold);border-radius:4px;color:var(--anthracite);font-weight:600;font-size:0.95rem;text-decoration:none;white-space:nowrap;">📖 Leseprobe lesen</a>' : '')
            + '</div>'
            + ebookNote
            + '<p class="buch-order-note">Ausführliche Leseprobe kostenlos verfügbar · Bestellung über <strong>Books on Demand</strong></p>';
