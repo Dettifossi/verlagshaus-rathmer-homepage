@@ -1,4 +1,17 @@
 const BUECHER_DATEN = {
+  "wenn-die-stille-brennt": {
+    title: "Wenn die Stille brennt – Burnout",
+    subtitle: "Das Enneagramm als Kompass aus der stillen Erschöpfung",
+    cover: "images/2026/06/Wenn-die-Stille-brennt-Cover.webp",
+    coverAlt: "Wenn die Stille brennt – Burnout – Detlef Rathmer – Buchcover",
+    format: "Taschenbuch · 92 Seiten",
+    desc: "Burnout ist kein Zufall – es ist eine Falle, in die wir mit den besten Absichten tappen. Dieses Buch zeigt, wie Erschöpfung bei jedem Enneagramm-Typ anders entsteht, sich anders anfühlt und anders überwunden werden kann. Statt eines Krisenmanuals bietet es eine Landkarte zur Prävention: Erkenne die typspezifischen Warnsignale, bevor die Stille brennt – und finde zurück zu innerer Balance.\n\nDetlef Rathmer verbindet jahrzehntelange therapeutische Praxis mit dem psychologischen Tiefgang des Enneagramms und zeigt, wie jeder Typ auf seine ureigene Weise in die Erschöpfung gerät – und wie der Weg heraus aussieht.",
+    price: "12,95 €",
+    category: "enneagramm",
+    orderType: "bod",
+    bodUrl: "https://buchshop.bod.de/wenn-die-stille-brennt-burnout-detlef-rathmer-9783696354657",
+  },
+
   "bundle-gesichter": {
     title: "Bundle: Gesichter des inneren Feuers + Die 27 Gesichter der Seele",
     cover: "images/2025/07/Cover-Gesichter-des-inneren-Feuers.001.jpg",
