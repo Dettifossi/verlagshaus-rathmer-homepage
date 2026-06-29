@@ -1,4 +1,16 @@
 const BUECHER_DATEN = {
+  "hinter-der-leidenschaft": {
+    title: "Hinter der Leidenschaft – Die neun Wunden des Enneagramms",
+    cover: "images/2026/06/Hinter-der-Leidenschaft-Cover.webp",
+    coverAlt: "Hinter der Leidenschaft – Die neun Wunden des Enneagramms – Detlef Rathmer – Buchcover",
+    format: "Taschenbuch · 200 Seiten",
+    desc: "Warum wiederholen wir dieselben Konflikte, obwohl wir Veränderung suchen? Dieses Buch geht dem nach. Detlef Rathmer untersucht die neun grundlegenden Wunden des Enneagramms und zeigt, wie frühe innere Überzeugungen Leidenschaften erzeugen, die unser Leben von innen heraus formen.\n\nHinter jeder Schutzstrategie liegt ein unerfülltes Bedürfnis – und in jeder Wunde das Potenzial zur Heilung. Wahre Veränderung beginnt dort, wo das Verdrängte endlich Sprache findet.",
+    price: "16,95 €",
+    category: "enneagramm",
+    orderType: "bod",
+    bodUrl: "https://buchshop.bod.de/hinter-der-leidenschaft-detlef-rathmer-9783696369446",
+  },
+
   "wenn-die-stille-brennt": {
     title: "Wenn die Stille brennt – Burnout",
     subtitle: "Das Enneagramm als Kompass aus der stillen Erschöpfung",
