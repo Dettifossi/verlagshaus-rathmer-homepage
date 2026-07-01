@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enneagramm-Heilungskompass – Die interaktive App | Verlagshaus Rathmer</title>
+  <meta name="description" content="Der Enneagramm-Heilungskompass: Das interaktive Navigationssystem für alle 27 Subtypen – Homöopathie, Bachblüten, Edelsteine, TCM und mehr. Einmalig digital. Von Detlef Rathmer.">
+  <link rel="stylesheet" href="styles.css?v=12">
+  <style>
+    /* ── Hero ── */
+    .kompass-hero {
+      background: linear-gradient(160deg, #1a2e28 0%, #0f1e1a 55%, #1c2a24 100%);
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .kompass-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 20%, rgba(180,150,70,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .kompass-hero__eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold, #c4a456);
+      margin-bottom: 1.5rem;
+    }
+    .kompass-hero__title {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: clamp(2.2rem, 6vw, 3.5rem);
+      font-weight: 400;
+      color: #f5ead8;
+      line-height: 1.15;
+      margin: 0 0 1.2rem;
+    }
+    .kompass-hero__sub {
+      font-size: 1.15rem;
+      color: rgba(245,234,216,0.78);
+      max-width: 540px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.6;
+    }
+    .kompass-hero__compass {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 2.5rem;
+      filter: drop-shadow(0 8px 32px rgba(0,0,0,0.55));
+    }
+    .kompass-hero__compass svg {
+      width: 100%;
+      height: 100%;
+    }
+    .kompass-hero__price-badge {
+      display: inline-block;
+      background: rgba(196,164,86,0.15);
+      border: 1px solid rgba(196,164,86,0.4);
+      border-radius: 40px;
+      padding: 0.5rem 1.4rem;
+      color: var(--gold, #c4a456);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .kompass-hero__btn {
+      display: inline-block;
+      background: var(--gold, #c4a456);
+      color: #1a1a1a;
+      padding: 1rem 2.2rem;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: background 0.2s;
+    }
+    .kompass-hero__btn:hover { background: #b8933e; }
+    .kompass-hero__hint {
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      color: rgba(245,234,216,0.45);
+    }
+
+    /* ── Was ist das? ── */
+    .kompass-what {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    .kompass-what h2 {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.9rem;
+      color: var(--anthracite, #2c2c2c);
+      margin-bottom: 1rem;
+    }
+    .kompass-what p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #444;
+      margin-bottom: 1.2rem;
+    }
+
+    /* ── Feature-Liste ── */
+    .kompass-features {
+      background: var(--cream, #faf6ef);
+      padding: 3.5rem 1.5rem;
+    }
+    .kompass-features__inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .kompass-features h2 {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.9rem;
+      color: var(--anthracite, #2c2c2c);
+      margin-bottom: 2rem;
+    }
+    .kompass-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.2rem;
+    }
+    .kompass-feature-item {
+      background: #fff;
+      border: 1px solid rgba(196,164,86,0.25);
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      display: flex;
+      gap: 0.9rem;
+      align-items: flex-start;
+    }
+    .kompass-feature-item__icon {
+      font-size: 1.4rem;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .kompass-feature-item__text strong {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--anthracite, #2c2c2c);
+      margin-bottom: 0.25rem;
+    }
+    .kompass-feature-item__text span {
+      font-size: 0.88rem;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* ── Für wen ── */
+    .kompass-forwho {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    .kompass-forwho h2 {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.9rem;
+      color: var(--anthracite, #2c2c2c);
+      margin-bottom: 1.2rem;
+    }
+    .kompass-forwho ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .kompass-forwho ul li {
+      padding: 0.6rem 0 0.6rem 1.8rem;
+      position: relative;
+      font-size: 1.02rem;
+      color: #444;
+      line-height: 1.55;
+      border-bottom: 1px solid rgba(196,164,86,0.15);
+    }
+    .kompass-forwho ul li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: var(--gold, #c4a456);
+      font-size: 0.7rem;
+      top: 0.75rem;
+    }
+
+    /* ── Kaufbox ── */
+    .kompass-buy {
+      background: linear-gradient(135deg, #1a2e28, #0f1e1a);
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .kompass-buy__box {
+      max-width: 480px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(196,164,86,0.35);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+    }
+    .kompass-buy__label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold, #c4a456);
+      margin-bottom: 0.75rem;
+    }
+    .kompass-buy__name {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.7rem;
+      color: #f5ead8;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+    .kompass-buy__price {
+      margin-bottom: 1.5rem;
+    }
+    .kompass-buy__price-main {
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: #f5ead8;
+      line-height: 1;
+    }
+    .kompass-buy__price-old {
+      font-size: 1.1rem;
+      color: rgba(245,234,216,0.4);
+      text-decoration: line-through;
+      margin-left: 0.4rem;
+    }
+    .kompass-buy__price-hint {
+      font-size: 0.82rem;
+      color: rgba(245,234,216,0.5);
+      margin-top: 0.35rem;
+    }
+    .kompass-buy__checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.8rem;
+      text-align: left;
+    }
+    .kompass-buy__checklist li {
+      padding: 0.4rem 0 0.4rem 1.6rem;
+      position: relative;
+      font-size: 0.9rem;
+      color: rgba(245,234,216,0.75);
+    }
+    .kompass-buy__checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--gold, #c4a456);
+      font-weight: 700;
+    }
+    .kompass-buy__btn {
+      display: block;
+      background: var(--gold, #c4a456);
+      color: #1a1a1a;
+      padding: 1.1rem 2rem;
+      border-radius: 10px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+      letter-spacing: 0.02em;
+      transition: background 0.2s;
+      margin-bottom: 1rem;
+    }
+    .kompass-buy__btn:hover { background: #b8933e; }
+    .kompass-buy__secure {
+      font-size: 0.8rem;
+      color: rgba(245,234,216,0.4);
+    }
+
+    /* ── Demo-Link ── */
+    .kompass-demo {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    .kompass-demo p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    .kompass-demo a {
+      color: var(--gold-dark, #8a6f3a);
+      text-decoration: underline;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="Logo-vr.png" alt="VR" class="nav-logo-img"><span class="nav-logo-text">Verlagshaus <span class="nav-logo-name">Rathmer</span><span class="nav-logo-url">www.verlagshausrathmer.com</span></span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-has-dropdown">
+        <button class="nav-dropdown-toggle" id="buecher-toggle">Bücher <span class="nav-caret">▾</span></button>
+        <ul class="nav-dropdown">
+          <li><a href="neuerscheinungen.html">Neuerscheinungen</a></li>
+          <li><a href="enneagramm.html">Enneagramm</a></li>
+          <li><a href="einzelstudien.html">Literarische Porträts (27)</a></li>
+          <li><a href="homoeopathie.html">Homöopathie &amp; Naturheilkunde</a></li>
+          <li><a href="persoenliche-entwicklung.html">Persönliche Entwicklung</a></li>
+          <li><a href="kalender.html">Kalender</a></li>
+        </ul>
+      </li>
+      <li><a href="kompass.html" class="is-active">Heilungskompass App</a></li>
+      <li><a href="geschenkideen.html">Geschenkideen</a></li>
+      <li><a href="seminare.html">Seminare &amp; Ausbildungen</a></li>
+      <li><a href="ueber-den-autor.html">Über den Autor</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <div class="site-switcher">
+      <button class="site-switcher__btn">⇄&thinsp;Praxis</button>
+      <div class="site-switcher__card">
+        <p class="site-switcher__label">Weitere Website</p>
+        <p class="site-switcher__name">Naturheilpraxis Detlef Rathmer</p>
+        <p class="site-switcher__desc">Klassische Homöopathie, Enneagramm &amp; psychologische Beratung in Billerbeck.</p>
+        <a href="https://psychologische-homoeopathie.de" class="site-switcher__link">&#8594;&ensp;Zur Praxis</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="kompass-hero">
+  <p class="kompass-hero__eyebrow">Neu: Die interaktive App</p>
+
+  <div class="kompass-hero__compass" aria-hidden="true">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="face" cx="42%" cy="36%" r="68%">
+          <stop offset="0%"   stop-color="#fff8e8" />
+          <stop offset="40%"  stop-color="#f5e8cc" />
+          <stop offset="75%"  stop-color="#ddc898" />
+          <stop offset="100%" stop-color="#c4a870" />
+        </radialGradient>
+        <linearGradient id="ring" x1="18%" y1="8%" x2="82%" y2="92%">
+          <stop offset="0%"   stop-color="#f0d88a" />
+          <stop offset="18%"  stop-color="#d4a050" />
+          <stop offset="46%"  stop-color="#6a4020" />
+          <stop offset="74%"  stop-color="#c89848" />
+          <stop offset="100%" stop-color="#e8c860" />
+        </linearGradient>
+        <linearGradient id="needle-n" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stop-color="#f08040" />
+          <stop offset="40%"  stop-color="#cc3818" />
+          <stop offset="100%" stop-color="#8a1e08" />
+        </linearGradient>
+        <linearGradient id="needle-s" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stop-color="#2e4255" />
+          <stop offset="100%" stop-color="#0e1e2c" />
+        </linearGradient>
+        <filter id="face-shadow">
+          <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="rgba(40,28,10,0.38)" />
+        </filter>
+      </defs>
+      <circle cx="100" cy="100" r="95" fill="url(#ring)" />
+      <circle cx="100" cy="100" r="90" fill="#1e1510" />
+      <circle cx="100" cy="100" r="87" fill="url(#ring)" opacity="0.7" />
+      <circle cx="100" cy="100" r="82" fill="url(#face)" filter="url(#face-shadow)" />
+      <ellipse cx="78" cy="68" rx="26" ry="16" fill="white" opacity="0.22" transform="rotate(-30 78 68)" />
+      <g stroke="#8a6f3a" stroke-width="1.5" opacity="0.5">
+        <line x1="100" y1="16" x2="100" y2="28" />
+        <line x1="100" y1="172" x2="100" y2="184" />
+        <line x1="16"  y1="100" x2="28"  y2="100" />
+        <line x1="172" y1="100" x2="184" y2="100" />
+        <line x1="39"  y1="39"  x2="47"  y2="47" />
+        <line x1="161" y1="39"  x2="153" y2="47" />
+        <line x1="39"  y1="161" x2="47"  y2="153" />
+        <line x1="161" y1="161" x2="153" y2="153" />
+      </g>
+      <g fill="none" stroke="rgba(80,50,20,0.35)" stroke-width="1">
+        <polygon points="100,34 157,132 43,132" />
+        <polyline points="143,50 122,162 166,88 57,50 78,162 34,88 143,50" />
+      </g>
+      <g fill="rgba(80,50,20,0.4)">
+        <circle cx="100" cy="34"  r="4" /><circle cx="143" cy="50"  r="4" />
+        <circle cx="166" cy="88"  r="4" /><circle cx="157" cy="132" r="4" />
+        <circle cx="122" cy="162" r="4" /><circle cx="78"  cy="162" r="4" />
+        <circle cx="43"  cy="132" r="4" /><circle cx="34"  cy="88"  r="4" />
+        <circle cx="57"  cy="50"  r="4" />
+      </g>
+      <polygon points="100,21 104.5,100 100,94 95.5,100" fill="url(#needle-n)" stroke="rgba(80,30,10,0.25)" stroke-width="0.5" />
+      <polygon points="100,179 104.5,100 100,106 95.5,100" fill="url(#needle-s)" stroke="rgba(10,20,30,0.2)" stroke-width="0.5" />
+      <circle cx="100" cy="100" r="10.5" fill="#150e08" />
+      <circle cx="100" cy="100" r="8"    fill="url(#ring)" />
+      <circle cx="100" cy="100" r="5"    fill="#f8e8c0" />
+      <circle cx="100" cy="100" r="2.2"  fill="rgba(185,80,30,0.95)" />
+    </svg>
+  </div>
+
+  <h1 class="kompass-hero__title">Enneagramm-<br>Heilungskompass</h1>
+  <p class="kompass-hero__sub">Das interaktive Navigationssystem für alle 27 Enneagramm-Subtypen — Homöopathie, Bachblüten, Edelsteine, TCM, Musik und mehr.</p>
+
+  <div class="kompass-hero__price-badge">Einführungspreis · € 49 statt € 69</div><br>
+  <a class="kompass-hero__btn" href="https://www.checkout-ds24.com/product/707486" rel="noopener">
+    Jetzt Zugang kaufen → € 49
+  </a>
+  <p class="kompass-hero__hint">Sofortiger digitaler Zugang · Sicherer Kauf über Digistore24</p>
+</section>
+
+<!-- Was ist das? -->
+<section>
+  <div class="kompass-what">
+    <h2>Was ist der Enneagramm-Heilungskompass?</h2>
+    <p>Der Enneagramm-Heilungskompass ist das erste interaktive Navigationssystem, das das Gesamtwerk von Detlef Rathmer in einer einzigen App bündelt. Statt in vielen Büchern zu blättern, finden Sie hier — geordnet nach Ihrem persönlichen Enneagramm-Subtyp — alle Heilmittel, Einblicke und Entwicklungswege auf einen Blick.</p>
+    <p>Die App entstand aus jahrzehntelanger therapeutischer Arbeit und umfasst über 60 Bücher zu Enneagramm, Homöopathie, Bachblüten, Schüßler-Salzen, Edelsteinen, TCM, ätherischen Ölen, Tees und persönlicher Entwicklung. Alles subtypgenau aufbereitet für alle 27 Subtypen des Enneagramms.</p>
+    <p>Es gibt bisher kein anderes Werk, das diese Informationen so gebündelt und zugänglich macht.</p>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="kompass-features">
+  <div class="kompass-features__inner">
+    <h2>Was nur diese App kann</h2>
+    <div class="kompass-feature-grid">
+      <div class="kompass-feature-item">
+        <div class="kompass-feature-item__icon">🔍</div>
+        <div class="kompass-feature-item__text">
+          <strong>Alles auf einen Blick</strong>
+          <span>Homöopathie, Bachblüten, Schüßler-Salze, Edelsteine, Tees, ätherische Öle, TCM, Musik, Kindheitsprägung — subtypgenau geordnet.</span>
+        </div>
+      </div>
+      <div class="kompass-feature-item">
+        <div class="kompass-feature-item__icon">📚</div>
+        <div class="kompass-feature-item__text">
+          <strong>Synthese des Gesamtwerks</strong>
+          <span>60+ Bücher von Detlef Rathmer in einem System — mit direkten Links zu den Quellbüchern bei BoD.</span>
+        </div>
+      </div>
+      <div class="kompass-feature-item">
+        <div class="kompass-feature-item__icon">🎯</div>
+        <div class="kompass-feature-item__text">
+          <strong>Subtypgenau</strong>
+          <span>Alle 27 Subtypen des Enneagramms mit eigenen Heilmittelprofilen, Charakterstudien und Entwicklungswegen.</span>
+        </div>
+      </div>
+      <div class="kompass-feature-item">
+        <div class="kompass-feature-item__icon">🔄</div>
+        <div class="kompass-feature-item__text">
+          <strong>Lebt und wächst</strong>
+          <span>Alle künftigen Updates sind im Preis enthalten — die App wird laufend ergänzt, wenn neue Bücher und Erkenntnisse hinzukommen.</span>
+        </div>
+      </div>
+      <div class="kompass-feature-item">
+        <div class="kompass-feature-item__icon">⚡</div>
+        <div class="kompass-feature-item__text">
+          <strong>Interaktiv &amp; sofort nutzbar</strong>
+          <span>Keine Installation, kein Download — die App läuft im Browser auf jedem Gerät. Sofortiger Zugang nach dem Kauf.</span>
+        </div>
+      </div>
+      <div class="kompass-feature-item">
+        <div class="kompass-feature-item__icon">🌿</div>
+        <div class="kompass-feature-item__text">
+          <strong>Enneagramm-Edelsteintherapie</strong>
+          <span>Erstmals digital: die Zuordnung von Edelsteinen und Mineralien zu allen 27 Subtypen des Enneagramms.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Für wen -->
+<section>
+  <div class="kompass-forwho">
+    <h2>Für wen ist die App?</h2>
+    <ul>
+      <li>Menschen, die ihren Enneagrammtyp kennen und tiefer verstehen möchten, was ihn bewegt, heilt und wachsen lässt</li>
+      <li>Therapeuten, Berater und Coaches, die mit dem Enneagramm arbeiten und schnell auf subtypspezifische Heilmittel zugreifen möchten</li>
+      <li>Leser der Bücher von Detlef Rathmer, die das Gesamtwerk in einem Navigationssystem bündeln wollen</li>
+      <li>Alle, die eine ganzheitliche, naturheilkundliche Perspektive auf Persönlichkeitsentwicklung suchen</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Kaufbox -->
+<section class="kompass-buy">
+  <div class="kompass-buy__box">
+    <p class="kompass-buy__label">Digitaler Zugang</p>
+    <p class="kompass-buy__name">Enneagramm-Heilungskompass</p>
+    <div class="kompass-buy__price">
+      <span class="kompass-buy__price-main">€ 49</span>
+      <span class="kompass-buy__price-old">€ 69</span>
+      <p class="kompass-buy__price-hint">Einführungspreis · zeitlich begrenzt · inkl. aller Updates</p>
+    </div>
+    <ul class="kompass-buy__checklist">
+      <li>Sofortiger Zugang nach Zahlung</li>
+      <li>Alle 27 Subtypen vollständig</li>
+      <li>Alle künftigen Updates inklusive</li>
+      <li>Läuft auf allen Geräten im Browser</li>
+      <li>Kleinunternehmer gem. § 19 UStG — kein Ausweis von Umsatzsteuer</li>
+    </ul>
+    <a class="kompass-buy__btn" href="https://www.checkout-ds24.com/product/707486" rel="noopener">
+      Jetzt Zugang kaufen → € 49
+    </a>
+    <p class="kompass-buy__secure">Sicherer Kauf über Digistore24 · Bei Fragen: <a href="mailto:detlefrathmer@t-online.de" style="color:inherit;">detlefrathmer@t-online.de</a></p>
+  </div>
+</section>
+
+<!-- Demo -->
+<section>
+  <div class="kompass-demo">
+    <p>Möchten Sie die App erst erkunden, bevor Sie kaufen?</p>
+    <p><a href="https://dettifossi.github.io/enneagramm-heilungskompass/" target="_blank" rel="noopener">Zur App-Vorschau →</a></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-logo"><img src="Logo-vr.png" alt="VR" class="footer-logo-img" loading="lazy">Verlagshaus Rathmer</span>
+    <ul class="footer-links">
+      <li><a href="impressum.html">Impressum</a></li>
+      <li><a href="agb.html">AGB</a></li>
+      <li><a href="widerruf.html">Widerruf</a></li>
+      <li><a href="datenschutz.html">Datenschutz</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">© 2026 Verlagshaus Rathmer · Detlef Rathmer · Molkereiweg 9 · 48727 Billerbeck</div>
+</footer>
+
+<script src="nav.js?v=3"></script>
+
+</body>
+</html>
