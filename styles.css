@@ -530,7 +530,7 @@ img { display: block; max-width: 100%; }
 .quote-band {
   position: relative;
   overflow: hidden;
-  background: var(--anthracite);
+  background: #2a3a2e;
   color: var(--cream);
   text-align: center;
   padding: 2.8rem 2rem;
