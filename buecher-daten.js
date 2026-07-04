@@ -792,6 +792,19 @@ const BUECHER_DATEN = {
     gallery: ["images/2026/05/Werbung-Enneagramm-Bachblueten-Therapie.jpg", "images/2025/12/EBT-MIT-AUTOR.jpg"],
   },
 
+  "die-enneagramm-aromatherapie": {
+    title: "Die Enneagramm-Aromatherapie",
+    cover: "images/2026/07/Die-Enneagramm-Aromatherapie-Cover.webp",
+    coverAlt: "Die Enneagramm-Aromatherapie – 9 Typen · 9 Ur-Wunden · 9 Seelendüfte – Detlef Rathmer – Buchcover",
+    format: "Taschenbuch · 116 Seiten · 2026",
+    desc: "9 Typen · 9 Ur-Wunden · 9 Seelendüfte\n\nDieses Werk verbindet die psychologische Struktur des Enneagramms mit praktischen Ansätzen der Aromatherapie zur ganzheitlichen Selbstreflexion. Aus 26 Jahren therapeutischer Berufspraxis als Heilpraktiker und Klassischer Homöopath heraus integriert Detlef Rathmer komplementäre Systeme wie Bachblüten, Schüßler-Salze und den Advaita-Impuls.\n\nJedem der neun Enneagramm-Typen entsprechen spezifische Ur-Wunden und seelische Themen – und ebenso spezifische ätherische Öle, die genau dort wirken, wo ein Typ besonders unter Druck steht oder in alten Mustern festhängt.\n\nAromatherapie ist in diesem Verständnis keine bloße Wohlfühlmethode, sondern ein Zugang zur Tiefenebene des Charakters. Düfte erreichen über das Limbische System direkt die emotionalen Schichten, die mit dem Intellekt allein kaum zu berühren sind.\n\nEin praxisnahes Werk für Therapeuten, Berater und alle, die ihre Persönlichkeitsarbeit mit natürlichen Heilmitteln vertiefen möchten.",
+    price: "12,95 €",
+    category: "homoeopathie",
+    orderType: "bod",
+    bodUrl: "https://buchshop.bod.de/die-enneagramm-aromatherapie-detlef-rathmer-9783695720507",
+    gallery: [],
+  },
+
   "du-bist-nicht-dein-zweifel": {
     title: "Du bist nicht dein Zweifel",
     cover: "images/2026/03/Du_bist_nicht_dein_Zweifel.webp",
