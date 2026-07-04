@@ -1,0 +1,707 @@
+{
+  "books": [
+    {
+      "slug": "hinter-der-leidenschaft",
+      "title": "Hinter der Leidenschaft – Die neun Wunden des Enneagramms",
+      "format": "Taschenbuch · 200 Seiten",
+      "price": "16,95 €",
+      "teaser": "Warum wiederholen wir dieselben Konflikte, obwohl wir Veränderung suchen? Dieses Buch geht dem nach",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2026/06/Hinter-der-Leidenschaft-Cover.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=hinter-der-leidenschaft"
+    },
+    {
+      "slug": "wenn-die-stille-brennt",
+      "title": "Wenn die Stille brennt – Burnout",
+      "format": "Taschenbuch · 92 Seiten",
+      "price": "12,95 €",
+      "teaser": "Burnout ist kein Zufall – es ist eine Falle, in die wir mit den besten Absichten tappen",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2026/06/Wenn-die-Stille-brennt-Cover.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=wenn-die-stille-brennt"
+    },
+    {
+      "slug": "gesichter-des-inneren-feuers-das-neue-enneagramm-buch",
+      "title": "Gesichter des inneren Feuers – Das neue Enneagramm-Buch",
+      "format": "PDF · eBook",
+      "price": "99,95 €",
+      "teaser": "Dieses Buch ist ein Wagnis – und eine Einladung",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2025/07/Cover-Gesichter-des-inneren-Feuers.001.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=gesichter-des-inneren-feuers-das-neue-enneagramm-buch"
+    },
+    {
+      "slug": "die-27-gesichter-der-seele-ein-psychologischer-subtypenroman",
+      "title": "Die 27 Gesichter der Seele – Ein psychologischer Subtypenroman",
+      "format": "PDF · eBook",
+      "price": "59,95 €",
+      "teaser": "Dieses Buch ist kein theologisches Traktat",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2025/07/Cover-27-Gesichter-der-Seele.001.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=die-27-gesichter-der-seele-ein-psychologischer-subtypenroman"
+    },
+    {
+      "slug": "die-verborgene-dynamik-der-27-subtypen",
+      "title": "Die verborgene Dynamik der 27 Subtypen",
+      "format": "Neuerscheinung 2026",
+      "price": "24,90 €",
+      "teaser": "Die verborgene Dynamik der 27 Subtypen bietet einen vertieften Zugang zum Enneagramm und zeigt, wie sich die neun Grundtypen durch die drei instinktiven Orientierungen in 27 differenzierte Subtypen en",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2026/05/Die_verborgene_Dynamik_der_27_Subtypen.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=die-verborgene-dynamik-der-27-subtypen"
+    },
+    {
+      "slug": "wer-du-wirklich-bist-band-1",
+      "title": "Wer du wirklich bist – Band 1",
+      "format": "Taschenbuch · 300 Seiten · 272 farbige Hochglanz-Übersichten · hochwertiger Bilderdruck",
+      "price": "9,99 €",
+      "teaser": "Das universelle Enneagramm: Wer du wirklich bist – Enneagramm in farbigen Schaubildern  Detlef Rathmer ist Therapeut und Autor",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Wer-du-wirklich-bist.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=wer-du-wirklich-bist-band-1"
+    },
+    {
+      "slug": "wer-du-wirklich-bist-band-2",
+      "title": "Wer du wirklich bist – Band 2",
+      "format": "Taschenbuch · 106 Übersichten",
+      "price": "9,99 €",
+      "teaser": "Bei der Ausarbeitung der einzelnen Schaubilder (Übersichten) ergab sich immer wieder die Notwendigkeit, in Bezug auf ein spezielles Thema das Wesentliche jedes Enneagrammtyps genau herauszuarbeiten",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/01/image2.jpeg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=wer-du-wirklich-bist-band-2"
+    },
+    {
+      "slug": "wer-du-wirklich-bist-band-3",
+      "title": "Wer du wirklich bist – Band 3",
+      "format": "Taschenbuch · 100 neue Übersichten",
+      "price": "17,95 €",
+      "teaser": "Bei der Ausarbeitung der einzelnen Schaubilder (Übersichten) ergab sich immer wieder die Notwendigkeit, in Bezug auf ein spezielles Thema das Wesentliche jedes Enneagrammtyps genau herauszuarbeiten",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2022/08/Cover-Download-WDWB3-17.08.2022.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=wer-du-wirklich-bist-band-3"
+    },
+    {
+      "slug": "die-praxis-der-typbestimmung-taschenbuch",
+      "title": "Die Praxis der Typbestimmung – Taschenbuch",
+      "format": "Taschenbuch",
+      "price": "14,95 €",
+      "teaser": "Sämtliche 36 Typen-Vergleiche zur präzisen und zuverlässigen Bestimmung des Enneagrammtyps Gemeinsamkeiten & Unterschiede der 9 Enneagrammtypen im direkten Vergleich unter Berücksichtigung der 27 Unte",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Die-Praxis-der-Typbestimmung-Taschenbuch.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=die-praxis-der-typbestimmung-taschenbuch"
+    },
+    {
+      "slug": "rathmer-s-enneagramm-typentest",
+      "title": "Rathmer's Enneagramm-Typentest",
+      "format": "Taschenbuch · Test",
+      "price": "6,99 €",
+      "teaser": "Kompakter Enneagramm-Typentest zur Selbstbestimmung!  – Neuartig konzipierter Enneagramm-Typentest, der die Weisheiten der universellen Enneagramm-Lehre mit den zuverlässigen Erkenntnissen der moderne",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Rathmers-Enneagramm-Typentest.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=rathmer-s-enneagramm-typentest"
+    },
+    {
+      "slug": "motivationaler-enneagramm-typentest",
+      "title": "Motivationaler Enneagramm-Typentest",
+      "format": "Taschenbuch · Motivationstest",
+      "price": "9,95 €",
+      "teaser": "Ein Meilenstein in der Typbestimmung: Dieser sorgfältig konzipierte Typentest nennt sich motivational, beruht also grundlegend auf der menschlichen Motivation",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/07/unnamed.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=motivationaler-enneagramm-typentest"
+    },
+    {
+      "slug": "motivational-enneagram-type-test-english",
+      "title": "Motivational Enneagram Type Test (English)",
+      "format": "Paperback · English Edition",
+      "price": "9,95 €",
+      "teaser": "This carefully designed type test is called motivational, so it is fundamentally based on human motivation",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2018/12/unnamed-1.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=motivational-enneagram-type-test-english"
+    },
+    {
+      "slug": "die-27-persoenlichkeiten-des-enneagramms",
+      "title": "Die 27 Persönlichkeiten des Enneagramms",
+      "format": "Taschenbuch",
+      "price": "7,99 €",
+      "teaser": "27 Charakterprofile als Ausdruck der menschlichen Natur  Erkenne deinen Persönlichkeitstyp im Spiegel des Enneagramms!  Ausführliche Beschreibung aller 27 Enneagramm-Untertypen!  – Durch die Kombinati",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Die-27-Persönlichkeiten-des-Enneagramms.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=die-27-persoenlichkeiten-des-enneagramms"
+    },
+    {
+      "slug": "der-code-deiner-persoenlichkeit",
+      "title": "Der Code deiner Persönlichkeit",
+      "format": "Taschenbuch",
+      "price": "17,99 €",
+      "teaser": "Der Code deiner Persönlichkeit zeigt dir einen klaren Weg, um dich selbst und andere tiefer zu verstehen",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2025/09/89ff581c-5628-41e8-9297-f9de3c22ac64.jpeg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=der-code-deiner-persoenlichkeit"
+    },
+    {
+      "slug": "rathmer-s-grosses-enneagramm-lexikon-von-a-z-taschenbuch",
+      "title": "Rathmer's großes Enneagramm-Lexikon von A–Z (Taschenbuch)",
+      "format": "Taschenbuch",
+      "price": "18,95 €",
+      "teaser": "Ein Nachschlagewerk über die 9 Enneatypen inklusive der 27 Untertypen  Grundlegendes Enneagramm-Wissen kompakt in einem Buch!  – Typbestimmung von mehr als 1500 berühmten Persönlichkeiten  – Insgesamt",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Enneagramm-Lexikon-Taschenbuch.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=rathmer-s-grosses-enneagramm-lexikon-von-a-z-taschenbuch"
+    },
+    {
+      "slug": "the-hidden-dynamics-of-the-27-subtypes",
+      "title": "The Hidden Dynamics of the 27 Subtypes",
+      "format": "English Edition · 2026",
+      "price": "24,90 €",
+      "teaser": "The Hidden Dynamics of the 27 Subtypes offers a deeper approach to the Enneagram and demonstrates how the nine core types unfold into 27 differentiated subtypes through the three instinctual orientati",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2026/05/Cover-The-hidden-dynamic-of-the-27-subtypes.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=the-hidden-dynamics-of-the-27-subtypes"
+    },
+    {
+      "slug": "enneagramm-zoo",
+      "title": "Enneagramm-Zoo",
+      "format": "Taschenbuch",
+      "price": "17,95 €",
+      "teaser": "Willkommen im Enneagramm-Zoo Ein Ort, an dem Selbsterkenntnis Form annimmt – mit Federn, Fell und Krallen",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2025/11/Enneagramm-Zoo.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=enneagramm-zoo"
+    },
+    {
+      "slug": "archetypen-der-tiere-im-enneagramm",
+      "title": "Archetypen der Tiere im Enneagramm",
+      "format": "Taschenbuch",
+      "price": "17,95 €",
+      "teaser": "Dieses Buch eröffnet einen neuen Zugang zum Enneagramm: Die 27 Subtypen werden nicht abstrakt erklärt, sondern in lebendigen Archetypen der Tierwelt gespiegelt",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2025/10/Archetypen_der_Tiere_im_Enneagramm.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=archetypen-der-tiere-im-enneagramm"
+    },
+    {
+      "slug": "chrono-ennea-typ-ernaehrung-im-rhythmus-der-organe",
+      "title": "Chrono-Ennea-Typ: Ernährung im Rhythmus der Organe",
+      "format": "Taschenbuch · Ernährung",
+      "price": "14,95 €",
+      "teaser": "Unsere Organe haben ihre Zeit – und unsere Persönlichkeit ihren eigenen Rhythmus",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2025/08/IMG_3816-2.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=chrono-ennea-typ-ernaehrung-im-rhythmus-der-organe"
+    },
+    {
+      "slug": "rathmer-s-repertorium-ebook-version",
+      "title": "Rathmer's Repertorium – eBook Version",
+      "format": "eBook · PDF",
+      "price": "99,00 €",
+      "teaser": "Rathmer`s Repertorium – Das große Repertorium der Geist-/Gemütsrubriken und deren Bedeutung in der Homöopathie – jetzt auch als eBook!  Diese EBook-Version ist für alle gedacht, die gern das umfangrei",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-RR-EBook.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=rathmer-s-repertorium-ebook-version"
+    },
+    {
+      "slug": "rathmer-s-repertorium-opus-radar-zusatzmodul",
+      "title": "Rathmer's Repertorium – Zusatzmodul für Opus/Radar",
+      "format": "Elektronisches Zusatzmodul · Opus/Radar",
+      "price": "Preis auf Medicando",
+      "teaser": "Rathmer's Repertorium steht als elektronisches Zusatzmodul für das weit verbreitete Homöopathie-Software-System Opus/Radar zur Verfügung",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-RR-gebunden.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=rathmer-s-repertorium-opus-radar-zusatzmodul"
+    },
+    {
+      "slug": "repertorium-der-hervorstechenden-gemuetsrubriken-gebundene-a",
+      "title": "Repertorium der hervorstechenden Gemütsrubriken – Gebundene Ausgabe",
+      "format": "Gebundene Ausgabe",
+      "price": "59,95 €",
+      "teaser": "Das neue Repertorium der hervorstechenden Gemütsrubriken",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Repertorium-der-hervorstechenden-Gemütsrubriken-gebunden.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=repertorium-der-hervorstechenden-gemuetsrubriken-gebundene-a"
+    },
+    {
+      "slug": "repertorium-der-hervorstechenden-gemuetsrubriken-ebook",
+      "title": "Repertorium der hervorstechenden Gemütsrubriken – eBook",
+      "format": "eBook · PDF",
+      "price": "36,99 €",
+      "teaser": "Das neue Repertorium der hervorstechenden Gemütsrubriken",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Repertorium-der-hervorstechenden-Gemütsrubriken-gebunden.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=repertorium-der-hervorstechenden-gemuetsrubriken-ebook"
+    },
+    {
+      "slug": "enneagramm-homoeopathie-band-1",
+      "title": "Enneagramm-Homöopathie – Band 1",
+      "format": "Taschenbuch · Band 1",
+      "price": "9,95 €",
+      "teaser": "Ganzheitliche homöopathische Behandlung  nach der neuen Enneagramm-Homöopathie  Ausführliche Darstellung der neuen Enneagramm-Homöopathie!  – Die Kombination von Homöopathie und Enneagramm in Form der",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Enneagramm-Homöopathie.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=enneagramm-homoeopathie-band-1"
+    },
+    {
+      "slug": "enneagramm-homoeopathie-band-2",
+      "title": "Enneagramm-Homöopathie – Band 2",
+      "format": "Gebundene Ausgabe · Band 2",
+      "price": "12,95 €",
+      "teaser": "Ganzheitliche homöopathische Behandlung  nach der neuen Enneagramm-Homöopathie  Ausführliche Darstellung der neuen Enneagramm-Homöopathie!  – Die Kombination von Homöopathie und Enneagramm in Form der",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-EH-Band-2.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=enneagramm-homoeopathie-band-2"
+    },
+    {
+      "slug": "enneagramm-homoeopathie-ebook-version",
+      "title": "Enneagramm-Homöopathie – eBook Version",
+      "format": "eBook · PDF",
+      "price": "9,95 €",
+      "teaser": "Mittelwirkung/Grundsätze/Synthese/Differenzierung zwischen den 9 Heilmitteln der Enneagramm-Homöopathie!  Dieses kleine Büchlein hat es in sich! Es ist geschrieben für alle, die sich schon ein wenig m",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Enneagramm-Homöopathie-EBook-im-pdf-Format.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=enneagramm-homoeopathie-ebook-version"
+    },
+    {
+      "slug": "die-dynamik-der-9-enneagramm-heilmittel-gebundene-ausgabe",
+      "title": "Die Dynamik der 9 Enneagramm-Heilmittel – Gebundene Ausgabe",
+      "format": "Gebundene Ausgabe",
+      "price": "59,95 €",
+      "teaser": "Die dynamischen Beziehungen zwischen den Enneagramm-Heilmittel  Zum Zentrum wahren Heilens gelangen wir nur, wenn wir in der Tiefe die zentralen Heilmittel, die in diesem Buch ausführlich dargestellt ",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Die-Dynamik-der-9-Enneagramm-Heilmittel-gebunden.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=die-dynamik-der-9-enneagramm-heilmittel-gebundene-ausgabe"
+    },
+    {
+      "slug": "die-dynamik-der-9-enneagramm-heilmittel-ebook",
+      "title": "Die Dynamik der 9 Enneagramm-Heilmittel – eBook",
+      "format": "eBook Version",
+      "price": "39,99 €",
+      "teaser": "Die dynamischen Beziehungen zwischen den Enneagramm-Heilmitteln  Zum Zentrum wahren Heilens gelangen wir nur, wenn wir in der Tiefe die zentralen Heilmittel, die in diesem Buch ausführlich dargestellt",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Die-Dynamik-der-9-Enneagramm-Heilmittel-EBook-Edition.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=die-dynamik-der-9-enneagramm-heilmittel-ebook"
+    },
+    {
+      "slug": "enneagramm-homoeopathie-repertorium-ebook-version",
+      "title": "Enneagramm-Homöopathie-Repertorium – eBook Version",
+      "format": "eBook · PDF",
+      "price": "59,95 €",
+      "teaser": "Facettenreiche Darstellung der Enneagramm-Homöopathie  Sowohl in einer lebendigen Homöopathie als auch beim Enneagramm geht es um den Menschen selbst – was läge da nicht näher, als beide Systeme mitei",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-EH-Repertorium-EBook-im-pdf-Format.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=enneagramm-homoeopathie-repertorium-ebook-version"
+    },
+    {
+      "slug": "das-grosse-eh-repertorium-gebunden",
+      "title": "Das große Enneagramm-Homöopathie Repertorium von A-Z – Gebundene Ausgabe",
+      "format": "Gebundene Ausgabe · 392 Seiten",
+      "price": "69,99 €",
+      "teaser": "Eine facettenreiche Darstellung der Enneagramm-Homöopathie in Form von Gemüts-, Symbol- und Themenrubriken",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Das-gro%C3%9Fe-Enneagramm-Hom%C3%B6opathie-Repertorium-von-A-Z.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=das-grosse-eh-repertorium-gebunden"
+    },
+    {
+      "slug": "das-grosse-eh-repertorium-ebook",
+      "title": "Das große Enneagramm-Homöopathie Repertorium von A-Z – eBook Version",
+      "format": "eBook · PDF",
+      "price": "49,99 €",
+      "teaser": "Eine facettenreiche Darstellung der Enneagramm-Homöopathie in Form von Gemüts-, Symbol- und Themenrubriken",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Das-gro%C3%9Fe-Enneagramm-Hom%C3%B6opathie-Repertorium-von-A-Z.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=das-grosse-eh-repertorium-ebook"
+    },
+    {
+      "slug": "lehrbuch-der-enneagramm-homoeopathie-band-1-taschenbuch",
+      "title": "Lehrbuch der Enneagramm-Homöopathie – Band 1 (Taschenbuch)",
+      "format": "Taschenbuch · Band 1",
+      "price": "59,95 €",
+      "teaser": "Band 1: Arzneimittellehre Typen I – IV  Dieses dreibändige Werk führt ein in die neue homöopathische Methode der Enneagramm-Homöopathie",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Lehrbuch-der-EH-3-bändig-Taschenbuch-Band-1.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=lehrbuch-der-enneagramm-homoeopathie-band-1-taschenbuch"
+    },
+    {
+      "slug": "lehrbuch-der-enneagramm-homoeopathie-band-2-taschenbuch",
+      "title": "Lehrbuch der Enneagramm-Homöopathie – Band 2 (Taschenbuch)",
+      "format": "Taschenbuch · Band 2",
+      "price": "59,95 €",
+      "teaser": "Band 2: Arzneimittellehre Typen V – IX  Dieses dreibändige Werk führt ein in die neue homöopathische Methode der Enneagramm-Homöopathie",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Lehrbuch-der-EH-3-bändig-Taschenbuch-Band-2.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=lehrbuch-der-enneagramm-homoeopathie-band-2-taschenbuch"
+    },
+    {
+      "slug": "lehrbuch-der-enneagramm-homoeopathie-band-3-taschenbuch",
+      "title": "Lehrbuch der Enneagramm-Homöopathie – Band 3 (Taschenbuch)",
+      "format": "Taschenbuch · Band 3",
+      "price": "59,95 €",
+      "teaser": "Band 3: Enneagramm-Repertorium als Ergänzung zu den Bänden 1 und 2  Dieses dreibändige Werk führt ein in die neue homöopathische Methode der Enneagramm-Homöopathie",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Lehrbuch-der-EH-3-bändig-Taschenbuch-Band-3.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=lehrbuch-der-enneagramm-homoeopathie-band-3-taschenbuch"
+    },
+    {
+      "slug": "lehrbuch-der-enneagramm-homoeopathie-band-1-ebook",
+      "title": "Lehrbuch der Enneagramm-Homöopathie – Band 1 (eBook)",
+      "format": "eBook · Band 1",
+      "price": "44,99 €",
+      "teaser": "Band 1: Arzneimittellehre Typen I – IV  Dieses dreibändige Werk führt ein in die neue homöopathische Methode der Enneagramm-Homöopathie",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Lehrbuch-der-EH-3-bändig-EBook-Band-1.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=lehrbuch-der-enneagramm-homoeopathie-band-1-ebook"
+    },
+    {
+      "slug": "lehrbuch-der-enneagramm-homoeopathie-band-2-ebook",
+      "title": "Lehrbuch der Enneagramm-Homöopathie – Band 2 (eBook)",
+      "format": "eBook · Band 2",
+      "price": "44,99 €",
+      "teaser": "Band 2: Arzneimittellehre Typen V – IX  Dieses dreibändige Werk führt ein in die neue homöopathische Methode der Enneagramm-Homöopathie",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Lehrbuch-der-EH-3-bändig-EBook-Band-2.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=lehrbuch-der-enneagramm-homoeopathie-band-2-ebook"
+    },
+    {
+      "slug": "lehrbuch-der-enneagramm-homoeopathie-band-3-ebook",
+      "title": "Lehrbuch der Enneagramm-Homöopathie – Band 3 (eBook)",
+      "format": "eBook · Band 3",
+      "price": "44,99 €",
+      "teaser": "Band 3: Enneagramm-Repertorium als Ergänzung zu den Bänden 1 und 2  Dieses dreibändige Werk führt ein in die neue homöopathische Methode der Enneagramm-Homöopathie",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Lehrbuch-der-EH-3-bändig-EBook-Band-3.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=lehrbuch-der-enneagramm-homoeopathie-band-3-ebook"
+    },
+    {
+      "slug": "das-unterrichtsskript-zur-sehgal-ausbildung-ebook",
+      "title": "Das Unterrichtsskript zur Sehgal-Ausbildung – eBook",
+      "format": "eBook · Ausbildungsmaterial",
+      "price": "99,00 €",
+      "teaser": "Unterrichtsmaterialien aus der Sehgal-Schule!  Für alle Interessierten an der Sehgal-Ausbildung, die jedoch aus zeitlichen, geographischen oder sonstigen Gründen nicht an einer aktiven Sehgal-Ausbildu",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Das-Unterrichtsskript-zur-Sehgal-Ausbildung-EBook-im-pdf-Format.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=das-unterrichtsskript-zur-sehgal-ausbildung-ebook"
+    },
+    {
+      "slug": "fallanalyse-in-der-homoeopathie-nach-sehgal",
+      "title": "Fallanalyse in der Homöopathie nach Sehgal",
+      "format": "Taschenbuch · Externes Werk",
+      "price": "56,00 €",
+      "teaser": "Autodidaktisches Lern- und Arbeitsbuch anhand von 36 Fällen aus der homöopathischen Praxis  Fallanalyse in der Homöopathie nach Sehgal  Im März 2008 ist im Eva-Lang-Verlag vom Leiter der Schule für Re",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Fallanalyse-in-der-Homöopathie-nach-Sehgal.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=fallanalyse-in-der-homoeopathie-nach-sehgal"
+    },
+    {
+      "slug": "gesetzeskunde-fuer-heilpraktiker",
+      "title": "Gesetzeskunde für Heilpraktiker",
+      "format": "eBook · PDF",
+      "price": "22,00 €",
+      "teaser": "Gesetzeskunde für Heilpraktiker zur Vorbereitung auf die amtsärztliche Überprüfung!  Vorbereitung auf die amtsärztliche Überprüfung beim Gesundheitsamt  Ausführliches Lehrmaterial zur Gesetzeskunde fü",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Gesetzeskunde-für-Heilpraktiker.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=gesetzeskunde-fuer-heilpraktiker"
+    },
+    {
+      "slug": "die-enneagramm-homoeopathie-unterrichtsmaterial",
+      "title": "Die Enneagramm-Homöopathie – Unterrichtsmaterial",
+      "format": "eBook · Unterrichtsmaterial",
+      "price": "99,00 €",
+      "teaser": "20 Unterrichtseinheiten für das Selbststudium der Enneagramm-Homöopathie",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Das-Enneagramm-Homööopathie-Unterrichtsmaterial-EBook-pdf.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=die-enneagramm-homoeopathie-unterrichtsmaterial"
+    },
+    {
+      "slug": "die-enneagrammatische-homoeopathie-ebook",
+      "title": "Die enneagrammatische Homöopathie – eBook",
+      "format": "eBook · PDF",
+      "price": "8,95 €",
+      "teaser": "Dieses Buch handelt von der enneagrammatischen Homöopathie, einer neuen Form der Anwendung homöopathischer Heilmittel nach den Erkenntnissen der Enneagramm-Lehre",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Die-enneagrammatische-Homöopathie-EBook-im-pdf-Format.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=die-enneagrammatische-homoeopathie-ebook"
+    },
+    {
+      "slug": "der-kern-der-heilmittel-the-core-of-the-remedies-ebook",
+      "title": "Der Kern der Heilmittel / The Core of the Remedies – eBook",
+      "format": "eBook · Deutsch/Englisch",
+      "price": "69,99 €",
+      "teaser": "Das vorliegende Werk soll den Homöopathen befähigen, den wirklichen Kern des Heilmittels in Bezug auf den Gemütszustand des Patienten zu erkennen!  Um ein homöopathisches Arzneimittel sicher und wirks",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Der-Kern-der-Heilmittel-EBook.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=der-kern-der-heilmittel-the-core-of-the-remedies-ebook"
+    },
+    {
+      "slug": "enneagramm-biochemie",
+      "title": "Enneagramm-Biochemie",
+      "format": "Taschenbuch",
+      "price": "19,80 €",
+      "teaser": "Was heilt den Menschen wirklich? Nicht das Symptom steht im Mittelpunkt dieses Buches, sondern die Fähigkeit des Organismus, sich selbst zu regulieren",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2026/02/Enneagramm-Biochemie.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=enneagramm-biochemie"
+    },
+    {
+      "slug": "enneagramm-bachblueten-therapie",
+      "title": "Enneagramm-Bachblüten-Therapie",
+      "format": "Taschenbuch",
+      "price": "22,00 €",
+      "teaser": "Dieses Buch verbindet zwei bewährte Systeme der inneren Arbeit: die Enneagramm-Typologie und die Bachblüten-Therapie nach Dr",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2025/12/Enneagramm-Bachblueten-Therapie.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=enneagramm-bachblueten-therapie"
+    },
+    {
+      "slug": "die-enneagramm-aromatherapie",
+      "title": "Die Enneagramm-Aromatherapie",
+      "format": "Taschenbuch · 116 Seiten · 2026",
+      "price": "12,95 €",
+      "teaser": "9 Typen · 9 Ur-Wunden · 9 Seelendüfte  Dieses Werk verbindet die psychologische Struktur des Enneagramms mit praktischen Ansätzen der Aromatherapie zur ganzheitlichen Selbstreflexion",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2026/07/Die-Enneagramm-Aromatherapie-Cover.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=die-enneagramm-aromatherapie"
+    },
+    {
+      "slug": "du-bist-nicht-dein-zweifel",
+      "title": "Du bist nicht dein Zweifel",
+      "format": "Neuerscheinung 2026",
+      "price": "16,00 €",
+      "teaser": "Du bist nicht dein Zweifel  Warum Selbstzweifel entsteht – und wie daraus innere Freiheit wachsen kann  Selbstzweifel gehört zu den stillsten Kräften unseres Lebens",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2026/03/Du_bist_nicht_dein_Zweifel.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=du-bist-nicht-dein-zweifel"
+    },
+    {
+      "slug": "nichts-und-alles",
+      "title": "Nichts und Alles",
+      "format": "Taschenbuch",
+      "price": "12,99 €",
+      "teaser": "Nichts und Alles – Die Praxis des Schauens nach innen  Was bleibt, wenn der Blick sich umkehrt – weg von der Welt, hin zu dem, der sieht?  Dieses Buch beschreibt keine neue Lehre, keine Methode, sonde",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2025/12/Nichts_und_Alles.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=nichts-und-alles"
+    },
+    {
+      "slug": "der-raum-hinter-allem",
+      "title": "Der Raum hinter allem",
+      "format": "Taschenbuch",
+      "price": "16,99 €",
+      "teaser": "Viele Menschen versuchen, ihr Leben zu ordnen – Termine, Aufgaben, Erwartungen",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2025/12/Der_Raum_hinter_allem.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=der-raum-hinter-allem"
+    },
+    {
+      "slug": "sei-still-und-wisse-ich-bin-gott",
+      "title": "Sei still und wisse – ich bin Gott!",
+      "format": "Taschenbuch",
+      "price": "9,95 €",
+      "teaser": "Wie finde ich zur Ruhe? Wie finde ich zur Stille? Wie finde ich zu mir selbst? Wie finde ich mein wahres Glück?  Wir finden unser wahres Glück nur dann, wenn wir uns selbst finden",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Sei-still-und-wisse-ich-bin-Gott.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=sei-still-und-wisse-ich-bin-gott"
+    },
+    {
+      "slug": "heilung-als-erinnerung",
+      "title": "Heilung als Erinnerung",
+      "format": "Taschenbuch · 2026",
+      "price": "19,80 €",
+      "teaser": "Was bedeutet Heilung wirklich? Ist sie Veränderung, Korrektur, Anpassung – oder ein Erinnern an etwas Tieferes, das im Menschen nie verloren war? Auf Grundlage des Enneagramms beschreibt dieses Buch d",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2026/03/Heilung_als_Erinnerung.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=heilung-als-erinnerung"
+    },
+    {
+      "slug": "7-wege-zu-dir-selbst-lebenskunst-fuer-den-alltag",
+      "title": "7 Wege zu Dir selbst – Lebenskunst für den Alltag!",
+      "format": "Taschenbuch",
+      "price": "9,95 €",
+      "teaser": "„Das Glück wohnt nicht im Besitze und nicht im Golde, das Glücksgefühl ist in der Seele zu Hause",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-7-Wege-zu-dir-selbst.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=7-wege-zu-dir-selbst-lebenskunst-fuer-den-alltag"
+    },
+    {
+      "slug": "die-sprache-unserer-beziehungen",
+      "title": "Die Sprache unserer Beziehungen",
+      "format": "Taschenbuch",
+      "price": "15,99 €",
+      "teaser": "Die Sprache unserer Beziehungen – Nähe gestalten in Liebe, Freundschaft und Familie  Beziehungen sind das Herz unseres Lebens",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2025/12/Die_Sprache_unserer_Beziehungen.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=die-sprache-unserer-beziehungen"
+    },
+    {
+      "slug": "leidenschaft-und-heilung",
+      "title": "Leidenschaft und Heilung",
+      "format": "Taschenbuch",
+      "price": "17,99 €",
+      "teaser": "Leidenschaft und Heilung – Das Enneagramm in der homöopathischen Praxis  Dieses Buch lädt zu einer besonderen Entdeckungsreise ein: in die Welt des Enneagramms, verbunden mit lebendigen Patientengesch",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2025/10/Leidenschaft_und_Heilung.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=leidenschaft-und-heilung"
+    },
+    {
+      "slug": "die-sprache-unserer-sexualitaet",
+      "title": "Die Sprache unserer Sexualität",
+      "format": "Taschenbuch",
+      "price": "14,95 €",
+      "teaser": "„Die Sprache der Sexualität“ ist mehr als ein Ratgeber – es ist eine Einladung, Intimität, Nähe und Leidenschaft neu zu verstehen",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2025/10/Die_Sprache_unserer_Sexualitaet.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=die-sprache-unserer-sexualitaet"
+    },
+    {
+      "slug": "the-code-of-your-personality",
+      "title": "The Code of Your Personality",
+      "format": "Paperback · English Edition",
+      "price": "12,99 €",
+      "teaser": "The Code of Your Personality invites you on a journey of self-discovery with the timeless wisdom of the Enneagram",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2025/10/The_Code_of_Your_Personality.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=the-code-of-your-personality"
+    },
+    {
+      "slug": "in-der-tiefe-der-zeit",
+      "title": "In der Tiefe der Zeit",
+      "format": "Taschenbuch",
+      "price": "15,95 €",
+      "teaser": "IN DER TIEFE DER ZEIT – 27 Geschichten über Verlust, Geheimnisse und die verborgene Kraft des Lebens  Manchmal hält das Leben den Atem an: Abschied, Krankheit, ein unerwarteter Bruch – und plötzlich z",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2025/09/PHOTO-2025-09-12-09-12-58.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=in-der-tiefe-der-zeit"
+    },
+    {
+      "slug": "das-seminar-wenn-masken-fallen",
+      "title": "Das Seminar – Wenn Masken fallen",
+      "format": "Taschenbuch · Roman",
+      "price": "17,95 €",
+      "teaser": "Ein mehrwöchiges Seminar, das alles verändert: 27 Menschen reisen zu einem Selbsterfahrungsseminar in ein abgelegenes Haus",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2025/09/c47f43b0-fbb1-4990-81fb-e36730c29ee4.jpeg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=das-seminar-wenn-masken-fallen"
+    },
+    {
+      "slug": "der-weltweit-erste-enneagramm-wandkalender-xxl-a3",
+      "title": "Der weltweit erste Enneagramm-Wandkalender (XXL, A3)",
+      "format": "Wandkalender · XXL A3-Format",
+      "price": "34,95 €",
+      "teaser": "VERSCHÖNERN SIE IHR LEBEN UND SCHMÜCKEN SIE IHR HEIM – MIT EINEM EWIGEN ENNEAGRAMM-WANDKALENDER AUS DEM VERLAGSHAUS RATHMER – Ihrem freundlichen Buchverlag!  Dieser liebevoll gestaltete „ewige Enneagr",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Der-weltweit-erste-Enneagramm-Wandkalender-XXL-A3-Format.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=der-weltweit-erste-enneagramm-wandkalender-xxl-a3"
+    },
+    {
+      "slug": "der-weltweit-erste-enneagramm-wandkalender",
+      "title": "Der weltweit erste Enneagramm-Wandkalender!",
+      "format": "Wandkalender · Standardformat",
+      "price": "24,95 €",
+      "teaser": "VERSCHÖNERN SIE IHR LEBEN UND SCHMÜCKEN SIE IHR HEIM – MIT EINEM EWIGEN ENNEAGRAMM-WANDKALENDER AUS DEM VERLAGSHAUS RATHMER – Ihrem freundlichen Buchverlag!  Dieser liebevoll gestaltete „ewige Enneagr",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Der-weltweit-erste-Enneagramm-Wandkalender.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=der-weltweit-erste-enneagramm-wandkalender"
+    },
+    {
+      "slug": "der-weltweit-erste-enneagramm-tischkalender",
+      "title": "Der weltweit erste Enneagramm-Tischkalender!",
+      "format": "Tischkalender",
+      "price": "22,95 €",
+      "teaser": "VERSCHÖNERN SIE IHR LEBEN UND SCHMÜCKEN SIE IHREN TISCH/SCHREIBTISCH – MIT DEM EWIGEN ENNEAGRAMM-TISCHKALENDER AUS DEM VERLAGSHAUS RATHMER – Ihrem freundlichen Buchverlag!  Eine wundervolle Geschenkid",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Der-weltweit-erste-Enneagramm-Tischkalender.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=der-weltweit-erste-enneagramm-tischkalender"
+    },
+    {
+      "slug": "der-weltweit-erste-enneagramm-kuechenkalender",
+      "title": "Der weltweit erste Enneagramm-Küchenkalender!",
+      "format": "Küchenkalender",
+      "price": "19,99 €",
+      "teaser": "VERSCHÖNERN SIE IHR LEBEN UND SCHMÜCKEN SIE IHRE KÜCHE – MIT DEM EWIGEN ENNEAGRAMM-KÜCHENKALENDER AUS DEM VERLAGSHAUS RATHMER – Ihrem freundlichen Buchverlag!  Eine wundervolle Geschenkidee – ein ganz",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Der-weltweit-erste-Enneagramm-Küchenkalender.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=der-weltweit-erste-enneagramm-kuechenkalender"
+    },
+    {
+      "slug": "the-eternal-enneagramm-wall-calendar",
+      "title": "The Eternal Enneagramm Wall Calendar",
+      "format": "Wall Calendar · English Edition",
+      "price": "24,95 €",
+      "teaser": "Beautify your life and taste your home – with an everlasting ENNEAGRAM wall calendar from the Publishing House RATHMER – your friendly book publisher!  This lovingly designed „Eternal Enneagram Wall C",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-The-Eternal-Enneagram-Wall-Calender.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=the-eternal-enneagramm-wall-calendar"
+    },
+    {
+      "slug": "typ-1-die-ewige-suche-nach-vollkommenheit",
+      "title": "Typ 1 – Die ewige Suche nach Vollkommenheit",
+      "format": "Enneagramm-Typ 1",
+      "price": "24,95 €",
+      "teaser": "EIN BILD SAGT MEHR ALS TAUSEND WORTE – SELBSTERKENNTNIS MIT DEM ENNEAGRAMM FÜR TYP 1 – AUS DEM VERLAGSHAUS RATHMER – Ihrem freundlichen Buchverlag!  Dieser liebevoll gestaltete „ENNEAGRAMM-KALENDER FÜ",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Kalender-Typ-1.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=typ-1-die-ewige-suche-nach-vollkommenheit"
+    },
+    {
+      "slug": "typ-2-die-ewige-suche-nach-liebe",
+      "title": "Typ 2 – Die ewige Suche nach Liebe",
+      "format": "Enneagramm-Typ 2",
+      "price": "24,95 €",
+      "teaser": "EIN BILD SAGT MEHR ALS TAUSEND WORTE – SELBSTERKENNTNIS MIT DEM ENNEAGRAMM FÜR TYP 2 – AUS DEM VERLAGSHAUS RATHMER – Ihrem freundlichen Buchverlag!  Dieser liebevoll gestaltete „ENNEAGRAMM-KALENDER FÜ",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Kalender-Typ-2.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=typ-2-die-ewige-suche-nach-liebe"
+    },
+    {
+      "slug": "typ-3-die-ewige-suche-nach-erfolg",
+      "title": "Typ 3 – Die ewige Suche nach Erfolg",
+      "format": "Enneagramm-Typ 3",
+      "price": "24,95 €",
+      "teaser": "EIN BILD SAGT MEHR ALS TAUSEND WORTE – SELBSTERKENNTNIS MIT DEM ENNEAGRAMM FÜR TYP 3 – AUS DEM VERLAGSHAUS RATHMER – Ihrem freundlichen Buchverlag!  Dieser liebevoll gestaltete „ENNEAGRAMM-KALENDER FÜ",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Kalender-Typ-3.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=typ-3-die-ewige-suche-nach-erfolg"
+    },
+    {
+      "slug": "typ-4-die-ewige-suche-nach-individualitaet",
+      "title": "Typ 4 – Die ewige Suche nach Individualität",
+      "format": "Enneagramm-Typ 4",
+      "price": "24,95 €",
+      "teaser": "EIN BILD SAGT MEHR ALS TAUSEND WORTE – SELBSTERKENNTNIS MIT DEM ENNEAGRAMM FÜR TYP 4 – AUS DEM VERLAGSHAUS RATHMER – Ihrem freundlichen Buchverlag!  Dieser liebevoll gestaltete „ENNEAGRAMM-KALENDER FÜ",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Kalender-Typ-4.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=typ-4-die-ewige-suche-nach-individualitaet"
+    },
+    {
+      "slug": "typ-5-die-ewige-suche-nach-wissen",
+      "title": "Typ 5 – Die ewige Suche nach Wissen",
+      "format": "Enneagramm-Typ 5",
+      "price": "24,95 €",
+      "teaser": "EIN BILD SAGT MEHR ALS TAUSEND WORTE – SELBSTERKENNTNIS MIT DEM ENNEAGRAMM FÜR TYP 5 – AUS DEM VERLAGSHAUS RATHMER – Ihrem freundlichen Buchverlag!  Dieser liebevoll gestaltete „ENNEAGRAMM-KALENDER FÜ",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Kalender-Typ-5.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=typ-5-die-ewige-suche-nach-wissen"
+    },
+    {
+      "slug": "typ-6-die-ewige-suche-nach-sicherheit",
+      "title": "Typ 6 – Die ewige Suche nach Sicherheit",
+      "format": "Enneagramm-Typ 6",
+      "price": "24,95 €",
+      "teaser": "EIN BILD SAGT MEHR ALS TAUSEND WORTE – SELBSTERKENNTNIS MIT DEM ENNEAGRAMM FÜR TYP 6 – AUS DEM VERLAGSHAUS RATHMER – Ihrem freundlichen Buchverlag! Dieser liebevoll gestaltete „ENNEAGRAMM-KALENDER FÜR",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Kalender-Typ-6.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=typ-6-die-ewige-suche-nach-sicherheit"
+    },
+    {
+      "slug": "typ-7-die-ewige-suche-nach-lebensfreude",
+      "title": "Typ 7 – Die ewige Suche nach Lebensfreude",
+      "format": "Enneagramm-Typ 7",
+      "price": "24,95 €",
+      "teaser": "EIN BILD SAGT MEHR ALS TAUSEND WORTE – SELBSTERKENNTNIS MIT DEM ENNEAGRAMM FÜR TYP 7 – AUS DEM VERLAGSHAUS RATHMER – Ihrem freundlichen Buchverlag!  Dieser liebevoll gestaltete „ENNEAGRAMM-KALENDER FÜ",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-kalender-Typ-7.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=typ-7-die-ewige-suche-nach-lebensfreude"
+    },
+    {
+      "slug": "typ-8-die-ewige-suche-nach-macht",
+      "title": "Typ 8 – Die ewige Suche nach Macht",
+      "format": "Enneagramm-Typ 8",
+      "price": "24,95 €",
+      "teaser": "EIN BILD SAGT MEHR ALS TAUSEND WORTE – SELBSTERKENNTNIS MIT DEM ENNEAGRAMM FÜR TYP 8 – AUS DEM VERLAGSHAUS RATHMER – Ihrem freundlichen Buchverlag!  Dieser liebevoll gestaltete „ENNEAGRAMM-KALENDER FÜ",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Kalender-Typ-8.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=typ-8-die-ewige-suche-nach-macht"
+    },
+    {
+      "slug": "typ-9-die-ewige-suche-nach-harmonie",
+      "title": "Typ 9 – Die ewige Suche nach Harmonie",
+      "format": "Enneagramm-Typ 9",
+      "price": "24,95 €",
+      "teaser": "EIN BILD SAGT MEHR ALS TAUSEND WORTE – SELBSTERKENNTNIS MIT DEM ENNEAGRAMM FÜR TYP 9 – AUS DEM VERLAGSHAUS RATHMER – Ihrem freundlichen Buchverlag!  Dieser liebevoll gestaltete „ENNEAGRAMM-KALENDER FÜ",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Kalender-Typ-9.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=typ-9-die-ewige-suche-nach-harmonie"
+    },
+    {
+      "slug": "der-ewige-kalender-der-selbsterkenntnis",
+      "title": "Der ewige Kalender der Selbsterkenntnis",
+      "format": "Themenkalender · Selbsterkenntnis",
+      "price": "24,95 €",
+      "teaser": "VERSCHÖNERN SIE IHR LEBEN UND SCHMÜCKEN SIE IHR HEIM – MIT DEM EWIGEN KALENDER DER SELBSTERKENNTNIS AUS DEM VERLAGSHAUS RATHMER – Ihrem freundlichen Buchverlag!  Dieser liebevoll gestaltete „SELBSTERK",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Der-ewige-Kalender-der-Selbsterkenntnis.png",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=der-ewige-kalender-der-selbsterkenntnis"
+    },
+    {
+      "slug": "der-ewige-kalender-der-naturwunder",
+      "title": "Der ewige Kalender der Naturwunder",
+      "format": "Themenkalender · Naturwunder",
+      "price": "24,95 €",
+      "teaser": "VERSCHÖNERN SIE IHR LEBEN UND SCHMÜCKEN SIE IHR HEIM – MIT DEM EWIGEN KALENDER DER NATURWUNDER AUS DEM VERLAGSHAUS RATHMER – Ihrem freundlichen Buchverlag!  Dieser liebevoll gestaltete „NATURWUNDER-KA",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Der-ewige-Kalender-der-Naturwunder.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=der-ewige-kalender-der-naturwunder"
+    },
+    {
+      "slug": "der-ewige-kalender-der-liebe",
+      "title": "Der ewige Kalender der Liebe",
+      "format": "Themenkalender · Liebe",
+      "price": "24,95 €",
+      "teaser": "VERSCHÖNERN SIE IHR LEBEN UND SCHMÜCKEN SIE IHR HEIM – MIT DEM EWIGEN KALENDER DER LIEBE AUS DEM VERLAGSHAUS RATHMER – Ihrem freundlichen Buchverlag!  Dieser liebevoll gestaltete „LIEBES-KALENDER“ (A4",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2019/05/A-Cover-Der-ewige-Kalender-der-Liebe.jpg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=der-ewige-kalender-der-liebe"
+    },
+    {
+      "slug": "meta-intelligenz",
+      "title": "Meta-Intelligenz",
+      "format": "Persönliche Entwicklung · 2026",
+      "price": "15,90 €",
+      "teaser": "Meta-Intelligenz beschreibt eine grundlegende Fähigkeit des menschlichen Geistes: die Möglichkeit, die eigenen Gedanken bewusst wahrzunehmen",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2026/05/Meta-Intelligenz.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=meta-intelligenz"
+    },
+    {
+      "slug": "meta-intelligenz-das-hoerbuch",
+      "title": "Meta-Intelligenz – Das Hörbuch",
+      "format": "Hörbuch · Download",
+      "price": "14,90 €",
+      "teaser": "Dieses Hörbuch richtet sich an Menschen, die ihr eigenes Denken nicht nur nutzen, sondern verstehen wollen",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2026/03/WhatsApp-Image-2026-03-22-at-9.26.55-PM.jpeg",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=meta-intelligenz-das-hoerbuch"
+    },
+    {
+      "slug": "fuehrung-mit-fundament",
+      "title": "Führung mit Fundament",
+      "format": "Führung · Persönlichkeit · 2026",
+      "price": "49,90 €",
+      "teaser": "Tiefenpsychologie trifft strategische Führungspraxis  Wer führen will, muss sein inneres Betriebssystem kennen",
+      "coverUrl": "https://www.verlagshausrathmer.com/images/2026/05/Fuehrung_mit_Fundament.webp",
+      "pageUrl": "https://www.verlagshausrathmer.com/buch.html?slug=fuehrung-mit-fundament"
+    }
+  ],
+  "count": 78
+}
