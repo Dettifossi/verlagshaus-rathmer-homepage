@@ -5106,11 +5106,11 @@ function detlefRathmerJazzPage() {
 
       <!-- Abschnitts-Navigation -->
       <nav id="dr-top" style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2.5rem;">
-        <a href="#dr-jazz"        style="padding:0.4rem 0.9rem;border-radius:20px;background:var(--paper-deep,#ede8dc);color:var(--copper);font-size:0.85rem;font-weight:600;text-decoration:none;">Jazz-Alben</a>
-        <a href="#dr-enn-alben"   style="padding:0.4rem 0.9rem;border-radius:20px;background:var(--paper-deep,#ede8dc);color:var(--copper);font-size:0.85rem;font-weight:600;text-decoration:none;">Enneagramm-Alben</a>
-        <a href="#dr-enn-songs"   style="padding:0.4rem 0.9rem;border-radius:20px;background:var(--paper-deep,#ede8dc);color:var(--copper);font-size:0.85rem;font-weight:600;text-decoration:none;">Enneagramm-Songs</a>
-        <a href="#dr-spirituell"  style="padding:0.4rem 0.9rem;border-radius:20px;background:var(--paper-deep,#ede8dc);color:var(--copper);font-size:0.85rem;font-weight:600;text-decoration:none;">Spirituelle Songs</a>
-        <a href="#dr-liebe"       style="padding:0.4rem 0.9rem;border-radius:20px;background:var(--paper-deep,#ede8dc);color:var(--copper);font-size:0.85rem;font-weight:600;text-decoration:none;">Liebeslieder</a>
+        <button onclick="document.getElementById('dr-jazz').scrollIntoView({behavior:'smooth',block:'start'})" style="cursor:pointer;padding:0.4rem 0.9rem;border-radius:20px;background:var(--paper-deep,#ede8dc);color:var(--copper);font-size:0.85rem;font-weight:600;border:none;font-family:inherit;">Jazz-Alben</button>
+        <button onclick="document.getElementById('dr-enn-alben').scrollIntoView({behavior:'smooth',block:'start'})" style="cursor:pointer;padding:0.4rem 0.9rem;border-radius:20px;background:var(--paper-deep,#ede8dc);color:var(--copper);font-size:0.85rem;font-weight:600;border:none;font-family:inherit;">Enneagramm-Alben</button>
+        <button onclick="document.getElementById('dr-enn-songs').scrollIntoView({behavior:'smooth',block:'start'})" style="cursor:pointer;padding:0.4rem 0.9rem;border-radius:20px;background:var(--paper-deep,#ede8dc);color:var(--copper);font-size:0.85rem;font-weight:600;border:none;font-family:inherit;">Enneagramm-Songs</button>
+        <button onclick="document.getElementById('dr-spirituell').scrollIntoView({behavior:'smooth',block:'start'})" style="cursor:pointer;padding:0.4rem 0.9rem;border-radius:20px;background:var(--paper-deep,#ede8dc);color:var(--copper);font-size:0.85rem;font-weight:600;border:none;font-family:inherit;">Spirituelle Songs</button>
+        <button onclick="document.getElementById('dr-liebe').scrollIntoView({behavior:'smooth',block:'start'})" style="cursor:pointer;padding:0.4rem 0.9rem;border-radius:20px;background:var(--paper-deep,#ede8dc);color:var(--copper);font-size:0.85rem;font-weight:600;border:none;font-family:inherit;">Liebeslieder</button>
       </nav>
 
       <h2 id="dr-jazz" style="margin-top:0;margin-bottom:0.3rem;">Jazz-Alben</h2>
@@ -5120,14 +5120,14 @@ function detlefRathmerJazzPage() {
            style="color:var(--copper);">@SOULFULJAZZHIGHERVIBES</a>
       </p>
       ${grid(jazzAlben)}
-      <p style="text-align:right;margin-top:0.8rem;"><a href="#dr-top" style="font-size:0.85rem;color:var(--copper);">↑ Nach oben</a></p>
+      <p style="text-align:right;margin-top:0.8rem;"><button onclick="document.getElementById('dr-top').scrollIntoView({behavior:'smooth',block:'start'})" style="font-size:0.85rem;color:var(--copper);background:none;border:none;cursor:pointer;font-family:inherit;">↑ Nach oben</button></p>
 
       <h2 id="dr-enn-alben" style="margin-top:3rem;margin-bottom:0.3rem;">Enneagramm-Alben</h2>
       <p style="color:var(--ink-muted);font-size:0.93rem;margin-bottom:0.5rem;">
         Entspannungs- und Heilungsmusik für alle 9 Enneagrammtypen sowie thematische Alben.
       </p>
       ${grid(enneagrammAlben, ENNEA_TRACKS)}
-      <p style="text-align:right;margin-top:0.8rem;"><a href="#dr-top" style="font-size:0.85rem;color:var(--copper);">↑ Nach oben</a></p>
+      <p style="text-align:right;margin-top:0.8rem;"><button onclick="document.getElementById('dr-top').scrollIntoView({behavior:'smooth',block:'start'})" style="font-size:0.85rem;color:var(--copper);background:none;border:none;cursor:pointer;font-family:inherit;">↑ Nach oben</button></p>
 
       <h2 id="dr-enn-songs" style="margin-top:3rem;margin-bottom:0.3rem;">Enneagramm-Songs</h2>
       <p style="color:var(--ink-muted);font-size:0.93rem;margin-bottom:0.5rem;">
@@ -5136,14 +5136,14 @@ function detlefRathmerJazzPage() {
         <a href="#homoeopathie-songs" data-route="homoeopathie-songs" style="color:var(--copper);">Homöopathie & Songs</a>.
       </p>
       ${grid(enneagrammSongs)}
-      <p style="text-align:right;margin-top:0.8rem;"><a href="#dr-top" style="font-size:0.85rem;color:var(--copper);">↑ Nach oben</a></p>
+      <p style="text-align:right;margin-top:0.8rem;"><button onclick="document.getElementById('dr-top').scrollIntoView({behavior:'smooth',block:'start'})" style="font-size:0.85rem;color:var(--copper);background:none;border:none;cursor:pointer;font-family:inherit;">↑ Nach oben</button></p>
 
       <h2 id="dr-spirituell" style="margin-top:3rem;margin-bottom:0.3rem;">Spirituelle Songs</h2>
       <p style="color:var(--ink-muted);font-size:0.93rem;margin-bottom:0.5rem;">
         Lieder über das Wesen der Wirklichkeit, tiefe Stille und das Licht hinter den Dingen.
       </p>
       ${grid(spirituelleSongs)}
-      <p style="text-align:right;margin-top:0.8rem;"><a href="#dr-top" style="font-size:0.85rem;color:var(--copper);">↑ Nach oben</a></p>
+      <p style="text-align:right;margin-top:0.8rem;"><button onclick="document.getElementById('dr-top').scrollIntoView({behavior:'smooth',block:'start'})" style="font-size:0.85rem;color:var(--copper);background:none;border:none;cursor:pointer;font-family:inherit;">↑ Nach oben</button></p>
 
       <h2 id="dr-liebe" style="margin-top:3rem;margin-bottom:0.3rem;">Liebeslieder von Detlef</h2>
       <p style="color:var(--ink-muted);font-size:0.93rem;margin-bottom:0.5rem;">
