@@ -4930,6 +4930,18 @@ function portraitTyp9Page() { return _portraitTypPage(PORTRAIT_TYPEN[8]); }
 
 
 
+const ENNEA_TRACKS = {
+  "14": ["Galway Light", "Thyme Upon the Hills", "Star of the County Town", "The Fields of Athenry", "Dreams of Home", "Arthur McBride", "The Wild Rover", "The Foggy Dew", "Mountain Thyme"],
+  "15": ["Perfeição Serena", "No Abraço do Amor", "Reflexos do Meu Verdadeiro Ser", "Entre as Marés do Meu Ser", "Segredo ao Sol", "Coragem ao Vento", "Céu Aberto", "Fortaleza Serena", "Na Paz do Caminho"],
+  "16": ["SERENE PERFECTION", "IN LOVE´S EMBRACE", "REFLECTION OF MY TRUE SELF", "WITHIN THE TIDES OF MY BEING", "SECRET IN THE SUN", "COURAGE IN THE WIND", "OPEN SKY", "SERENE STRENGTH", "IN THE PEACE OF THE PATH"],
+  "17": ["GELASSENE VOLLKOMMENHEIT", "IN DER UMARMUNG DER LIEBE", "IM SPIEGEL MEINES WAHREN SELBST", "IN DEN GEZEITEN MEINES SEINS", "GEHEIMNIS IM LICHT", "MUT IM WIND", "OFFENER HIMMEL", "GELASSENE STÄRKE", "IM FRIEDEN DES WEGES"],
+  "18": ["Die perfekte Liebe", "Für dich gebe ich alles", "Erfolg in der Liebe", "Die unerreichbare Liebe", "Liebe auf Abstand", "Kann ich dir vertrauen?", "Frei und doch bei dir", "Du & ich gegen die Welt", "Sanfte Harmonie"],
+  "19": ["Perfection - Anger", "Love - Pride", "Success - Vanity", "Individuality - Envy", "Knowledge - Greed", "Safety - Anxiety", "Joy - Gluttony", "Power - Lust", "Harmony - Inertia"],
+  "20": ["Letting Go", "Let Me Be", "Who I Am", "Whole Again", "Step Into the Light", "Stronger Than My Fear", "Here and Now", "Stronger in Love", "Wake Me Up"],
+  "21": ["Sunrise of Purpose", "Let Love Flow Free", "True Reflection", "Colors of My Soul", "Into the Light", "Rise Beyond the Fear", "Dance of Freedom", "Open the Gates", "Awakened Peace"],
+  "22": ["Ein neuer Tag", "Lass’ die Liebe frei fließen", "Wenn die Masken fallen", "Bunte Seelenfarben", "Licht im Kopf", "Durch die Angst ins Licht", "Flieg’ mein Freund, doch lande auch", "Lass’ die Mauern fallen", "Lebe deinen stillen Klang"],
+};
+
 const JAZZ_TRACKS = {
   "64": [{t:"Morning Rhapsody",s:0}, {t:"Cityscape Serenade",s:190}, {t:"Midnight Reflections",s:401}, {t:"Blue Notes of Longing",s:596}, {t:"Soulful Interlude",s:769}, {t:"Rhythm of Abundance",s:969}, {t:"Nocturne of Solitude",s:1144}, {t:"Whispers in the Wind",s:1318}, {t:"Harmonious Journeys",s:1508}, {t:"Echoes of the Heart",s:1693}, {t:"Serenade of Truth",s:1878}, {t:"Eternal Dawn",s:2063}],
   "65": [{t:"First Light",s:0}, {t:"Footsteps on the Pavement",s:178}, {t:"The Stranger's Smile",s:386}, {t:"Beneath the Old Sycamore",s:569}, {t:"Echoes in the Rain",s:727}, {t:"The Space Between Notes",s:907}, {t:"Holding a Memory",s:1049}, {t:"Turning Tides",s:1235}, {t:"In a Single Breath",s:1408}, {t:"The Quietest Sound",s:1580}, {t:"Returning to Silence",s:1802}, {t:"After the Music Fades",s:1957}],
@@ -4967,10 +4979,10 @@ function detlefRathmerJazzPage() {
       ${tracks && tracks.length ? `
       <details style="padding:0.4rem 1rem 0.6rem;">
         <summary style="cursor:pointer;font-size:0.82rem;color:var(--copper);font-weight:600;user-select:none;">
-          ▶ Alle ${tracks.length} Songs anzeigen
+          ▶ Alle ${tracks.length} Songs
         </summary>
         <ol style="margin:0.4rem 0 0;padding-left:1.4rem;font-size:0.81rem;line-height:1.9;">
-          ${tracks.map(trk => `<li><a href="https://www.youtube.com/watch?v=${id}&t=${trk.s}s" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${trk.t}</a></li>`).join("")}
+          ${tracks.map(trk => typeof trk === "string" ? `<li style="color:var(--ink);">${trk}</li>` : `<li><a href="https://www.youtube.com/watch?v=${id}&t=${trk.s}s" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${trk.t}</a></li>`).join("")}
         </ol>
       </details>` : ""}
     </div>
@@ -5010,15 +5022,15 @@ function detlefRathmerJazzPage() {
   ];
 
   const enneagrammAlben = [
-    { id: "J0Vq9I81i-Q", label: "Album 14 – Irish Folk & Enneagram (English)" },
-    { id: "OUQ5-VXvK7M", label: "Album 15 – Bossa Nova & Enneagramm (Português)" },
-    { id: "59S6PAWebZ8", label: "Album 16 – Bossa Nova & Enneagram (English)" },
-    { id: "T057IXeqDG4", label: "Album 17 – Bossa Nova & Enneagramm (Deutsch)" },
-    { id: "2qaItk2k21s", label: "Album 18 – Love Ballads & Enneagram" },
-    { id: "LoUJ6097Als", label: "Album 19 – Classical Music & Enneagram" },
-    { id: "LSpTS9uSeaM", label: "Album 20 – R&B Meets Enneagram" },
-    { id: "nwXeqwPDTr0", label: "Album 21 – Reggae Meets Enneagram" },
-    { id: "7HFR5e_mS-E", label: "Album 22 – Charming German Hits Meets Enneagram" },
+    { id: "J0Vq9I81i-Q", num: "14", label: "Album 14 – Irish Folk & Enneagram (English)" },
+    { id: "OUQ5-VXvK7M", num: "15", label: "Album 15 – Bossa Nova & Enneagramm (Português)" },
+    { id: "59S6PAWebZ8", num: "16", label: "Album 16 – Bossa Nova & Enneagram (English)" },
+    { id: "T057IXeqDG4", num: "17", label: "Album 17 – Bossa Nova & Enneagramm (Deutsch)" },
+    { id: "2qaItk2k21s", num: "18", label: "Album 18 – Love Ballads & Enneagram" },
+    { id: "LoUJ6097Als", num: "19", label: "Album 19 – Classical Music & Enneagram" },
+    { id: "LSpTS9uSeaM", num: "20", label: "Album 20 – R&B Meets Enneagram" },
+    { id: "nwXeqwPDTr0", num: "21", label: "Album 21 – Reggae Meets Enneagram" },
+    { id: "7HFR5e_mS-E", num: "22", label: "Album 22 – Charming German Hits Meets Enneagram" },
     { id: "QWeHHcDySkk", label: "Album 23 – Rap Meets Enneagram" },
     { id: "mumR1QESNzQ", label: "Album 24 – Healing Music for Enneagram Type 1" },
     { id: "6nCg7G-91Lc", label: "Album 25 – Healing Music for Enneagram Type 2" },
@@ -5074,9 +5086,9 @@ function detlefRathmerJazzPage() {
     { id: "c2CcthcXRxc", label: "9. Flügel aus Licht" },
   ];
 
-  const grid = (items) => `
+  const grid = (items, tracksMap) => `
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;margin-top:1rem;">
-      ${items.map(a => kachel(a.id, a.label, a.num ? JAZZ_TRACKS[a.num] : null)).join("")}
+      ${items.map(a => kachel(a.id, a.label, a.num ? (tracksMap || JAZZ_TRACKS)[a.num] : null)).join("")}
     </div>
   `;
 
@@ -5114,7 +5126,7 @@ function detlefRathmerJazzPage() {
       <p style="color:var(--ink-muted);font-size:0.93rem;margin-bottom:0.5rem;">
         Entspannungs- und Heilungsmusik für alle 9 Enneagrammtypen sowie thematische Alben.
       </p>
-      ${grid(enneagrammAlben)}
+      ${grid(enneagrammAlben, ENNEA_TRACKS)}
       <p style="text-align:right;margin-top:0.8rem;"><a href="#dr-top" style="font-size:0.85rem;color:var(--copper);">↑ Nach oben</a></p>
 
       <h2 id="dr-enn-songs" style="margin-top:3rem;margin-bottom:0.3rem;">Enneagramm-Songs</h2>
