@@ -4968,7 +4968,7 @@ const JAZZ_TRACKS = {
 };
 
 function detlefRathmerJazzPage() {
-  const kachel = (id, label, tracks) => `
+  const kachel = (id, label, tracks, desc) => `
     <div style="background:var(--paper);border-radius:14px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,0.08);">
       <p style="margin:0;padding:0.7rem 1rem 0.5rem;font-size:0.88rem;font-weight:600;line-height:1.35;color:var(--ink);">${label}</p>
       <div style="position:relative;aspect-ratio:16/9;background:#000;">
@@ -4976,6 +4976,7 @@ function detlefRathmerJazzPage() {
           src="https://www.youtube.com/embed/${id}?rel=0"
           allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
       </div>
+      ${desc ? `<p style="margin:0;padding:0.3rem 1rem 0.6rem;font-size:0.8rem;color:var(--ink-muted);line-height:1.5;">${desc}</p>` : ""}
       ${tracks && tracks.length ? `
       <details style="padding:0.4rem 1rem 0.6rem;">
         <summary style="cursor:pointer;font-size:0.82rem;color:var(--copper);font-weight:600;user-select:none;">
@@ -5001,7 +5002,7 @@ function detlefRathmerJazzPage() {
     { id: "bjuxx198edA", num: "73", label: "Album 73 – Jazz of Inner Light" },
     { id: "jtN0f9j99Lc", num: "74", label: "Album 74 – Jazz of the Unwritten Path" },
     { id: "HkzeR-6z428", num: "75", label: "Album 75 – Jazz of the Wandering Soul" },
-    { id: "4O3ukz_lkTM", num: "76", label: "Album 76 – Jazz & Healing Vibes" },
+    { id: "4O3ukz_lkTM", num: "76", label: "Album 76 – Jazz & Healing Vibes", desc: "70 der schönsten Jazzkompositionen von Detlef Rathmer – eine 3¾-stündige Reise durch Klang und Wohlbefinden." },
     { id: "BIVoUgrInEY", num: "77", label: "Album 77 – Jazz of the Eternal Flow" },
     { id: "jwaiY-XAICw", num: "78", label: "Album 78 – Jazz of Destiny’s Flow" },
     { id: "vHzAIXpkOro", num: "79", label: "Album 79 – Jazz of the Unfolding Mystery" },
@@ -5088,7 +5089,7 @@ function detlefRathmerJazzPage() {
 
   const grid = (items, tracksMap) => `
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;margin-top:1rem;">
-      ${items.map(a => kachel(a.id, a.label, a.num ? (tracksMap || JAZZ_TRACKS)[a.num] : null)).join("")}
+      ${items.map(a => kachel(a.id, a.label, a.num ? (tracksMap || JAZZ_TRACKS)[a.num] : null, a.desc || null)).join("")}
     </div>
   `;
 
