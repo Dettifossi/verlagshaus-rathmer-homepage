@@ -3,7 +3,7 @@
 export const registerEntries = [
 
   // A
-  { term: "Adler",                   route: "subtype/se1",              description: "Tierarchetype des SE1 · Typ 1 · Bauchzentrum" },
+  { term: "Adler",                   route: "tierlexikon/se1",              description: "Tierarchetyp des SE1 · Typ 1 · Bauchzentrum" },
   { term: "Angst",                   route: "subtype/sx6",              description: "Leidenschaft Typ 6 → SE6, SO6, SX6" },
   { term: "Angst → Essenz",     route: "angst-essenz",             description: "Schaubild: von der Grundangst zur Essenz aller 9 Typen" },
   { term: "Antriebskr\xe4fte der Menschheit", route: "antriebskraefte", description: "Schaubild: Die 9 Leidenschaften als Motoren der 27 Subtypen – Normal-, Verst\xe4rkungs- und Kontratyp" },
@@ -23,13 +23,13 @@ export const registerEntries = [
   { term: "Bewältigungsstrategien",  route: "bewaeltigungsstrategie",   description: "Schaubild: typische Stress- und Schutzmuster" },
   { term: "Beziehungen",             route: "beziehungen",              description: "Dynamiken zwischen Enneagramm-Typen" },
   { term: "Beziehungen (Schaubild)", route: "beziehungen-schaubild",    description: "Schaubild: Liebe, Schutz und Ego-Dynamik in Beziehungen" },
-  { term: "Biber",                   route: "subtype/so7",              description: "Tierarchetype des SO7 · Typ 7 · Kopfzentrum" },
+  { term: "Biber",                   route: "tierlexikon/so7",              description: "Tierarchetyp des SO7 · Typ 7 · Kopfzentrum" },
   { term: "Blickqualität",           route: "tool/blickqualitaet",      description: "Werkzeug: Selbstbeobachtung der Aufmerksamkeitsqualität" },
-  { term: "Büffel",                  route: "subtype/so9",              description: "Tierarchetype des SO9 · Typ 9 · Bauchzentrum" },
+  { term: "Büffel",                  route: "tierlexikon/so9",              description: "Tierarchetyp des SO9 · Typ 9 · Bauchzentrum" },
   { term: "Burnout",                 route: "library",                  description: "Buch: Burnout bei allen 27 Subtypen (typspezifische Profile)" },
 
   // C
-  { term: "Chihuahua",               route: "subtype/sx4",              description: "Tierarchetype des SX4 · Typ 4 · Herzzentrum" },
+  { term: "Chihuahua",               route: "tierlexikon/sx4",              description: "Tierarchetyp des SX4 · Typ 4 · Herzzentrum" },
 
   // D
   { term: "Deutsche Bundesländer",   route: "bundeslaender",            description: "Schaubild: Zuordnung der 16 Bundesländer zu den 9 Enneagramm-Prinzipien" },
@@ -46,30 +46,31 @@ export const registerEntries = [
   { term: "Enneagramm-Profiling",    route: "enneagramm-profiling",     description: "Typisierung \xfcber Blick, Haltung & Mimik – Grundlagen und Ausbildungshinweis" },
   { term: "Ego-Persönlichkeit",      route: "ego-persoenlichkeit",      description: "Schaubild: Strukturmuster des Ego-Anteils" },
   { term: "Eitelkeit",               route: "subtype/se3",              description: "Leidenschaft Typ 3 → SE3, SO3, SX3" },
-  { term: "Elefant",                 route: "subtype/se9",              description: "Tierarchetype des SE9 · Typ 9 · Bauchzentrum" },
+  { term: "Elefant",                 route: "tierlexikon/se9",              description: "Tierarchetyp des SE9 · Typ 9 · Bauchzentrum" },
   { term: "Empfindliche Punkte",     route: "empfindliche-punkte",      description: "Schaubild: typische Wunden & Reizthemen" },
   { term: "Energetische Bewegungen", route: "energetische-bewegungen",  description: "Schaubild: typische Energierichtungen der 9 Typen" },
   { term: "Erfolgsverhalten der 9 Typen", route: "erfolgsverhalten",   description: "Schaubild: St\xe4rken, Schw\xe4chen & Erfolgsmuster je Typ" },
   { term: "Enneagramm-Typen",        route: "knowledge",                description: "Übersicht aller 9 Typen in der Wissensbasis" },
   { term: "Entwicklungsweg",         route: "knowledge",                description: "Persönlicher Wachstumspfad je Subtyp in der Wissensbasis" },
-  { term: "Erdmännchen",             route: "subtype/so6",              description: "Tierarchetype des SO6 · Typ 6 · Kopfzentrum" },
-  { term: "Eule",                    route: "subtype/se5",              description: "Tierarchetype des SE5 · Typ 5 · Kopfzentrum" },
+  { term: "Erdmännchen",             route: "tierlexikon/so6",              description: "Tierarchetyp des SO6 · Typ 6 · Kopfzentrum" },
+  { term: "Eule",                    route: "tierlexikon/se5",              description: "Tierarchetyp des SE5 · Typ 5 · Kopfzentrum" },
 
   // F
-  { term: "Faultier",                route: "subtype/sx9",              description: "Tierarchetype des SX9 · Typ 9 · Bauchzentrum" },
+  { term: "Faultier",                route: "tierlexikon/sx9",              description: "Tierarchetyp des SX9 · Typ 9 · Bauchzentrum" },
   { term: "Frieden schlie\xdfen",      route: "frieden-schliessen",       description: "Vom Splitter im Auge – Enneagramm als Werkzeug f\xfcr Mitgef\xfchl statt Urteil" },
   { term: "Frustrationen",           route: "frustrationen",            description: "Schaubild: typische Ohnmachts- und Enttäuschungsmuster" },
   { term: "Führungsstile",           route: "fuehrungsstile",           description: "Schaubild: 27 Führungsprofile für Unternehmen" },
-  { term: "Flusspferd",              route: "subtype/se2",              description: "Tierarchetype des SE2 · Typ 2 · Herzzentrum" },
+  { term: "Flusspferd",              route: "tierlexikon/se2",              description: "Tierarchetyp des SE2 · Typ 2 · Herzzentrum" },
 
   { term: "Gesichtsausdrücke der 9 Typen", route: "gesichtsausdruecke", description: "Schaubild: typische Gesichtsausdrücke & emotionale Zustände je Enneagrammtyp" },
 
   // G
-  { term: "Gans",                    route: "subtype/so1",              description: "Tierarchetype des SO1 · Typ 1 · Bauchzentrum" },
+  { term: "Gans",                    route: "tierlexikon/so1",              description: "Tierarchetyp des SO1 · Typ 1 · Bauchzentrum" },
   { term: "Geiz",                    route: "subtype/se5",              description: "Leidenschaft Typ 5 → SE5, SO5, SX5" },
-  { term: "Gepard",                  route: "subtype/so3",              description: "Tierarchetype des SO3 · Typ 3 · Herzzentrum" },
+  { term: "Gepard",                  route: "tierlexikon/so3",              description: "Tierarchetyp des SO3 · Typ 3 · Herzzentrum" },
   { term: "Gifte des Geistes",       route: "gifte-des-geistes",        description: "Schaubild: die 9 Hauptleidenschaften im \xdcberblick" },
   { term: "Hauptfokus des Bewusstseins", route: "hauptfokus-des-bewusstseins-der-9-typen", description: "Worauf die innere Kamera jedes Typs automatisch zielt: die charakteristischen Bewusstseinsfoki der 9 Typen." },
+  { term: "Dynamik des Bewusstseinszustandes", route: "dynamik-des-bewusstseinszustandes", description: "Die 9 Bewusstseinsstufen (Bewusstseinsgrade) aller 9 Enneagrammtypen — von vollkommen unbewusst bis vollkommen bewusst." },
   { term: "Psychologisches Abwehrverhalten", route: "psychologisches-abwehrverhalten-der-9-typen", description: "Verdrängung, Projektion, Introjektion & Co.: die 9 Abwehrmechanismen der Enneagrammtypen ausführlich erklärt." },
   { term: "Heilfasten der 9 Typen", route: "heilfasten-der-9-typen", description: "9 Fastentage als Reise durch die 9 Enneagrammprinzipien: Gemütszustände, Gedanken, Gefühle, Körper." },
   { term: "Psychologische Verhaltensmuster", route: "psychologische-verhaltensmuster-der-9-typen", description: "Tiefe Persönlichkeitsmuster der 9 Typen: zwanghaft, narzisstisch, passiv-aggressiv u.v.m. — mit Triaden-Zuordnung." },
@@ -85,11 +86,11 @@ export const registerEntries = [
   { term: "Kussverhalten der 9 Typen", route: "kussverhalten-der-9-typen", description: "Claudio Naranjos Perspektive: Wie k\xfcsst jeder Enneagrammtyp? Intimit\xe4t, Charakter und Bewusstseinsgrad." },
   { term: "Hochsensibilit\xe4t der 9 Typen", route: "hochsensibilitaet-der-9-typen", description: "Schaubild: die hochsensiblen Qualit\xe4ten aller 9 Enneagrammtypen – Segen und Fluch" },
   { term: "Harmonieverhalten der 9 Typen", route: "harmonieverhalten", description: "Schaubild: Harmoniestrategien & Prinzipien je Typ" },
-  { term: "Golden Retriever",        route: "subtype/so2",              description: "Tierarchetype des SO2 · Typ 2 · Herzzentrum" },
-  { term: "Gorilla",                 route: "subtype/se7",              description: "Tierarchetype des SE7 · Typ 7 · Kopfzentrum" },
+  { term: "Golden Retriever",        route: "tierlexikon/so2",              description: "Tierarchetyp des SO2 · Typ 2 · Herzzentrum" },
+  { term: "Gorilla",                 route: "tierlexikon/se7",              description: "Tierarchetyp des SE7 · Typ 7 · Kopfzentrum" },
   { term: "Grundformel des Rathmer-Enneagramms", route: "grundformel", description: "Drei Defizite, drei Energieformen, drei Instinkte – das Gesamtmodell nach David & Detlef Rathmer" },
   { term: "Grundleidenschaft",       route: "gifte-des-geistes",        description: "Schaubild: je eine Grundleidenschaft pro Typ" },
-  { term: "Gürteltier",              route: "subtype/so4",              description: "Tierarchetype des SO4 · Typ 4 · Herzzentrum" },
+  { term: "Gürteltier",              route: "tierlexikon/so4",              description: "Tierarchetyp des SO4 · Typ 4 · Herzzentrum" },
 
   // H
   { term: "Heilmittel",              route: "healing",                  description: "Homöopathie, Bachblüten, Edelsteine & Tee für alle Subtypen" },
@@ -102,7 +103,7 @@ export const registerEntries = [
   { term: "Homöopathie",             route: "healing",                  description: "Enneagramm-Homöopathie für alle 27 Subtypen" },
 
   // I
-  { term: "Igel",                    route: "subtype/sx5",              description: "Tierarchetype des SX5 · Typ 5 · Kopfzentrum" },
+  { term: "Igel",                    route: "tierlexikon/sx5",              description: "Tierarchetyp des SX5 · Typ 5 · Kopfzentrum" },
   { term: "Identifikation & Muster",     route: "identifikation",             description: "Schaubild: Je enger die Identifikation, desto lauter das Muster" },
   { term: "Illusionen",              route: "illusionen",               description: "Schaubild: typische Wahrnehmungsverzerrungen" },
   { term: "Individualit\xe4tsverhalten der 9 Typen", route: "individualitaetsverhalten", description: "Schaubild: wie jeder Typ seine Einzigartigkeit ausdr\xfcckt" },
@@ -110,8 +111,8 @@ export const registerEntries = [
   { term: "Intrinsisches Verlangen", route: "intrinsisches-verlangen",  description: "Schaubild: tiefste Sehnsucht jedes Typs" },
 
   // K
-  { term: "Kamel",                   route: "subtype/sx2",              description: "Tierarchetype des SX2 · Typ 2 · Herzzentrum" },
-  { term: "Kaninchen",               route: "subtype/se6",              description: "Tierarchetype des SE6 · Typ 6 · Kopfzentrum" },
+  { term: "Kamel",                   route: "tierlexikon/sx2",              description: "Tierarchetyp des SX2 · Typ 2 · Herzzentrum" },
+  { term: "Kaninchen",               route: "tierlexikon/se6",              description: "Tierarchetyp des SE6 · Typ 6 · Kopfzentrum" },
   { term: "Kernüberzeugungen",       route: "kerneberzeugungen",        description: "Schaubild: typische Glaubenssätze der 9 Typen" },
   { term: "K\xf6rperregulation",         route: "koerperregulation",         description: "Schaubild: die 9 Typen als Ordnungsmuster von K\xf6rper, Seele und Energie &ndash; mit Reflexionsfragen" },
   { term: "Kindheitsperspektiven",   route: "kindheitsperspektiven",    description: "Schaubild: prägende Kindheitserfahrungen je Typ" },
@@ -119,7 +120,7 @@ export const registerEntries = [
   { term: "Kompass",                 route: "dashboard",                description: "Dein persönlicher Tages-Kompass" },
   { term: "Kopfzentrum",             route: "drei-zentren",             description: "Zentrum der Typen 5, 6, 7 · Denken & Sicherheit" },
   { term: "Körperübung",             route: "tool/koerperuebung",       description: "Werkzeug: tägliche Körperübung für deinen Subtyp" },
-  { term: "Krokodil",                route: "subtype/sx8",              description: "Tierarchetype des SX8 · Typ 8 · Bauchzentrum" },
+  { term: "Krokodil",                route: "tierlexikon/sx8",              description: "Tierarchetyp des SX8 · Typ 8 · Bauchzentrum" },
 
   // L
   { term: "Laster · Tugenden",       route: "laster-tugenden-affirmationen", description: "Schaubild: Leidenschaft, Tugend & Affirmation je Typ" },
@@ -127,8 +128,12 @@ export const registerEntries = [
   { term: "Liebesverhalten der 9 Typen", route: "liebesverhalten",     description: "Schaubild: Liebessprachen & Bed\xfcrfnisse in Beziehungen je Typ" },
   { term: "Leidenschaft",            route: "gifte-des-geistes",        description: "Schaubild: die neun Hauptleidenschaften" },
   { term: "Limericks",               route: "limericks",                description: "Die 9 Enneagrammtypen als rhythmische F\xfcnfzeiler mit transformierender Pointe" },
+  { term: "Haiku der 9 Typen",      route: "haiku-der-9-typen",        description: "Neun japanische Kurzgedichte — je ein Haiku h\xe4lt den Kern eines Enneagrammtyps fest." },
+  { term: "Humor der 9 Typen",      route: "humor-der-9-typen",        description: "Die Humor-Stile der 9 Enneagrammtypen — vom satirischen Typ-1-Witz bis zum selbstironischen Schmunzeln des Typ 9." },
+  { term: "Solfeggio-Frequenzen", route: "solfeggio-frequenzen", description: "Die 9 Solfeggio-Frequenzen und ihre heilenden Wirkungen auf K\xf6rper, Geist und Seele im Enneagramm-Kontext." },
+  { term: "Zehn Anwendungen f\xfcr das Enneagramm", route: "zehn-anwendungen-fuer-das-enneagramm", description: "10 Lebensbereiche, in denen das Enneagramm wirkt — von pers\xf6nlichem Wachstum \xfcber F\xfchrung bis zu Elternschaft." },
   { term: "Lookalike-Typen",         route: "lookalike-typen",          description: "Schaubild: häufig verwechselte Typen im Vergleich" },
-  { term: "Löwe",                    route: "subtype/so8",              description: "Tierarchetype des SO8 · Typ 8 · Bauchzentrum" },
+  { term: "Löwe",                    route: "tierlexikon/so8",              description: "Tierarchetyp des SO8 · Typ 8 · Bauchzentrum" },
 
   // M
   { term: "Machtverhalten der 9 Typen", route: "machtverhalten",       description: "Schaubild: wie jeder Typ Macht aus\xfcbt und Einfluss gewinnt" },
@@ -148,8 +153,8 @@ export const registerEntries = [
 
   // O
   { term: "Öle (Ätherische)",        route: "oils",                     description: "Ölempfehlungen für alle 27 Subtypen" },
-  { term: "Oktopus",                 route: "subtype/so5",              description: "Tierarchetype des SO5 · Typ 5 · Kopfzentrum" },
-  { term: "Orang-Utan",              route: "subtype/se8",              description: "Tierarchetype des SE8 · Typ 8 · Bauchzentrum" },
+  { term: "Oktopus",                 route: "tierlexikon/so5",              description: "Tierarchetyp des SO5 · Typ 5 · Kopfzentrum" },
+  { term: "Orang-Utan",              route: "tierlexikon/se8",              description: "Tierarchetyp des SE8 · Typ 8 · Bauchzentrum" },
   { term: "Organuhr",                route: "tcm",                      description: "Chinesische Organuhr im Kontext des Enneagramms" },
 
   // P
@@ -180,7 +185,7 @@ export const registerEntries = [
   { term: "Insektenarten der 9 Typen", route: "insektenarten-der-9-typen", description: "9 Insektenarten als archetypische Entsprechungen der Enneagrammtypen" },
   { term: "Perspektiven",            route: "perspektiven",             description: "Schaubild: wie Mitmenschen jeden Typ wahrnehmen" },
   { term: "Prinzipien",              route: "prinzipien",               description: "Schaubild: Das Enneagramm als Landkarte für Entwicklung – von der Typbestimmung zu den neun Grundprinzipien" },
-  { term: "Pfau",                    route: "subtype/sx3",              description: "Tierarchetype des SX3 · Typ 3 · Herzzentrum" },
+  { term: "Pfau",                    route: "tierlexikon/sx3",              description: "Tierarchetyp des SX3 · Typ 3 · Herzzentrum" },
   { term: "Psychogramme",            route: "psychogramme",             description: "Schaubild: ausführliche Persönlichkeitsprofile" },
   { term: "Punkte der Integration",  route: "heilungsweg",              description: "Schaubild: Wachstums- & Stresspunkte im Enneagramm" },
 
@@ -191,7 +196,7 @@ export const registerEntries = [
   { term: "SE · Selbsterhaltungstyp", route: "knowledge",              description: "Einer der drei Subtypen: Fokus auf persönliche Sicherheit" },
   { term: "60-Sekunden-Scan",        route: "60-sekunden-scan",         description: "Schaubild: schnelle Typbestimmung in 60 Sekunden" },
   { term: "Schaubilder",             route: "schaubilder",              description: "Alle 40 interaktiven Übersichten" },
-  { term: "Schimpanse",              route: "subtype/sx7",              description: "Tierarchetype des SX7 · Typ 7 · Kopfzentrum" },
+  { term: "Schimpanse",              route: "tierlexikon/sx7",              description: "Tierarchetyp des SX7 · Typ 7 · Kopfzentrum" },
   { term: "Symmetrie des Enneagramms", route: "symmetrie-des-enneagramms",  description: "Schaubild: gegen\xfcberliegende Typenpaare &ndash; gleiche Grundwunde, entgegengesetzte Strategien" },
   { term: "Gaslighting & Enneagramm", route: "gaslighting-enneagramm", description: "Schaubild: Welche Subtypen zu gaslightingartigen Dynamiken neigen &ndash; und warum" },
   { term: "Interessante Erkenntnisse", route: "interessante-erkenntnisse", description: "Schaubild: Neun \xfcberraschende Einsichten zu den 9 Enneagrammtypen &ndash; was wirklich hinter den Typenbildern steckt" },
@@ -204,7 +209,7 @@ export const registerEntries = [
   { term: "Sicherheitsverhalten der 9 Typen", route: "sicherheitsverhalten", description: "Schaubild: Strategien zur Herstellung von Sicherheit je Typ" },
   { term: "Suche nach der wahren Liebe", route: "suche-nach-liebe",       description: "Schaubild: Womit jeder Typ Liebe ersetzt &ndash; und was ihn dabei aufhält" },
   { term: "Spa\xdfverhalten der 9 Typen", route: "spassverhalten",     description: "Schaubild: wie jeder Typ Freude und Vergn\xfcgen erlebt" },
-  { term: "Schwarze Mamba",          route: "subtype/sx1",              description: "Tierarchetype des SX1 · Typ 1 · Bauchzentrum" },
+  { term: "Schwarze Mamba",          route: "tierlexikon/sx1",              description: "Tierarchetyp des SX1 · Typ 1 · Bauchzentrum" },
   { term: "Selbsterhaltungstyp",     route: "knowledge",                description: "SE-Subtypen: SE1 bis SE9 · Fokus Sicherheit & Stabilität" },
   { term: "Sexualtyp",               route: "knowledge",                description: "SX-Subtypen: SX1 bis SX9 · Fokus Intensität & Anziehung" },
   { term: "SO · Sozialtyp",          route: "knowledge",                description: "Einer der drei Subtypen: Fokus auf Gruppe & Zugehörigkeit" },
@@ -218,11 +223,11 @@ export const registerEntries = [
   { term: "SX · Sexualtyp",          route: "knowledge",                description: "Einer der drei Subtypen: Fokus auf Tiefe & Intensität" },
 
   // T
-  { term: "Taube",                   route: "subtype/se4",              description: "Tierarchetype des SE4 · Typ 4 · Herzzentrum" },
+  { term: "Taube",                   route: "tierlexikon/se4",              description: "Tierarchetyp des SE4 · Typ 4 · Herzzentrum" },
   { term: "TCM",                     route: "tcm",                      description: "Traditionelle Chinesische Medizin · Meridiane & Organuhr" },
   { term: "Teeempfehlungen",         route: "tee-enneagramm",           description: "Schaubild: Tees für alle 9 Enneagramm-Typen" },
   { term: "Tischdialoge der 27 Subtypen", route: "tischdialoge", description: "Innerer Dialog zwischen Leidenschaft & Instinkt je Subtyp, mit Ergebnis" },
-  { term: "Tierbilder",              route: "tierentsprechungen",        description: "Schaubild: alle 27 Tierarchetypen im Überblick" },
+  { term: "Tierbilder",              route: "tierentsprechungen",        description: "Schaubild: alle 27 Tierarchetypn im Überblick" },
   { term: "Trägheit",                route: "subtype/se9",              description: "Leidenschaft Typ 9 → SE9, SO9, SX9" },
   { term: "Triaden",                 route: "drei-zentren",             description: "Schaubild: Kopf-, Herz- und Bauchtriade" },
   { term: "Triadendefizite",         route: "triadendefizite",          description: "Schaubild: Schutz-, Liebes- und Vertrauensdefizit der drei Triaden" },
@@ -249,7 +254,7 @@ export const registerEntries = [
 
   // W
   { term: "Wahrnehmungsstile",       route: "wahrnehmungsstile",        description: "Schaubild: Aufmerksamkeit & Wahrnehmungsfilter" },
-  { term: "Waschbär",                route: "subtype/se3",              description: "Tierarchetype des SE3 · Typ 3 · Herzzentrum" },
+  { term: "Waschbär",                route: "tierlexikon/se3",              description: "Tierarchetyp des SE3 · Typ 3 · Herzzentrum" },
   { term: "Weihnachten",             route: "weihnachtsgeschenke",      description: "Schaubild: Geschenkideen f\xfcr alle Enneagramm-Typen" },
   { term: "Wissensverhalten der 9 Typen", route: "wissensverhalten",   description: "Schaubild: wie jeder Typ Wissen sucht und anwendet" },
   { term: "Wer wir sind",               route: "wer-wir-sind",             description: "Die Landkarte ist nicht das Gebiet \x96 Pers\xf6nlichkeit vs. Essenz" },
@@ -257,7 +262,7 @@ export const registerEntries = [
   { term: "Wunden & Schutzstrategien", route: "wunden",                   description: "Schaubild: Jede Wunde hat eine Schutzstrategie hervorgebracht \x96 alle 9 Typen" },
   { term: "Wurzeln des Enneagramms",     route: "wurzeln-des-enneagramms", description: "Geschichte, Urspr\xfcnge und Tiefe des Enneagramms" },
   { term: "Wissensbasis",            route: "knowledge",                description: "Alle 27 Subtypen mit Profil, Schaubildern & Werkzeugen" },
-  { term: "Wolf",                    route: "subtype/sx6",              description: "Tierarchetype des SX6 · Typ 6 · Kopfzentrum" },
+  { term: "Wolf",                    route: "tierlexikon/sx6",              description: "Tierarchetyp des SX6 · Typ 6 · Kopfzentrum" },
   { term: "Wollust",                 route: "subtype/se8",              description: "Leidenschaft Typ 8 → SE8, SO8, SX8" },
   { term: "Wunde",                   route: "knowledge",                description: "Die Wunde hinter der Leidenschaft · je Subtyp in der Wissensbasis" },
   { term: "Wut",                     route: "subtype/se1",              description: "Leidenschaft Typ 1 → SE1, SO1, SX1" },
@@ -269,7 +274,7 @@ export const registerEntries = [
   { term: "Zornverhalten der 9 Typen", route: "zornverhalten",         description: "Schaubild: wie jeder Typ mit \xc4rger und Zorn umgeht" },
   { term: "Zentren",                 route: "drei-zentren",             description: "Schaubild: Kopf-, Herz- und Bauchzentrum" },
   { term: "2-Punkte-Integration",    route: "tool/2-punkte-integration", description: "Werkzeug: Integrationsübung über die zwei Punkte" },
-  { term: "Ted Bundy", route: "kriminalpsychologie-ted-bundy", description: "Kriminalpsychologisches Portr\xe4t: Sozialer Typ 1, Doppelleben, Kontrolle und Zerst\xf6rung" },
+  { term: "Ted Bundy", route: "kriminalpsychologie-ted-bundy", description: "Kriminalpsychologisches Portr\xe4t: SO1w9 \u2013 Soziale Eins mit Neunerfl\xfcgel. B\xfcrgerliche Fassade, unterdr\xfcckter Zorn, Resentiment als Triebkraft. Mindestens 30 Morde in den USA. Tierentsprechung: Gans." },
   { term: "Harvey Weinstein", route: "kriminalpsychologie-harvey-weinstein", description: "Kriminalpsychologisches Porträt: Selbsterhaltender Typ 2 mit Flügel 1, Mäzen und Predator, #MeToo-Auslöser" },
   { term: "Selbsterhaltende Zwei (dunkle Seite)", route: "kriminalpsychologie-harvey-weinstein", description: "SE2w1 – Anspruchsdenken, Geben als Kontrolle und systemische Machtüberschreitung" },
   { term: "#MeToo", route: "kriminalpsychologie-harvey-weinstein", description: "Harvey Weinstein als Auslöser der globalen #MeToo-Bewegung – Enneagramm-Analyse" },
@@ -281,4 +286,130 @@ export const registerEntries = [
   { term: "Adolf Hitler", route: "kriminalpsychologie-adolf-hitler", description: "Kriminalpsychologisches Portr\xe4t: Sexueller Typ 4 mit Fl\xfcgel 5, Neid als Vernichtungswille, SX4w5-Analyse" },
   { term: "Sexuelle Vier (dunkle Seite)", route: "kriminalpsychologie-adolf-hitler", description: "Die destruktive Auspr\xe4gung der Sexuellen Vier: Rivalit\xe4t, Grandiosit\xe4t und Vernichtungswille" },
   { term: "Soziale Eins (dunkle Seite)", route: "kriminalpsychologie-ted-bundy", description: "Die destruktive Ausprägung der sozialen Eins: Selbstt\xe4uschung, Perfektionismus und Doppelleben" },
+  // Heilmittel-Unterseiten
+  { term: "Ätherische Öle (Subtyp-Seite)",  route: "aetherische-oele",    description: "Ätherische Öle für alle 27 Subtypen – spezifische Duft-Empfehlungen und Wirkungsweise" },
+  { term: "Bachblüten",              route: "bachblueten",           description: "Bach-Blüten-Empfehlungen für alle 27 Subtypen des Enneagramms" },
+  { term: "Homöopathie (Subtyp-Seite)", route: "homoeopathie",        description: "Homöopathische Mittel für alle 27 Subtypen – Arzneimittelbild und Wirkungsweise" },
+  { term: "Mineralstoffimpulse",       route: "mineralstoffe",          description: "Mineralstoff-Impulse für alle 27 Subtypen – typspezifische Mikronährstoffe" },
+  { term: "Heiltees",                  route: "heiltees",               description: "Heilpflanzen-Tees für alle 27 Subtypen – Wirkung und Zubereitung" },
+
+  // Kompasse
+  { term: "Situationskompass",         route: "situationskompass",      description: "Situationskompass: Enneagramm-Analyse konkreter Lebenssituationen – für deinen Subtyp" },
+  { term: "Krisenkompass",             route: "krisenkompass",          description: "Krisenkompass: Enneagramm-Unterstützung in akuten Krisen – subtyp-spezifische Impulse" },
+
+  // Typentest
+  { term: "Typentest (Motivational)",  route: "typentest-motivational", description: "Motivationaler Typentest mit Fokus auf innere Antriebe und Bedürfnisse" },
+
+  // Tierlexikon
+  { term: "Tierlexikon",               route: "tierlexikon",            description: "Das vollständige Tierlexikon: alle 27 Tierarchetypn mit Bedeutung, Qualitäten und Instinktzuordnung" },
+
+  // Neue Tierarten-Schaubilder
+  { term: "Bärenarten der 9 Typen",   route: "baerenarten-der-9-typen",        description: "Archetypische Bären-Entsprechungen für jeden Enneagrammtyp" },
+  { term: "Fischarten der 9 Typen",    route: "fischarten-der-9-typen",          description: "Archetypische Fisch-Entsprechungen für jeden Enneagrammtyp" },
+  { term: "Froscharten der 9 Typen",   route: "froscharten-der-9-typen",         description: "Archetypische Frosch-Entsprechungen für jeden Enneagrammtyp" },
+  { term: "Milchkuharten der 9 Typen", route: "milchkuharten-der-9-typen",       description: "Archetypische Milchkuh-Entsprechungen für jeden Enneagrammtyp" },
+  { term: "Nagetierarten der 9 Typen", route: "nagetierarten-der-9-typen",       description: "Archetypische Nagetier-Entsprechungen für jeden Enneagrammtyp" },
+  { term: "Reptilienarten der 9 Typen", route: "reptilienarten-der-9-typen",     description: "Archetypische Reptilien-Entsprechungen für jeden Enneagrammtyp" },
+  { term: "Schildkrötenarten der 9 Typen", route: "schildkroetenarten-der-9-typen", description: "Archetypische Schildkröten-Entsprechungen für jeden Enneagrammtyp" },
+  { term: "Spinnenarten der 9 Typen",  route: "spinnenarten-der-9-typen",        description: "Archetypische Spinnen-Entsprechungen für jeden Enneagrammtyp" },
+  { term: "Vogelarten der 9 Typen",    route: "vogelarten-der-9-typen",          description: "Archetypische Vogel-Entsprechungen für jeden Enneagrammtyp" },
+  { term: "Walarten der 9 Typen",      route: "walarten-der-9-typen",            description: "Archetypische Wal-Entsprechungen für jeden Enneagrammtyp" },
+
+  // Kriminalpsychologie – fehlende Porträts
+  { term: "Aileen Wuornos",            route: "kriminalpsychologie-aileen-wuornos",       description: "Kriminalpsychologisches Porträt: SX7w8 – erste bekannte Serienmörderin der USA, Straßenprostituierte, 7 Morde 1989–90" },
+  { term: "Alex Murdaugh",             route: "kriminalpsychologie-alex-murdaugh",        description: "Kriminalpsychologisches Porträt: SX1w2 – US-amerikanischer Anwalt, ermordete Frau und Sohn, Versicherungsbetrug und Doppelleben" },
+  { term: "Anders Breivik",            route: "kriminalpsychologie-anders-breivik",       description: "Kriminalpsychologisches Porträt: SX6w5 – norwegischer Massenmörder, 77 Tote 2011, ideologische Paranoia und Selbstüberhöhung" },
+  { term: "Armin Meiwes",              route: "kriminalpsychologie-armin-meiwes",         description: "Kriminalpsychologisches Porträt: SX6w5 – 'Der Kannibale von Rotenburg', geb. 1961. Freiwilliger Kannibalismusfall 2001, lebenslange Freiheitsstrafe. Tierentsprechung: Wolf." },
+  { term: "Andrei Tschikatilo",        route: "kriminalpsychologie-andrei-tschikatilo",   description: "Kriminalpsychologisches Porträt: SE1w9 – sowjetischer Serienmörder, mindestens 52 Opfer 1978–90, Selbsterhaltungstyp 1" },
+  { term: "Ángel Reséndez",           route: "kriminalpsychologie-angel-resendez",      description: "Kriminalpsychologisches Porträt: SE2w1 – mexikanisch-amerikanischer Wandermörder, „Railroad Killer”, mind. 15 Opfer" },
+  { term: "Anna Delvey",               route: "kriminalpsychologie-anna-delvey",          description: "Kriminalpsychologisches Porträt: SE2w3 – russisch-deutsche Hochstaplerin, fake Millionärin in New York, SE2-Analyse" },
+  { term: "Arno Funke („Dagobert”)",   route: "kriminalpsychologie-arno-funke",          description: "Kriminalpsychologisches Porträt: SE1w9 – deutscher Kaufhauserpresser 1992–94, Volkslegende und Grenzgänger zwischen Ruhm und Regel" },
+  { term: "Bernie Madoff",             route: "kriminalpsychologie-bernie-madoff",        description: "Kriminalpsychologisches Porträt: SE1w9 – größter Finanzbetrüger der Geschichte, Ponzi-Schema, 65 Mrd. Dollar Schaden" },
+  { term: "Buster Murdaugh",           route: "kriminalpsychologie-buster-murdaugh",      description: "Kriminalpsychologisches Porträt: SE2w3 – Sohn von Alex Murdaugh, familiäre Mittäterschaft und dynastischer Selbstschutz" },
+  { term: "Cedric Maake",              route: "kriminalpsychologie-cedric-maake",         description: "Kriminalpsychologisches Porträt: SO2w3 – südafrikanischer Serienmörder, „Shooting and Stabbing Killer”, SO2-Analyse" },
+  { term: "Chris Watts",               route: "kriminalpsychologie-chris-watts",          description: "Kriminalpsychologisches Porträt: SO7w6 – US-amerikanischer Familienmörder 2018, ermordete schwangere Frau und zwei Töchter. Tierentsprechung: Biber." },
+  { term: "David Berkowitz",           route: "kriminalpsychologie-david-berkowitz",      description: "Kriminalpsychologisches Porträt: SE4w3 – „Son of Sam”, 6 Morde New York 1976–77, Grandiosität und Verfolgungswahn" },
+  { term: "Elliot Rodger",             route: "kriminalpsychologie-elliot-rodger",        description: "Kriminalpsychologisches Porträt: SO4w5 – Isla-Vista-Massaker 2014, 6 Tote, 14 Verletzte, soziale Vier mit Fünferflügel, Neid als Weltgericht, Tierentsprechung: Gürteltier" },
+  { term: "Dennis Nilsen",             route: "kriminalpsychologie-dennis-nilsen",        description: "Kriminalpsychologisches Porträt: SE1w2 – britischer Serienmörder, 15 Morde, Einsamkeit und zwanghafte Kontrolle" },
+  { term: "Dennis Rader",              route: "kriminalpsychologie-dennis-rader",         description: "Kriminalpsychologisches Porträt: SE1w9 – „BTK Killer”, 10 Morde Kansas 1974–91, Doppelleben als Kirchenpräsident" },
+  { term: "Diane Downs",               route: "kriminalpsychologie-diane-downs",          description: "Kriminalpsychologisches Porträt: SX3w4 – US-amerikanische Kindsmörderin 1983, erschoss ihre drei Kinder um einem Mann das perfekte Ideal zu sein. Tierentsprechung: Pfau." },
+  { term: "Dorothea Puente",           route: "kriminalpsychologie-dorothea-puente",      description: "Kriminalpsychologisches Porträt: SE1w2 – US-amerikanische Serienmörderin, vergiftete Boardinghouse-Bewohner, „Grandma Killer”" },
+  { term: "Fritz Haarmann",            route: "kriminalpsychologie-fritz-haarmann",       description: "Kriminalpsychologisches Porträt: SX1w9 – „Wolf von Hannover”, mindestens 24 Morde 1918–24, Kontrollzwang und Vernichtungslust" },
+  { term: "Gary Ridgway",              route: "kriminalpsychologie-gary-ridgway",         description: "Kriminalpsychologisches Porträt: SX1w2 – „Green River Killer”, mindestens 49 Morde, einer der produktivsten Serienmörder der USA" },
+  { term: "Gennadi Mikhasevich",       route: "kriminalpsychologie-gennadi-mikhasevich",  description: "Kriminalpsychologisches Porträt: SX1w2 – sowjetischer Serienmörder, 36 Morde 1971–85, vorbestrafte Unschuldige durch sein Schweigen" },
+  { term: "Ted Kaczynski",              route: "kriminalpsychologie-ted-kaczynski",        description: "Kriminalpsychologisches Porträt: SO5w4 – 'Unabomber', Bombenanschläge 1978–1995, 3 Tote, 23 Verletzte, sozialer Typ 5 mit Viererflügel, Tierentsprechung: Oktopus" },
+  { term: "Harold Shipman",            route: "kriminalpsychologie-harold-shipman",       description: "Kriminalpsychologisches Porträt: SO5w6 – britischer Arzt und Massenmörder, mind. 215 Patienten getötet, Macht über Leben und Tod" },
+  { term: "Heinrich Pommerenke",       route: "kriminalpsychologie-heinrich-pommerenke",  description: "Kriminalpsychologisches Porträt: SO1w9 – „Bestie von Baden”, mehrfacher Mörder und Vergewaltiger, religiöse Wahnvorstellungen" },
+  { term: "Jack Unterweger",           route: "kriminalpsychologie-jack-unterweger",      description: "Kriminalpsychologisches Porträt: SO2w1 – österreichischer Serienmörder, Literaturlegende, Medienstar und Doppelleben" },
+  { term: "Jeffrey Dahmer",            route: "kriminalpsychologie-jeffrey-dahmer",       description: "Kriminalpsychologisches Porträt: SX5w4 – „Milwaukee Cannibal”, 17 Morde 1978–91, Einsamkeit und Besitzfixierung" },
+  { term: "Jeffrey Epstein",           route: "kriminalpsychologie-jeffrey-epstein",      description: "Kriminalpsychologisches Porträt: SX8w9 – US-amerikanischer Finanzier und Sexualstraftäter, systematischer Mädchenmissbrauch im globalen Netzwerk" },
+  { term: "Jim Jones",                 route: "kriminalpsychologie-jim-jones",            description: "Kriminalpsychologisches Porträt: SO2w3 – Sektenführer, Jonestown-Massaker 1978, über 900 Tote, Helfer als Heilsbringer" },
+  { term: "Joachim Kroll",             route: "kriminalpsychologie-joachim-kroll",        description: "Kriminalpsychologisches Porträt: SE5w6 – „Ruhrgebiets-Kannibale”, mindestens 8 Morde 1955–76, soziale Isolation und dissoziertes Innenleben" },
+  { term: "Joel Rifkin",               route: "kriminalpsychologie-joel-rifkin",          description: "Kriminalpsychologisches Porträt: SX5w6 – US-amerikanischer Serienmörder, 17 Morde in New York 1989–93, sexuelle Tradition Zutrauen" },
+  { term: "John McAfee",               route: "kriminalpsychologie-john-mcafee",          description: "Kriminalpsychologisches Porträt: SX8w9 – Antiviren-Pionier, Flucht, Drogen, Mordverdacht – Freiheit als absoluter Wert" },
+  { term: "John Wayne Gacy",           route: "kriminalpsychologie-john-wayne-gacy",      description: "Kriminalpsychologisches Porträt: SE2w3 – „Pogo the Clown”, 33 Morde, Bürgerehrung und Doppelleben als Partyhelfer" },
+  { term: "Jonathan Meijer",           route: "kriminalpsychologie-jonathan-meijer",      description: "Kriminalpsychologisches Porträt: SE2w1 – niederländischer Samenspender, mind. 550 biologische Kinder, Kontrollbedürfnis als Fürsorgemissbrauch" },
+  { term: "Josef Fritzl",              route: "kriminalpsychologie-josef-fritzl",         description: "Kriminalpsychologisches Porträt: SX1w9 – österreichischer Kellertäter, 24 Jahre Gefangenschaft der eigenen Tochter, 7 Kinder" },
+  { term: "Karla Homolka",             route: "kriminalpsychologie-karla-homolka",        description: "Kriminalpsychologisches Porträt: SE3w4 – kanadische Mittäterin neben Paul Bernardo, „Ken und Barbie”-Mörder" },
+  { term: "Michael Franzese",          route: "kriminalpsychologie-michael-franzese",     description: "Kriminalpsychologisches Porträt: SE3w2 – ehemaliger New Yorker Mafia-Capo, 100-Mio.-Benzinbetrug, Ausstieg und Wandel" },
+  { term: "Michail Popkow",            route: "kriminalpsychologie-michail-popkow",       description: "Kriminalpsychologisches Porträt: SE1w9 – russischer Serienmörder, 86 Morde, „Werwolf von Angarsk”, Polizist als Täter" },
+  { term: "Niels Högel",               route: "kriminalpsychologie-niels-hoegel",        description: "Kriminalpsychologisches Porträt: SE7w8 – deutscherkrankenpfleger, mind. 85 Morde an Patienten, Sucht nach Reanimations-Spannung" },
+  { term: "Paul Bernardo",             route: "kriminalpsychologie-paul-bernardo",        description: "Kriminalpsychologisches Porträt: SX1w2 – kanadischer Serienmörder und Vergewaltiger, „Scharlach-Vergewaltiger”, Doppelverbrechen mit Homolka" },
+  { term: "Paul Ogorzow",              route: "kriminalpsychologie-paul-ogorzow",         description: "Kriminalpsychologisches Porträt: SE1w9 – „S-Bahn-Mörder”, 8 Morde Berlin 1939–41, NSDAP-Mitglied und Triebtäter" },
+  { term: "Pedro Alonso López",        route: "kriminalpsychologie-pedro-alonso-lopez",  description: "Kriminalpsychologisches Porträt: SO3w2 – „Monster der Anden”, 300+ gestandene Morde in Südamerika, freigelassen 1998" },
+  { term: "Peter Sutcliffe",           route: "kriminalpsychologie-peter-sutcliffe",      description: "Kriminalpsychologisches Porträt: SE2w1 – „Yorkshire Ripper”, 13 Morde England 1975–80, religiöser Wahn und Frauenhass" },
+  { term: "Richard Ramírez",           route: "kriminalpsychologie-richard-ramirez",     description: "Kriminalpsychologisches Porträt: SX3w4 – „Night Stalker”, 13 Morde Kalifornien 1984–85, satanische Selbstmythologisierung. Tierentsprechung: Pfau." },
+  { term: "Rudolf Pleil",              route: "kriminalpsychologie-rudolf-pleil",         description: "Kriminalpsychologisches Porträt: SE2w3 – „der totmacher”, mind. 10 Morde Nachkriegsdeutschland, SE2-Analyse" },
+  { term: "Ruja Ignatova",             route: "kriminalpsychologie-ruja-ignatova",        description: "Kriminalpsychologisches Porträt: SE3w4 – „Crypto Queen”, OneCoin-Betrügerin, 4 Mrd. Euro Schaden, untergetaucht seit 2017" },
+  { term: "Salvatore Riina",           route: "kriminalpsychologie-salvatore-riina",      description: "Kriminalpsychologisches Porträt: SE8w9 – „Bestia”, Cosa-Nostra-Boss, verantwortlich für hunderte Morde, 30 Jahre auf der Flucht" },
+  { term: "Samuel Bankman-Fried",      route: "kriminalpsychologie-samuel-bankman-fried", description: "Kriminalpsychologisches Porträt: SE3w4 – FTX-Gründer, Kryptowährungsbetrug, 8 Mrd. Dollar Schaden, Effektiven-Altruismus-Fassade" },
+  { term: "Sebastian Greenwood",       route: "kriminalpsychologie-sebastian-greenwood",  description: "Kriminalpsychologisches Porträt: SE2w3 – OneCoin-Mitgründer, Betrug im Milliardenmaßstab, Ruja Ignatovas Komplize" },
+  { term: "Tommy Lynn Sells",          route: "kriminalpsychologie-tommy-lynn-sells",     description: "Kriminalpsychologisches Porträt: SE2w1 – US-amerikanischer Serienmörder, mind. 22 Morde, wandernder Gelegenheitstäter" },
+  { term: "Wade Wilson",               route: "kriminalpsychologie-wade-wilson",          description: "Kriminalpsychologisches Porträt: SO3w4 – US-amerikanischer Doppelmörder 2019, inszenierte Unschuld und Zuschauerperformance vor Gericht" },
+  { term: "Wolfgang Beltracchi",       route: "kriminalpsychologie-wolfgang-beltracchi",  description: "Kriminalpsychologisches Porträt: SX9w1 – deutscher Kunstfälscher, 300+ gefälschte Gemälde, Meisterfälscher der Kunstgeschichte" },
+
+  // Tierlexikon – alle 27 Subtypen
+  { term: "Tierlexikon: Adler (SE1)", route: "tierlexikon/se1", description: "Tierlexikon-Eintrag: Adler – Tierarchetyp des SE1 · Selbsterhaltender Typ 1 · Typ 1 · Bauchzentrum" },
+  { term: "Tierlexikon: Gans (SO1)", route: "tierlexikon/so1", description: "Tierlexikon-Eintrag: Gans – Tierarchetyp des SO1 · Sozialer Typ 1 · Typ 1 · Bauchzentrum" },
+  { term: "Tierlexikon: Schwarze Mamba (SX1)", route: "tierlexikon/sx1", description: "Tierlexikon-Eintrag: Schwarze Mamba – Tierarchetyp des SX1 · Sexueller Typ 1 · Typ 1 · Bauchzentrum" },
+  { term: "Tierlexikon: Flusspferd (SE2)", route: "tierlexikon/se2", description: "Tierlexikon-Eintrag: Flusspferd – Tierarchetyp des SE2 · Selbsterhaltender Typ 2 · Typ 2 · Herzzentrum" },
+  { term: "Tierlexikon: Golden Retriever (SO2)", route: "tierlexikon/so2", description: "Tierlexikon-Eintrag: Golden Retriever – Tierarchetyp des SO2 · Sozialer Typ 2 · Typ 2 · Herzzentrum" },
+  { term: "Tierlexikon: Kamel (SX2)", route: "tierlexikon/sx2", description: "Tierlexikon-Eintrag: Kamel – Tierarchetyp des SX2 · Sexueller Typ 2 · Typ 2 · Herzzentrum" },
+  { term: "Tierlexikon: Waschbär (SE3)", route: "tierlexikon/se3", description: "Tierlexikon-Eintrag: Waschbär – Tierarchetyp des SE3 · Selbsterhaltender Typ 3 · Typ 3 · Herzzentrum" },
+  { term: "Tierlexikon: Gepard (SO3)", route: "tierlexikon/so3", description: "Tierlexikon-Eintrag: Gepard – Tierarchetyp des SO3 · Sozialer Typ 3 · Typ 3 · Herzzentrum" },
+  { term: "Tierlexikon: Pfau (SX3)", route: "tierlexikon/sx3", description: "Tierlexikon-Eintrag: Pfau – Tierarchetyp des SX3 · Sexueller Typ 3 · Typ 3 · Herzzentrum" },
+  { term: "Tierlexikon: Taube (SE4)", route: "tierlexikon/se4", description: "Tierlexikon-Eintrag: Taube – Tierarchetyp des SE4 · Selbsterhaltender Typ 4 · Typ 4 · Herzzentrum" },
+  { term: "Tierlexikon: Gürteltier (SO4)", route: "tierlexikon/so4", description: "Tierlexikon-Eintrag: Gürteltier – Tierarchetyp des SO4 · Sozialer Typ 4 · Typ 4 · Herzzentrum" },
+  { term: "Tierlexikon: Chihuahua (SX4)", route: "tierlexikon/sx4", description: "Tierlexikon-Eintrag: Chihuahua – Tierarchetyp des SX4 · Sexueller Typ 4 · Typ 4 · Herzzentrum" },
+  { term: "Tierlexikon: Eule (SE5)", route: "tierlexikon/se5", description: "Tierlexikon-Eintrag: Eule – Tierarchetyp des SE5 · Selbsterhaltender Typ 5 · Typ 5 · Kopfzentrum" },
+  { term: "Tierlexikon: Oktopus (SO5)", route: "tierlexikon/so5", description: "Tierlexikon-Eintrag: Oktopus – Tierarchetyp des SO5 · Sozialer Typ 5 · Typ 5 · Kopfzentrum" },
+  { term: "Tierlexikon: Igel (SX5)", route: "tierlexikon/sx5", description: "Tierlexikon-Eintrag: Igel – Tierarchetyp des SX5 · Sexueller Typ 5 · Typ 5 · Kopfzentrum" },
+  { term: "Tierlexikon: Kaninchen (SE6)", route: "tierlexikon/se6", description: "Tierlexikon-Eintrag: Kaninchen – Tierarchetyp des SE6 · Selbsterhaltender Typ 6 · Typ 6 · Kopfzentrum" },
+  { term: "Tierlexikon: Erdmännchen (SO6)", route: "tierlexikon/so6", description: "Tierlexikon-Eintrag: Erdmännchen – Tierarchetyp des SO6 · Sozialer Typ 6 · Typ 6 · Kopfzentrum" },
+  { term: "Tierlexikon: Wolf (SX6)", route: "tierlexikon/sx6", description: "Tierlexikon-Eintrag: Wolf – Tierarchetyp des SX6 · Sexueller Typ 6 · Typ 6 · Kopfzentrum" },
+  { term: "Tierlexikon: Gorilla (SE7)", route: "tierlexikon/se7", description: "Tierlexikon-Eintrag: Gorilla – Tierarchetyp des SE7 · Selbsterhaltender Typ 7 · Typ 7 · Kopfzentrum" },
+  { term: "Tierlexikon: Biber (SO7)", route: "tierlexikon/so7", description: "Tierlexikon-Eintrag: Biber – Tierarchetyp des SO7 · Sozialer Typ 7 · Typ 7 · Kopfzentrum" },
+  { term: "Tierlexikon: Schimpanse (SX7)", route: "tierlexikon/sx7", description: "Tierlexikon-Eintrag: Schimpanse – Tierarchetyp des SX7 · Sexueller Typ 7 · Typ 7 · Kopfzentrum" },
+  { term: "Tierlexikon: Orang-Utan (SE8)", route: "tierlexikon/se8", description: "Tierlexikon-Eintrag: Orang-Utan – Tierarchetyp des SE8 · Selbsterhaltender Typ 8 · Typ 8 · Bauchzentrum" },
+  { term: "Tierlexikon: Löwe (SO8)", route: "tierlexikon/so8", description: "Tierlexikon-Eintrag: Löwe – Tierarchetyp des SO8 · Sozialer Typ 8 · Typ 8 · Bauchzentrum" },
+  { term: "Tierlexikon: Krokodil (SX8)", route: "tierlexikon/sx8", description: "Tierlexikon-Eintrag: Krokodil – Tierarchetyp des SX8 · Sexueller Typ 8 · Typ 8 · Bauchzentrum" },
+  { term: "Tierlexikon: Elefant (SE9)", route: "tierlexikon/se9", description: "Tierlexikon-Eintrag: Elefant – Tierarchetyp des SE9 · Selbsterhaltender Typ 9 · Typ 9 · Bauchzentrum" },
+  { term: "Tierlexikon: Büffel (SO9)", route: "tierlexikon/so9", description: "Tierlexikon-Eintrag: Büffel – Tierarchetyp des SO9 · Sozialer Typ 9 · Typ 9 · Bauchzentrum" },
+  { term: "Tierlexikon: Faultier (SX9)", route: "tierlexikon/sx9", description: "Tierlexikon-Eintrag: Faultier – Tierarchetyp des SX9 · Sexueller Typ 9 · Typ 9 · Bauchzentrum" },
+
+  { term: "Charles Manson",            route: "kriminalpsychologie-charles-manson",       description: "Kriminalpsychologisches Porträt: SX6w7 – Sektengründer und Drahtzieher der Manson Family, 1934–2017. Tate-LaBianca-Morde 1969, nie selbst Täter. Tierentsprechung: Wolf." },
+  { term: "Leslie Van Houten",          route: "kriminalpsychologie-leslie-van-houten",     description: "Kriminalpsychologisches Porträt: SO9w1 – Mitglied der Manson Family, geb. 1949. Beteiligt an den LaBianca-Morden 1969, 2023 nach 53 Jahren Haft entlassen. Tierentsprechung: Büffel." },
+
+  { term: "Adolf Eichmann",             route: "kriminalpsychologie-adolf-eichmann",       description: "Kriminalpsychologisches Porträt: SO6w5 – SS-Obersturmbannführer, 1906–1962. Hauptorganisator der Holocaust-Logistik. Paradebeispiel der Banalität des Bösen. Tierentsprechung: Erdmännchen." },
+
+  { term: "Das Event",           route: "das-event",          description: "Schaubilder: Die 9 Enneagrammtypen vor, auf und nach einem gesellschaftlichen Event – augenzwinkernd, treffend, dreigeteilt." },
+
+  { term: "Andrew Cunanan",             route: "kriminalpsychologie-andrew-cunanan",       description: "Kriminalpsychologisches Porträt: SO3w4 – Fünffachmörder und Mörder von Gianni Versace, 1969–1997. Mordserie April–Juli 1997 quer durch die USA. Tierentsprechung: Gepard." },
+  { term: "O.J. Simpson",              route: "kriminalpsychologie-oj-simpson",           description: "Kriminalpsychologisches Porträt: SO3w4 – NFL-Legende und Protagonist des Prozesses des Jahrhunderts. Freigesprochen 1995, zivilrechtlich schuldig 1997. Tierentsprechung: Gepard." },
+  { term: "Pamela Smart",              route: "kriminalpsychologie-pamela-smart",         description: "Kriminalpsychologisches Porträt: SX2w3 – Die Verführerin von Derry. Manipulierte einen 15-jährigen Schüler zur Ermordung ihres Mannes (1990). Als einzige noch in Haft. Tierentsprechung: Kamel." },
+  { term: "Belle Gunness",             route: "kriminalpsychologie-belle-gunness",        description: "Kriminalpsychologisches Porträt: SE3w4 – Die Schwarze Witwe von La Porte. Mindestens 25–40 Opfer, per Heiratsanzeige gelockt und ermordet, ca. 1900–1908. Tierentsprechung: Waschbär." },
+  { term: "John List",                 route: "kriminalpsychologie-john-list",            description: "Kriminalpsychologisches Porträt: SE6w5 – Fünffachmörder (1971, New Jersey). Erschoss seine Familie aus Angst vor finanziellem Absturz, lebte 17 Jahre als 'Robert Clark'. Tierentsprechung: Kaninchen." },
+  { term: "John Gotti",               route: "kriminalpsychologie-john-gotti",           description: "Kriminalpsychologisches Porträt: SO8w7 – Der Teflon Don. Boss der Gambino-Familie, dreimal freigesprochen, 1992 verurteilt. Gestorben 2002 in Haft. Tierentsprechung: Löwe." },
+  { term: "Nick Leeson",             route: "kriminalpsychologie-nick-leeson",          description: "Kriminalpsychologisches Porträt: SO9w8 – Der Rogue Trader von Barings Bank. Verbarg 1992–1995 Handelsverluste auf Konto 88888, brachte die älteste Merchant Bank Englands zum Einsturz (827 Mio. Pfund). Tierentsprechung: Büffel." },
+  { term: "Griselda Blanco",          route: "kriminalpsychologie-griselda-blanco",      description: "Kriminalpsychologisches Porträt: SE8w9 – Die Patin von Medellín. Wegbereiterin des Kokainhandels, Lehrmeisterin Escobars, über 200 Morde in Auftrag gegeben. Erschossen 2012 durch Moto Sicario. Tierentsprechung: Orang-Utan." },
 ];

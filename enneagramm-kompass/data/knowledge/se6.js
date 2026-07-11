@@ -196,7 +196,7 @@ export const se6 = {
           category: "Bachblüte",
           field: "Vertrauen bei unbestimmter Angst",
           text: "Aspen ist die Bachblüte für unbestimmte Ängste, vages Unbehagen und das Gefühl drohender Gefahr ohne klaren Grund. Sie hilft bei feiner Schreckhaftigkeit und einer reizbaren inneren Wachsamkeit. Die Blüte schenkt Vertrauen und ein Gefühl innerer Sicherheit. Für die Sechs, die mit Zweifel und Angst vor dem Ungewissen lebt, ist sie ein tiefer Beruhiger. So darf an die Stelle diffuser Angst ein stilles Grundvertrauen treten.",
-          goal: "Auf der Seelenebene wandelt es vages Unbehagen in innere Verlässlichkeit: Vertrauen in das eigene Erdung, statt sich in Projektionen und Worst-Case-Szenarien zu verlieren.",
+          goal: "Auf der Seelenebene wandelt es vages Unbehagen in innere Verlässlichkeit: Vertrauen in die eigene Erdung, statt sich in Projektionen und Worst-Case-Szenarien zu verlieren.",
         },
         {
           title: "Hämatit",

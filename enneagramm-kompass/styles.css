@@ -264,14 +264,19 @@ button {
   backdrop-filter: blur(10px);
 }
 
-.first-glimpse img,
-.profile-visual img {
+.first-glimpse img {
   display: block;
   width: 72px;
   aspect-ratio: 1;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid rgba(255, 250, 240, 0.9);
+  border: none;
+}
+
+.profile-visual img {
+  display: block;
+  object-fit: cover;
+  border: none;
 }
 
 .first-glimpse span {
@@ -305,19 +310,26 @@ button {
 }
 
 .profile-visual {
-  display: grid;
-  place-items: center;
+  position: relative;
   justify-self: center;
   width: 150px;
-  min-height: 150px;
+  height: 150px;
   border-radius: 50%;
-  background: rgba(255, 250, 240, 0.42);
+  overflow: hidden;
+  background: #222;
 }
 
 .profile-visual img {
-  width: min(150px, 42vw);
-  opacity: 0.78;
-  box-shadow: 0 14px 32px rgba(65, 46, 28, 0.1);
+  position: absolute;
+  inset: 0;
+  width: 140%;
+  height: 140%;
+  margin: -20%;
+  object-fit: cover;
+  border: none !important;
+  outline: none !important;
+  opacity: 1;
+  display: block;
 }
 
 .focus {
@@ -2001,12 +2013,8 @@ textarea:focus {
   }
 
   .profile-visual {
-    min-height: 112px;
     width: 112px;
-  }
-
-  .profile-visual img {
-    width: 96px;
+    height: 112px;
   }
 }
 
@@ -2456,7 +2464,13 @@ button.primary:hover::after {
   0%, 100% { transform: scale(1); }
   50%       { transform: scale(1.028); }
 }
-.profile-visual img,
+@keyframes breatheZoomed {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.025); }
+}
+.profile-visual img {
+  animation: breatheZoomed 7s ease-in-out infinite;
+}
 .first-glimpse img {
   animation: breathe 7s ease-in-out infinite;
 }
@@ -3696,6 +3710,30 @@ button.primary:hover::after {
 }
 .tagesimpuls-card__btn:hover { background: #3a5229; }
 
+.tagesimpuls-card__actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+.tagesimpuls-card__actions .tagesimpuls-card__btn {
+  flex: 1;
+  margin-top: 0;
+}
+.tagesimpuls-card__share {
+  flex: 0 0 auto;
+  padding: 0.85rem 1.1rem;
+  background: transparent;
+  color: #4d6b3a;
+  border: 1.5px solid #4d6b3a;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.tagesimpuls-card__share:hover { background: #4d6b3a; color: #fff; }
+
 /* ── Typ-Impuls Block ── */
 .typ-impuls {
   margin: 1.5rem 0 0.5rem;
@@ -4187,6 +4225,65 @@ button.primary:hover::after {
 /* ── Psychogramme ────────────────────────────────────────────── */
 .psycho-wrap { max-width: 760px; margin: 0 auto; padding: 1.2rem 1rem 3rem; }
 .psycho-intro { font-size: 0.92rem; color: var(--muted); line-height: 1.6; margin: 0.5rem 0 1.5rem; }
+
+.krim-portrait-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem 0 2rem;
+}
+.krim-portrait-frame {
+  width: 220px;
+  height: 220px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 3px solid #8b5e3c;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.28), 0 0 0 1px rgba(139,94,60,0.25);
+  background: #2a1f17;
+}
+.krim-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%) contrast(1.05);
+}
+.krim-portrait-name {
+  margin: 0.75rem 0 0.15rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+.krim-portrait-typ {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.krim-tier-badge-wrap {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  box-shadow: 0 0 0 2px var(--line, rgba(114,102,90,0.28));
+}
+.krim-tier-badge-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 140%;
+  height: 140%;
+  margin: -20%;
+  object-fit: cover;
+}
 .psycho-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; }
 @media (max-width: 540px) { .psycho-grid { grid-template-columns: 1fr 1fr; } }
 .psycho-card {
@@ -4487,9 +4584,9 @@ button.primary:hover::after {
   font-weight: 600;
   white-space: nowrap;
 }
-.td-kt--normal  { background: #e8f4e8; color: #2d6a2d; }
-.td-kt--verst   { background: #fff0e0; color: #8a4800; }
-.td-kt--contra  { background: #f0e8f8; color: #5a2d8a; }
+.td-kt--normal  { background: var(--line); color: var(--anthracite); }
+.td-kt--verst   { background: var(--line); color: var(--anthracite); opacity: 0.75; }
+.td-kt--contra  { background: var(--anthracite); color: var(--cream); }
 
 /* Deutsche Bundesländer */
 .bl-karte-wrap {
@@ -4729,3 +4826,174 @@ button.primary:hover::after {
   color: var(--muted);
   line-height: 1.5;
 }
+
+/* ── Globale Suche ─────────────────────────────────────────────────────── */
+.suche-bar-outer {
+  width: 100%; padding: 0.4rem 1rem;
+  background: var(--bg); border-bottom: 1px solid var(--line);
+  box-sizing: border-box; display: block;
+}
+.suche-bar-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  width: 100%; box-sizing: border-box;
+  padding: 0.6rem 1rem;
+  background: var(--ivory); border: 1.5px solid var(--border);
+  border-radius: 8px; cursor: pointer;
+  color: var(--muted); font-size: 0.95rem; font-family: inherit;
+  text-align: left; transition: border-color .15s, color .15s;
+}
+.suche-bar-btn:hover, .suche-bar-btn:active {
+  border-color: var(--gold); color: var(--ink);
+}
+
+.suche-page { max-width: 640px; margin: 0 auto; }
+
+.suche-box {
+  position: relative; display: flex; align-items: center;
+  background: var(--surface, #f5f0e8); border: 1.5px solid var(--line);
+  border-radius: 12px; padding: 0.6rem 1rem; gap: 0.6rem;
+  margin-bottom: 1.5rem; transition: border-color .2s;
+}
+.suche-box:focus-within { border-color: var(--gold); }
+.suche-box-icon { flex-shrink: 0; opacity: 0.4; }
+
+.suche-input {
+  flex: 1; border: none; background: none; outline: none;
+  font-family: inherit; font-size: 1.05rem; color: var(--ink);
+  -webkit-appearance: none;
+}
+.suche-input::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+.suche-hint {
+  text-align: center; color: var(--muted); font-size: 0.9rem;
+  margin: 2rem 0; opacity: 0.7;
+}
+.suche-total {
+  font-size: 0.8rem; color: var(--muted); margin: 0 0 1.2rem;
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+.suche-group { margin-bottom: 1.8rem; }
+.suche-group-title {
+  font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--muted); margin: 0 0 0.6rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.suche-count {
+  background: var(--gold); color: #fff; border-radius: 20px;
+  padding: 0.05rem 0.45rem; font-size: 0.7rem; font-weight: 700;
+}
+.suche-result {
+  display: flex; flex-direction: column; gap: 0.15rem;
+  width: 100%; text-align: left; background: var(--surface, #f5f0e8);
+  border: 1px solid var(--line); border-radius: 10px;
+  padding: 0.7rem 1rem; margin-bottom: 0.45rem;
+  cursor: pointer; transition: background .15s, border-color .15s;
+  font-family: inherit;
+}
+.suche-result:hover { background: var(--cream); border-color: var(--gold); }
+.suche-result-label { font-size: 0.95rem; color: var(--ink); font-weight: 500; }
+.suche-result-sub { font-size: 0.78rem; color: var(--muted); }
+.suche-hl { background: #f5d76e55; color: var(--ink); font-weight: 700; border-radius: 2px; }
+.suche-more { font-size: 0.8rem; color: var(--muted); margin: 0.3rem 0 0; text-align: center; }
+
+/* ── Favoriten ──────────────────────────────────────────────────────────── */
+.fav-heart-btn {
+  background: none; border: none; cursor: pointer;
+  font-size: 1.4rem; line-height: 1; padding: 0.1rem 0.4rem;
+  color: var(--muted); transition: color .15s, transform .15s;
+  margin-left: auto;
+}
+.fav-heart-btn--active { color: var(--gold); }
+.fav-heart-btn:active { transform: scale(1.25); }
+
+.suche-fav-nav-btn {
+  background: var(--ivory); border: 1.5px solid var(--border);
+  border-radius: 8px; cursor: pointer; padding: 0.55rem 0.8rem;
+  font-size: 1.1rem; line-height: 1; color: var(--gold);
+  flex-shrink: 0; transition: border-color .15s;
+}
+.suche-fav-nav-btn:hover { border-color: var(--gold); }
+
+.fav-item {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.8rem 1rem; border: 1.5px solid var(--border);
+  border-radius: 8px; background: var(--ivory); margin-bottom: 0.5rem;
+  cursor: pointer; transition: border-color .15s;
+}
+.fav-item:hover { border-color: var(--gold); }
+.fav-item-label { font-weight: 600; color: var(--ink); }
+
+.fav-clear-btn {
+  margin-top: 1rem; padding: 0.4rem 1rem;
+  border: 1px solid var(--border); border-radius: 6px;
+  background: none; color: var(--muted); cursor: pointer;
+  font-size: 0.85rem; font-family: inherit;
+}
+.fav-clear-btn:hover { color: var(--ink); border-color: var(--ink); }
+
+/* ── Kriminalporträt-Filter ─────────────────────────────────────────────── */
+.kf-bar {
+  background: var(--ivory); border: 1.5px solid var(--border);
+  border-radius: 12px; padding: 0.9rem 1rem; margin-bottom: 1rem;
+}
+.kf-row {
+  display: flex; flex-wrap: wrap; gap: 0.4rem 0.3rem;
+  align-items: center; margin-bottom: 0.55rem;
+}
+.kf-row:last-of-type { margin-bottom: 0; }
+.kf-label {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em;
+  text-transform: uppercase; color: var(--muted);
+  width: 5.5rem; flex-shrink: 0;
+}
+.kf-btn {
+  padding: 0.25rem 0.65rem; border-radius: 6px;
+  border: 1.5px solid var(--border); background: var(--bg);
+  font-size: 0.82rem; font-weight: 600; color: var(--anthracite);
+  cursor: pointer; font-family: inherit;
+  transition: background .12s, border-color .12s, color .12s;
+}
+.kf-btn:hover { border-color: #9a7a2a; }
+.kf-btn--active {
+  background: #9a7a2a; border-color: #9a7a2a; color: #fff;
+}
+.kf-btn--typ-colored {
+  border-color: var(--kf-typ-col); color: var(--kf-typ-col);
+}
+.kf-btn--typ-colored.kf-btn--active {
+  background: var(--kf-typ-col); border-color: var(--kf-typ-col); color: #fff;
+}
+.kf-btn--tag {
+  font-size: 0.78rem;
+  border-color: var(--kf-tag-col); color: var(--kf-tag-col);
+  background: color-mix(in srgb, var(--kf-tag-col) 10%, var(--bg));
+}
+.kf-btn--tag.kf-btn--active {
+  background: var(--kf-tag-col); border-color: var(--kf-tag-col); color: #fff;
+}
+.kf-btn--tag[data-kf-tag="ALL"] {
+  border-color: var(--border); color: var(--anthracite); background: var(--bg);
+}
+.kf-btn--tag[data-kf-tag="ALL"].kf-btn--active {
+  background: #9a7a2a; border-color: #9a7a2a; color: #fff;
+}
+.kf-count {
+  font-size: 0.78rem; color: var(--muted);
+  margin-top: 0.5rem; text-align: right;
+}
+.kf-card {
+  border-radius: 12px; padding: 1.2rem 1.4rem;
+  transition: box-shadow .15s, border-color .15s;
+}
+.kf-tag {
+  display: inline-block; padding: 0.15rem 0.5rem;
+  border-radius: 4px; font-size: 0.74rem; font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.kf-tag--serienmord  { background: #fdecea; color: #c0392b; }
+.kf-tag--betrug      { background: #eaf0fb; color: #2563c7; }
+.kf-tag--mafia       { background: #f3eafb; color: #7c3aed; }
+.kf-tag--terror      { background: #fef3e2; color: #b45309; }
+.kf-tag--nahbereich  { background: #e6f9f0; color: #15803d; }
+.kf-tag--missbrauch  { background: #fef0f6; color: #be185d; }
+.kf-tag--sonstiges   { background: #f0f0f0; color: #555; }

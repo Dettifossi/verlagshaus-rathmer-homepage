@@ -1,0 +1,137 @@
+{
+  "se1": {
+    "name": "Adler",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783678133/kompass/tier-sounds/se1.mp3",
+    "source": "Bald_Eagle_Yellowstone_National_Park.ogg"
+  },
+  "so1": {
+    "name": "Gans",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783678135/kompass/tier-sounds/so1.mp3",
+    "source": "Geese_Honking_(loud).ogg"
+  },
+  "sx1": {
+    "name": "Schwarze Mamba",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783678834/kompass/tier-sounds/sx1.mp3",
+    "source": "Alligatorhiss.ogg"
+  },
+  "se2": {
+    "name": "Flusspferd",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783679318/kompass/tier-sounds/se2.mp3",
+    "source": "Hippos%20In%20A%20River-SoundBible.com-248446379.mp3"
+  },
+  "so2": {
+    "name": "Golden Retriever",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783677933/kompass/tier-sounds/so2.mp3",
+    "source": "Barking_of_a_dog_2.ogg"
+  },
+  "sx2": {
+    "name": "Kamel",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783678836/kompass/tier-sounds/sx2.mp3",
+    "source": "Acoustic-Structure-and-Contextual-Use-of-Calls-by-Captive-Male-and-Female-Cheetahs-%28Acinonyx-pone.0158546.s001.oga"
+  },
+  "se3": {
+    "name": "Waschbär",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783678144/kompass/tier-sounds/se3.mp3",
+    "source": "Baby_Raccoon_Chatter_1.flac"
+  },
+  "so3": {
+    "name": "Gepard",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783678837/kompass/tier-sounds/so3.mp3",
+    "source": "Acoustic-Structure-and-Contextual-Use-of-Calls-by-Captive-Male-and-Female-Cheetahs-%28Acinonyx-pone.0158546.s001.oga"
+  },
+  "sx3": {
+    "name": "Pfau",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783678147/kompass/tier-sounds/sx3.mp3",
+    "source": "Pavo_cristatus_(call).ogg"
+  },
+  "se4": {
+    "name": "Taube",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783678149/kompass/tier-sounds/se4.mp3",
+    "source": "Dove_cooing.ogg"
+  },
+  "so4": {
+    "name": "Gürteltier",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783678839/kompass/tier-sounds/so4.mp3",
+    "source": "Alligatorhiss.ogg"
+  },
+  "sx4": {
+    "name": "Chihuahua",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783678840/kompass/tier-sounds/sx4.mp3",
+    "source": "Fennec_Singing.ogg"
+  },
+  "se5": {
+    "name": "Eule",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783679319/kompass/tier-sounds/se5.mp3",
+    "source": "Owl%20Hooting-SoundBible.com-1155496330.mp3"
+  },
+  "so5": {
+    "name": "Oktopus",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783679136/kompass/tier-sounds/so5.mp3",
+    "source": "Ocean_Waves-Mike_Koenig-980635527.mp3"
+  },
+  "sx5": {
+    "name": "Igel",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783678157/kompass/tier-sounds/sx5.mp3",
+    "source": "Hedgehog_O.ogg"
+  },
+  "se6": {
+    "name": "Kaninchen",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783679138/kompass/tier-sounds/se6.mp3",
+    "source": "Angry%20Squirrel-SoundBible.com-1620933676.mp3"
+  },
+  "so6": {
+    "name": "Erdmännchen",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783679140/kompass/tier-sounds/so6.mp3",
+    "source": "Prairie%20Dog-SoundBible.com-1831661504.mp3"
+  },
+  "sx6": {
+    "name": "Wolf",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783678161/kompass/tier-sounds/sx6.mp3",
+    "source": "Wolf_howls.ogg"
+  },
+  "se7": {
+    "name": "Gorilla",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783679142/kompass/tier-sounds/se7.mp3",
+    "source": "Gorilla-SoundBible.com-1576451741.mp3"
+  },
+  "so7": {
+    "name": "Biber",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783679454/kompass/tier-sounds/so7.mp3",
+    "source": "mingosounds-beaver-279.mp3"
+  },
+  "sx7": {
+    "name": "Schimpanse",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783679321/kompass/tier-sounds/sx7.mp3",
+    "source": "Monkeys%20Monkeying%20Around-SoundBible.com-1738007729.mp3"
+  },
+  "se8": {
+    "name": "Orang-Utan",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783679837/kompass/tier-sounds/se8.mp3",
+    "source": "gibbon-monkey-daniel_simon.mp3"
+  },
+  "so8": {
+    "name": "Löwe",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783679147/kompass/tier-sounds/so8.mp3",
+    "source": "Lion%20Roar-SoundBible.com-718441804.mp3"
+  },
+  "sx8": {
+    "name": "Krokodil",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783679766/kompass/tier-sounds/sx8.mp3",
+    "source": "Alligator%20Crocodile%20Growl-SoundBible.com-723655949.mp3"
+  },
+  "se9": {
+    "name": "Elefant",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783679149/kompass/tier-sounds/se9.mp3",
+    "source": "Elephant-SoundBible.com-551032783.mp3"
+  },
+  "so9": {
+    "name": "Büffel",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783679151/kompass/tier-sounds/so9.mp3",
+    "source": "Bison-SoundBible.com-1105726036.mp3"
+  },
+  "sx9": {
+    "name": "Faultier",
+    "url": "https://res.cloudinary.com/ymooybdl/video/upload/v1783679153/kompass/tier-sounds/sx9.mp3",
+    "source": "Gorilla-SoundBible.com-1576451741.mp3"
+  }
+}
