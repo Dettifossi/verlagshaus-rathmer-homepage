@@ -2307,7 +2307,7 @@ export const uiText = {
       { route: "homoeopathie-songs", label: "Enneagramm, Homöopathie & Songs" },
       { route: "beruhmte-philosophen", label: "Berühmte Philosophen" },
       { route: "bedeutung-27-subtypen", label: "Bedeutung der 27 Subtypen" },
-      { route: "dynamik-der-typen", label: "Dynamik der Enneagramm-Typen" },
+      { route: "dynamik-der-typen", label: "Die innere Dynamik der Enneagrammtypen" },
       { route: "beziehungen-schaubild", label: "Beziehungen" },
       { route: "bedrohungsszenarien", label: "Bedrohungsszenarien" },
       { route: "befreiende-fragen", label: "Befreiende Fragen" },
