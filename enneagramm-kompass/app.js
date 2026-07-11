@@ -181,7 +181,8 @@ const text = uiText;
 document.title = text.meta.appTitle;
 
 window.addEventListener("hashchange", () => {
-  const newRoute = location.hash.replace("#", "") || "start";
+  const raw = location.hash.replace("#", "") || "start";
+  const [newRoute, scrollAnchor] = raw.split("|");
   if (newRoute !== "beziehungen") beziehungSelected = null;
   if (newRoute !== "suche") _sucheQuery = "";
   if (newRoute !== "differenzierung") diffState = { a: null, b: null };
@@ -189,6 +190,10 @@ window.addEventListener("hashchange", () => {
   if (newRoute !== "krisenkompass") krisenState = { typNr: null, krisenId: null };
   state.route = newRoute;
   render();
+  if (scrollAnchor) setTimeout(() => {
+    const el = document.getElementById(scrollAnchor);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, 80);
 });
 
 function go(route) {
