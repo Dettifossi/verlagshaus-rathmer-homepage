@@ -140,7 +140,7 @@ const HEILWISSEN_ROUTES = new Set(["tischdialoge", "healing", "oils", "tcm", "ki
     "schildkroetenarten-der-9-typen",
     "fischarten-der-9-typen",
     "walarten-der-9-typen",
-    "insektenarten-der-9-typen", "frieden-schliessen", "wer-wir-sind", "verwechslungen", "wunden", "leidenschaft-und-wunde", "grundformel", "ego-fixierungen", "enneagramm-profiling", "antriebskraefte", "bewusstseinsuebungen", "dynamik-des-bewusstseinszustandes", "schopenhauer-zitat", "koerperregulation", "symmetrie-des-enneagramms", "schaubilder-als-spiegel", "neun-logismoi", "bedeutung-27-subtypen", "wurzeln-des-enneagramms", "spirituelle-uebungen", "laster-tugenden-affirmationen", "schutzdefizite", "illusionen", "interessante-erkenntnisse", "identifikation", "schmerzschutz", "blickqualitaet", "prinzipien", "hunderassen", "verantwortung", "limericks", "haiku-der-9-typen", "humor-der-9-typen", "david-rathmer-fuehrung", "david-rathmer-persoenlichkeiten", "david-rathmer-erfolgsinterviews", "david-rathmer-impulse", "david-rathmer-kriminalfaelle", "david-rathmer-grundlagen", "solfeggio-frequenzen", "zehn-anwendungen-fuer-das-enneagramm", "beziehungen-schaubild", "rumi-zitate", "suche-nach-liebe", "drei-lebenskraefte", "beruhmte-philosophen", "beruhmte-komponisten", "homoeopathie-songs", "detlef-rathmer-jazz", "portrait-typ-1", "portrait-typ-2", "portrait-typ-3", "portrait-typ-4", "portrait-typ-5", "portrait-typ-6", "portrait-typ-7", "portrait-typ-8", "portrait-typ-9", "frustrationen", "intrinsisches-verlangen", "basisemotionen", "kerneberzeugungen", "kindheitsperspektiven", "lebensgluck", "beziehungen", "differenzierung", "tierentsprechungen", "triadendefizite", "zornverhalten", "liebesverhalten", "erfolgsverhalten", "individualitaetsverhalten", "wissensverhalten", "sicherheitsverhalten", "spassverhalten", "machtverhalten", "harmonieverhalten", "situationskompass", "tierlexikon"]);
+    "insektenarten-der-9-typen", "frieden-schliessen", "wer-wir-sind", "verwechslungen", "wunden", "leidenschaft-und-wunde", "grundformel", "ego-fixierungen", "enneagramm-profiling", "antriebskraefte", "bewusstseinsuebungen", "dynamik-des-bewusstseinszustandes", "schopenhauer-zitat", "koerperregulation", "symmetrie-des-enneagramms", "schaubilder-als-spiegel", "neun-logismoi", "bedeutung-27-subtypen", "dynamik-der-typen", "wurzeln-des-enneagramms", "spirituelle-uebungen", "laster-tugenden-affirmationen", "schutzdefizite", "illusionen", "interessante-erkenntnisse", "identifikation", "schmerzschutz", "blickqualitaet", "prinzipien", "hunderassen", "verantwortung", "limericks", "haiku-der-9-typen", "humor-der-9-typen", "david-rathmer-fuehrung", "david-rathmer-persoenlichkeiten", "david-rathmer-erfolgsinterviews", "david-rathmer-impulse", "david-rathmer-kriminalfaelle", "david-rathmer-grundlagen", "solfeggio-frequenzen", "zehn-anwendungen-fuer-das-enneagramm", "beziehungen-schaubild", "rumi-zitate", "suche-nach-liebe", "drei-lebenskraefte", "beruhmte-philosophen", "beruhmte-komponisten", "homoeopathie-songs", "detlef-rathmer-jazz", "portrait-typ-1", "portrait-typ-2", "portrait-typ-3", "portrait-typ-4", "portrait-typ-5", "portrait-typ-6", "portrait-typ-7", "portrait-typ-8", "portrait-typ-9", "frustrationen", "intrinsisches-verlangen", "basisemotionen", "kerneberzeugungen", "kindheitsperspektiven", "lebensgluck", "beziehungen", "differenzierung", "tierentsprechungen", "triadendefizite", "zornverhalten", "liebesverhalten", "erfolgsverhalten", "individualitaetsverhalten", "wissensverhalten", "sicherheitsverhalten", "spassverhalten", "machtverhalten", "harmonieverhalten", "situationskompass", "tierlexikon"]);
 
 function hasProfile() {
   return !!localStorage.getItem(PROFILE_KEY);
@@ -2371,6 +2371,68 @@ function subtypeEntry(code) {
   );
 }
 
+const DYNAMIK_VIDEOS = {
+  1: "b3NTI3JH2wo",
+  2: "BlxNIC_VxV4",
+  3: "Txkm8yZ88kw",
+  4: "XoJD38aD5kg",
+  5: "kEikxOZt4fM",
+  6: "_nQGpZhlsQo",
+  7: "l87ai_tZAoU",
+  8: "jnyg4qjQUf8",
+  9: "GT3XxoDyHeo",
+};
+
+const DYNAMIK_TYPE_NAMES = {
+  1: "Typ 1 – Der Reformer",
+  2: "Typ 2 – Der Helfer",
+  3: "Typ 3 – Der Erfolgsmensch",
+  4: "Typ 4 – Der Individualist",
+  5: "Typ 5 – Der Denker",
+  6: "Typ 6 – Der Loyalist",
+  7: "Typ 7 – Der Enthusiast",
+  8: "Typ 8 – Der Herausforderer",
+  9: "Typ 9 – Der Friedensstifter",
+};
+
+function dynamikDerTypenPage() {
+  const typeColors = ["","#7B7B52","#6B8E6B","#8B5E3C","#4A6670","#5A6E8C","#8B7355","#6B8E8C","#8B3A3A","#5A7A5A"];
+  const cards = Object.entries(DYNAMIK_VIDEOS).map(([num, vid]) => {
+    const n = parseInt(num);
+    const col = typeColors[n] || "var(--copper)";
+    return `
+      <div style="background:var(--paper);border-radius:14px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,0.08);border-top:3px solid ${col};">
+        <p style="margin:0;padding:0.7rem 1rem 0.5rem;font-size:0.88rem;font-weight:600;line-height:1.35;color:var(--ink);">${DYNAMIK_TYPE_NAMES[n]}</p>
+        <div style="position:relative;aspect-ratio:16/9;background:#000;">
+          <iframe width="100%" height="100%" style="border:none;display:block;"
+            src="https://www.youtube.com/embed/${vid}?rel=0"
+            allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  return shell(`
+    ${pageHeader("dynamik-der-typen")}
+    <div class="section-content">
+      <p style="font-size:1.05rem;line-height:1.7;margin-bottom:1.8rem;">
+        Diese neun Videos zeigen die innere Dynamik der Enneagrammtypen –
+        die Denk- und Fühlmuster, Motivationen und blinden Flecken jedes Typs,
+        dargestellt in jeweils 10–12 Minuten.
+        Es sind die meistgesehenen Videos des Kanals.
+      </p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;">
+        ${cards}
+      </div>
+      ${relatedLinks([
+        { route: "dynamik-des-bewusstseinszustandes", label: "Dynamik des Bewusstseinszustands" },
+        { route: "bedeutung-27-subtypen", label: "Bedeutung der 27 Subtypen" },
+        { route: "enneagramm-profiling", label: "Enneagramm-Profiling" },
+      ])}
+    </div>
+  `);
+}
+
 function subtypePage(code) {
   const sp = text.subtypePage;
   const entry = subtypeEntry(code);
@@ -2405,6 +2467,15 @@ function subtypePage(code) {
       </button>
     </section>
     ${details.meinKompass ? meinKompassSection(details.meinKompass, sp) : ""}
+    ${(function(){ const dn = parseInt(code.match(/\d+/)[0]); const dv = DYNAMIK_VIDEOS[dn]; return dv ? `
+    <section class="narrow" style="padding-top:0;padding-bottom:0;">
+      <h3 style="margin:0 0 0.6rem;font-size:1rem;color:${tc};">Die Dynamik des Typs ${dn}</h3>
+      <div style="position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,0.1);">
+        <iframe width="100%" height="100%" style="border:none;display:block;"
+          src="https://www.youtube.com/embed/${dv}?rel=0"
+          allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </section>` : ""; })()} 
     <section class="subtype-sections">
       ${sectionBlock("verstehen", sp.rooms.verstehen, verstehenInner(entry, sp) + impulseBlock(SUBTYP_IMPULSE[code.toLowerCase()], tc), tc)}
       ${sectionBlock("spueren", sp.rooms.spueren, spuerenInner(entry, sp), tc)}
@@ -30280,6 +30351,7 @@ function render() {
     zitate: zitatePage,
     "gaslighting-enneagramm": gaslightingPage,
     "bedeutung-27-subtypen": bedeutungSubtypenPage,
+    "dynamik-der-typen": dynamikDerTypenPage,
     "wurzeln-des-enneagramms": wurzelnDesEnneagrammsPage,
     "spirituelle-uebungen": spirituelleUebungenPage,
     "laster-tugenden-affirmationen": lasterTugendenAffirmationenPage,
