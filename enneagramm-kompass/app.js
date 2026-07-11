@@ -4972,41 +4972,56 @@ function detlefRathmerJazzPage() {
     ${pageHeader("detlef-rathmer-jazz")}
     <div class="section-content">
 
-      <p style="font-size:1.05rem;line-height:1.7;margin-bottom:2rem;">
-        Über 32 Jahre habe ich Menschen an Volkshochschulen im Enneagramm und in der Homöopathie unterrichtet –
-        und während all dieser Zeit begleitete mich die Musik. Auf dieser Seite finden Sie meine Jazz-Alben,
-        meine Enneagramm-Songs und spirituelle Lieder – alles, was ich über die Jahre komponiert und aufgenommen habe.
+      <p style="font-size:1.05rem;line-height:1.7;margin-bottom:1.5rem;">
+        Über 32 Jahre habe ich Menschen an Volkshochschulen im Bereich der Homöopathie,
+        aber auch im Bereich Gitarre unterrichtet – und während all dieser Zeit begleitete mich
+        die Musik auch privat immer wieder. Auf dieser Seite finden Sie meine Jazz-Alben,
+        meine Enneagramm-Songs und spirituelle Lieder – alles, was ich über die Jahre
+        komponiert und aufgenommen habe.
       </p>
 
-      <h2 style="margin-top:2rem;margin-bottom:0.3rem;">Jazz-Alben</h2>
+      <!-- Abschnitts-Navigation -->
+      <nav id="dr-top" style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2.5rem;">
+        <a href="#dr-jazz"        style="padding:0.4rem 0.9rem;border-radius:20px;background:var(--paper-deep,#ede8dc);color:var(--copper);font-size:0.85rem;font-weight:600;text-decoration:none;">Jazz-Alben</a>
+        <a href="#dr-enn-alben"   style="padding:0.4rem 0.9rem;border-radius:20px;background:var(--paper-deep,#ede8dc);color:var(--copper);font-size:0.85rem;font-weight:600;text-decoration:none;">Enneagramm-Alben</a>
+        <a href="#dr-enn-songs"   style="padding:0.4rem 0.9rem;border-radius:20px;background:var(--paper-deep,#ede8dc);color:var(--copper);font-size:0.85rem;font-weight:600;text-decoration:none;">Enneagramm-Songs</a>
+        <a href="#dr-spirituell"  style="padding:0.4rem 0.9rem;border-radius:20px;background:var(--paper-deep,#ede8dc);color:var(--copper);font-size:0.85rem;font-weight:600;text-decoration:none;">Spirituelle Songs</a>
+        <a href="#dr-liebe"       style="padding:0.4rem 0.9rem;border-radius:20px;background:var(--paper-deep,#ede8dc);color:var(--copper);font-size:0.85rem;font-weight:600;text-decoration:none;">Liebeslieder</a>
+      </nav>
+
+      <h2 id="dr-jazz" style="margin-top:0;margin-bottom:0.3rem;">Jazz-Alben</h2>
       <p style="color:var(--ink-muted);font-size:0.93rem;margin-bottom:0.5rem;">
         30 Jazz-Alben zum Entspannen und Heilen – Kanal:
         <a href="https://www.youtube.com/@SOULFULJAZZHIGHERVIBES/videos" target="_blank" rel="noopener"
            style="color:var(--copper);">@SOULFULJAZZHIGHERVIBES</a>
       </p>
       ${grid(jazzAlben)}
+      <p style="text-align:right;margin-top:0.8rem;"><a href="#dr-top" style="font-size:0.85rem;color:var(--copper);">↑ Nach oben</a></p>
 
-      <h2 style="margin-top:3rem;margin-bottom:0.3rem;">Enneagramm-Alben</h2>
+      <h2 id="dr-enn-alben" style="margin-top:3rem;margin-bottom:0.3rem;">Enneagramm-Alben</h2>
       <p style="color:var(--ink-muted);font-size:0.93rem;margin-bottom:0.5rem;">
         Entspannungs- und Heilungsmusik für alle 9 Enneagrammtypen sowie thematische Alben.
       </p>
       ${grid(enneagrammAlben)}
+      <p style="text-align:right;margin-top:0.8rem;"><a href="#dr-top" style="font-size:0.85rem;color:var(--copper);">↑ Nach oben</a></p>
 
-      <h2 style="margin-top:3rem;margin-bottom:0.3rem;">Enneagramm-Songs</h2>
+      <h2 id="dr-enn-songs" style="margin-top:3rem;margin-bottom:0.3rem;">Enneagramm-Songs</h2>
       <p style="color:var(--ink-muted);font-size:0.93rem;margin-bottom:0.5rem;">
         Einzelne Lieder rund um das Enneagramm – zum Mitsingen und Nachdenken.
         Die Homöopathie-Songs finden Sie auf der eigenen Seite
         <a href="#homoeopathie-songs" data-route="homoeopathie-songs" style="color:var(--copper);">Homöopathie & Songs</a>.
       </p>
       ${grid(enneagrammSongs)}
+      <p style="text-align:right;margin-top:0.8rem;"><a href="#dr-top" style="font-size:0.85rem;color:var(--copper);">↑ Nach oben</a></p>
 
-      <h2 style="margin-top:3rem;margin-bottom:0.3rem;">Spirituelle Songs</h2>
+      <h2 id="dr-spirituell" style="margin-top:3rem;margin-bottom:0.3rem;">Spirituelle Songs</h2>
       <p style="color:var(--ink-muted);font-size:0.93rem;margin-bottom:0.5rem;">
         Lieder über das Wesen der Wirklichkeit, tiefe Stille und das Licht hinter den Dingen.
       </p>
       ${grid(spirituelleSongs)}
+      <p style="text-align:right;margin-top:0.8rem;"><a href="#dr-top" style="font-size:0.85rem;color:var(--copper);">↑ Nach oben</a></p>
 
-      <h2 style="margin-top:3rem;margin-bottom:0.3rem;">Liebeslieder von Detlef</h2>
+      <h2 id="dr-liebe" style="margin-top:3rem;margin-bottom:0.3rem;">Liebeslieder von Detlef</h2>
       <p style="color:var(--ink-muted);font-size:0.93rem;margin-bottom:0.5rem;">
         9 Liebeslieder – auch auf Spotify erhältlich.
       </p>

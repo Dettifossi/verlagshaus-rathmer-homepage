@@ -2460,15 +2460,15 @@ export const uiText = {
     ]},
     { route: "stille", label: "⏱ Stille" },
     { route: "musik",  label: "🎵 Entspannungs- und Heilungsmusik" },
-    { route: "detlef-rathmer", label: "▶ Detlef Rathmer", dropdown: [
-      { route: "detlef-rathmer-jazz", label: "Jazz & Musik" },
-    ]},
     { route: "david-rathmer", label: "▶ David L. Rathmer", dropdown: [
       { route: "david-rathmer-fuehrung",               label: "Führung & Unternehmen" },
       { route: "david-rathmer-erfolgsinterviews",      label: "Erfolgsinterviews" },
       { route: "david-rathmer-impulse",               label: "Impulse & Einsichten" },
       { route: "david-rathmer-persoenlichkeiten",      label: "Berühmte Persönlichkeiten" },
       { route: "david-rathmer-grundlagen",             label: "Enneagramm-Grundlagen" },
+    ]},
+    { route: "detlef-rathmer", label: "▶ Detlef Rathmer – Musikalisch erleben", dropdown: [
+      { route: "detlef-rathmer-jazz", label: "Jazz & Musik" },
     ]},
   ],
   subtypePage: {
