@@ -2425,6 +2425,7 @@ function dynamikDerTypenPage() {
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;">
         ${cards}
       </div>
+      ${bookTip("die-praxis-der-typbestimmung-taschenbuch", "In dieser Zeit entstanden auch die Videos – das Buch liefert die schriftliche Vertiefung zur Typbestimmung, Schritt für Schritt.", "Die Praxis der Typbestimmung")}
       ${relatedLinks([
         { route: "dynamik-des-bewusstseinszustandes", label: "Dynamik des Bewusstseinszustands" },
         { route: "bedeutung-27-subtypen", label: "Bedeutung der 27 Subtypen" },
