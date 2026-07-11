@@ -4968,7 +4968,7 @@ const JAZZ_TRACKS = {
 };
 
 function detlefRathmerJazzPage() {
-  const kachel = (id, label, tracks, desc) => `
+  const kachel = (id, label, tracks, desc, langs) => `
     <div style="background:var(--paper);border-radius:14px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,0.08);">
       <p style="margin:0;padding:0.7rem 1rem 0.5rem;font-size:0.88rem;font-weight:600;line-height:1.35;color:var(--ink);">${label}</p>
       <div style="position:relative;aspect-ratio:16/9;background:#000;">
@@ -4977,6 +4977,15 @@ function detlefRathmerJazzPage() {
           allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
       </div>
       ${desc ? `<p style="margin:0;padding:0.3rem 1rem 0.6rem;font-size:0.8rem;color:var(--ink-muted);line-height:1.5;">${desc}</p>` : ""}
+      ${langs && langs.length ? `
+      <details style="padding:0.4rem 1rem 0.6rem;">
+        <summary style="cursor:pointer;font-size:0.82rem;color:var(--copper);font-weight:600;user-select:none;">
+          ▶ In ${langs.length} weiteren Sprachen
+        </summary>
+        <ul style="margin:0.4rem 0 0;padding-left:1.2rem;font-size:0.81rem;line-height:2;">
+          ${langs.map(l => `<li><a href="https://www.youtube.com/watch?v=${l.id}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${l.label}</a></li>`).join("")}
+        </ul>
+      </details>` : ""}
       ${tracks && tracks.length ? `
       <details style="padding:0.4rem 1rem 0.6rem;">
         <summary style="cursor:pointer;font-size:0.82rem;color:var(--copper);font-weight:600;user-select:none;">
@@ -5049,8 +5058,18 @@ function detlefRathmerJazzPage() {
   const enneagrammSongs = [
     { id: "UIs80tsNcmE", label: "Enneagramm-Hymne – Loblied auf die 9 Typen (Deutsch)" },
     { id: "2li9BrwEdGo", label: "Enneagram Anthem – Hymn of Praise (English)" },
-    { id: "zQV3lWHeOWk", label: "Flammen des Lebens – Die Leidenschaften der 9 Typen (Deutsch)" },
-    { id: "gfGQVCffmL0", label: "Flames of Life – The Passions of the 9 Types (English)" },
+    { id: "zQV3lWHeOWk", label: "Flammen des Lebens – Die Leidenschaften der 9 Typen (Deutsch)", desc: '' },
+    { id: "gfGQVCffmL0", label: "Flames of Life – The Passions of the 9 Types (English)", langs: [
+      { id: "bTNPBa2CCPQ", label: "Flammes de Vie (Français)" },
+      { id: "ccmZzNuGsQw", label: "Llamas de la Vida (Español)" },
+      { id: "t3elU2OR-P8", label: "Chamas da Vida (Português)" },
+      { id: "lwgNhlyj_Vs", label: "Fiamme della Vita (Italiano)" },
+      { id: "PCbcJQYfJPQ", label: "生命之火 (Mandarin-Chinesisch)" },
+      { id: "zhfEHpi7guY", label: "Огни жизни (Russisch)" },
+      { id: "TONsxxciVeM", label: "Вогонь життя (Ukrainisch)" },
+      { id: "ceWj_6bq5sY", label: "Hayatın Alevleri (Türkisch)" },
+      { id: "RWnOplcD-NM", label: "जीवन की ज्वाला (Hindi)" },
+    ]},
     { id: "0wuNFvrDWgs", label: "27 Pfade – Song über die 27 Persönlichkeiten (Deutsch)" },
     { id: "gKt5ewn7MY4", label: "27 Paths – Song About the 27 Personalities (English)" },
     { id: "UiiJxzKg_8k", label: "Neun Wege – Jazz-Version" },
@@ -5089,7 +5108,7 @@ function detlefRathmerJazzPage() {
 
   const grid = (items, tracksMap) => `
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;margin-top:1rem;">
-      ${items.map(a => kachel(a.id, a.label, a.num ? (tracksMap || JAZZ_TRACKS)[a.num] : null, a.desc || null)).join("")}
+      ${items.map(a => kachel(a.id, a.label, a.num ? (tracksMap || JAZZ_TRACKS)[a.num] : null, a.desc || null, a.langs || null)).join("")}
     </div>
   `;
 
