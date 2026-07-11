@@ -2417,7 +2417,7 @@ function dynamikDerTypenPage() {
     <div class="section-content">
       <h1 style="font-size:1.6rem;line-height:1.3;margin-bottom:1rem;">Die innere Dynamik der Enneagrammtypen</h1>
       <p style="font-size:1.05rem;line-height:1.7;margin-bottom:1.8rem;">
-        Diese neun Videos zeigen die innere Dynamik der Enneagrammtypen –
+        Diese neun Videos vermitteln ein lebendiges Bild der inneren Dynamik der Enneagrammtypen –
         die Denk- und Fühlmuster, Motivationen und blinden Flecken jedes Typs,
         dargestellt in jeweils 10–12 Minuten.
         Es sind die meistgesehenen Videos des Kanals.
