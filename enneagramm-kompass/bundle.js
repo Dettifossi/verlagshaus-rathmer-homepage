@@ -4852,8 +4852,33 @@ function portraitTyp9Page() { return _portraitTypPage(PORTRAIT_TYPEN[8]); }
 
 
 
+const JAZZ_TRACKS = {
+  "64": [{t:"Morning Rhapsody",s:0}, {t:"Cityscape Serenade",s:190}, {t:"Midnight Reflections",s:401}, {t:"Blue Notes of Longing",s:596}, {t:"Soulful Interlude",s:769}, {t:"Rhythm of Abundance",s:969}, {t:"Nocturne of Solitude",s:1144}, {t:"Whispers in the Wind",s:1318}, {t:"Harmonious Journeys",s:1508}, {t:"Echoes of the Heart",s:1693}, {t:"Serenade of Truth",s:1878}, {t:"Eternal Dawn",s:2063}],
+  "65": [{t:"First Light",s:0}, {t:"Footsteps on the Pavement",s:178}, {t:"The Stranger's Smile",s:386}, {t:"Beneath the Old Sycamore",s:569}, {t:"Echoes in the Rain",s:727}, {t:"The Space Between Notes",s:907}, {t:"Holding a Memory",s:1049}, {t:"Turning Tides",s:1235}, {t:"In a Single Breath",s:1408}, {t:"The Quietest Sound",s:1580}, {t:"Returning to Silence",s:1802}, {t:"After the Music Fades",s:1957}],
+  "66": [{t:"Whisper of Dawn",s:0}, {t:"Drifting Through Time",s:176}, {t:"Embers of Yesterday",s:339}, {t:"Unspoken Words",s:526}, {t:"Between the Lines",s:726}, {t:"Winds of Change",s:889}, {t:"Still Water",s:1074}, {t:"Carrying the Light",s:1291}, {t:"Footprints in the Mist",s:1473}, {t:"Unfinished Conversations",s:1690}, {t:"The Weight of Time",s:1894}, {t:"Homeward",s:2068}],
+  "67": [{t:"The Way the River Knows",s:0}, {t:"Dancing Between the Raindrops:",s:168}, {t:"A Stranger's Name",s:372}, {t:"Midnight and the Moon",s:549}, {t:"Footprints in the Sand",s:756}, {t:"Love Like a Lantern",s:957}, {t:"Café Conversations",s:1130}, {t:"When the Musik Fades",s:1322}, {t:"Echoes of Yesterday",s:1497}, {t:"The Space Between the Words",s:1697}, {t:"The Road to Stillness",s:1871}, {t:"Just This Moment",s:2101}],
+  "68": [{t:"Before the Day Begins",s:0}, {t:"Stranger in the Rain:",s:223}, {t:"Conversations in Blue",s:428}, {t:"Shadows and Silhouettes",s:608}, {t:"A Door Left Open",s:795}, {t:"The Rhythm of Goodbye",s:988}, {t:"When the World Stands Still",s:1206}, {t:"One Step at a Time",s:1371}, {t:"The Space Between the Stars",s:1554}, {t:"The River Knows the Way",s:1736}, {t:"The Last Light on the Horizon",s:1944}, {t:"Oh, Returning to Silence",s:2157}],
+  "69": [{t:"One Breath, One Step",s:0}, {t:"Coffee in a Silent Café",s:187}, {t:"The Language of Rain",s:415}, {t:"Shadows of the Moon",s:608}, {t:"The Heart's Compass",s:811}, {t:"The Dance of Time",s:995}, {t:"Lost in the Moment",s:1188}, {t:"Through the Quiet Storm",s:1385}, {t:"The Light We Share",s:1565}, {t:"The Edge of Tomorrow",s:1748}, {t:"The Quiet Within",s:1951}, {t:"Return to the Heart",s:2121}],
+  "70": [{t:"Whispers of the Unknown",s:0}, {t:"A Chance Encounter",s:184}, {t:"The Wind Knows Our Names",s:392}, {t:"Levers Never Sent",s:591}, {t:"Café of Forgotten Dreams",s:773}, {t:"Oh, Shadows and Silhouettes",s:947}, {t:"The Synchronicity Waltz",s:1103}, {t:"Painted Skies and Passing Trains",s:1267}, {t:"Language of Rain",s:1459}, {t:"The Invisible Thread",s:1624}, {t:"Home is a Feeling",s:1806}, {t:"The Full Circle",s:1968}],
+  "71": [{t:"Awakening in Blue",s:0}, {t:"Moonlight Conversations",s:177}, {t:"Tides of Time",s:366}, {t:"Serenade for the Lost",s:557}, {t:"Whispers in the Rain",s:739}, {t:"Dancing with Time",s:922}, {t:"Silent Echoes",s:1098}, {t:"Through the Keyhole",s:1318}, {t:"The Space Between",s:1471}, {t:"Lanterns on the Water",s:1696}, {t:"Where the Wind Goes",s:1898}, {t:"The Quiet Light",s:2053}],
+  "72": [{t:"The First Light",s:0}, {t:"Traces on the Tide",s:154}, {t:"Serendipity Blues",s:355}, {t:"Whispers of the Moon",s:568}, {t:"Between the Notes",s:752}, {t:"Unwritten Pages",s:946}, {t:"Velvet Skies",s:1174}, {t:"Dancing with the Wind",s:1413}, {t:"Falling into Time",s:1591}, {t:"Silent Agreements",s:1817}, {t:"The Shape of Light",s:2021}, {t:"Where the Road Begins",s:2241}],
+  "73": [{t:"The Echo of Dawn",s:0}, {t:"Midnight Confessions",s:159}, {t:"Chance Encounters",s:376}, {t:"Footprints in the Rain",s:554}, {t:"Paper Boats",s:747}, {t:"Mirror of the Moon",s:975}, {t:"When We Were Fire",s:1214}, {t:"Serendipity Street",s:1443}, {t:"The Space Between Words",s:1625}, {t:"Silent Conversations",s:1826}, {t:"Beneath the Surface",s:2022}, {t:"The Light Within",s:2216}],
+  "74": [{t:"Footsteps in the Fog",s:0}, {t:"The Rhythm of Chance",s:203}, {t:"Echoes on the Page",s:332}, {t:"Crossroads Café",s:510}, {t:"When the Wind Decides",s:705}, {t:"Conversations with the Moon",s:931}, {t:"Silent Promises",s:1127}, {t:"The River Remembers",s:1326}, {t:"Shadows That Dance",s:1518}, {t:"The Weight of a Whisper",s:1757}, {t:"The Space Unwritten",s:1941}, {t:"The Open Road",s:2145}],
+  "75": [{t:"Awakening Breeze",s:0}, {t:"Fading Footprints",s:189}, {t:"When the Night Sings",s:400}, {t:"Echoes on the Shore",s:541}, {t:"Whispers Left Behind",s:746}, {t:"The Road Not Taken",s:949}, {t:"Unfinished Lines",s:1116}, {t:"Threads of Time",s:1309}, {t:"When the Wind Remembers",s:1527}, {t:"Beneath the Neon Glow",s:1745}, {t:"The Spaces Between Us",s:1952}, {t:"Awaken to the Dawn",s:2170}],
+  "77": [{t:"River of Time",s:0}, {t:"The Stranger's Eyes",s:211}, {t:"Footprints on the Wind",s:566}, {t:"Where the Moonlight Falls",s:759}, {t:"Threads of Gold",s:916}, {t:"The Turning of the Tide",s:1125}, {t:"Whispers on the Water",s:1315}, {t:"Written in the Wind",s:1493}, {t:"Between the Silence",s:1700}, {t:"Golden Threads of Time",s:1900}, {t:"The Light Behind the Sky",s:2096}, {t:"Forever in the Moment",s:2327}],
+  "78": [{t:"Destiny as Your Friend",s:0}, {t:"The Chance We Never Took",s:169}, {t:"Raindrop Reverie",s:393}, {t:"Echoes of Tomorrow",s:618}, {t:"Serenade of the Unseen",s:811}, {t:"Beneath the Velvet Sky",s:1127}, {t:"Echoes of the Soul",s:1354}, {t:"Spaces in Time",s:1533}, {t:"When the River Sings Your Name",s:1749}, {t:"Whispers of the Forgotten Dream",s:1953}, {t:"In the Quiet of the Night",s:2156}, {t:"The Heart's Eternal Song",s:2367}],
+  "79": [{t:"Echoes of an Unfinished Dream",s:0}, {t:"The Distance Between Heartbeats",s:198}, {t:"Golden Threads in a Tapestry of Time",s:398}, {t:"Footsteps on a Vanishing Road",s:621}, {t:"Where the Moonlight Used to Fall",s:847}, {t:"Whispers in a Half-Forgotten Song",s:1047}, {t:"Beneath the Surface of Time",s:1264}, {t:"The Dance of Forgotten Dreams",s:1502}, {t:"In the Quiet of Tomorrow",s:1721}, {t:"Through the Veil of Time",s:1900}, {t:"Echoes of a Soul's Embrace",s:2119}, {t:"The Light We Become",s:2322}],
+  "80": [{t:"Silent Wonders",s:0}, {t:"Echoes of a Distant Heart",s:224}, {t:"Silent Verses on the Breeze",s:459}, {t:"A Place Called Home",s:642}, {t:"Hushed Between the Heartbeats",s:788}, {t:"No Yesterday, No Tomorrow",s:979}, {t:"Unwritten Roads",s:1189}, {t:"Shadows of Unspoken Tomorrows",s:1395}, {t:"Where the River Knows",s:1617}, {t:"Woven in the Wind",s:1820}, {t:"Echoes of the Unseen",s:2040}, {t:"Where the River Knows No Name",s:2242}],
+  "81": [{t:"Celestial Beginnings",s:0}, {t:"Urban Reverie",s:169}, {t:"Twilight Conversations",s:349}, {t:"Blue Heart Soliloguy",s:541}, {t:"Melody of Embrace",s:721}, {t:"Rhythms of Destiny",s:935}, {t:"Nocturne of Reflection",s:1087}, {t:"Whispers of the Infinite",s:1296}, {t:"Serenade of the Soul",s:1468}, {t:"Harmonic Truth",s:1663}, {t:"Echoes of Unbound Love",s:1825}, {t:"Dawn of Renewal",s:2000}],
+  "82": [{t:"Echoes Beyond the Veil",s:0}, {t:"Dawn of Awakening",s:211}, {t:"Ebbing Shadows",s:431}, {t:"Currents of Connection",s:642}, {t:"Mirrors of the Soul",s:863}, {t:"Fragments of Destiny",s:1045}, {t:"Interwoven Fates",s:1237}, {t:"Embers of Reflection",s:1476}, {t:"Resonance of the Heart",s:1697}, {t:"Infinite Embrace",s:1890}, {t:"Clarity in the Silence",s:2069}, {t:"Transcendental Horizon",s:2274}],
+  "83": [{t:"Echoes of a Timeless Heart",s:0}, {t:"Underneath the Lantern Glow",s:195}, {t:"Waves of Forgotten Tomorrows",s:387}, {t:"Silhouettes in Silent Rain",s:596}, {t:"The Space Between Our Words",s:795}, {t:"Beneath the Crescent Glow",s:1031}, {t:"Unfinished Letters",s:1226}, {t:"Autumn's Last Serenade",s:1429}, {t:"A Glimpse Beyond Time",s:1641}, {t:"Stillness Between Stars",s:1955}, {t:"The Weight of Unspoken Words",s:2172}, {t:"Where Time Stands Still",s:2498}],
+  "84": [{t:"Rhythms of Awakening",s:0}, {t:"Dancing with Destiny",s:227}, {t:"Eternal Echoes",s:390}, {t:"Waves of Unspoken Grace",s:590}, {t:"Symphony of the Heart's Voyage",s:777}, {t:"Melodies in the Midnight Light",s:967}, {t:"Embers of Unconditional Love",s:1112}, {t:"Pathways of Serendipity",s:1304}, {t:"Chords of Inner Clarity",s:1510}, {t:"Whispers of Timeless Hope",s:1691}, {t:"Reflections in a Gentle Breeze",s:1875}, {t:"Final Cadence of Renewal",s:2084}],
+  "85": [{t:"Dawn's Swinging Revelation",s:0}, {t:"Destiny's Rhythmic Dance",s:182}, {t:"Echoes of Timeless Swing",s:382}, {t:"Urban Pulse of Healing",s:664}, {t:"Swing of Unfolding Hearts",s:882}, {t:"Cadence of Inner Wisdom",s:1073}, {t:"Syncopated Journeys",s:1266}, {t:"Harmonic Convergence",s:1444}, {t:"Resonance of the Infinite",s:1657}, {t:"Swing of Serendipity",s:1879}, {t:"Unveiled Truths in Swing",s:2080}, {t:"Rebirth Beneath the Swing",s:2275}],
+  "86": [{t:"Lighthearted Improvisations",s:0}, {t:"Liveliness of the Moment",s:324}, {t:"Illusion of the Past",s:500}, {t:"Love is a Mystery",s:782}, {t:"Simplicity of Life",s:967}, {t:"Lost Dreams",s:1161}, {t:"Always Now",s:1401}, {t:"The Way Home",s:1575}, {t:"Everlasting Spring",s:1815}, {t:"Past Feelings",s:2048}, {t:"What Else, What Else",s:2288}, {t:"Such Is Life",s:2357}, {t:"Driving Without Destination",s:2579}, {t:"Minor Steps in Major Time",s:2770}, {t:"Highway to Silence",s:2922}, {t:"Moonlight Over Mulholland",s:3070}, {t:"Shadows on Melrose",s:3253}, {t:"Whispers from the Coast",s:3473}, {t:"The Coffee Was Jazz",s:3713}, {t:"Cool Breeze, Warm Soul",s:3884}],
+};
+
 function detlefRathmerJazzPage() {
-  const kachel = (id, label) => `
+  const kachel = (id, label, tracks) => `
     <div style="background:var(--paper);border-radius:14px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,0.08);">
       <p style="margin:0;padding:0.7rem 1rem 0.5rem;font-size:0.88rem;font-weight:600;line-height:1.35;color:var(--ink);">${label}</p>
       <div style="position:relative;aspect-ratio:16/9;background:#000;">
@@ -4861,40 +4886,49 @@ function detlefRathmerJazzPage() {
           src="https://www.youtube.com/embed/${id}?rel=0"
           allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
       </div>
+      ${tracks && tracks.length ? `
+      <details style="padding:0.4rem 1rem 0.6rem;">
+        <summary style="cursor:pointer;font-size:0.82rem;color:var(--copper);font-weight:600;user-select:none;">
+          ▶ Alle ${tracks.length} Songs anzeigen
+        </summary>
+        <ol style="margin:0.4rem 0 0;padding-left:1.4rem;font-size:0.81rem;line-height:1.9;">
+          ${tracks.map(trk => `<li><a href="https://www.youtube.com/watch?v=${id}&t=${trk.s}s" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${trk.t}</a></li>`).join("")}
+        </ol>
+      </details>` : ""}
     </div>
   `;
 
   const jazzAlben = [
-    { id: "LcOU_Hn_yBo", label: "Album 64 – Jazz of Eternal Reflections" },
-    { id: "pKnb8mB0Zfo", label: "Album 65 – Jazz of the Soul’s Journey" },
-    { id: "UUV-PEfF_nM", label: "Album 66 – Timeless Currents" },
-    { id: "k9cTNPdppLk", label: "Album 67 – Jazz of Life’s Essence" },
-    { id: "h0sa7RYZM1E", label: "Album 68 – Jazz of Infinite Horizons" },
-    { id: "BEWN4kSD0BY", label: "Album 69 – Jazz of the Heart’s Journey" },
-    { id: "xPExswhyM14", label: "Album 70 – Jazz of Serendipity" },
-    { id: "r00wftzVgB4", label: "Album 71 – Jazz of Awakening" },
-    { id: "pD4nIBarcLM", label: "Album 72 – Jazz of Timeless Whispers" },
-    { id: "bjuxx198edA", label: "Album 73 – Jazz of Inner Light" },
-    { id: "jtN0f9j99Lc", label: "Album 74 – Jazz of the Unwritten Path" },
-    { id: "HkzeR-6z428", label: "Album 75 – Jazz of the Wandering Soul" },
-    { id: "4O3ukz_lkTM", label: "Album 76 – Jazz & Healing Vibes" },
-    { id: "BIVoUgrInEY", label: "Album 77 – Jazz of the Eternal Flow" },
-    { id: "jwaiY-XAICw", label: "Album 78 – Jazz of Destiny’s Flow" },
-    { id: "vHzAIXpkOro", label: "Album 79 – Jazz of the Unfolding Mystery" },
-    { id: "71n7_wtBpRw", label: "Album 80 – Jazz of Sacred Moments" },
-    { id: "2H8AeBJiD1Q", label: "Album 81 – Jazz of Life’s Symphony" },
-    { id: "VL5UoR4u-b4", label: "Album 82 – Jazz of Sacred Frequencies" },
-    { id: "lpaiPZmq3cM", label: "Album 83 – Jazz of Hidden Truth" },
-    { id: "NE7kqSM1PGU", label: "Album 84 – Jazz of Vital Resonance" },
-    { id: "1AGJ32cw6lI", label: "Album 85 – Swinging Jazz of Cosmic Clarity" },
-    { id: "LlqDcFqqm8I", label: "Album 86 – Spirit of 1950s West Coast Jazz" },
-    { id: "U5CgE4r9G9c", label: "Album 87 – Spirit of 1920s New Orleans Jazz (Dixieland)" },
-    { id: "GInMSoLraG0", label: "Album 89 – Spirit of 1940s Fast-paced Bebop Jazz" },
-    { id: "IaxD4i3ZIUo", label: "Album 94 – Lo-Fi Jazz of the Unwritten Language of Life" },
-    { id: "5d-jXATn2Lk", label: "Album 95 – Jazz of Gravity and Grace" },
-    { id: "BDyzUXBdy-o", label: "Album 97 – Jazz of Inner Stillness (Lo-fi, Bossanova)" },
-    { id: "jw9n6Dccr7M", label: "Album 99 – Jazz of Cosmic Law (Lo-fi, Swing Jazz)" },
-    { id: "ku-pxWpNCZc", label: "Album 101 – Stillness in the Shifting Sky (Nordic Jazz)" },
+    { id: "LcOU_Hn_yBo", num: "64", label: "Album 64 – Jazz of Eternal Reflections" },
+    { id: "pKnb8mB0Zfo", num: "65", label: "Album 65 – Jazz of the Soul’s Journey" },
+    { id: "UUV-PEfF_nM", num: "66", label: "Album 66 – Timeless Currents" },
+    { id: "k9cTNPdppLk", num: "67", label: "Album 67 – Jazz of Life’s Essence" },
+    { id: "h0sa7RYZM1E", num: "68", label: "Album 68 – Jazz of Infinite Horizons" },
+    { id: "BEWN4kSD0BY", num: "69", label: "Album 69 – Jazz of the Heart’s Journey" },
+    { id: "xPExswhyM14", num: "70", label: "Album 70 – Jazz of Serendipity" },
+    { id: "r00wftzVgB4", num: "71", label: "Album 71 – Jazz of Awakening" },
+    { id: "pD4nIBarcLM", num: "72", label: "Album 72 – Jazz of Timeless Whispers" },
+    { id: "bjuxx198edA", num: "73", label: "Album 73 – Jazz of Inner Light" },
+    { id: "jtN0f9j99Lc", num: "74", label: "Album 74 – Jazz of the Unwritten Path" },
+    { id: "HkzeR-6z428", num: "75", label: "Album 75 – Jazz of the Wandering Soul" },
+    { id: "4O3ukz_lkTM", num: "76", label: "Album 76 – Jazz & Healing Vibes" },
+    { id: "BIVoUgrInEY", num: "77", label: "Album 77 – Jazz of the Eternal Flow" },
+    { id: "jwaiY-XAICw", num: "78", label: "Album 78 – Jazz of Destiny’s Flow" },
+    { id: "vHzAIXpkOro", num: "79", label: "Album 79 – Jazz of the Unfolding Mystery" },
+    { id: "71n7_wtBpRw", num: "80", label: "Album 80 – Jazz of Sacred Moments" },
+    { id: "2H8AeBJiD1Q", num: "81", label: "Album 81 – Jazz of Life’s Symphony" },
+    { id: "VL5UoR4u-b4", num: "82", label: "Album 82 – Jazz of Sacred Frequencies" },
+    { id: "lpaiPZmq3cM", num: "83", label: "Album 83 – Jazz of Hidden Truth" },
+    { id: "NE7kqSM1PGU", num: "84", label: "Album 84 – Jazz of Vital Resonance" },
+    { id: "1AGJ32cw6lI", num: "85", label: "Album 85 – Swinging Jazz of Cosmic Clarity" },
+    { id: "LlqDcFqqm8I", num: "86", label: "Album 86 – Spirit of 1950s West Coast Jazz" },
+    { id: "U5CgE4r9G9c", num: "87", label: "Album 87 – Spirit of 1920s New Orleans Jazz (Dixieland)" },
+    { id: "GInMSoLraG0", num: "89", label: "Album 89 – Spirit of 1940s Fast-paced Bebop Jazz" },
+    { id: "IaxD4i3ZIUo", num: "94", label: "Album 94 – Lo-Fi Jazz of the Unwritten Language of Life" },
+    { id: "5d-jXATn2Lk", num: "95", label: "Album 95 – Jazz of Gravity and Grace" },
+    { id: "BDyzUXBdy-o", num: "97", label: "Album 97 – Jazz of Inner Stillness (Lo-fi, Bossanova)" },
+    { id: "jw9n6Dccr7M", num: "99", label: "Album 99 – Jazz of Cosmic Law (Lo-fi, Swing Jazz)" },
+    { id: "ku-pxWpNCZc", num: "101", label: "Album 101 – Stillness in the Shifting Sky (Nordic Jazz)" },
   ];
 
   const enneagrammAlben = [
@@ -4964,7 +4998,7 @@ function detlefRathmerJazzPage() {
 
   const grid = (items) => `
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;margin-top:1rem;">
-      ${items.map(a => kachel(a.id, a.label)).join("")}
+      ${items.map(a => kachel(a.id, a.label, a.num ? JAZZ_TRACKS[a.num] : null)).join("")}
     </div>
   `;
 

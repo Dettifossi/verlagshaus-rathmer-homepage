@@ -2461,6 +2461,7 @@ export const uiText = {
     { route: "stille", label: "⏱ Stille" },
     { route: "musik",  label: "🎵 Entspannungs- und Heilungsmusik" },
     { route: "david-rathmer", label: "▶ David L. Rathmer", dropdown: [
+      { route: "enneagramm-profiling",                 label: "Enneagramm-Profiling" },
       { route: "david-rathmer-fuehrung",               label: "Führung & Unternehmen" },
       { route: "david-rathmer-erfolgsinterviews",      label: "Erfolgsinterviews" },
       { route: "david-rathmer-impulse",               label: "Impulse & Einsichten" },
