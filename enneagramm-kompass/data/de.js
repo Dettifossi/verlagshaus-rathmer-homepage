@@ -2469,6 +2469,7 @@ export const uiText = {
       { route: "david-rathmer-persoenlichkeiten",      label: "Berühmte Persönlichkeiten" },
       { route: "david-rathmer-grundlagen",             label: "Enneagramm-Grundlagen" },
     ]},
+    { route: "enneagramm-profiling", label: "Enneagramm-Profiling" },
     { route: "detlef-rathmer", label: "▶ Detlef Rathmer – Musikalisch erleben", dropdown: [
       { route: "detlef-rathmer-jazz", label: "Jazz & Musik – alle Alben" },
       { route: "detlef-rathmer-jazz|dr-jazz", label: "Jazz-Alben" },
