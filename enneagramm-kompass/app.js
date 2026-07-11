@@ -192,8 +192,8 @@ window.addEventListener("hashchange", () => {
   render();
   if (scrollAnchor) setTimeout(() => {
     const el = document.getElementById(scrollAnchor);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, 80);
+    if (el) el.scrollIntoView({ behavior: "auto", block: "start" });
+  }, 300);
 });
 
 function go(route) {
