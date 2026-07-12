@@ -109,7 +109,22 @@ const KRIMINAL_PORTRAITS = [
 ];
 
 const BERUEHMT_PORTRAITS = [
-  // Einträge werden nach und nach ergänzt
+  { route:"beruehmte-sting", name:"Sting", subtyp:"SE1w9",
+    heading:"Sting – Selbsterhaltender Typ 1",
+    teaser:"SE1w9 · „Der Adler“, geb. 1951. Sänger, Bassist, Komponist. The Police und eine beispiellose Solokarriere – von Jazz bis Laute, von Shakespeare bis Rainforest Foundation. Handwerk als Gewissen, Stille als zweite Natur. Tierentsprechung: Adler.",
+    tags:["Musik"] },
+  { route:"beruehmte-sting", name:"Sting", subtyp:"SE1w9",
+    heading:"Sting – Selbsterhaltender Typ 1",
+    teaser:"SE1w9 · „Der Adler“, geb. 1951. Sänger, Bassist, Komponist. The Police und eine beispiellose Solokarriere – von Jazz bis Laute, von Shakespeare bis Rainforest Foundation. Handwerk als Gewissen, Stille als zweite Natur. Tierentsprechung: Adler.",
+    tags:["Musik"] },
+  { route:"beruehmte-christoph-waltz", name:"Christoph Waltz", subtyp:"SE1w2",
+    heading:"Christoph Waltz – Selbsterhaltender Typ 1",
+    teaser:"SE1w2 · „Der Adler“, geb. 1956. Zweifacher Oscar-Preisträger für Inglourious Basterds und Django Unchained. Fünfzig Jahre Handwerk, ein Leben lang innere Präzision – dann der Moment, auf den der Adler gewartet hatte. Tierentsprechung: Adler.",
+    tags:["Schauspiel"] },
+  { route:"beruehmte-kai-pflaume", name:"Kai Pflaume", subtyp:"SX3w2",
+    heading:"Kai Pflaume – Sexueller Typ 3",
+    teaser:"SX3w2 · „Der Strahlende“, geb. 1967. Deutschlands bekanntester Moderator. Seit über 30 Jahren fasziniert er Millionen – nicht durch große Gesten, sondern durch echte Wärme und magnetische persönliche Präsenz. Tierentsprechung: Pfau.",
+    tags:["Medien"] },
 ];
 
 const HEILWISSEN_ROUTES = new Set(["tischdialoge", "healing", "oils", "tcm", "kindheit", "music", "homoeopathie", "mineralstoffe", "bachblueten", "heiltees", "psychogramme", "schaubilder", "aufmerksamkeitsfokus", "bedrohungsszenarien", "befreiende-fragen", "bewaeltigungsstrategie", "dialektische-struktur", "drei-zentren", "ego-persoenlichkeit", "empfindliche-punkte", "zentren-weltwahrnehmung", "energetische-bewegungen", "fuehrungsstile", "gifte-des-geistes", "gaslighting-enneagramm", "kindliche-temperamente", "lookalike-typen", "mikroimpressionen", "naehe", "nonverbale-signale", "verbale-signale", "zentrale-fragen", "heilungsweg", "horney-triaden", "tee-enneagramm", "aetherische-oele", "angst-essenz", "edelsteine", "subtypen-checklisten", "subtypen-schaubilder", "perspektiven", "mangelgefuehle", "60-sekunden-scan", "wahrnehmungsstile", "das-event", "portraits-wegbegleiter", "weihnachtsgeschenke", "obstsorten", "gemuesesorten", "weinsorten", "brotsorten", "kaesesorten", "gewuerzarten", "getreidearten", "kaffeearten", "epochen-weltgeschichte", "affenarten", "baumarten", "berge-der-9-typen", "luxusautos-der-9-typen", "luxusuhren-der-9-typen", "brillenmodelle-der-9-typen", "flugzeugmodelle-der-9-typen", "hauptfokus-des-bewusstseins-der-9-typen", "beruehmte-persoenlichkeiten", ...BERUEHMT_PORTRAITS.map(p => p.route), "kriminalpsychologie", ...KRIMINAL_PORTRAITS.map(p => p.route),
@@ -6742,7 +6757,7 @@ function kaesesortenPage() {
 }
 
 function beruehmtePersoenlichkeitenPage() {
-  const allKats = ["Musik","Schauspiel","Wissenschaft","Sport","Politik","Kunst","Literatur","Wirtschaft","Astronaut","Sonstiges"];
+  const allKats = ["Musik","Schauspiel","Wissenschaft","Sport","Politik","Kunst","Literatur","Wirtschaft","Astronaut","Medien","Sonstiges"];
   const katLabel = {
     "Musik":        "Musik",
     "Schauspiel":   "Schauspiel / Film",
@@ -6753,27 +6768,28 @@ function beruehmtePersoenlichkeitenPage() {
     "Literatur":    "Literatur",
     "Wirtschaft":   "Wirtschaft / Unternehmertum",
     "Astronaut":    "Raumfahrt / Exploration",
+    "Medien":       "Medien / TV",
     "Sonstiges":    "Sonstiges",
   };
   const katColors = {
     "Musik":"#7c3aed","Schauspiel":"#b45309","Wissenschaft":"#0369a1",
     "Sport":"#15803d","Politik":"#c0392b","Kunst":"#be185d",
-    "Literatur":"#92400e","Wirtschaft":"#2563c7","Astronaut":"#0e7490","Sonstiges":"#6b7280"
+    "Literatur":"#92400e","Wirtschaft":"#2563c7","Astronaut":"#0e7490","Medien":"#0f766e","Sonstiges":"#6b7280"
   };
 
   function filterBar() {
-    const instBtn = inst => '<button class="kf-btn" data-bp-inst="'+inst+'" onclick="bpSet('inst',''+inst+'')">'+(inst==="ALL"?"Alle":inst)+'</button>';
+    const instBtn = inst => '<button class="kf-btn" data-bp-inst="'+inst+'" onclick="bpSet(\'inst\',\''+inst+'\')">'+(inst==="ALL"?"Alle":inst)+'</button>';
     const typBtn = n => {
       const col = n===0 ? null : (TYPE_COLORS[n]||"var(--copper)");
       const style = col ? ' style="--kf-typ-col:'+col+';"' : '';
       return '<button class="kf-btn kf-btn--typ'+(col?' kf-btn--typ-colored':'')+'"'
         +' data-bp-typ="'+n+'" data-kf-col="'+(col||'')+'"'
-        +style+' onclick="bpSet('typ','+n+')">'+(n===0?"Alle":n)+'</button>';
+        +style+' onclick="bpSet(\'typ\','+n+')">'+(n===0?"Alle":n)+'</button>';
     };
     const katBtn = k => {
       const col = katColors[k]||"var(--copper)";
       return '<button class="kf-btn kf-btn--tag" data-bp-kat="'+k+'"'
-        +' style="--kf-tag-col:'+col+';" onclick="bpSet('kat',''+k+'')">'+(katLabel[k]||k)+'</button>';
+        +' style="--kf-tag-col:'+col+';" onclick="bpSet(\'kat\',\''+k+'\')">'+(katLabel[k]||k)+'</button>';
     };
     return '<div class="kf-bar">'
       +'<div class="kf-row"><span class="kf-label">Instinkt</span>'
@@ -6792,8 +6808,8 @@ function beruehmtePersoenlichkeitenPage() {
     const kats = (p.tags||[]).join(",");
     return '<div class="kf-card" data-bp-inst="'+inst+'" data-bp-typ="'+typ+'" data-bp-kats="'+kats+'" data-route="'+p.route+'"'
       +' style="cursor:pointer;max-width:100%;background:var(--ivory);border:1.5px solid var(--border);"'
-      +' onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 2px 12px rgba(0,0,0,.1)'"'
-      +' onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">'
+      +' onmouseover="this.style.borderColor=\'var(--gold)\';this.style.boxShadow=\'0 2px 12px rgba(0,0,0,.1)\'"'
+      +' onmouseout="this.style.borderColor=\'var(--border)\';this.style.boxShadow=\'none\'">'
       +'<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;">'
       +'<div><h3 style="font-size:1.05rem;font-weight:700;margin:0 0 0.4rem;color:var(--ink);">'+p.heading+'</h3>'
       +'<p class="vb-intro" style="margin:0 0 0.8rem;font-size:0.92rem;">'+p.teaser+'</p>'
@@ -6816,11 +6832,11 @@ function beruehmtePersoenlichkeitenPage() {
     +allCodes.map(function(code){
       const n = parseInt(code.slice(-1));
       const col = TYPE_COLORS[n]||"var(--copper)";
-      return '<a href="#" onclick="event.preventDefault();var el=document.getElementById('bp-'+code.toLowerCase()+'');if(el)el.scrollIntoView({behavior:'smooth',block:'start'});"'
+      return '<a href="#" onclick="event.preventDefault();var el=document.getElementById(\'bp-'+code.toLowerCase()+'\');if(el)el.scrollIntoView({behavior:\'smooth\',block:\'start\'});"'
         +' style="display:inline-block;padding:0.25rem 0.6rem;border-radius:6px;border:1.5px solid '+col+';'
         +'font-size:0.8rem;font-weight:700;color:'+col+';background:var(--bg);text-decoration:none;opacity:0.85;"'
-        +' onmouseover="this.style.opacity='1';this.style.background=''+col+'20'"'
-        +' onmouseout="this.style.opacity='0.85';this.style.background='var(--bg)'">'
+        +' onmouseover="this.style.opacity=\'1\';this.style.background=\''+col+'20\'"'
+        +' onmouseout="this.style.opacity=\'0.85\';this.style.background=\'var(--bg)\'">'
         +code+'</a>';
     }).join("")
     +'</div></div>';
@@ -6834,7 +6850,7 @@ function beruehmtePersoenlichkeitenPage() {
       const code = (p.subtyp||'').substring(0,3).toUpperCase();
       if (code && code !== lastCode) {
         if (lastCode !== null) {
-          out += '<div class="kf-section-back"><a href="#" onclick="event.preventDefault();document.getElementById('bp-register').scrollIntoView({behavior:'smooth'});" style="font-size:0.8rem;color:var(--copper);font-weight:600;text-decoration:none;padding:0.3rem 0.8rem;border:1px solid var(--border);border-radius:6px;background:var(--ivory);">\u2191 zum Register</a></div>';
+          out += '<div class="kf-section-back"><a href="#" onclick="event.preventDefault();document.getElementById(\'bp-register\').scrollIntoView({behavior:\'smooth\'});" style="font-size:0.8rem;color:var(--copper);font-weight:600;text-decoration:none;padding:0.3rem 0.8rem;border:1px solid var(--border);border-radius:6px;background:var(--ivory);">\u2191 zum Register</a></div>';
         }
         const n = parseInt(code.slice(-1));
         const col = TYPE_COLORS[n]||"var(--copper)";
@@ -6901,6 +6917,176 @@ window.bpApply = function() {
     b.classList.toggle("kf-btn--active", b.dataset.bpKat===s.kat||(s.kat==="ALL"&&b.dataset.bpKat==="ALL"));
   });
 };
+
+function stingPortraitPage() {
+  return shell(`
+    <div class="page-container">
+      ${pageHeader("Berühmte Persönlichkeiten")}
+      <div id="js-back-target" data-route="beruehmte-persoenlichkeiten" style="display:none;"></div>
+      <div class="krim-portrait-wrap">
+        <div class="krim-portrait-frame" style="background:linear-gradient(135deg,#c8a84b18,#1e3a5f18);display:flex;align-items:center;justify-content:center;min-height:180px;">
+          <span style="font-size:4.5rem;">🦅</span>
+        </div>
+        <p class="krim-portrait-name">Sting</p>
+        <p class="krim-portrait-typ">SE1w9 &middot; Selbsterhaltender Typ 1 mit Neunerflügel</p>
+        <p class="krim-portrait-subtitle">Musiker, geb. 1951 &ndash; Tierentsprechung: Adler</p>
+      </div>
+      <div class="page-content">
+
+        <h2 class="vb-section">1. Der Adler</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Der <strong>Adler</strong> fliegt allein. Er braucht keine Formation, keine Bestätigung, keine Bühne. Er ist in seiner Höhe zu Hause &ndash; weit über dem Lärm der Welt, mit einem Blick, der alles umfasst und nichts übersieht. Wenn er landet, dann mit vollständiger Absicht.</p>
+          <p class="vb-intro">Gordon Sumner, der sich Sting nannte, hätte Lehrer bleiben können. Er hatte das Diplom, er hatte die Stelle, er hatte die Sicherheit. Doch die innere Stimme der Eins duldet keinen Kompromiss: Wenn das Richtige wartet, muss man es tun. Sting gab den sicheren Hafen auf und ging nach London &ndash; mit dem Wissen, dass es nicht anders sein konnte.</p>
+        </blockquote>
+
+        <h2 class="vb-section">2. Die selbsterhaltende Eins: Handwerk als Gewissen</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Die <strong>selbsterhaltende Eins (SE1)</strong> trägt ihre Maßstäbe nicht nach außen. Sie korrigiert nicht die Welt &ndash; sie korrigiert sich selbst, immer wieder, mit einer Strenge, die andere selten sehen. Naranjo nennt diesen Subtyp <em>Worry</em> &ndash; Besorgnis. Der SE1er fragt sich: Ist das wirklich gut genug? Habe ich das Richtige getan? Genüge ich meinem eigenen Anspruch?</p>
+          <p class="vb-intro">Bei Sting zeigt sich das in der außergewöhnlichen Ernsthaftigkeit, mit der er Musik betreibt. Während andere Rockstars Hits wiederholen, nimmt Sting Alben mit dem Saxophonisten Branford Marsalis auf, vertont elisabethanische Lautenlieder von John Dowland und studiert die Kompositionskunst vergangener Jahrhunderte. Seinen bekanntesten Song, <em>Every Breath You Take</em>, erklärt er bis heute geduldig als düsteres Lied über Besessenheit und Überwachung &ndash; nicht als Liebeslied. Die Eins besteht darauf, dass die Dinge richtig verstanden werden.</p>
+        </blockquote>
+
+        <h2 class="vb-section">3. Der Neunerflügel: Die Stille hinter dem Anspruch</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Der <strong>Neunerflügel (w9)</strong> fügt der SE1er-Energie etwas hinzu, was selten zusammengehört: Stille. Während die reine Einser-Energie angespannt, wachsam, korrekturbewusst ist, bringt der Neunerflügel eine Qualität der Ruhe, des Loslassens, der Verbundenheit mit etwas Größerem.</p>
+          <p class="vb-intro">Das erklärt Stings jahrzehntelange Yogapraxis, seine Beschäftigung mit Buddhismus und Tantra, seinen Rückzug auf das toskanische Landgut. Der SE1w9er sucht nicht nur das Richtige &ndash; er sucht auch den Frieden. Die Neuner-Energie gibt der Eins die Fähigkeit, innezuhalten, zu atmen, die Perfektion loszulassen. Stings Musik hat genau diese Qualität: präzise und weiträumig zugleich, anspruchsvoll und meditativ. Der Adler kreist &ndash; aber er genießt auch die Höhe.</p>
+        </blockquote>
+
+        <h2 class="vb-section">4. Licht und Schatten der selbsterhaltenden Eins</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Das Licht der SE1w9 ist von seltener Schönheit: ein Künstler, der nie aufgehört hat, sich zu entwickeln; ein Mensch, der seine Überzeugungen lebt &ndash; die Rainforest Foundation, die er 1989 gemeinsam mit seiner Frau Trudie Styler gründete, ist bis heute aktiv; eine Integrität, die im Musikbusiness auffällt wie ein Adler unter Hamstern.</p>
+          <p class="vb-intro">Der Schatten ist zweifach. Die SE1 neigt zur Selbstgerechtigkeit &ndash; zum unbewussten Gefühl, selbst das Richtige zu tun, während andere es nicht tun. Das Schicksalsmuster der Eins ist der <strong>Zorn</strong>, der sich bei der SE1 nach innen wendet: chronische Unzufriedenheit mit dem Eigenen, das Gefühl, nie ganz angekommen zu sein. Der Neunerflügel fügt seinen eigenen Schatten hinzu: Rückzug, Distanz, eine Abschirmung, die andere als Kälte erleben.</p>
+          <p class="vb-intro">Sting hat in Interviews offen über Jahre der kreativen Stagnation gesprochen &ndash; Phasen, in denen ihm nichts Würdiges einfiel. Das ist der SE1w9er in seiner Nacht: Der innere Richter schweigt. Der äußere Frieden bleibt. Aber es entsteht nichts.</p>
+        </blockquote>
+
+        <h2 class="vb-section">5. Der Heilungsweg: Vom Richter zur Schönheit</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Der Heilungsweg der Eins führt vom Zorn zur Gelassenheit. Die wachsende Eins lernt: Das Gute muss nicht perfekt sein, um gut zu sein. Das Richtige zeigt sich nicht nur durch Kontrolle, sondern auch durch Vertrauen &ndash; Vertrauen in den Fluss, den die Neuner-Energie kennt.</p>
+          <p class="vb-intro">Sting hat diesen Weg beschritten &ndash; nicht durch Aufgabe seiner Maßstäbe, sondern durch die Entdeckung, dass Schönheit größer ist als Richtigkeit. Dass ein unvollkommener Song, der berührt, mehr wert ist als ein perfekter, der niemanden erreicht. Der Adler muss nicht immer oben sein. Manchmal fliegt er einfach.</p>
+        </blockquote>
+
+      </div>
+      ${relatedLinks([
+        {route:"beruehmte-persoenlichkeiten", label:"Alle berühmten Persönlichkeiten"},
+        {route:"subtype/se1", label:"SE1 – Der Besorgte: Subtyp-Profil"},
+        {route:"beruehmte-christoph-waltz", label:"Porträt: Christoph Waltz (SE1w2)"},
+      ])}
+    </div>
+  `);
+}
+
+function christophWaltzPortraitPage() {
+  return shell(`
+    <div class="page-container">
+      ${pageHeader("Berühmte Persönlichkeiten")}
+      <div id="js-back-target" data-route="beruehmte-persoenlichkeiten" style="display:none;"></div>
+      <div class="krim-portrait-wrap">
+        <div class="krim-portrait-frame" style="background:linear-gradient(135deg,#c8a84b18,#1e3a5f18);display:flex;align-items:center;justify-content:center;min-height:180px;">
+          <span style="font-size:4.5rem;">🦅</span>
+        </div>
+        <p class="krim-portrait-name">Christoph Waltz</p>
+        <p class="krim-portrait-typ">SE1w2 &middot; Selbsterhaltender Typ 1 mit Zweierflügel</p>
+        <p class="krim-portrait-subtitle">Schauspieler, geb. 1956 &ndash; Tierentsprechung: Adler</p>
+      </div>
+      <div class="page-content">
+
+        <h2 class="vb-section">1. Der Adler</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Der <strong>Adler</strong> ist das Tier der selbsterhaltenden Eins &ndash; und kein Bild trifft Christoph Waltz präziser. Der Adler kreist hoch, weit über dem Geschehen. Er sieht, was andere nicht sehen. Er wartet. Er urteilt. Und wenn er handelt, dann mit einer Präzision, die keine zweite Chance braucht.</p>
+          <p class="vb-intro">Christoph Waltz hat fünfzig Jahre gewartet. Nicht weil es ihm an Talent fehlte &ndash; sondern weil das System noch nicht das Richtige für ihn bereithielt. Mit 52 Jahren entdeckte ihn Quentin Tarantino und gab ihm Hans Landa &ndash; eine der komplexesten Rollen der Filmgeschichte. Der Adler hatte geduldig gekreist. Dann schlug er zu.</p>
+        </blockquote>
+
+        <h2 class="vb-section">2. Die selbsterhaltende Eins: Perfektion als innere Pflicht</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Die <strong>selbsterhaltende Eins (SE1)</strong> ist in der Enneagramm-Tradition der zurückgezogenste der drei Einser-Subtypen. Während die soziale Eins die Welt korrigieren möchte und die sexuelle Eins ihre Überzeugungen im direkten Kontakt ausdrückt, wendet die SE1 ihr Perfektionsstreben nach innen: auf das eigene Handwerk, die eigene Vorbereitung, die eigene Integrität. Naranjo nennt diesen Subtyp <em>Worry</em> &ndash; Besorgnis. Die SE1 macht sich Sorgen, ob sie das Richtige tut, ob es gut genug ist, ob sie der Aufgabe wirklich gerecht wird.</p>
+          <p class="vb-intro">Bei Christoph Waltz zeigt sich das in seiner legendären Arbeitsdisziplin. Er liest Drehbücher viele Male, auf der Suche nach der genauen Intention hinter jedem Wort. Er spricht seine Rollen auf Deutsch, Englisch, Französisch und Italienisch &ndash; und findet in jeder Sprache die eigene Nuance. Das ist kein Ehrgeiz. Das ist Pflicht. Das ist die innere Stimme der Eins: <em>Es muss richtig sein.</em></p>
+        </blockquote>
+
+        <h2 class="vb-section">3. Der Zweierflügel: Wärme hinter der Präzision</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Der <strong>Zweierflügel (w2)</strong> fügt der SE1er-Energie etwas Entscheidendes hinzu: die Fähigkeit zur Wärme, zur Großzügigkeit, zum Geben. Die reine Eins kann kühl, rigide und unerbittlich wirken. Der Zweierflügel öffnet diese Energie nach außen &ndash; er macht aus dem innerlichen Kontrolleur einen Menschen, der gibt, der trägt, der sich kümmert.</p>
+          <p class="vb-intro">Das erklärt, warum Christoph Waltz auch in seinen dunkelsten Rollen nie kalt wirkt. Hans Landa in <em>Inglourious Basterds</em> ist ein Monster &ndash; und doch schaut man ihm nicht weg. Dr. King Schultz in <em>Django Unchained</em> ist ein Kopfgeldjäger &ndash; und doch wärmt er jeden Raum, den er betritt. Der SE1w2er trägt seine Strenge innen und seine Wärme außen. Genau das macht seine Rollen so magnetisch.</p>
+        </blockquote>
+
+        <h2 class="vb-section">4. Licht und Schatten der selbsterhaltenden Eins</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Das Licht der SE1 ist offensichtlich: außergewöhnliches Handwerk, innere Integrität, eine Präzision, die andere in Staunen versetzt. Wer mit Christoph Waltz dreht, weiß: Er ist vorbereitet. Er ist fokussiert. Er verschwendet keine Energie.</p>
+          <p class="vb-intro">Der Schatten ist subtiler: Die SE1 neigt zur inneren Erschöpfung durch ständige Selbstkritik. Das Schicksalsmuster der Eins ist der <strong>Zorn</strong> &ndash; und beim SE1er richtet sich dieser Zorn zuerst gegen sich selbst. Nie gut genug. Nie fertig. Nie wirklich sicher, ob es richtig war. Waltz hat in Interviews angedeutet, dass er sein Schaffen kaum wirklich genießen kann &ndash; er sieht immer zuerst, was hätte besser sein können.</p>
+          <p class="vb-intro">Dass er trotzdem zwei Oscars gewonnen hat und dabei außergewöhnlich gefässt wirkte, ist kein Zeichen von Gleichgültigkeit. Es ist das Zeichen eines SE1ers, der gelernt hat, seinen inneren Richter zu kennen &ndash; und ihn nicht mehr alles entscheiden zu lassen.</p>
+        </blockquote>
+
+        <h2 class="vb-section">5. Der Heilungsweg: Vom inneren Richter zur inneren Würde</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Der Heilungsweg der Eins führt vom Zorn zur Stille. Von der Selbstkritik zur Selbstachtung. Die wachsende Eins lernt: Gut gemacht ist gut genug. Das Richtige entsteht nicht durch Sorge, sondern durch Vertrauen &ndash; Vertrauen in das Handwerk, das man ein Leben lang gepflegt hat.</p>
+          <p class="vb-intro">Christoph Waltz verkörpert diesen Weg auf eigene Weise. Fünfzig Jahre Arbeit, dann der Ruf der Welt. Er hat nicht gezweifelt, ob er das Richtige tat. Er hat es getan. Der Adler braucht keine Bestätigung. Er weiß, wann der Moment gekommen ist.</p>
+        </blockquote>
+
+      </div>
+      ${relatedLinks([
+        {route:"beruehmte-persoenlichkeiten", label:"Alle berühmten Persönlichkeiten"},
+        {route:"subtype/se1", label:"SE1 – Der Besorgte: Subtyp-Profil"},
+        {route:"kriminalpsychologie", label:"Kriminalpsychologie – Porträts"},
+      ])}
+    </div>
+  `);
+}
+
+function kaiPflaumePortraitPage() {
+  return shell(`
+    <div class="page-container">
+      ${pageHeader("Berühmte Persönlichkeiten")}
+      <div id="js-back-target" data-route="beruehmte-persoenlichkeiten" style="display:none;"></div>
+      <div class="krim-portrait-wrap">
+        <div class="krim-portrait-frame" style="background:linear-gradient(135deg,#c8a84b18,#7c3aed18);display:flex;align-items:center;justify-content:center;min-height:180px;">
+          <span style="font-size:4.5rem;">🦚</span>
+        </div>
+        <p class="krim-portrait-name">Kai Pflaume</p>
+        <p class="krim-portrait-typ">SX3w2 &middot; Sexueller Typ 3 mit Zweierflügel</p>
+        <p class="krim-portrait-subtitle">Moderator, geb. 1967 &ndash; Tierentsprechung: Pfau</p>
+      </div>
+      <div class="page-content">
+
+        <h2 class="vb-section">1. Der Pfau</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Der <strong>Pfau</strong> ist das Tier der sexuellen Drei &ndash; und kaum ein Bild trifft Kai Pflaume besser. Der Pfau trägt sein schönstes Gefieder nicht zur Schau, um zu beeindrucken. Er trägt es, weil es zu ihm gehört. Seine Pracht ist keine Inszenierung, sie ist Ausdruck seines Wesens. Wer einen Pfau beobachtet, spürt: Das ist echt. Das braucht keine Bühne.</p>
+          <p class="vb-intro">Kai Pflaume ist seit über dreißig Jahren im deutschen Fernsehen präsent &ndash; und das ohne Skandal, ohne Bruch, ohne die Maske zu wechseln. Er ist derselbe geblieben: warm, neugierig, persönlich. Das ist das Geheimnis des Pfaus. Er strahlt nicht, weil er strahlen muss. Er strahlt, weil sein Licht von innen kommt.</p>
+        </blockquote>
+
+        <h2 class="vb-section">2. Die sexuelle Drei: Magnetismus als Lebensthema</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Die <strong>sexuelle Drei (SX3)</strong> ist in der Enneagramm-Tradition der Subtyp, der persönliche Anziehungskraft zur Lebensaufgabe macht. Nicht Erfolg vor der Masse &ndash; das wäre die soziale Drei &ndash;, sondern die direkte, persönliche Resonanz mit dem Menschen gegenüber. Die SX3 fragt: <em>Wirke ich auf dich? Bin ich begehrenswert für dich?</em> Ihr Charisma ist intim, unmittelbar, auf Augenhöhe.</p>
+          <p class="vb-intro">Das erklärt Kai Pflaumes Moderationsstil präzise. Er sitzt einem Kandidaten beim &bdquo;Wer weiß denn sowas?&ldquo; gegenüber &ndash; und dieser Kandidat fühlt sich gesehen. Nicht als Fernsehgast, sondern als Mensch. Pflaume schaut hin. Er fragt nach. Er lacht nicht für die Kamera, er lacht, weil ihn etwas wirklich amüsiert. Diese Qualität &ndash; echte Präsenz im direkten Kontakt &ndash; ist das Markenzeichen der SX3.</p>
+          <p class="vb-intro">Claudio Naranjo nennt diesen Subtyp <em>Masculinity/Femininity</em>: die Verkörperung von Anziehungskraft in ihrer reinsten, persönlichsten Form. Beim gesunden SX3 ist das keine Fassade &ndash; es ist eine echte Gabe. Die Fähigkeit, in jedem Gegenüber etwas Besonderes zu sehen und ihm das spürbar zu machen.</p>
+        </blockquote>
+
+        <h2 class="vb-section">3. Der Zweierflügel: Wärme als zweite Natur</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Der <strong>Zweierflügel (w2)</strong> fügt der Dreierenergie etwas Entscheidendes hinzu: echte Fürsorge. Während die reine Drei mit Charisma und Leistung punktet, kommt beim SX3w2 noch eine zweite Kraft hinzu &ndash; das aufrichtige Interesse an anderen, die Freude daran, jemandem etwas Gutes zu tun. Die Zwei gibt, nicht um Gegenleistung zu erwarten, sondern weil Geben ihr Wesen ist.</p>
+          <p class="vb-intro">Bei Kai Pflaume zeigt sich das in der Art, wie er Kandidaten behandelt &ndash; geduldig, ermutigend, nie auf Kosten anderer. In &bdquo;Klein gegen Groß&ldquo; stehen Kinder neben Weltmeistern. Pflaume moderiert dieses Aufeinandertreffen so, dass immer der Mensch im Mittelpunkt steht, nicht die Quote. Das ist kein Konzept, das ist Charakter.</p>
+          <p class="vb-intro">Der SX3w2er strahlt nicht nur &ndash; er wärmt auch. Er zieht nicht nur an &ndash; er kümmert sich auch. Dieser Unterschied erklärt, warum Pflaume über Jahrzehnte Vertrauen gewonnen hat, das bei anderen Moderatoren schnell verbrennt.</p>
+        </blockquote>
+
+        <h2 class="vb-section">4. Licht und Schatten der sexuellen Drei</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Jeder Enneagramm-Typ trägt sein Licht und seinen Schatten. Das Licht der SX3 ist offensichtlich: Charisma, Wärme, die Fähigkeit, Menschen direkt zu berühren. Der Schatten ist subtiler: Die Drei kann ihre Identität mit ihrer Wirkung verwechseln. <em>Ich bin, wie andere mich sehen.</em> Wenn niemand mehr bewundert, wer bin ich dann?</p>
+          <p class="vb-intro">Das Schicksalsmuster der Drei ist die <strong>Täuschung</strong> &ndash; nicht als böse Absicht, sondern als strukturelle Gefahr. Die Drei kann beginnen, eine Rolle zu spielen, so überzeugend, dass sie vergisst, dass es eine Rolle ist. Das Image wird zur Identität. Der Pfau vergisst, wie er ohne sein Gefieder aussieht.</p>
+          <p class="vb-intro">Bei Kai Pflaume ist dieser Schatten kaum sichtbar &ndash; und das ist ein Zeichen gesunder Entwicklung. Er hat offenbar eine stabile innere Basis gefunden, die unabhängig von Einschaltquoten trägt. Dreißig Jahre Fernsehen ohne Burnout, ohne Skandal, ohne Imagewechsel: Das spricht für einen SX3er, der seinen Schatten kennt und mit ihm umzugehen gelernt hat.</p>
+        </blockquote>
+
+        <h2 class="vb-section">5. Der Heilungsweg: Von der Wirkung zur Echtheit</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Der Heilungsweg der Drei führt von der Außenwirkung zur inneren Wahrheit. Die wachsende Drei lernt, ihren Wert von innen zu definieren &ndash; nicht aus Reaktionen anderer. Aus dem <em>Ich bin begehrenswert</em> wird: <em>Ich bin.</em> Aus Anziehung wird Echtheit. Aus Charisma wird Charakter.</p>
+          <p class="vb-intro">Kai Pflaume verkörpert diese Entwicklung in seltener Reinheit. Sein Strahlen ist echt geworden &ndash; nicht weil er aufgehört hat zu strahlen, sondern weil die Quelle dieses Lichts nicht mehr die Kamera ist. Der Pfau braucht kein Publikum. Er ist schön, auch wenn niemand hinschaut.</p>
+        </blockquote>
+
+      </div>
+      ${relatedLinks([
+        {route:"beruehmte-persoenlichkeiten", label:"Alle berühmten Persönlichkeiten"},
+        {route:"subtype/sx3", label:"SX3 – Der Strahlende: Subtyp-Profil"},
+        {route:"kriminalpsychologie", label:"Kriminalpsychologie – Porträts"},
+      ])}
+    </div>
+  `);
+}
 
 function kriminalpsychologiePage() {
   const allInst = ["SE","SO","SX"];
@@ -30361,6 +30547,8 @@ function _favLabel(r) {
   if (!r) return null;
   const k = KRIMINAL_PORTRAITS.find(p => p.route === r);
   if (k) return k.name;
+  const bp = BERUEHMT_PORTRAITS.find(p => p.route === r);
+  if (bp) return bp.name;
   if (r.startsWith('subtype/')) {
     const c = r.split('/')[1];
     const s = subtypeProfiles[c];
@@ -30571,6 +30759,10 @@ function render() {
     "hauptfokus-des-bewusstseins-der-9-typen": hauptfokusBewusstseinsDer9TypenPage,
     "dynamik-des-bewusstseinszustandes": dynamikBewusstseinszustandesPage,
       "beruehmte-persoenlichkeiten": beruehmtePersoenlichkeitenPage,
+      "beruehmte-sting": stingPortraitPage,
+      "beruehmte-sting": stingPortraitPage,
+      "beruehmte-christoph-waltz": christophWaltzPortraitPage,
+      "beruehmte-kai-pflaume": kaiPflaumePortraitPage,
       "kriminalpsychologie": kriminalpsychologiePage,
       "kriminalpsychologie-fritz-haarmann": fritzHaarmannPortraitPage,
       "kriminalpsychologie-josef-fritzl": josefFritzlPortraitPage,
