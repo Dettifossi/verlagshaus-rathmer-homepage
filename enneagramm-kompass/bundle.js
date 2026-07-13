@@ -135,14 +135,14 @@ const BERUEHMT_PORTRAITS = [
     heading:"Christoph Waltz – Selbsterhaltender Typ 1",
     teaser:"SE1w2 · „Der Adler“, geb. 1956. Zweifacher Oscar-Preisträger für Inglourious Basterds und Django Unchained. Fünfzig Jahre Handwerk, ein Leben lang innere Präzision – dann der Moment, auf den der Adler gewartet hatte. Tierentsprechung: Adler.",
     tags:["Schauspiel"] },
-  { route:"beruehmte-angelina-jolie", name:"Angelina Jolie", subtyp:"SO1w2",
-    heading:"Angelina Jolie – Sozialer Typ 1",
-    teaser:"SO1w2 · „Die Gans“, geb. 1975. Schauspielerin, Regisseurin, UN-Sonderbotschafterin. Über 20 Jahre humanitäre Arbeit in Krisengebieten, sechs Kinder, ein Schaffen, das immer auch Haltung ist. Tierentsprechung: Gans.",
-    tags:["Schauspiel"] },
   { route:"beruehmte-friedrich-merz", name:"Friedrich Merz", subtyp:"SO1w9",
     heading:"Friedrich Merz – Sozialer Typ 1",
     teaser:"SO1w9 · „Die Gans“, geb. 1955. Bundeskanzler, CDU-Vorsitzender, Jurist. Prinzip vor Pragmatismus, Ordnung als moralische Frage – und die Geduld, jahrelang zu warten, bis die Stunde kommt. Tierentsprechung: Gans.",
     tags:["Politik"] },
+  { route:"beruehmte-angelina-jolie", name:"Angelina Jolie", subtyp:"SO1w2",
+    heading:"Angelina Jolie – Sozialer Typ 1",
+    teaser:"SO1w2 · „Die Gans“, geb. 1975. Schauspielerin, Regisseurin, UN-Sonderbotschafterin. Über 20 Jahre humanitäre Arbeit in Krisengebieten, sechs Kinder, ein Schaffen, das immer auch Haltung ist. Tierentsprechung: Gans.",
+    tags:["Schauspiel"] },
   { route:"beruehmte-leonardo-dicaprio", name:"Leonardo DiCaprio", subtyp:"SX1w2",
     heading:"Leonardo DiCaprio – Sexueller Typ 1",
     teaser:"SX1w2 · geb. 1974. Schauspieler, Klimaaktivist. Fünfmal Oscar-nominiert, sechsmal angetreten – und im Moment des Triumphes sprach er über den Klimawandel, nicht über sich. Die Schwarze Mamba brennt nicht für Applaus. Tierentsprechung: Schwarze Mamba.",
@@ -275,22 +275,22 @@ const BERUEHMT_PORTRAITS = [
     heading:"Hans Zimmer – Selbsterhaltender Typ 7",
     teaser:"SE7w8 · geb. 1957. Filmkomponist, Arrangeur, Musikproduzent. The Lion King, Gladiator, Inception, Interstellar. Der Gorilla, der Klang zu Emotion macht – und eine ganze Familie von Komponisten um sich versammelt hat. Tierentsprechung: Gorilla.",
     tags:["Musik"] },
-  { route:"beruehmte-ina-mueller", name:"Ina Müller", subtyp:"SX7w8",
-    heading:"Ina Müller – Sexueller Typ 7",
-    teaser:"SX7w8 · geb. 1965. Sängerin, Musikkabarettistin, Fernsehmoderatorin (Inas Nacht). Der Schimpanse mit Achterflügel: lebenslustig, direkt, unerschrocken – und immer nah am Menschen. Tierentsprechung: Schimpanse.",
-    tags:["Musik","Medien / TV"] },
-  { route:"beruehmte-thomas-gottschalk", name:"Thomas Gottschalk", subtyp:"SX7w6",
-    heading:"Thomas Gottschalk – Sexueller Typ 7",
-    teaser:"SX7w6 · geb. 1950. Deutscher Radio- und Fernsehmoderator, Entertainer, Schauspieler. Wetten, dass..? – 23 Jahre, 212 Sendungen. Der Schimpanse: lebendig, magnetisch, unberechenbar – und immer auf der Suche nach dem nächsten Funken. Tierentsprechung: Schimpanse.",
-    tags:["Schauspiel / Film","Medien / TV"] },
-  { route:"beruehmte-hazel-brugger", name:"Hazel Brugger", subtyp:"SO7w8",
-    heading:"Hazel Brugger – Sozialer Typ 7",
-    teaser:"SO7w8 · geb. 1993. Comedian, Kabarettistin, Moderatorin, Bloggerin, Autorin, Slam-Poetin. Schweizer-US-amerikanisch. Der Biber, der baut, amüsiert und attackiert – mit Tempo, Tiefe und einem Lachen, das nichts auslässt. Tierentsprechung: Biber.",
-    tags:["Schauspiel / Film","Musik"] },
   { route:"beruehmte-elon-musk", name:"Elon Musk", subtyp:"SO7w6",
     heading:"Elon Musk – Sozialer Typ 7",
     teaser:"SO7w6 · geb. 1971. Unternehmer, Gründer von PayPal, SpaceX, X (ehem. Twitter), Mitinhaber von Tesla. Reichster Mensch der Welt (Stand 2026). Der Biber, der Welten baut – und dabei nie fertig wird. Tierentsprechung: Biber.",
     tags:["Wirtschaft / Unternehmertum","Wissenschaft"] },
+  { route:"beruehmte-hazel-brugger", name:"Hazel Brugger", subtyp:"SO7w8",
+    heading:"Hazel Brugger – Sozialer Typ 7",
+    teaser:"SO7w8 · geb. 1993. Comedian, Kabarettistin, Moderatorin, Bloggerin, Autorin, Slam-Poetin. Schweizer-US-amerikanisch. Der Biber, der baut, amüsiert und attackiert – mit Tempo, Tiefe und einem Lachen, das nichts auslässt. Tierentsprechung: Biber.",
+    tags:["Schauspiel / Film","Musik"] },
+  { route:"beruehmte-thomas-gottschalk", name:"Thomas Gottschalk", subtyp:"SX7w6",
+    heading:"Thomas Gottschalk – Sexueller Typ 7",
+    teaser:"SX7w6 · geb. 1950. Deutscher Radio- und Fernsehmoderator, Entertainer, Schauspieler. Wetten, dass..? – 23 Jahre, 212 Sendungen. Der Schimpanse: lebendig, magnetisch, unberechenbar – und immer auf der Suche nach dem nächsten Funken. Tierentsprechung: Schimpanse.",
+    tags:["Schauspiel / Film","Medien / TV"] },
+  { route:"beruehmte-ina-mueller", name:"Ina Müller", subtyp:"SX7w8",
+    heading:"Ina Müller – Sexueller Typ 7",
+    teaser:"SX7w8 · geb. 1965. Sängerin, Musikkabarettistin, Fernsehmoderatorin (Inas Nacht). Der Schimpanse mit Achterflügel: lebenslustig, direkt, unerschrocken – und immer nah am Menschen. Tierentsprechung: Schimpanse.",
+    tags:["Musik","Medien / TV"] },
   { route:"beruehmte-umberto-eco", name:"Umberto Eco", subtyp:"SE8w7",
     heading:"Umberto Eco – Selbsterhaltender Typ 8",
     teaser:"SE8w7 · 1932–2016. Schriftsteller, Semiotiker, Philosoph, Medienwissenschaftler. Der Name der Rose, Das Foucaultsche Pendel. 30.000 Bücher. Der Orang-Utan, der im Labyrinth zu Hause ist – und der weiß, dass alle Zeichen lügen. Tierentsprechung: Orang-Utan.",
@@ -299,6 +299,14 @@ const BERUEHMT_PORTRAITS = [
     heading:"Toni Morrison – Selbsterhaltende Typ 8",
     teaser:"SE8w9 · 1931–2019. Schriftstellerin, Literaturnobelpreisträgerin 1993. Beloved, Sula, The Bluest Eye. Die Orang-Utan-Frau, die das Schweigen der Geschichte gebrochen hat – geerdet, unerschütterlich, von bleibender Wucht. Tierentsprechung: Orang-Utan.",
     tags:["Literatur"] },
+  { route:"beruehmte-michelle-obama", name:"Michelle Obama", subtyp:"SO8w7",
+    heading:"Michelle Obama – Sozialer Typ 8",
+    teaser:"SO8w7 · geb. 1964. Anwältin, Autorin, ehemalige First Lady der USA (2009–2017). Bestseller-Autorin (Becoming). Der Löwe, der für sein Rudel kämpft – und der weiß, dass man hochgeht, wenn andere runtergehen. Tierentsprechung: Löwe.",
+    tags:["Politik"] },
+  { route:"beruehmte-bud-spencer", name:"Bud Spencer", subtyp:"SO8w9",
+    heading:"Bud Spencer – Sozialer Typ 8",
+    teaser:"SO8w9 · Carlo Pedersoli, 1929–2016. Schauspieler, Schwimmer, Unternehmer, Familienvater. Vier Fäuste für ein Halleluja. Der Löwe, der nicht braucht zu brüllen – er ist einfach da. Tierentsprechung: Löwe.",
+    tags:["Schauspiel / Film"] },
 ];
 
 const HEILWISSEN_ROUTES = new Set(["tischdialoge", "healing", "oils", "tcm", "kindheit", "music", "homoeopathie", "mineralstoffe", "bachblueten", "heiltees", "psychogramme", "schaubilder", "aufmerksamkeitsfokus", "bedrohungsszenarien", "befreiende-fragen", "bewaeltigungsstrategie", "dialektische-struktur", "drei-zentren", "ego-persoenlichkeit", "empfindliche-punkte", "zentren-weltwahrnehmung", "energetische-bewegungen", "fuehrungsstile", "gifte-des-geistes", "gaslighting-enneagramm", "kindliche-temperamente", "lookalike-typen", "mikroimpressionen", "naehe", "nonverbale-signale", "verbale-signale", "zentrale-fragen", "heilungsweg", "horney-triaden", "tee-enneagramm", "aetherische-oele", "angst-essenz", "edelsteine", "subtypen-checklisten", "subtypen-schaubilder", "perspektiven", "mangelgefuehle", "60-sekunden-scan", "wahrnehmungsstile", "das-event", "portraits-wegbegleiter", "weihnachtsgeschenke", "obstsorten", "gemuesesorten", "weinsorten", "brotsorten", "kaesesorten", "gewuerzarten", "getreidearten", "kaffeearten", "epochen-weltgeschichte", "affenarten", "baumarten", "berge-der-9-typen", "luxusautos-der-9-typen", "luxusuhren-der-9-typen", "brillenmodelle-der-9-typen", "flugzeugmodelle-der-9-typen", "hauptfokus-des-bewusstseins-der-9-typen", "beruehmte-persoenlichkeiten", ...BERUEHMT_PORTRAITS.map(p => p.route), "kriminalpsychologie", ...KRIMINAL_PORTRAITS.map(p => p.route),
@@ -8169,6 +8177,117 @@ function toniMorrisonPortraitPage() {
         {route:"beruehmte-persoenlichkeiten", label:"Alle berühmten Persönlichkeiten"},
         {route:"subtype/se8", label:"SE8 – Der Orang-Utan: Subtyp-Profil"},
         {route:"beruehmte-umberto-eco", label:"Porträt: Umberto Eco (SE8w7)"},
+      ])}
+    </div>
+  `);
+}
+
+
+function michelleObamaPortraitPage() {
+  return shell(`
+    <div class="page-container">
+      ${pageHeader("Berühmte Persönlichkeiten")}
+      <div id="js-back-target" data-route="beruehmte-persoenlichkeiten" style="display:none;"></div>
+      <div class="krim-portrait-wrap">
+        <div class="krim-portrait-frame">
+          <img src="https://res.cloudinary.com/ymooybdl/image/upload/f_auto,q_auto,w_440,h_440,c_fill/kompass/assets/beruehmte-michelle-obama-portrait.jpg" alt="Michelle Obama" class="krim-portrait-img" loading="lazy" />
+        </div>
+        <p class="krim-portrait-name">Michelle Obama</p>
+        <p class="krim-portrait-typ">SO8w7 &middot; Sozialer Typ 8 mit Siebenflügel</p>
+        <p class="krim-portrait-subtitle">Anwältin, Autorin &amp; ehemalige First Lady der USA, geb. 1964 &ndash; Tierentsprechung: Löwe</p>
+      </div>
+      <div class="page-content">
+
+        <h2 class="vb-section">1. Der Löwe</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Der <strong>Löwe</strong> ist das Tier des sozialen Typs 8 &ndash; und kaum ein Bild trifft Michelle Obama besser. Der Löwe lebt nicht als Einzelkämpfer. Er ist das Raubtier des Rudels, der Savanne, der Gemeinschaft. Die Löwin jagt für das Rudel, beschützt die Jungen, hält die Gruppe zusammen. Stärke ist hier kein Selbstzweck &ndash; sie ist im Dienst des Wir.</p>
+          <p class="vb-intro">Michelle Obama trägt diese Energie. Ihre Kraft richtet sich nicht nach innen wie bei der selbsterhaltenden Acht, nicht nach der intensiven Zweierbeziehung wie bei der sexuellen Acht &ndash; sondern nach außen, in die Gemeinschaft. Sie kämpft für ihre Kinder, für die Kinder anderer, für Menschen, die keine Stimme haben. Der Löwe schützt sein Rudel. Michelle Obama schützt ihr Volk.</p>
+        </blockquote>
+
+        <h2 class="vb-section">2. Die soziale Acht: Solidarität</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Die <strong>soziale Acht (SO8)</strong> ist der Subtyp, den Naranjo <em>Solidarität</em> nannte. Die SO8 setzt ihre Kraft in den Dienst der Gruppe &ndash; der Familie, der Gemeinschaft, des Volkes. Sie kann äußerlich sanfter wirken als die anderen Acht-Subtypen, aber unterschätzen sollte man sie nicht: Wer ihr Rudel angreift, bekommt die volle Kraft der Acht zu spüren.</p>
+          <p class="vb-intro">Michelle Obama wuchs auf der South Side von Chicago auf, in einer Arbeiterfamilie. Ihr Vater Fraser Robinson arbeitete trotz multipler Sklerose jahrzehntelang im Schichtdienst und verpasste keinen einzigen Arbeitstag. Diese Loyalität prägte sie: Man kämpft für die, die man liebt. Man lässt niemanden zurück. Sie studierte in Princeton und Harvard, aber sie verleugnete nie, woher sie kam &ndash; und diese Verwurzelung ist typisch für die SO8. Die Stärke kommt aus dem Wir, nicht trotz ihm.</p>
+        </blockquote>
+
+        <h2 class="vb-section">3. Der Siebenflügel: Licht in der Stärke</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Der <strong>Siebenflügel</strong> verleiht der sozialen Acht etwas Besonderes: Wärme, Optimismus, Beweglichkeit. Die SO8w9 ist erdiger, ruhiger, geduldiger. Die <strong>SO8w7</strong> ist lebendiger, mitreißender, enthusiastischer. Sie kann Menschen bewegen &ndash; im wörtlichen und im übertragenen Sinne.</p>
+          <p class="vb-intro">Michelle Obamas berühmte DNC-Rede 2016 &ndash; <em>„When they go low, we go high“</em> &ndash; ist ein Satz des Siebenflügels. Die Acht sagt: Ich bin stärker. Die Sieben sagt: Wir steigen auf. Zusammen entsteht eine Energie, die weder naiv noch zynisch ist: Sie weiß, wie hart die Welt ist &ndash; und wählt trotzdem das Licht. Ihre Kampagnen als First Lady &ndash; <em>Let’s Move!</em>, <em>Reach Higher</em>, <em>Let Girls Learn</em> &ndash; haben alle diesen Ton: fordernd und einladend zugleich.</p>
+        </blockquote>
+
+        <h2 class="vb-section">4. Die Leidenschaft: Wollust als Einsatz</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Die Leidenschaft der Acht heißt <strong>Wollust</strong> &ndash; kein sexueller Begriff, sondern ein Hunger nach dem vollen, ungefilterten Leben. Die soziale Acht richtet diesen Hunger auf die Gemeinschaft: Sie will mit voller Kraft dabei sein, kämpfen, verändern, beschützen.</p>
+          <p class="vb-intro">Michelle Obama setzt sich vollständig ein. <em>Becoming</em>, ihre Autobiografie aus dem Jahr 2018, ist eines der meistverkauften Memoirenbücher aller Zeiten &ndash; nicht wegen Sensationen, sondern wegen Ehrlichkeit. Sie schreibt über Fehlgeburten, über Ehekrisen, über den Druck, als Schwarze Frau im Weißen Haus unsichtbar und gleichzeitig überbewertet zu sein. Diese Offenheit ist SO8-Wollust: Wenn ich schon rede, dann vollständig. Wenn ich schon da bin, dann ganz.</p>
+        </blockquote>
+
+        <h2 class="vb-section">5. Das Geschenk: Würde als Gemeinschaftsstiftung</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Was Michelle Obama der Welt gegeben hat, ist mehr als Kampagnen oder Bücher. Es ist ein Bild von Würde. Sie hat gezeigt, wie man mit Stärke und Wärme zugleich führt &ndash; wie man in einer Position extremer Sichtbarkeit geerdet bleibt, ohne sich anzupassen. Als First Lady hat sie Kinder im Garten des Weißen Hauses Gemüse anbauen lassen und gleichzeitig über Bildung, Ernährung und Gleichberechtigung weltweit mitgestaltet.</p>
+          <p class="vb-intro">Das ist das Geschenk der SO8w7: die Fähigkeit, Menschen zu versammeln, ohne sie zu vereinnahmen; zu führen, ohne zu dominieren; zu fordern, ohne zu entmutigen. <em>„When they go low, we go high“</em> &ndash; das ist kein Slogan. Das ist eine Lebenshaltung. Und sie lebt sie.</p>
+        </blockquote>
+
+      </div>
+      ${relatedLinks([
+        {route:"beruehmte-persoenlichkeiten", label:"Alle berühmten Persönlichkeiten"},
+        {route:"subtype/so8", label:"SO8 – Der Löwe: Subtyp-Profil"},
+        {route:"beruehmte-toni-morrison", label:"Porträt: Toni Morrison (SE8w9)"},
+      ])}
+    </div>
+  `);
+}
+
+function budSpencerPortraitPage() {
+  return shell(`
+    <div class="page-container">
+      ${pageHeader("Berühmte Persönlichkeiten")}
+      <div id="js-back-target" data-route="beruehmte-persoenlichkeiten" style="display:none;"></div>
+      <div class="krim-portrait-wrap">
+        <div class="krim-portrait-frame">
+          <img src="https://res.cloudinary.com/ymooybdl/image/upload/f_auto,q_auto,w_440,h_440,c_fill/kompass/assets/beruehmte-bud-spencer-portrait.jpg" alt="Bud Spencer" class="krim-portrait-img" loading="lazy" />
+        </div>
+        <p class="krim-portrait-name">Bud Spencer</p>
+        <p class="krim-portrait-typ">SO8w9 &middot; Sozialer Typ 8 mit Neunerflügel</p>
+        <p class="krim-portrait-subtitle">Schauspieler, Schwimmer &amp; Familienvater, 1929&ndash;2016 &ndash; Tierentsprechung: Löwe</p>
+      </div>
+      <div class="page-content">
+
+        <h2 class="vb-section">1. Der Löwe</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Der <strong>Löwe</strong> ist das Tier des sozialen Typs 8 &ndash; und kein Bild passt besser zu Bud Spencer. Der Löwe muss nicht brüllen, um zu wirken. Seine Präsenz allein ist genug. Er sitzt im Schatten des Akazienbaums, ruhig und massiv, während kleinere Tiere einen großen Bogen um ihn machen &ndash; nicht aus Feindschaft, sondern aus Respekt. Wenn das Rudel in Gefahr ist, steht er auf. Bis dahin ist er einfach da.</p>
+          <p class="vb-intro">Bud Spencer war dieses Tier. Fast 1,90 Meter, über 120 Kilo &ndash; und dennoch war er kein Einschüchterer. Wer ihn kannte, sah den warmen Blick, das tiefe Lachen, die bedingungslose Treue zu seiner Familie und zu seinem lebenslangen Freund Terence Hill. Der Löwe schützt, ohne zu drohen. Bud Spencer schützte, ohne große Worte zu machen.</p>
+        </blockquote>
+
+        <h2 class="vb-section">2. Die soziale Acht: Solidarität</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Die <strong>soziale Acht (SO8)</strong> setzt ihre Kraft in den Dienst der Gemeinschaft &ndash; der Familie, der Freunde, der Schwachen. Naranjo nannte diesen Subtyp <em>Solidarität</em>: Die SO8 kämpft nicht für sich selbst, sondern für andere. Sie ist der natürliche Beschützer, die Schutzhand über denen, die kleiner sind.</p>
+          <p class="vb-intro">Carlo Pedersoli &ndash; so sein bürgerlicher Name &ndash; war Jurist, Olympia-Schwimmer, Unternehmer und Schauspieler. Aber was ihn am meisten definierte, war seine Rolle als Vater und Freund. Er heiratete 1960 Maria Amato, bekam vier Kinder, blieb ein Leben lang mit Terence Hill befreundet &ndash; 50 Jahre Filmpartnerschaft, 50 Jahre echte Freundschaft. Die SO8 wählt ihr Rudel und bleibt. Für immer.</p>
+        </blockquote>
+
+        <h2 class="vb-section">3. Der Neunerflügel: Die Ruhe des Riesen</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Der <strong>Neunerflügel</strong> verleiht der sozialen Acht eine besondere Qualität: Geduld, Gelassenheit und eine fast magische Fähigkeit, große Menschen in Ruhe zu halten. Die SO8w7 ist lebhafter, impulsiver, lauter. Die <strong>SO8w9</strong> ist ruhiger &ndash; ein schlafender Vulkan, der nur ausbricht, wenn es wirklich nötig ist.</p>
+          <p class="vb-intro">Bud Spencers Filmfiguren spiegeln das perfekt wider: Er ist immer der Ruhigere, der erst reagiert, wenn provoziert wird &ndash; und dann mit einer Wucht, die niemand erwartet hat. Sein Humor war trocken, fast lakonisch. Er sprach wenig und tat viel. Der Neunerflügel gab ihm auch die Fähigkeit, neben Terence Hill zu bestehen – einer selbsterhaltenden Eins mit Zweierflügel, gesund ausgeprägt und mit der natürlichen Leichtigkeit, die entsteht, wenn eine Eins ihren Entspannungspunkt in der Sieben lebt. Diese heitere, warmherzige Energie der SE1w2 ergänzte das ruhige Gewicht der SO8w9 zu einem der beliebtesten Duos der Filmgeschichte.</p>
+        </blockquote>
+
+        <h2 class="vb-section">4. Die Leidenschaft: Wollust als Schutz</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Die Leidenschaft der Acht heißt <strong>Wollust</strong> &ndash; ein Hunger nach Intensität, nach dem vollen Leben, nach dem Ungefilterten. Die soziale Acht richtet diesen Hunger auf die Gruppe: Sie will voll da sein, vollständig eingesetzt, bedingungslos loyal.</p>
+          <p class="vb-intro">Bud Spencer lebte dieses Prinzip ohne Abstriche. Er war kein halber Mensch: kein halber Schwimmer (er war Olympiateilnehmer), kein halber Vater (er war bei seinen Kindern), kein halber Freund (er war ein Freund fürs Leben). Selbst seine Filmkämpfe hatten diese Qualität: kein Stilett, keine Waffe, sondern die volle Körperkraft &ndash; direkt, ehrlich, unübersehbar. Wollust als Träger von Wahrhaftigkeit.</p>
+        </blockquote>
+
+        <h2 class="vb-section">5. Das Geschenk: Die Stille, die trägt</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Was Bud Spencer hinterlassen hat, ist eine Qualität, die selten geworden ist: die Stille des Starken. Er hat bewiesen, dass man laut sein kann, ohne zu schreien &ndash; dass Größe nicht aus lautstarkem Auftreten kommt, sondern aus dem, was man ist, wenn niemand zuschaut.</p>
+          <p class="vb-intro">Generationen von Kindern in Deutschland, Österreich und der Schweiz sind mit ihm aufgewachsen &ndash; und was sie geliebt haben, war nicht der Schauspieler, sondern den Menschen dahinter: groß, warm, zuverlässig. Den Löwen, der immer da ist. Das ist das Geschenk der SO8w9: Die Stärke, die nicht dominieren will &ndash; sondern einfach trägt.</p>
+        </blockquote>
+
+      </div>
+      ${relatedLinks([
+        {route:"beruehmte-persoenlichkeiten", label:"Alle berühmten Persönlichkeiten"},
+        {route:"subtype/so8", label:"SO8 – Der Löwe: Subtyp-Profil"},
+        {route:"beruehmte-michelle-obama", label:"Porträt: Michelle Obama (SO8w7)"},
       ])}
     </div>
   `);
@@ -33269,6 +33388,8 @@ function render() {
       "beruehmte-elon-musk": elonMuskPortraitPage,
       "beruehmte-umberto-eco": umbertEcoPortraitPage,
       "beruehmte-toni-morrison": toniMorrisonPortraitPage,
+      "beruehmte-michelle-obama": michelleObamaPortraitPage,
+      "beruehmte-bud-spencer": budSpencerPortraitPage,
       "beruehmte-herbert-groenemeyer": herbertGroenomeyerPortraitPage,
       "beruehmte-sigmund-freud": sigmundFreudPortraitPage,
       "beruehmte-beatrice-chebet": beatriceChebetPortraitPage,
