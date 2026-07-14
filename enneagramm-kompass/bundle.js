@@ -32609,6 +32609,17 @@ function stillePage() {
         </div>
       </div>
 
+      <div style="margin:0 auto 1.5rem;max-width:360px;text-align:center;">
+        <p style="font-size:0.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 .7rem;">Dauer wählen</p>
+        <div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;">
+          <button class="stille-dauer-btn" data-min="2"  style="padding:.45rem .9rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.9rem;font-family:inherit;color:var(--ink);">2 min</button>
+          <button class="stille-dauer-btn" data-min="3"  style="padding:.45rem .9rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.9rem;font-family:inherit;color:var(--ink);">3 min</button>
+          <button class="stille-dauer-btn" data-min="5"  style="padding:.45rem .9rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.9rem;font-family:inherit;color:var(--ink);">5 min</button>
+          <button class="stille-dauer-btn active" data-min="9" style="padding:.45rem .9rem;border-radius:20px;border:1.5px solid var(--copper);background:var(--paper);cursor:pointer;font-size:.9rem;font-family:inherit;color:var(--copper);font-weight:700;">9 min</button>
+          <button class="stille-dauer-btn" data-min="0"  style="padding:.45rem .9rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.9rem;font-family:inherit;color:var(--ink);">∞ endlos</button>
+        </div>
+      </div>
+
       <div style="margin:0 auto 1.5rem;max-width:480px;">
         <p style="font-size:0.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 .7rem;text-align:center;">Klangbegleitung wählen</p>
         <div id="stille-klang-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:.45rem;">
@@ -32803,13 +32814,41 @@ function _syntheseFallback(animal) {
 
 
 function _stilleInit() {
-  const DAUER = 9 * 60;
+  let DAUER = 9 * 60;
+  let ENDLOS = false;
   const arc = document.getElementById("stille-arc");
   const zeitEl = document.getElementById("stille-zeit");
   const statusEl = document.getElementById("stille-status");
   const startBtn = document.getElementById("stille-start");
   const resetBtn = document.getElementById("stille-reset");
   if (!arc || !startBtn) return;
+
+  // Dauer-Buttons
+  document.querySelectorAll(".stille-dauer-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (laedt) return; // kein Wechsel während Sitzung
+      document.querySelectorAll(".stille-dauer-btn").forEach(b => {
+        b.style.borderColor = "var(--border)";
+        b.style.background = "transparent";
+        b.style.color = "var(--ink)";
+        b.style.fontWeight = "normal";
+      });
+      btn.style.borderColor = "var(--copper)";
+      btn.style.background = "var(--paper)";
+      btn.style.color = "var(--copper)";
+      btn.style.fontWeight = "700";
+      const min = parseInt(btn.dataset.min);
+      ENDLOS = min === 0;
+      DAUER = ENDLOS ? 0 : min * 60;
+      verbleibend = DAUER;
+      if (ENDLOS) {
+        zeitEl.textContent = "∞";
+        arc.style.strokeDashoffset = "0";
+      } else {
+        aktualisiere();
+      }
+    });
+  });
 
   const UMFANG = 2 * Math.PI * 136;
   let verbleibend = DAUER;
@@ -32859,15 +32898,17 @@ function _stilleInit() {
   }
 
   function tick() {
-    verbleibend--;
-    aktualisiere();
-    if (verbleibend <= 0) {
-      clearInterval(interval); interval = null;
-      stopKlang();
-      gong(160);
-      statusEl.textContent = "Willkommen zurück.";
-      startBtn.textContent = "✓ Fertig";
-      startBtn.disabled = true;
+    if (!ENDLOS) {
+      verbleibend--;
+      aktualisiere();
+      if (verbleibend <= 0) {
+        clearInterval(interval); interval = null;
+        stopKlang();
+        gong(160);
+        statusEl.textContent = "Willkommen zurück.";
+        startBtn.textContent = "✓ Fertig";
+        startBtn.disabled = true;
+      }
     }
   }
 
@@ -32898,7 +32939,7 @@ function _stilleInit() {
     clearInterval(interval); interval = null; laedt = false;
     stopKlang();
     verbleibend = DAUER;
-    aktualisiere();
+    if (ENDLOS) { zeitEl.textContent = "∞"; arc.style.strokeDashoffset = "0"; } else { aktualisiere(); }
     statusEl.textContent = "bereit";
     startBtn.id = "stille-start";
     startBtn.textContent = "▶ Starten";
