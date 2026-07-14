@@ -35141,15 +35141,31 @@ document.addEventListener("click", (e) => {
 
 // Automatischer Versions-Check: holt index.html frisch vom Server und lädt neu wenn Version veraltet
 (function() {
-  const MY_VERSION = 'inhalt-v436';
+  const MY_VERSION = 'inhalt-v437';
   setTimeout(function() {
     fetch('./index.html', { cache: 'no-store' })
       .then(function(r) { return r.text(); })
       .then(function(html) {
         var m = html.match(/bundle\.js\?v=([^"']+)/);
         if (m && m[1] !== MY_VERSION) {
-          console.log('[Kompass] Neue Version gefunden:', m[1], '– lade neu');
-          location.reload(true);
+          console.log('[Kompass] Neue Version gefunden:', m[1], '– Cache löschen und neu laden');
+          // Caches leeren + SW deregistrieren, dann neu laden
+          var chain = Promise.resolve();
+          if (window.caches) {
+            chain = chain.then(function() {
+              return caches.keys().then(function(keys) {
+                return Promise.all(keys.map(function(k) { return caches.delete(k); }));
+              });
+            });
+          }
+          if (navigator.serviceWorker) {
+            chain = chain.then(function() {
+              return navigator.serviceWorker.getRegistrations().then(function(regs) {
+                return Promise.all(regs.map(function(r) { return r.unregister(); }));
+              });
+            });
+          }
+          chain.then(function() { location.reload(); }).catch(function() { location.reload(); });
         }
       })
       .catch(function() {});
