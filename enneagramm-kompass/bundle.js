@@ -25520,6 +25520,49 @@ function dynamikBewusstseinszustandesPage() {
   return shell(`
     <div class="page-container">
       ${pageHeader("Die Dynamik des Bewusstseinszustandes", "Schaubilder · Bewusstseinsgrade")}
+
+      <!-- Schaubilder: Die Dynamik des Bewusstseinszustandes (Typ 1–9) -->
+      <div style="margin-bottom:2rem;">
+        <h2 style="font-size:1.05rem;color:var(--gold-dark);margin-bottom:1rem;">Schaubilder: Bewusstseinsgrade der 9 Typen</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;">
+          <div style="text-align:center;">
+            <p style="font-size:.85rem;font-weight:700;color:var(--ink);margin:0 0 .4rem;">Typ 1</p>
+            <img src="https://res.cloudinary.com/ymooybdl/image/upload/v1784042033/kompass/assets/bewusstseinsgrade-typ-1.jpg" alt="Bewusstseinsgrade Typ 1" style="width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);" loading="lazy" />
+          </div>
+          <div style="text-align:center;">
+            <p style="font-size:.85rem;font-weight:700;color:var(--ink);margin:0 0 .4rem;">Typ 2</p>
+            <img src="https://res.cloudinary.com/ymooybdl/image/upload/v1784042035/kompass/assets/bewusstseinsgrade-typ-2.jpg" alt="Bewusstseinsgrade Typ 2" style="width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);" loading="lazy" />
+          </div>
+          <div style="text-align:center;">
+            <p style="font-size:.85rem;font-weight:700;color:var(--ink);margin:0 0 .4rem;">Typ 3</p>
+            <img src="https://res.cloudinary.com/ymooybdl/image/upload/v1784042037/kompass/assets/bewusstseinsgrade-typ-3.jpg" alt="Bewusstseinsgrade Typ 3" style="width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);" loading="lazy" />
+          </div>
+          <div style="text-align:center;">
+            <p style="font-size:.85rem;font-weight:700;color:var(--ink);margin:0 0 .4rem;">Typ 4</p>
+            <img src="https://res.cloudinary.com/ymooybdl/image/upload/v1784042039/kompass/assets/bewusstseinsgrade-typ-4.jpg" alt="Bewusstseinsgrade Typ 4" style="width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);" loading="lazy" />
+          </div>
+          <div style="text-align:center;">
+            <p style="font-size:.85rem;font-weight:700;color:var(--ink);margin:0 0 .4rem;">Typ 5</p>
+            <img src="https://res.cloudinary.com/ymooybdl/image/upload/v1784042041/kompass/assets/bewusstseinsgrade-typ-5.jpg" alt="Bewusstseinsgrade Typ 5" style="width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);" loading="lazy" />
+          </div>
+          <div style="text-align:center;">
+            <p style="font-size:.85rem;font-weight:700;color:var(--ink);margin:0 0 .4rem;">Typ 6</p>
+            <img src="https://res.cloudinary.com/ymooybdl/image/upload/v1784042043/kompass/assets/bewusstseinsgrade-typ-6.jpg" alt="Bewusstseinsgrade Typ 6" style="width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);" loading="lazy" />
+          </div>
+          <div style="text-align:center;">
+            <p style="font-size:.85rem;font-weight:700;color:var(--ink);margin:0 0 .4rem;">Typ 7</p>
+            <img src="https://res.cloudinary.com/ymooybdl/image/upload/v1784042045/kompass/assets/bewusstseinsgrade-typ-7.jpg" alt="Bewusstseinsgrade Typ 7" style="width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);" loading="lazy" />
+          </div>
+          <div style="text-align:center;">
+            <p style="font-size:.85rem;font-weight:700;color:var(--ink);margin:0 0 .4rem;">Typ 8</p>
+            <img src="https://res.cloudinary.com/ymooybdl/image/upload/v1784042047/kompass/assets/bewusstseinsgrade-typ-8.jpg" alt="Bewusstseinsgrade Typ 8" style="width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);" loading="lazy" />
+          </div>
+          <div style="text-align:center;">
+            <p style="font-size:.85rem;font-weight:700;color:var(--ink);margin:0 0 .4rem;">Typ 9</p>
+            <img src="https://res.cloudinary.com/ymooybdl/image/upload/v1784042049/kompass/assets/bewusstseinsgrade-typ-9.jpg" alt="Bewusstseinsgrade Typ 9" style="width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);" loading="lazy" />
+          </div>
+        </div>
+      </div>
       <p class="psycho-intro">Jeder Enneagrammtyp durchläuft neun Bewusstseinsstufen — von vollkommen unbewusst (Stufe 1) bis vollkommen bewusst (Stufe 9). Diese Skala zeigt, wie sich das Verhalten und die innere Haltung eines Typs mit steigendem Bewusstsein wandelt: von destruktiven Mustern hin zu seiner höchsten Entfaltung.</p>
       <div style="background:var(--surface-2,rgba(0,0,0,0.03));border-radius:10px;padding:.8rem 1.2rem;margin-bottom:1.8rem;display:flex;gap:1.2rem;flex-wrap:wrap;font-size:.85rem;">
         <span>🟢 Stufe 7–9: bewusst · heilsam</span>
