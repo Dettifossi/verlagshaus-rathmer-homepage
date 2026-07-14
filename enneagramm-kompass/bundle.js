@@ -4430,23 +4430,15 @@ function bindEvents() {
     });
   }
 
-  // Tab-Umschalter Email / Zugangscode
-  const tabEmail = document.querySelector("#tabEmail");
-  const tabCode  = document.querySelector("#tabCode");
-  if (tabEmail && tabCode) {
-    const showTab = (tab) => {
-      const isEmail = tab === "email";
-      document.querySelector("#panelEmail").style.display = isEmail ? "" : "none";
-      document.querySelector("#panelCode").style.display  = isEmail ? "none" : "";
-      tabEmail.style.background   = isEmail ? "var(--gold-dark)" : "transparent";
-      tabEmail.style.color        = isEmail ? "var(--cream)" : "var(--muted)";
-      tabEmail.style.border       = isEmail ? "2px solid var(--gold-dark)" : "2px solid #ccc";
-      tabCode.style.background    = isEmail ? "transparent" : "var(--gold-dark)";
-      tabCode.style.color         = isEmail ? "var(--muted)" : "var(--cream)";
-      tabCode.style.border        = isEmail ? "2px solid #ccc" : "2px solid var(--gold-dark)";
-    };
-    tabEmail.addEventListener("click", () => showTab("email"));
-    tabCode.addEventListener("click",  () => showTab("code"));
+  // Zugangscode-Toggle
+  const toggleCode = document.querySelector("#toggleCode");
+  if (toggleCode) {
+    toggleCode.addEventListener("click", () => {
+      const panel = document.querySelector("#panelCode");
+      const visible = panel.style.display !== "none";
+      panel.style.display = visible ? "none" : "";
+      toggleCode.textContent = visible ? "Ich habe einen Zugangscode" : "Zugangscode ausblenden";
+    });
   }
 
   // Firebase E-Mail-Login
@@ -32182,32 +32174,28 @@ function freischaltPage() {
 
         <div class="freischalt-card__divider"><span>Bereits gekauft? Jetzt anmelden:</span></div>
 
-        <!-- Tab-Umschalter -->
-        <div style="display:flex;gap:.5rem;margin-bottom:1rem;">
-          <button id="tabEmail" style="flex:1;padding:.55rem;border-radius:8px;border:2px solid var(--gold-dark);background:var(--gold-dark);color:var(--cream);font-family:inherit;font-size:.9rem;cursor:pointer;font-weight:700;">E-Mail-Login</button>
-          <button id="tabCode" style="flex:1;padding:.55rem;border-radius:8px;border:2px solid #ccc;background:transparent;color:var(--muted);font-family:inherit;font-size:.9rem;cursor:pointer;">Zugangscode</button>
-        </div>
-
-        <!-- E-Mail-Login (Firebase) -->
+        <!-- E-Mail-Login (neue Kunden) -->
         <div id="panelEmail">
           <input id="fbEmail" type="email" placeholder="Ihre E-Mail-Adresse" autocomplete="email" spellcheck="false"
             style="width:100%;box-sizing:border-box;padding:0.7rem 1rem;border:1px solid #ddd;border-radius:8px;font-size:1rem;font-family:inherit;margin-bottom:0.5rem;" />
-          <input id="fbPass" type="password" placeholder="Ihr Passwort" autocomplete="current-password"
+          <input id="fbPass" type="password" placeholder="Ihr Passwort (aus der Bestätigungs-E-Mail)" autocomplete="current-password"
             style="width:100%;box-sizing:border-box;padding:0.7rem 1rem;border:1px solid #ddd;border-radius:8px;font-size:1rem;font-family:inherit;margin-bottom:0.75rem;" />
           <button id="fbLoginBtn" class="primary" style="width:100%;">Anmelden</button>
           <p id="fbMsg" class="freischalt-card__msg"></p>
         </div>
 
-        <!-- Zugangscode (alter Weg) -->
-        <div id="panelCode" style="display:none;">
-          <div style="margin-bottom:0.75rem;">
-            <input id="unlockName" type="text" placeholder="Ihr Vor- und Zuname" autocomplete="name" spellcheck="false"
-              style="width:100%;box-sizing:border-box;padding:0.7rem 1rem;border:1px solid #ddd;border-radius:8px;font-size:1rem;font-family:inherit;margin-bottom:0.5rem;" />
-          </div>
-          <div class="freischalt-card__input-row">
-            <input id="unlockCode" type="text" placeholder="Zugangscode eingeben" autocomplete="off" spellcheck="false" style="width:100%;margin-bottom:.75rem;" />
-            <button id="unlockBtn" class="primary" style="width:100%;">Aktivieren</button>
-          </div>
+        <!-- Zugangscode (alte Kunden, ausklappbar) -->
+        <div style="margin-top:1rem;text-align:center;">
+          <button id="toggleCode" style="background:none;border:none;color:var(--muted);font-size:.85rem;cursor:pointer;text-decoration:underline;font-family:inherit;">
+            Ich habe einen Zugangscode
+          </button>
+        </div>
+        <div id="panelCode" style="display:none;margin-top:.75rem;">
+          <input id="unlockName" type="text" placeholder="Ihr Vor- und Zuname" autocomplete="name" spellcheck="false"
+            style="width:100%;box-sizing:border-box;padding:0.7rem 1rem;border:1px solid #ddd;border-radius:8px;font-size:1rem;font-family:inherit;margin-bottom:0.5rem;" />
+          <input id="unlockCode" type="text" placeholder="Zugangscode eingeben" autocomplete="off" spellcheck="false"
+            style="width:100%;box-sizing:border-box;padding:0.7rem 1rem;border:1px solid #ddd;border-radius:8px;font-size:1rem;font-family:inherit;margin-bottom:.75rem;" />
+          <button id="unlockBtn" class="primary" style="width:100%;">Aktivieren</button>
           <p id="unlockMsg" class="freischalt-card__msg"></p>
         </div>
 
