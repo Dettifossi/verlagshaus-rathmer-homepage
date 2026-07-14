@@ -32972,26 +32972,12 @@ function _stilleInit() {
     // Real CC0 recordings — played via AudioContext (works on all devices incl. iOS)
     const REAL_SOUNDS = new Set(["regen","meer","wasserfall","wind","gewitter","sommerregen","wald","voegel","bach","wiese","kuckuck","blizzard","trommel","eule","white","pink","brown","feuer","hoehle","chimes","zug","katze","wal","delfin","bienen","wolf","seehund","aquarium","gewaesser","herzschlag","regenwald","nachtmeer","tropfen","zikaden","savanne","unterwasser","klangschale","om","morgenkonzert"]);
     if (REAL_SOUNDS.has(id)) {
-      if (!audioCtx) return;
-      let cancelled = false;
-      klangStop = () => { cancelled = true; };
-      const bufPromise = klangFetchCache[id] || fetch(klangCdnUrl(id)).then(r => r.arrayBuffer());
-      delete klangFetchCache[id];
-      bufPromise
-        .then(ab => cancelled ? null : audioCtx.decodeAudioData(ab))
-        .then(decoded => {
-          if (!decoded || cancelled || !audioCtx || audioCtx.state === "closed") return;
-          const src = audioCtx.createBufferSource();
-          src.buffer = decoded;
-          src.loop = true;
-          const g = audioCtx.createGain();
-          g.gain.value = 0.7;
-          src.connect(g);
-          g.connect(audioCtx.destination);
-          src.start();
-          klangStop = () => { cancelled = true; try { src.stop(); } catch(e) {} };
-        })
-        .catch(() => {});
+      // HTML Audio statt AudioContext → funktioniert mit AirPlay/HomePod auf iOS
+      const audio = new Audio(klangCdnUrl(id));
+      audio.loop = true;
+      audio.volume = 0.7;
+      audio.play().catch(() => {});
+      klangStop = () => { audio.pause(); audio.src = ""; };
       return;
     }
 
