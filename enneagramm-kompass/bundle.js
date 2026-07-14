@@ -32609,14 +32609,19 @@ function stillePage() {
         </div>
       </div>
 
-      <div style="margin:0 auto 1.5rem;max-width:360px;text-align:center;">
+      <div style="margin:0 auto 1.5rem;max-width:420px;text-align:center;">
         <p style="font-size:0.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 .7rem;">Dauer wählen</p>
-        <div style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;">
-          <button class="stille-dauer-btn" data-min="2"  style="padding:.45rem .9rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.9rem;font-family:inherit;color:var(--ink);">2 min</button>
-          <button class="stille-dauer-btn" data-min="3"  style="padding:.45rem .9rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.9rem;font-family:inherit;color:var(--ink);">3 min</button>
-          <button class="stille-dauer-btn" data-min="5"  style="padding:.45rem .9rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.9rem;font-family:inherit;color:var(--ink);">5 min</button>
-          <button class="stille-dauer-btn active" data-min="9" style="padding:.45rem .9rem;border-radius:20px;border:1.5px solid var(--copper);background:var(--paper);cursor:pointer;font-size:.9rem;font-family:inherit;color:var(--copper);font-weight:700;">9 min</button>
-          <button class="stille-dauer-btn" data-min="0"  style="padding:.45rem .9rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.9rem;font-family:inherit;color:var(--ink);">∞ endlos</button>
+        <div style="display:flex;gap:.4rem;justify-content:center;flex-wrap:wrap;">
+          <button class="stille-dauer-btn" data-min="2"  style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--ink);">2 min</button>
+          <button class="stille-dauer-btn" data-min="3"  style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--ink);">3 min</button>
+          <button class="stille-dauer-btn" data-min="5"  style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--ink);">5 min</button>
+          <button class="stille-dauer-btn active" data-min="9" style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--copper);background:var(--paper);cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--copper);font-weight:700;">9 min</button>
+          <button class="stille-dauer-btn" data-min="12" style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--ink);">12 min</button>
+          <button class="stille-dauer-btn" data-min="15" style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--ink);">15 min</button>
+          <button class="stille-dauer-btn" data-min="20" style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--ink);">20 min</button>
+          <button class="stille-dauer-btn" data-min="30" style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--ink);">30 min</button>
+          <button class="stille-dauer-btn" data-min="60" style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--ink);">1 Std</button>
+          <button class="stille-dauer-btn" data-min="0"  style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--ink);">∞ endlos</button>
         </div>
       </div>
 
