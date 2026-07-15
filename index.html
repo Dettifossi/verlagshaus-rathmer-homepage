@@ -353,7 +353,8 @@
         var text = b.kommentar || b.text || '';
         return '<div style="background:rgba(255,255,255,0.08);border-left:3px solid #c4a456;border-radius:6px;padding:0.8rem 1rem;margin-bottom:0.6rem;text-align:left;">'
           + '<span style="color:#c4a456;font-size:1rem;">' + sterne + '</span>'
-          + (text ? '<p style="color:rgba(245,234,216,0.85);font-family:\'EB Garamond\',Georgia,serif;font-size:0.95rem;line-height:1.6;margin:0.3rem 0 0;">„' + text + '"</p>' : '')
+          + (text ? '<p style="color:rgba(245,234,216,0.85);font-family:\'EB Garamond\',Georgia,serif;font-size:0.95rem;line-height:1.6;margin:0.3rem 0 0.3rem;">„' + text + '"</p>' : '')
+          + (b.name ? '<span style="color:rgba(245,234,216,0.5);font-size:0.82rem;">— ' + b.name + '</span>' : '')
           + '</div>';
       }).join('');
       if (liste.length > 2) {

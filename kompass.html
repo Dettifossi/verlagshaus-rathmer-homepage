@@ -686,8 +686,8 @@
         var datum = b.datum ? new Date(b.datum).toLocaleDateString('de-DE') : '';
         return '<blockquote style="margin:0;padding:1.4rem 1.6rem;background:#faf8f4;border-left:3px solid var(--gold,#c4a456);border-radius:8px;">'
           + '<div style="color:#c4a456;font-size:1.2rem;margin-bottom:0.5rem;">' + sterne + '</div>'
-          + (text ? '<p style="font-family:\'EB Garamond\',Georgia,serif;font-size:1.08rem;line-height:1.75;color:var(--anthracite,#2c2c2c);margin:0 0 0.6rem;">„' + text + '“</p>' : '')
-          + '<footer style="font-size:0.85rem;color:#888;">' + datum + '</footer>'
+          + (text ? '<p style=”font-family:\'EB Garamond\',Georgia,serif;font-size:1.08rem;line-height:1.75;color:var(--anthracite,#2c2c2c);margin:0 0 0.6rem;”>„' + text + '”</p>' : '')
+          + '<footer style=”font-size:0.85rem;color:#888;”>' + (b.name ? '— ' + b.name + (datum ? ' · ' + datum : '') : datum) + '</footer>'
           + '</blockquote>';
       }).join('');
       section.style.display = 'block';
