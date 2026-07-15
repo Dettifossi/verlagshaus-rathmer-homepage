@@ -662,6 +662,40 @@
   </div>
 </section>
 
+<!-- Verifizierte Käufer-Bewertungen (dynamisch aus JSONBin) -->
+<section id="kaeufer-bewertungen" style="display:none;padding:3rem 1.5rem;max-width:780px;margin:0 auto;">
+  <h2 style="font-family:'EB Garamond',Georgia,serif;font-size:1.7rem;text-align:center;color:var(--anthracite,#2c2c2c);margin-bottom:0.4rem;">Bewertungen verifizierter Käufer</h2>
+  <p style="text-align:center;color:#777;font-size:0.92rem;margin-bottom:2.2rem;">Nur Nutzer mit aktivem Zugang können den Kompass bewerten.</p>
+  <div id="kaeufer-liste" style="display:flex;flex-direction:column;gap:1.4rem;"></div>
+</section>
+<script>
+(function() {
+  var KEY = '$2a$10$LNlgIJOGbl6mnMlsX.luWuOkm/0og9HUbwLyoqdb9hHh9Uk9hbt6O';
+  var BIN = '6a573185da38895dfe5f9c4b';
+  fetch('https://api.jsonbin.io/v3/b/' + BIN + '/latest', { headers: { 'X-Master-Key': KEY } })
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      var rec = d.record;
+      var liste = Array.isArray(rec) ? rec : (rec && Array.isArray(rec.reviews) ? rec.reviews : []);
+      if (!liste.length) return;
+      var section = document.getElementById('kaeufer-bewertungen');
+      var container = document.getElementById('kaeufer-liste');
+      container.innerHTML = liste.map(function(b) {
+        var sterne = '★'.repeat(b.sterne || 0) + '☆'.repeat(5 - (b.sterne || 0));
+        var text = b.kommentar || b.text || '';
+        var datum = b.datum ? new Date(b.datum).toLocaleDateString('de-DE') : '';
+        return '<blockquote style="margin:0;padding:1.4rem 1.6rem;background:#faf8f4;border-left:3px solid var(--gold,#c4a456);border-radius:8px;">'
+          + '<div style="color:#c4a456;font-size:1.2rem;margin-bottom:0.5rem;">' + sterne + '</div>'
+          + (text ? '<p style="font-family:\'EB Garamond\',Georgia,serif;font-size:1.08rem;line-height:1.75;color:var(--anthracite,#2c2c2c);margin:0 0 0.6rem;">„' + text + '“</p>' : '')
+          + '<footer style="font-size:0.85rem;color:#888;">' + datum + '</footer>'
+          + '</blockquote>';
+      }).join('');
+      section.style.display = 'block';
+    })
+    .catch(function() {});
+})();
+</script>
+
 <!-- Kaufbox -->
 <section class="kompass-buy">
   <div class="kompass-buy__box">
