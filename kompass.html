@@ -669,6 +669,27 @@
   <div id="kaeufer-liste" style="display:flex;flex-direction:column;gap:1.4rem;"></div>
 </section>
 <script>
+function translateReviewKompass(btn) {
+  var card = btn.closest('[data-review-card]');
+  var textEl = card.querySelector('[data-review-text]');
+  if (btn.dataset.translated === '1') {
+    textEl.textContent = textEl.dataset.orig;
+    btn.textContent = '🌐 Übersetzen';
+    btn.dataset.translated = '0';
+    return;
+  }
+  var orig = textEl.textContent;
+  textEl.dataset.orig = orig;
+  btn.textContent = '…';
+  fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&q=' + encodeURIComponent(orig))
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      textEl.textContent = d[0].map(function(s) { return s[0]; }).join('');
+      btn.textContent = '↩ Original';
+      btn.dataset.translated = '1';
+    })
+    .catch(function() { btn.textContent = '🌐 Übersetzen'; });
+}
 (function() {
   var KEY = '$2a$10$LNlgIJOGbl6mnMlsX.luWuOkm/0og9HUbwLyoqdb9hHh9Uk9hbt6O';
   var BIN = '6a573185da38895dfe5f9c4b';
@@ -684,10 +705,11 @@
         var sterne = '★'.repeat(b.sterne || 0) + '☆'.repeat(5 - (b.sterne || 0));
         var text = b.kommentar || b.text || '';
         var datum = b.datum ? new Date(b.datum).toLocaleDateString('de-DE') : '';
-        return '<blockquote style="margin:0;padding:1.4rem 1.6rem;background:#faf8f4;border-left:3px solid var(--gold,#c4a456);border-radius:8px;">'
-          + '<div style="color:#c4a456;font-size:1.2rem;margin-bottom:0.5rem;">' + sterne + '</div>'
-          + (text ? '<p style=”font-family:\'EB Garamond\',Georgia,serif;font-size:1.08rem;line-height:1.75;color:var(--anthracite,#2c2c2c);margin:0 0 0.6rem;”>„' + text + '”</p>' : '')
+        return '<blockquote style=”margin:0;padding:1.4rem 1.6rem;background:#faf8f4;border-left:3px solid var(--gold,#c4a456);border-radius:8px;” data-review-card>'
+          + '<div style=”color:#c4a456;font-size:1.2rem;margin-bottom:0.5rem;”>' + sterne + '</div>'
+          + (text ? '<p style=”font-family:\'EB Garamond\',Georgia,serif;font-size:1.08rem;line-height:1.75;color:var(--anthracite,#2c2c2c);margin:0 0 0.6rem;” data-review-text>„' + text + '”</p>' : '')
           + '<footer style=”font-size:0.85rem;color:#888;”>' + (b.name ? '— ' + b.name + (datum ? ' · ' + datum : '') : datum) + '</footer>'
+          + '<button onclick=”translateReviewKompass(this)” data-translated=”0” style=”margin-top:0.6rem;background:none;border:none;color:var(--gold,#c4a456);font-size:0.8rem;cursor:pointer;padding:0;”>🌐 Übersetzen</button>'
           + '</blockquote>';
       }).join('');
       section.style.display = 'block';
