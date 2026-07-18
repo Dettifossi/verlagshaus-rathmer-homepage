@@ -415,37 +415,40 @@
   };
 
   function translateReview(btn) {
-    var card = btn.closest('[data-review-card]');
-    var textEl = card.querySelector('[data-review-text]');
-    var titleEl = card.querySelector('[data-review-title]');
-    if (btn.dataset.translated === '1') {
-      textEl.textContent = textEl.dataset.orig;
-      if (titleEl) titleEl.textContent = titleEl.dataset.orig;
-      btn.textContent = '🌐 Übersetzen';
-      btn.dataset.translated = '0';
-      return;
-    }
-    var origText = textEl.textContent;
-    var origTitle = titleEl ? titleEl.textContent : '';
-    textEl.dataset.orig = origText;
-    if (titleEl) titleEl.dataset.orig = origTitle;
-    btn.textContent = '…';
-    var combined = origTitle ? origTitle + '\n\n' + origText : origText;
-    fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&q=' + encodeURIComponent(combined))
-      .then(function(r) { return r.json(); })
-      .then(function(d) {
-        var result = d[0].map(function(s) { return s[0]; }).join('');
-        if (titleEl && origTitle) {
-          var parts = result.split(/\n\n/);
-          titleEl.textContent = parts[0];
-          textEl.textContent = parts.slice(1).join('\n\n') || result;
-        } else {
-          textEl.textContent = result;
-        }
-        btn.textContent = '↩ Original';
-        btn.dataset.translated = '1';
-      })
-      .catch(function() { btn.textContent = '🌐 Übersetzen'; });
+    try {
+      var card = btn.parentElement;
+      var textEl = card.querySelector('p');
+      var titleEl = card.querySelector('strong');
+      if (!textEl) return;
+      if (btn.dataset.translated === '1') {
+        textEl.textContent = textEl.dataset.orig;
+        if (titleEl) titleEl.textContent = titleEl.dataset.orig;
+        btn.textContent = '🌐 Übersetzen';
+        btn.dataset.translated = '0';
+        return;
+      }
+      var origText = textEl.textContent;
+      var origTitle = titleEl ? titleEl.textContent : '';
+      textEl.dataset.orig = origText;
+      if (titleEl) titleEl.dataset.orig = origTitle;
+      btn.textContent = '…';
+      var combined = origTitle ? origTitle + '\n\n' + origText : origText;
+      fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&q=' + encodeURIComponent(combined))
+        .then(function(r) { return r.json(); })
+        .then(function(d) {
+          var result = d[0].map(function(s) { return s[0]; }).join('');
+          if (titleEl && origTitle) {
+            var parts = result.split(/\n\n/);
+            titleEl.textContent = parts[0];
+            textEl.textContent = parts.slice(1).join('\n\n') || result;
+          } else {
+            textEl.textContent = result;
+          }
+          btn.textContent = '↩ Original';
+          btn.dataset.translated = '1';
+        })
+        .catch(function() { btn.textContent = '🌐 Übersetzen'; });
+    } catch(e) { btn.textContent = '🌐 Übersetzen'; }
   }
 
   function buildReviews(book) {
