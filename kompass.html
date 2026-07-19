@@ -708,11 +708,11 @@ function translateReviewKompass(btn) {
         var sterne = '★'.repeat(b.sterne || 0) + '☆'.repeat(5 - (b.sterne || 0));
         var text = b.kommentar || b.text || '';
         var datum = b.datum ? new Date(b.datum).toLocaleDateString('de-DE') : '';
-        return '<blockquote style=”margin:0;padding:1.4rem 1.6rem;background:#faf8f4;border-left:3px solid var(--gold,#c4a456);border-radius:8px;” data-review-card>'
-          + '<div style=”color:#c4a456;font-size:1.2rem;margin-bottom:0.5rem;”>' + sterne + '</div>'
-          + (text ? '<p style=”font-family:\'EB Garamond\',Georgia,serif;font-size:1.08rem;line-height:1.75;color:var(--anthracite,#2c2c2c);margin:0 0 0.6rem;” data-review-text>„' + text + '”</p>' : '')
-          + '<footer style=”font-size:0.85rem;color:#888;”>' + (b.name ? '— ' + b.name + (datum ? ' · ' + datum : '') : datum) + '</footer>'
-          + '<button onclick=”translateReviewKompass(this)” data-translated=”0” style=”margin-top:0.6rem;background:none;border:none;color:var(--gold,#c4a456);font-size:0.8rem;cursor:pointer;padding:0;”>🌐 Übersetzen</button>'
+        return '<blockquote style="margin:0;padding:1.4rem 1.6rem;background:#faf8f4;border-left:3px solid var(--gold,#c4a456);border-radius:8px;" data-review-card>'
+          + '<div style="color:#c4a456;font-size:1.2rem;margin-bottom:0.5rem;">' + sterne + '</div>'
+          + (text ? '<p style="font-family:\'EB Garamond\',Georgia,serif;font-size:1.08rem;line-height:1.75;color:var(--anthracite,#2c2c2c);margin:0 0 0.6rem;" data-review-text>„' + text + '"</p>' : '')
+          + '<footer style="font-size:0.85rem;color:#888;">' + (b.name ? '— ' + b.name + (datum ? ' · ' + datum : '') : datum) + '</footer>'
+          + '<button onclick="translateReviewKompass(this)" data-translated="0" style="margin-top:0.6rem;background:none;border:none;color:var(--gold,#c4a456);font-size:0.8rem;cursor:pointer;padding:0;">🌐 Übersetzen</button>'
           + '</blockquote>';
       }).join('');
       section.style.display = 'block';
