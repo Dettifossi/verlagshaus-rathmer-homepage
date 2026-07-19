@@ -203,12 +203,12 @@
     var zitate = [], idx = 0;
     function show(i) {
       var q = zitate[i];
-      tEl.textContent = '„' + q.t + '”';
+      tEl.textContent = '„' + q.t + '"';
       aEl.textContent = '— ' + q.a;
       /* Mobile-Elemente: lazy lookup, da Script vor dem DOM-Element steht */
       var tM = document.getElementById('wl-mob-text');
       var aM = document.getElementById('wl-mob-autor');
-      if (tM) tM.textContent = '„' + q.t + '”';
+      if (tM) tM.textContent = '„' + q.t + '"';
       if (aM) aM.textContent = '— ' + q.a;
     }
     function tick() {
