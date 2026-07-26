@@ -324,6 +324,7 @@
 <!-- Stripe Payment Links – hier die echten Links eintragen (Stripe Dashboard → Payment Links) -->
 <script>
 const STRIPE_LINKS = {
+  "meta-intelligenz-hoerbuch": "HIER-ECHTEN-STRIPE-PAYMENT-LINK-EINTRAGEN",
   "bundle-gesichter": "https://buy.stripe.com/8x214n9sQ8WualAanp4gg3w",
   "gesichter-inneres-feuer": "https://buy.stripe.com/5kQbJ1awU6Om51g8fh4gg2E",
   "27-gesichter-seele": "https://buy.stripe.com/cNifZhdJ6c8G0L02UX4gg2F",
@@ -390,7 +391,7 @@ const STRIPE_LINKS = {
   const title = params.get('title') ? decodeURIComponent(params.get('title')) : 'Produkt';
 
   // Digitale Produkte (kein Versand, Widerruf erlischt nach ausdrücklicher Zustimmung)
-  const DIGITAL = ['bundle-gesichter','gesichter-inneres-feuer','27-gesichter-seele','rathmers-repertorium-ebook','eh-ebook','eh-repertorium-ebook','sehgal-skript','gesetzeskunde-hp','eh-unterrichtsmaterial','enneagrammatische-hom','rep-hervor-ebook','kern-ebook','dynamik-ebook','lehrbuch-b1-ebook','lehrbuch-b2-ebook','lehrbuch-b3-ebook','einzelstudie'];
+  const DIGITAL = ['meta-intelligenz-hoerbuch','bundle-gesichter','gesichter-inneres-feuer','27-gesichter-seele','rathmers-repertorium-ebook','eh-ebook','eh-repertorium-ebook','sehgal-skript','gesetzeskunde-hp','eh-unterrichtsmaterial','enneagrammatische-hom','rep-hervor-ebook','kern-ebook','dynamik-ebook','lehrbuch-b1-ebook','lehrbuch-b2-ebook','lehrbuch-b3-ebook','einzelstudie'];
   const isDigital = DIGITAL.indexOf(product) !== -1;
   if (isDigital) {
     const si = document.getElementById('shippingInfo');
