@@ -78,6 +78,25 @@
       transform-origin: 100px 100px;
       animation: kompass-nadel 3.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s both;
     }
+    .kompass-hero__en-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(245,234,216,0.08);
+      border: 1px solid rgba(245,234,216,0.3);
+      border-radius: 40px;
+      padding: 0.4rem 1.1rem;
+      color: rgba(245,234,216,0.9);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 1.4rem;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .kompass-hero__en-badge:hover {
+      background: rgba(245,234,216,0.16);
+      border-color: rgba(245,234,216,0.5);
+    }
     .kompass-hero__price-badge {
       display: inline-block;
       background: rgba(196,164,86,0.15);
@@ -353,6 +372,10 @@
 <!-- Hero -->
 <section class="kompass-hero">
   <p class="kompass-hero__eyebrow">Die erste deutsche Enneagramm-App · Weltweit die umfangreichste</p>
+
+  <a class="kompass-hero__en-badge" href="https://kompass.verlagshausrathmer.com/en/" target="_blank" rel="noopener">
+    🇬🇧 Also available in English →
+  </a>
 
   <div class="kompass-hero__compass" aria-hidden="true">
     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
