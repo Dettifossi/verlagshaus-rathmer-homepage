@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enneagram Healing Compass — Go Beyond Typing Into Real Transformation</title>
+  <meta name="description" content="The Enneagram Healing Compass: an interactive system for deep emotional healing and shadow work across all 27 subtypes — not just personality typing. By Detlef Rathmer, direct student of Dr. Claudio Naranjo.">
+  <meta property="og:title" content="Enneagram Healing Compass — Beyond Typing, Into Transformation" />
+  <meta property="og:description" content="An interactive healing system for all 27 Enneagram subtypes — shadow work, emotional healing, natural remedies. By Detlef Rathmer, direct student of Dr. Claudio Naranjo." />
+  <meta property="og:image" content="https://res.cloudinary.com/ymooybdl/image/upload/f_auto,q_auto/kompass/assets/grundformel-rathmer-enneagramm.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://www.verlagshausrathmer.com/kompass-en.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://res.cloudinary.com/ymooybdl/image/upload/f_auto,q_auto/kompass/assets/grundformel-rathmer-enneagramm.jpg" />
+  <link rel="stylesheet" href="styles.css?v=12">
+  <style>
+    /* ── Hero ── */
+    .kompass-hero {
+      background: linear-gradient(160deg, #1a2e28 0%, #0f1e1a 55%, #1c2a24 100%);
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .kompass-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 20%, rgba(180,150,70,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .kompass-hero__eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold, #c4a456);
+      margin-bottom: 1.5rem;
+    }
+    .kompass-hero__title {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: clamp(2.2rem, 6vw, 3.5rem);
+      font-weight: 400;
+      color: #f5ead8;
+      line-height: 1.15;
+      margin: 0 0 1.2rem;
+    }
+    .kompass-hero__sub {
+      font-size: 1.15rem;
+      color: rgba(245,234,216,0.78);
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.6;
+    }
+    .kompass-hero__compass {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 2.5rem;
+      filter: drop-shadow(0 8px 32px rgba(0,0,0,0.55));
+    }
+    .kompass-hero__compass svg { width: 100%; height: 100%; }
+    @keyframes kompass-nadel {
+      0%   { transform: rotate(-22deg); }
+      18%  { transform: rotate(18deg); }
+      34%  { transform: rotate(-12deg); }
+      50%  { transform: rotate(10deg); }
+      64%  { transform: rotate(-6deg); }
+      78%  { transform: rotate(4deg); }
+      90%  { transform: rotate(-2deg); }
+      100% { transform: rotate(0deg); }
+    }
+    .kompass-nadel {
+      transform-origin: 100px 100px;
+      animation: kompass-nadel 3.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s both;
+    }
+    .kompass-hero__de-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(245,234,216,0.08);
+      border: 1px solid rgba(245,234,216,0.3);
+      border-radius: 40px;
+      padding: 0.4rem 1.1rem;
+      color: rgba(245,234,216,0.9);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 1.4rem;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .kompass-hero__de-badge:hover {
+      background: rgba(245,234,216,0.16);
+      border-color: rgba(245,234,216,0.5);
+    }
+    .kompass-hero__price-badge {
+      display: inline-block;
+      background: rgba(196,164,86,0.15);
+      border: 1px solid rgba(196,164,86,0.4);
+      border-radius: 40px;
+      padding: 0.5rem 1.4rem;
+      color: var(--gold, #c4a456);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .kompass-hero__btn {
+      display: inline-block;
+      background: var(--gold, #c4a456);
+      color: #1a1a1a;
+      padding: 1rem 2.2rem;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: background 0.2s;
+    }
+    .kompass-hero__btn:hover { background: #b8933e; }
+    .kompass-hero__btn--ghost {
+      display: inline-block;
+      background: transparent;
+      color: #f5ead8;
+      padding: 1rem 2.2rem;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      border: 1.5px solid rgba(245,234,216,0.5);
+      transition: border-color 0.2s, color 0.2s;
+      margin-left: 0.75rem;
+    }
+    .kompass-hero__btn--ghost:hover { border-color: #f5ead8; color: #fff; }
+    .kompass-hero__hint {
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      color: rgba(245,234,216,0.45);
+    }
+
+    /* ── What it is ── */
+    .kompass-what {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    .kompass-what h2 {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.9rem;
+      color: var(--anthracite, #2c2c2c);
+      margin-bottom: 1rem;
+    }
+    .kompass-what p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #444;
+      margin-bottom: 1.2rem;
+    }
+
+    /* ── Feature grid ── */
+    .kompass-features {
+      background: var(--cream, #faf6ef);
+      padding: 3.5rem 1.5rem;
+    }
+    .kompass-features__inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .kompass-features h2 {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.9rem;
+      color: var(--anthracite, #2c2c2c);
+      margin-bottom: 2rem;
+    }
+    .kompass-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.2rem;
+    }
+    .kompass-feature-item {
+      background: #fff;
+      border: 1px solid rgba(196,164,86,0.25);
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      display: flex;
+      gap: 0.9rem;
+      align-items: flex-start;
+    }
+    .kompass-feature-item__icon {
+      font-size: 1.4rem;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .kompass-feature-item__text strong {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--anthracite, #2c2c2c);
+      margin-bottom: 0.25rem;
+    }
+    .kompass-feature-item__text span {
+      font-size: 0.88rem;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* ── Who it's for ── */
+    .kompass-forwho {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    .kompass-forwho h2 {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.9rem;
+      color: var(--anthracite, #2c2c2c);
+      margin-bottom: 1.2rem;
+    }
+    .kompass-forwho ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .kompass-forwho ul li {
+      padding: 0.6rem 0 0.6rem 1.8rem;
+      position: relative;
+      font-size: 1.02rem;
+      color: #444;
+      line-height: 1.55;
+      border-bottom: 1px solid rgba(196,164,86,0.15);
+    }
+    .kompass-forwho ul li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: var(--gold, #c4a456);
+      font-size: 0.7rem;
+      top: 0.75rem;
+    }
+
+    /* ── Buy box ── */
+    .kompass-buy {
+      background: linear-gradient(135deg, #1a2e28, #0f1e1a);
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .kompass-buy__box {
+      max-width: 480px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(196,164,86,0.35);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+    }
+    .kompass-buy__label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold, #c4a456);
+      margin-bottom: 0.75rem;
+    }
+    .kompass-buy__name {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.7rem;
+      color: #f5ead8;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+    .kompass-buy__price { margin-bottom: 1.5rem; }
+    .kompass-buy__price-main {
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: #f5ead8;
+      line-height: 1;
+    }
+    .kompass-buy__price-hint {
+      font-size: 0.82rem;
+      color: rgba(245,234,216,0.5);
+      margin-top: 0.35rem;
+    }
+    .kompass-buy__checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.8rem;
+      text-align: left;
+    }
+    .kompass-buy__checklist li {
+      padding: 0.4rem 0 0.4rem 1.6rem;
+      position: relative;
+      font-size: 0.9rem;
+      color: rgba(245,234,216,0.75);
+    }
+    .kompass-buy__checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--gold, #c4a456);
+      font-weight: 700;
+    }
+    .kompass-buy__btn {
+      display: block;
+      background: var(--gold, #c4a456);
+      color: #1a1a1a;
+      padding: 1.1rem 2rem;
+      border-radius: 10px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+      letter-spacing: 0.02em;
+      transition: background 0.2s;
+      margin-bottom: 1rem;
+    }
+    .kompass-buy__btn:hover { background: #b8933e; }
+    .kompass-buy__secure {
+      font-size: 0.8rem;
+      color: rgba(245,234,216,0.4);
+    }
+
+    /* ── Shadow-work callout ── */
+    .kompass-shadow {
+      background: var(--anthracite, #2c2c2c);
+      padding: 4rem 1.5rem;
+    }
+    .kompass-shadow__inner {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .kompass-shadow h2 {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.9rem;
+      color: #f5ead8;
+      font-weight: 400;
+      margin-bottom: 1.2rem;
+    }
+    .kompass-shadow p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(245,234,216,0.8);
+      margin-bottom: 1.2rem;
+    }
+    .kompass-shadow__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+      text-align: left;
+    }
+    .kompass-shadow__grid div {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(196,164,86,0.2);
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+      font-size: 0.92rem;
+      color: rgba(245,234,216,0.85);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="kompass-en.html" class="nav-logo"><img src="Logo-vr.png" alt="VR" class="nav-logo-img"><span class="nav-logo-text">Verlagshaus <span class="nav-logo-name">Rathmer</span><span class="nav-logo-url">www.verlagshausrathmer.com</span></span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="kompass-en.html" class="is-active">Healing Compass</a></li>
+      <li><a href="kompass.html">🇩🇪 Deutsche Version</a></li>
+      <li><a href="mailto:detlefrathmer@t-online.de">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="kompass-hero">
+  <p class="kompass-hero__eyebrow">27 Subtypes · Shadow Work · Emotional Healing</p>
+
+  <a class="kompass-hero__de-badge" href="kompass.html">🇩🇪 Deutsche Version →</a>
+
+  <div class="kompass-hero__compass" aria-hidden="true">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="face" cx="42%" cy="36%" r="68%">
+          <stop offset="0%"   stop-color="#fff8e8" />
+          <stop offset="40%"  stop-color="#f5e8cc" />
+          <stop offset="75%"  stop-color="#ddc898" />
+          <stop offset="100%" stop-color="#c4a870" />
+        </radialGradient>
+        <linearGradient id="ring" x1="18%" y1="8%" x2="82%" y2="92%">
+          <stop offset="0%"   stop-color="#f0d88a" />
+          <stop offset="18%"  stop-color="#d4a050" />
+          <stop offset="46%"  stop-color="#6a4020" />
+          <stop offset="74%"  stop-color="#c89848" />
+          <stop offset="100%" stop-color="#e8c860" />
+        </linearGradient>
+        <linearGradient id="needle-n" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stop-color="#f08040" />
+          <stop offset="40%"  stop-color="#cc3818" />
+          <stop offset="100%" stop-color="#8a1e08" />
+        </linearGradient>
+        <linearGradient id="needle-s" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stop-color="#2e4255" />
+          <stop offset="100%" stop-color="#0e1e2c" />
+        </linearGradient>
+        <filter id="face-shadow">
+          <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="rgba(40,28,10,0.38)" />
+        </filter>
+      </defs>
+      <circle cx="100" cy="100" r="95" fill="url(#ring)" />
+      <circle cx="100" cy="100" r="90" fill="#1e1510" />
+      <circle cx="100" cy="100" r="87" fill="url(#ring)" opacity="0.7" />
+      <circle cx="100" cy="100" r="82" fill="url(#face)" filter="url(#face-shadow)" />
+      <ellipse cx="78" cy="68" rx="26" ry="16" fill="white" opacity="0.22" transform="rotate(-30 78 68)" />
+      <g stroke="#8a6f3a" stroke-width="1.5" opacity="0.5">
+        <line x1="100" y1="16" x2="100" y2="28" />
+        <line x1="100" y1="172" x2="100" y2="184" />
+        <line x1="16"  y1="100" x2="28"  y2="100" />
+        <line x1="172" y1="100" x2="184" y2="100" />
+        <line x1="39"  y1="39"  x2="47"  y2="47" />
+        <line x1="161" y1="39"  x2="153" y2="47" />
+        <line x1="39"  y1="161" x2="47"  y2="153" />
+        <line x1="161" y1="161" x2="153" y2="153" />
+      </g>
+      <g fill="none" stroke="rgba(80,50,20,0.35)" stroke-width="1">
+        <polygon points="100,34 157,132 43,132" />
+        <polyline points="143,50 122,162 166,88 57,50 78,162 34,88 143,50" />
+      </g>
+      <g fill="rgba(80,50,20,0.4)">
+        <circle cx="100" cy="34"  r="4" /><circle cx="143" cy="50"  r="4" />
+        <circle cx="166" cy="88"  r="4" /><circle cx="157" cy="132" r="4" />
+        <circle cx="122" cy="162" r="4" /><circle cx="78"  cy="162" r="4" />
+        <circle cx="43"  cy="132" r="4" /><circle cx="34"  cy="88"  r="4" />
+        <circle cx="57"  cy="50"  r="4" />
+      </g>
+      <g class="kompass-nadel">
+        <polygon points="100,21 104.5,100 100,94 95.5,100" fill="url(#needle-n)" stroke="rgba(80,30,10,0.25)" stroke-width="0.5" />
+        <polygon points="100,179 104.5,100 100,106 95.5,100" fill="url(#needle-s)" stroke="rgba(10,20,30,0.2)" stroke-width="0.5" />
+      </g>
+      <circle cx="100" cy="100" r="10.5" fill="#150e08" />
+      <circle cx="100" cy="100" r="8"    fill="url(#ring)" />
+      <circle cx="100" cy="100" r="5"    fill="#f8e8c0" />
+      <circle cx="100" cy="100" r="2.2"  fill="rgba(185,80,30,0.95)" />
+    </svg>
+  </div>
+
+  <h1 class="kompass-hero__title">Beyond Typing.<br>Into Transformation.</h1>
+  <p class="kompass-hero__sub">You already know your Enneagram type. The Healing Compass shows you what to actually <em>do</em> with it — subtype-specific shadow work, emotional healing, and natural remedies, drawn from 60+ books of clinical experience.</p>
+  <div style="display:flex;justify-content:center;margin:0.75rem 0 1rem;">
+    <ul style="list-style:none;padding:0;margin:0;text-align:left;">
+      <li style="color:rgba(245,234,216,0.85);font-size:0.9rem;margin-bottom:0.4rem;">✦ Goes past typing — into the wound, the pattern, and the healing path</li>
+      <li style="color:rgba(245,234,216,0.85);font-size:0.9rem;margin-bottom:0.4rem;">✦ Buy once, own it for life</li>
+      <li style="color:rgba(245,234,216,0.85);font-size:0.9rem;">✦ Continuously expanded — an investment that keeps growing in value</li>
+    </ul>
+  </div>
+
+  <div class="kompass-hero__price-badge">$ 79 · one-time · no subscription</div><br>
+  <p style="font-size:0.82rem;color:rgba(245,234,216,0.75);line-height:1.6;max-width:480px;margin:0.6rem auto 1rem;">
+    The Compass keeps growing — new subtypes, portraits, charts. As it grows, the price will rise. Buy now and lock in today's price permanently, including every future expansion.
+  </p>
+  <a class="kompass-hero__btn" href="https://buy.stripe.com/fZuaEXdJ64GegJY9jl4gg3E" rel="noopener">
+    Get Instant Access → $ 79
+  </a>
+  <a class="kompass-hero__btn--ghost" href="https://kompass.verlagshausrathmer.com/en/#leseprobe" target="_blank" rel="noopener">
+    View Free Sample
+  </a><br>
+  <p class="kompass-hero__hint">Instant digital access · Secure checkout via Stripe · Also accepts PayPal</p>
+</section>
+
+<!-- Shadow work callout -->
+<section class="kompass-shadow">
+  <div class="kompass-shadow__inner">
+    <h2>Typing tells you what you are. This shows you what to heal.</h2>
+    <p>Most Enneagram tools stop at the label: "You're a Type 4." The Healing Compass goes where the real work happens — the childhood wound behind the pattern, the passion that drives your reactivity, and a concrete path back to your true essence. Built from decades of therapeutic practice, not internet quizzes.</p>
+    <div class="kompass-shadow__grid">
+      <div><strong style="color:#f5ead8;">Core Wound</strong><br>The childhood pattern still running your reactions today.</div>
+      <div><strong style="color:#f5ead8;">Passion &amp; Fixation</strong><br>The exact emotional loop each of the 27 subtypes gets stuck in.</div>
+      <div><strong style="color:#f5ead8;">Healing Path</strong><br>A concrete, subtype-specific way back to essence — not generic advice.</div>
+      <div><strong style="color:#f5ead8;">Natural Remedies</strong><br>Homeopathy, Bach flowers, gemstones and TCM, matched to your exact subtype.</div>
+    </div>
+  </div>
+</section>
+
+<!-- What it is -->
+<section>
+  <div class="kompass-what">
+    <h2>What is the Enneagram Healing Compass?</h2>
+    <p>The Enneagram Healing Compass is the first interactive navigation system bundling Detlef Rathmer's entire body of work into a single app. Instead of paging through dozens of books, you get — organized by your exact Enneagram subtype — every remedy, insight, and healing path in one place.</p>
+    <p>The app grew out of decades of therapeutic practice and draws on 60+ books covering the Enneagram, homeopathy, Bach flowers, Schuessler salts, gemstones, TCM, essential oils, teas, and personal development — all mapped precisely to all 27 Enneagram subtypes.</p>
+    <p>Detlef Rathmer is a direct student of Dr. Claudio Naranjo, one of the most influential Enneagram teachers in the world — that personally transmitted knowledge flows directly into the Healing Compass.</p>
+    <p>There is no other work that brings this depth of information together in one accessible place. The Enneagram Healing Compass is a complete Enneagram universe — in a single app.</p>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="kompass-features">
+  <div class="kompass-features__inner">
+    <h2>What only this app can do</h2>
+    <div class="kompass-feature-grid">
+      <div class="kompass-feature-item">
+        <div class="kompass-feature-item__icon">🔍</div>
+        <div class="kompass-feature-item__text">
+          <strong>Everything in one place</strong>
+          <span>Homeopathy, Bach flowers, Schuessler salts, gemstones, teas, essential oils, TCM, music, childhood imprints — organized by exact subtype.</span>
+        </div>
+      </div>
+      <div class="kompass-feature-item">
+        <div class="kompass-feature-item__icon">📚</div>
+        <div class="kompass-feature-item__text">
+          <strong>A lifetime of work, synthesized</strong>
+          <span>60+ books by Detlef Rathmer in a single system.</span>
+        </div>
+      </div>
+      <div class="kompass-feature-item">
+        <div class="kompass-feature-item__icon">🎯</div>
+        <div class="kompass-feature-item__text">
+          <strong>Subtype-precise</strong>
+          <span>All 27 Enneagram subtypes, each with its own remedy profile, character study, and healing path.</span>
+        </div>
+      </div>
+      <div class="kompass-feature-item">
+        <div class="kompass-feature-item__icon">🔄</div>
+        <div class="kompass-feature-item__text">
+          <strong>Alive and growing</strong>
+          <span>Every future update is included in the price — the app keeps expanding as new books and insights are added.</span>
+        </div>
+      </div>
+      <div class="kompass-feature-item">
+        <div class="kompass-feature-item__icon">⚡</div>
+        <div class="kompass-feature-item__text">
+          <strong>Interactive, instantly usable</strong>
+          <span>No install, no download — runs in your browser on any device. Instant access after purchase.</span>
+        </div>
+      </div>
+      <div class="kompass-feature-item">
+        <div class="kompass-feature-item__icon">🌿</div>
+        <div class="kompass-feature-item__text">
+          <strong>Enneagram Gemstone Therapy</strong>
+          <span>First-ever digital mapping of gemstones and minerals to all 27 Enneagram subtypes.</span>
+        </div>
+      </div>
+      <div class="kompass-feature-item">
+        <div class="kompass-feature-item__icon">🌟</div>
+        <div class="kompass-feature-item__text">
+          <strong>Famous Personalities</strong>
+          <span>100+ living Enneagram portraits — seen through the lens of the Enneagram: recognizable, deep, instructive.</span>
+        </div>
+      </div>
+      <div class="kompass-feature-item">
+        <div class="kompass-feature-item__icon">🔎</div>
+        <div class="kompass-feature-item__text">
+          <strong>Criminal Psychology</strong>
+          <span>70+ depth-psychological case studies of notorious offenders — seen through the Enneagram: instructive, precise, never sensationalized.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Who it's for -->
+<section>
+  <div class="kompass-forwho">
+    <h2>Who is this for?</h2>
+    <ul>
+      <li>People doing real shadow work — ready to go past "what's my type" and into what actually needs to heal</li>
+      <li>People who already know their Enneagram type and want to understand, at a deep level, what drives, wounds, and heals it</li>
+      <li>Therapists, coaches, and practitioners working with the Enneagram who want fast access to subtype-specific remedies</li>
+      <li>Anyone drawn to a holistic, natural-medicine perspective on personal transformation</li>
+      <li>People still exploring their type, who want a grounded, non-superficial way to find it — including three built-in type tests</li>
+    </ul>
+  </div>
+</section>
+
+<!-- How it works -->
+<section style="background:var(--cream,#faf6ef);padding:3.5rem 1.5rem;">
+  <div style="max-width:780px;margin:0 auto;">
+    <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-dark,#8a6f3a);margin-bottom:0.5rem;">No installation required</p>
+    <h2 style="font-family:'EB Garamond',Georgia,serif;font-size:1.9rem;color:var(--anthracite,#2c2c2c);margin-bottom:0.6rem;">How it works</h2>
+    <p style="font-size:1rem;color:#555;margin-bottom:2.5rem;line-height:1.65;">There's nothing to download or install. You just open a link in your browser — on your phone, tablet, or computer. That's it.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1.5rem;">
+      <div style="background:#fff;border:1px solid rgba(196,164,86,0.2);border-radius:12px;padding:1.4rem 1.2rem;text-align:center;">
+        <div style="font-size:2.2rem;margin-bottom:0.7rem;">📧</div>
+        <strong style="display:block;font-size:1rem;color:var(--anthracite,#2c2c2c);margin-bottom:0.4rem;">1. Open your email</strong>
+        <p style="font-size:0.88rem;color:#666;line-height:1.5;margin:0;">After purchase, you'll receive an email with your personal access code.</p>
+      </div>
+      <div style="background:#fff;border:1px solid rgba(196,164,86,0.2);border-radius:12px;padding:1.4rem 1.2rem;text-align:center;">
+        <div style="font-size:2.2rem;margin-bottom:0.7rem;">🔑</div>
+        <strong style="display:block;font-size:1rem;color:var(--anthracite,#2c2c2c);margin-bottom:0.4rem;">2. Enter your code</strong>
+        <p style="font-size:0.88rem;color:#666;line-height:1.5;margin:0;">Type your name and code — a one-time step that takes ten seconds.</p>
+      </div>
+      <div style="background:#fff;border:1px solid rgba(196,164,86,0.2);border-radius:12px;padding:1.4rem 1.2rem;text-align:center;">
+        <div style="font-size:2.2rem;margin-bottom:0.7rem;">✦</div>
+        <strong style="display:block;font-size:1rem;color:var(--anthracite,#2c2c2c);margin-bottom:0.4rem;">3. Start right away</strong>
+        <p style="font-size:0.88rem;color:#666;line-height:1.5;margin:0;">The app opens instantly. Tip: bookmark it, so it's always within reach.</p>
+      </div>
+    </div>
+    <p style="margin-top:1.8rem;font-size:0.9rem;color:#777;text-align:center;">Questions? I'm happy to help personally: <a href="mailto:detlefrathmer@t-online.de" style="color:var(--gold-dark,#8a6f3a);">detlefrathmer@t-online.de</a></p>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section style="padding:3rem 1.5rem;max-width:780px;margin:0 auto;">
+  <h2 style="font-family:'EB Garamond',Georgia,serif;font-size:1.7rem;text-align:center;color:var(--anthracite,#2c2c2c);margin-bottom:0.4rem;">What users are saying</h2>
+  <p style="text-align:center;color:#777;font-size:0.92rem;margin-bottom:2.2rem;">Voices from the community</p>
+  <div style="display:flex;flex-direction:column;gap:1.4rem;">
+
+    <blockquote style="margin:0;padding:1.4rem 1.6rem;background:#faf8f4;border-left:3px solid var(--gold,#c4a456);border-radius:8px;">
+      <p style="font-family:'EB Garamond',Georgia,serif;font-size:1.08rem;line-height:1.75;color:var(--anthracite,#2c2c2c);margin:0 0 0.9rem;">"Your Enneagram app and website have turned out really great. I'd already read a few of your books, but your app made me want to dive so much deeper into the inner worlds of the Enneagram types."</p>
+      <footer style="font-size:0.85rem;color:#888;">— Hinrich H.</footer>
+    </blockquote>
+
+    <blockquote style="margin:0;padding:1.4rem 1.6rem;background:#faf8f4;border-left:3px solid var(--gold,#c4a456);border-radius:8px;">
+      <p style="font-family:'EB Garamond',Georgia,serif;font-size:1.08rem;line-height:1.75;color:var(--anthracite,#2c2c2c);margin:0 0 0.9rem;">"I'm honestly amazed by this app ♥️ Getting access to subtype-precise guidance this fast … it's simply wonderful."</p>
+      <footer style="font-size:0.85rem;color:#888;">— Birgit H.</footer>
+    </blockquote>
+
+    <blockquote style="margin:0;padding:1.4rem 1.6rem;background:#faf8f4;border-left:3px solid var(--gold,#c4a456);border-radius:8px;">
+      <p style="font-family:'EB Garamond',Georgia,serif;font-size:1.08rem;line-height:1.75;color:var(--anthracite,#2c2c2c);margin:0 0 0.9rem;">"What a wealth of content! Sensational."</p>
+      <footer style="font-size:0.85rem;color:#888;">— Roland</footer>
+    </blockquote>
+
+    <blockquote style="margin:0;padding:1.4rem 1.6rem;background:#faf8f4;border-left:3px solid var(--gold,#c4a456);border-radius:8px;">
+      <p style="font-family:'EB Garamond',Georgia,serif;font-size:1.08rem;line-height:1.75;color:var(--anthracite,#2c2c2c);margin:0 0 0.9rem;">"Finally, everything in one place! I've been studying the Enneagram for years, but I've never seen a collection this deep and this well organized. The 60+ books and resources are an absolute treasure."</p>
+      <footer style="font-size:0.85rem;color:#888;">— Anneliese P.</footer>
+    </blockquote>
+
+    <blockquote style="margin:0;padding:1.4rem 1.6rem;background:#faf8f4;border-left:3px solid var(--gold,#c4a456);border-radius:8px;">
+      <p style="font-family:'EB Garamond',Georgia,serif;font-size:1.08rem;line-height:1.75;color:var(--anthracite,#2c2c2c);margin:0 0 0.9rem;">"The Enneagram Healing Compass is exactly what this community has been waiting for. The navigation is super intuitive and the content goes genuinely deep without overwhelming you. I spent hours in it on the very first night …"</p>
+      <footer style="font-size:0.85rem;color:#888;">— Sabine K.</footer>
+    </blockquote>
+
+    <blockquote style="margin:0;padding:1.4rem 1.6rem;background:#faf8f4;border-left:3px solid var(--gold,#c4a456);border-radius:8px;">
+      <p style="font-family:'EB Garamond',Georgia,serif;font-size:1.08rem;line-height:1.75;color:var(--anthracite,#2c2c2c);margin:0 0 0.9rem;">"I use this app every single day and I'm still amazed by how much knowledge is packed into it. It feels like a whole Enneagram library in my pocket. The practical tips for each type have already helped me so much."</p>
+      <footer style="font-size:0.85rem;color:#888;">— Maria S. (Type 4 😉)</footer>
+    </blockquote>
+
+  </div>
+</section>
+
+<!-- Buy box -->
+<section class="kompass-buy">
+  <div class="kompass-buy__box">
+    <p class="kompass-buy__label">Digital access</p>
+    <p class="kompass-buy__name">Enneagram Healing Compass</p>
+    <div class="kompass-buy__price">
+      <span class="kompass-buy__price-main">$ 79</span>
+      <p class="kompass-buy__price-hint">One-time · no subscription · all updates included</p>
+    </div>
+    <ul class="kompass-buy__checklist">
+      <li>Instant access after payment</li>
+      <li>All 27 subtypes, in full</li>
+      <li>Every future update included</li>
+      <li>Runs on any device, in your browser</li>
+    </ul>
+    <p style="font-size:0.85rem;color:#888;line-height:1.6;margin:0.9rem 0 1.1rem;padding:0.7rem 0.9rem;background:#faf8f4;border-radius:6px;">
+      The Compass keeps growing — new subtypes, portraits, charts. As it grows, the price will rise. Buy now and lock in today's price permanently, including every future expansion.
+    </p>
+    <a class="kompass-buy__btn" href="https://buy.stripe.com/fZuaEXdJ64GegJY9jl4gg3E" rel="noopener">
+      Get Instant Access → $ 79
+    </a>
+    <a href="https://kompass.verlagshausrathmer.com/en/#leseprobe" target="_blank" rel="noopener" style="display:inline-block;margin-top:0.75rem;font-size:0.92rem;color:var(--gold,#c4a456);text-decoration:none;border-bottom:1px solid rgba(196,164,86,0.4);">Want to look first? → View the free sample</a>
+    <p class="kompass-buy__secure">Secure checkout via Stripe · also accepts PayPal · Questions: <a href="mailto:detlefrathmer@t-online.de" style="color:inherit;">detlefrathmer@t-online.de</a></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-logo"><img src="Logo-vr.png" alt="VR" class="footer-logo-img" loading="lazy">Verlagshaus Rathmer</span>
+    <ul class="footer-links">
+      <li><a href="impressum.html">Legal Notice (DE)</a></li>
+      <li><a href="datenschutz.html">Privacy Policy (DE)</a></li>
+      <li><a href="mailto:detlefrathmer@t-online.de">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">© 2026 Verlagshaus Rathmer · Detlef Rathmer · Molkereiweg 9 · 48727 Billerbeck, Germany</div>
+</footer>
+
+<script src="nav.js?v=3"></script>
+
+</body>
+</html>
