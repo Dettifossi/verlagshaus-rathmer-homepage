@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enneagram Healing Compass is moving …</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <script>
+      (function () {
+        var target = "https://kompass.verlagshausrathmer.com/en/" + location.hash;
+
+        function goToTarget() {
+          location.replace(target);
+        }
+
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.getRegistrations().then(function (regs) {
+            regs.forEach(function (reg) { reg.unregister(); });
+          }).catch(function () {});
+        }
+        if ("caches" in window) {
+          caches.keys().then(function (keys) {
+            return Promise.all(keys.map(function (k) { return caches.delete(k); }));
+          }).catch(function () {});
+        }
+
+        setTimeout(goToTarget, 300);
+      })();
+    </script>
+    <meta http-equiv="refresh" content="1;url=https://kompass.verlagshausrathmer.com/en/" />
+  </head>
+  <body>
+    <p style="font-family:Georgia,serif;text-align:center;margin-top:3rem;">
+      This address has moved — you are being redirected automatically to
+      <a href="https://kompass.verlagshausrathmer.com/en/">kompass.verlagshausrathmer.com/en/</a>.
+    </p>
+  </body>
+</html>
