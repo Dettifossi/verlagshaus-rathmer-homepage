@@ -38,7 +38,7 @@ body {
     linear-gradient(90deg, rgba(36, 57, 72, 0.04) 1px, transparent 1px),
     linear-gradient(0deg, rgba(36, 57, 72, 0.035) 1px, transparent 1px),
     radial-gradient(ellipse at 50% 0%, rgba(216, 231, 231, 0.9), transparent 34rem),
-    linear-gradient(140deg, #edf3ec 0%, #fffaf0 46%, #dbe7e0 100%);
+    linear-gradient(180deg, #edf3ec 0%, #fffaf0 46%, #dbe7e0 100%);
   background-size: 34px 34px, 34px 34px, auto, auto;
   animation: bgDrift 45s ease-in-out infinite;
 }
@@ -1961,6 +1961,7 @@ textarea:focus {
     justify-content: flex-start;
     border-radius: 14px;
     scrollbar-width: none;
+    min-width: 0;
   }
 
   .tabbar::-webkit-scrollbar {
@@ -5011,3 +5012,21 @@ button.primary:hover::after {
 .kf-tag--nahbereich  { background: #e6f9f0; color: #15803d; }
 .kf-tag--missbrauch  { background: #fef0f6; color: #be185d; }
 .kf-tag--sonstiges   { background: #f0f0f0; color: #555; }
+
+/* ── Sprachumschalter ────────────────────────────────────────────────────── */
+.lang-switcher {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  background: transparent;
+  border: 1.5px solid var(--gold-dark);
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  text-decoration: none;
+  opacity: 0.75;
+  transition: opacity 0.15s;
+}
+.lang-switcher:hover { opacity: 1; }

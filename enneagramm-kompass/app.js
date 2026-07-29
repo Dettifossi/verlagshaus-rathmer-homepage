@@ -7,7 +7,7 @@ import { DIAGNOSETEST } from "./data/diagnosetest.js?v=1";
 import { BEZIEHUNGS_PAARUNGEN } from "./data/beziehungspaarungen.js?v=14";
 import { DIFFERENZIERUNGEN } from "./data/differenzierungen.js?v=3";
 import { SITUATIONSKOMPASS } from "./data/situationskompass.js?v=8";
-import { registerEntries } from "./data/register.js?v=21";
+import { registerEntries } from "./data/register.js?v=20";
 import { TIERENTSPRECHUNGEN } from "./data/tierentsprechungen.js?v=1";
 import { VERHALTEN } from "./data/verhalten.js?v=1";
 import { TIERLEXIKON } from "./data/tierlexikon.js?v=8";
@@ -179,6 +179,10 @@ const BERUEHMT_PORTRAITS = [
     heading:"Angelina Jolie – Sozialer Typ 1",
     teaser:"SO1w2 · „Die Gans“, geb. 1975. Schauspielerin, Regisseurin, UN-Sonderbotschafterin. Über 20 Jahre humanitäre Arbeit in Krisengebieten, sechs Kinder, ein Schaffen, das immer auch Haltung ist. Tierentsprechung: Gans.",
     tags:["Schauspiel"] },
+  { route:"beruehmte-rasputin", name:"Grigori Rasputin", subtyp:"SX1w9",
+    heading:"Grigori Rasputin – Sexueller Typ 1",
+    teaser:"SX1w9 · 1869–1916. Wandermönch, Heiler, Vertrauter der Zarenfamilie. Ein Mann, der Petersburgs Salons mit brennenden Augen verstörte und einen kranken Zarewitsch heilte, wo Ärzte scheiterten – Reinheit und Rausch in derselben Gestalt. Tierentsprechung: Schwarze Mamba.",
+    tags:["Geschichte"] },
   { route:"beruehmte-leonardo-dicaprio", name:"Leonardo DiCaprio", subtyp:"SX1w2",
     heading:"Leonardo DiCaprio – Sexueller Typ 1",
     teaser:"SX1w2 · geb. 1974. Schauspieler, Klimaaktivist. Fünfmal Oscar-nominiert, sechsmal angetreten – und im Moment des Triumphes sprach er über den Klimawandel, nicht über sich. Die Schwarze Mamba brennt nicht für Applaus. Tierentsprechung: Schwarze Mamba.",
@@ -4430,15 +4434,23 @@ function bindEvents() {
     });
   }
 
-  // Zugangscode-Toggle
-  const toggleCode = document.querySelector("#toggleCode");
-  if (toggleCode) {
-    toggleCode.addEventListener("click", () => {
-      const panel = document.querySelector("#panelCode");
-      const visible = panel.style.display !== "none";
-      panel.style.display = visible ? "none" : "";
-      toggleCode.textContent = visible ? "Ich habe einen Zugangscode" : "Zugangscode ausblenden";
-    });
+  // Tab-Umschalter Email / Zugangscode
+  const tabEmail = document.querySelector("#tabEmail");
+  const tabCode  = document.querySelector("#tabCode");
+  if (tabEmail && tabCode) {
+    const showTab = (tab) => {
+      const isEmail = tab === "email";
+      document.querySelector("#panelEmail").style.display = isEmail ? "" : "none";
+      document.querySelector("#panelCode").style.display  = isEmail ? "none" : "";
+      tabEmail.style.background   = isEmail ? "var(--gold-dark)" : "transparent";
+      tabEmail.style.color        = isEmail ? "var(--cream)" : "var(--muted)";
+      tabEmail.style.border       = isEmail ? "2px solid var(--gold-dark)" : "2px solid #ccc";
+      tabCode.style.background    = isEmail ? "transparent" : "var(--gold-dark)";
+      tabCode.style.color         = isEmail ? "var(--muted)" : "var(--cream)";
+      tabCode.style.border        = isEmail ? "2px solid #ccc" : "2px solid var(--gold-dark)";
+    };
+    tabEmail.addEventListener("click", () => showTab("email"));
+    tabCode.addEventListener("click",  () => showTab("code"));
   }
 
   // Firebase E-Mail-Login
@@ -10108,6 +10120,65 @@ function friedrichMerzPortraitPage() {
 }
 
 
+function rasputinPortraitPage() {
+  return shell(`
+    <div class="page-container">
+      ${pageHeader("Berühmte Persönlichkeiten")}
+      <div id="js-back-target" data-route="beruehmte-persoenlichkeiten" style="display:none;"></div>
+      <div class="krim-portrait-wrap">
+        <div class="krim-portrait-frame">
+          <img src="./assets/portraits/beruehmte-rasputin-portrait.jpg" alt="Grigori Rasputin" class="krim-portrait-img" loading="lazy" />
+        </div>
+        <p class="krim-portrait-name">Grigori Rasputin</p>
+        <p class="krim-portrait-typ">SX1w9 &middot; Sexueller Typ 1 mit Neunerflügel</p>
+        <p class="krim-portrait-subtitle">Wandermönch &amp; Heiler, 1869&ndash;1916 &ndash; Tierentsprechung: Schwarze Mamba</p>
+      </div>
+      <div class="page-content">
+
+        <h2 class="vb-section">1. Die Schwarze Mamba</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Die <strong>Schwarze Mamba</strong> ist das Tier der sexuellen Eins &ndash; ein Tier, das nicht durch Lautstärke wirkt, sondern durch die Unausweichlichkeit ihrer Präsenz. Wer ihr zu nahe kommt, spürt eine Intensität, der man sich kaum entziehen kann. Kein Zufallstier: Die Mamba tötet nicht aus Wut, sondern aus einem inneren Zwang zur Reinheit &ndash; einer Kraft, die keine halben Sachen kennt.</p>
+          <p class="vb-intro">Zeitgenossen beschrieben Rasputins Blick als das erste, was an ihm auffiel &ndash; durchdringend, unmöglich zu ignorieren, für manche unheimlich, für andere heilend. Petersburger Salondamen berichteten, sie hätten sich unter diesem Blick <em>vollständig gesehen</em> gefühlt, ausgezogen bis auf den Grund. Das ist die Schwarze Mamba am Werk: kein Charisma, das schmeichelt, sondern eines, das durchdringt.</p>
+        </blockquote>
+
+        <h2 class="vb-section">2. Die sexuelle Eins: Reinheit als brennendes Verlangen</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Die <strong>sexuelle Eins (SX1)</strong> ist der intensivste aller Einser-Subtypen. Während die selbsterhaltende Eins ihre Perfektion nach innen richtet und die soziale Eins die Welt reformieren will, kanalisiert die SX1 ihre Leidenschaft in den unmittelbaren, persönlichen Kontakt &ndash; in die eine Beziehung, das eine Anliegen, die eine Sache, der sie sich mit ganzer Kraft verschreibt. Naranjo nennt diesen Subtyp <em>Jealousy</em> &ndash; eine besitzergreifende Intensität im Erleben dessen, was sie für wahr und rein hält.</p>
+          <p class="vb-intro">Rasputins gesamter Weg beginnt mit dieser Logik: Als junger Mann in Sibirien durchlebte er eine religiöse Krise, die ihn zum Wanderpilger machte &ndash; Klöster, Athos, Jerusalem. Er kehrte mit der Überzeugung zurück, dass wahre Reinheit nicht durch Verzicht, sondern durch das vollständige Durchleben und Überwinden der Sünde erreicht wird. Das ist SX1-Logik in ihrer eigenwilligsten Form: kein sanftes Ideal, sondern ein Feuer, das durch den Widerspruch selbst hindurchmuss, um rein zu werden.</p>
+          <p class="vb-intro">Dieselbe Unbedingtheit trug ihn an den Hof. Als der Zarewitsch Alexei an der Bluterkrankheit litt und Ärzte machtlos blieben, wandte sich Zarin Alexandra an Rasputin &ndash; und wiederholt gelang ihm, wo die Medizin scheiterte, eine Linderung der Blutungen. Ob durch Suggestion, Ruhe oder tatsächliche Gabe: Die SX1 wirft sich mit ihrer ganzen Person in das eine Anliegen, dem sie sich verschrieben hat. Für Rasputin war das die Rettung dieses einen Kindes &ndash; und darüber die Bindung an die Zarenfamilie, die sein Leben und sein Ende bestimmen sollte.</p>
+        </blockquote>
+
+        <h2 class="vb-section">3. Der Neunerflügel: Die Ruhe im Sturm</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Der <strong>Neunerflügel (w9)</strong> verändert die sexuelle Eins auf entscheidende Weise. Die reine SX1 kann fordernd, hitzig, kaum zu bändigen wirken. Der Neunerflügel bringt eine gegenläufige Ruhe ins Spiel &ndash; eine Weite, eine scheinbare Gelassenheit, die das Feuer der Eins nach außen abmildert, ohne es zu löschen. Nach außen: Frieden. Im Inneren: derselbe unerbittliche Drang.</p>
+          <p class="vb-intro">Diese Kombination erklärt, warum Rasputin so vielen Menschen so unterschiedlich erschien. Am Hof wirkte er wie ein Fels der Ruhe &ndash; einfach, bäuerlich, ungerührt vom höfischen Zeremoniell, mit einer Präsenz, die beruhigte, wo andere in Panik gerieten. Zugleich lebte er ein Doppelleben aus Exzess und Buße, das keine Ruhe kannte: Trinkgelage, außereheliche Beziehungen, religiöse Verzückung im ständigen Wechsel. Der Neunerflügel verschleiert die Intensität der Eins &ndash; macht sie zugänglich, warm, fast schläfrig wirkend &ndash; während das eigentliche Feuer unverändert brennt.</p>
+          <p class="vb-intro">Auch seine Lehre trug diese Handschrift: Rasputin predigte, dass man der Sünde nicht ausweichen, sondern sich ihr ruhig, ohne Krampf, hingeben müsse, um durch sie hindurch zur Gnade zu finden. Keine Eins-typische Strenge, sondern eine neunertypische Gelassenheit gegenüber dem eigenen Fehlverhalten &ndash; verbunden mit dem unbeirrbaren SX1-Glauben, im Recht zu sein.</p>
+        </blockquote>
+
+        <h2 class="vb-section">4. Licht und Schatten der sexuellen Eins</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Das Licht der SX1 ist ihre Fähigkeit zur vollständigen Hingabe. Rasputins Zuwendung zum kranken Zarewitsch, seine Präsenz in Momenten größter Not der Zarenfamilie, seine Fähigkeit, Angst durch bloße Anwesenheit zu lindern &ndash; das war kein Kalkül. Das war die Mamba, die sich ganz in den Dienst einer Sache stellt, der sie sich verschrieben hat.</p>
+          <p class="vb-intro">Das Schicksalsmuster der Eins ist der <strong>Zorn</strong> &ndash; und bei der SX1 lebt dieser Zorn nah an der Oberfläche, verkleidet als moralische Gewissheit. Rasputins Überzeugung, ein von Gott gesandter Heiler zu sein, kippte zunehmend in Selbstgerechtigkeit: Er ließ sich am Hof huldigen, mischte sich in Staatsgeschäfte und Bischofsernennungen ein, umgab sich mit Anhängerinnen, die seine Lehre der Reinigung durch Sünde wörtlich nahmen. Die Presse machte aus ihm eine Sagengestalt der Verderbtheit &ndash; nicht ganz zu Unrecht, aber auch verzerrt durch den Skandal, den seine bloße Existenz am Hof auslöste.</p>
+          <p class="vb-intro">Am 30. Dezember 1916 wurde er von einer Gruppe adliger Verschwörer ermordet, die glaubten, mit seinem Tod die Monarchie retten zu können. Die zahlreichen Legenden um seinen Tod &ndash; vergiftet, erschossen, ertränkt, angeblich unmöglich zu töten &ndash; sagen weniger über Rasputin selbst als über die Wucht, mit der die SX1-Präsenz die Menschen um ihn herum erfasste: Man konnte sich seiner nicht entziehen, selbst im Sterben nicht.</p>
+        </blockquote>
+
+        <h2 class="vb-section">5. Der Heilungsweg: Vom Zwang zur wahren Reinheit</h2>
+        <blockquote class="vb-blockquote">
+          <p class="vb-intro">Der Heilungsweg der Eins führt vom Zorn zur Heiterkeit, von der Forderung nach Vollkommenheit zur Annahme dessen, was ist. Die wachsende Eins entdeckt: Reinheit ist kein Zustand, den man erzwingen oder erkämpfen muss. Sie ist bereits da, wenn der Kampf gegen sich selbst aufhört.</p>
+          <p class="vb-intro">Rasputins Weg blieb ein Weg des Zwangs &ndash; die Überzeugung, Reinheit nur durch das Durchleben des Exzesses erreichen zu können, hielt ihn in einer Schleife gefangen, aus der er nie heraustrat. Der Neunerflügel hätte ihm die stille Präsenz geben können, in der Vollkommenheit nicht mehr bewiesen werden muss. Stattdessen blieb die Mamba bis zuletzt im Angriff: ein Mann, der Heilung brachte und zugleich nie zur eigenen Ruhe fand.</p>
+        </blockquote>
+
+      </div>
+      ${relatedLinks([
+        {route:"beruehmte-persoenlichkeiten", label:"Alle berühmten Persönlichkeiten"},
+        {route:"subtype/sx1", label:"SX1 – Die Schwarze Mamba: Subtyp-Profil"},
+        {route:"beruehmte-leonardo-dicaprio", label:"Porträt: Leonardo DiCaprio (SX1w2)"},
+      ])}
+    </div>
+  `);
+}
+
+
 function leonardoDiCaprioPortraitPage() {
   return shell(`
     <div class="page-container">
@@ -10159,7 +10230,7 @@ function leonardoDiCaprioPortraitPage() {
       ${relatedLinks([
         {route:"beruehmte-persoenlichkeiten", label:"Alle berühmten Persönlichkeiten"},
         {route:"subtype/sx1", label:"SX1 – Die Schwarze Mamba: Subtyp-Profil"},
-        {route:"beruehmte-christoph-waltz", label:"Porträt: Christoph Waltz (SE1w2)"},
+        {route:"beruehmte-rasputin", label:"Porträt: Grigori Rasputin (SX1w9)"},
       ])}
     </div>
   `);
@@ -25520,49 +25591,6 @@ function dynamikBewusstseinszustandesPage() {
   return shell(`
     <div class="page-container">
       ${pageHeader("Die Dynamik des Bewusstseinszustandes", "Schaubilder · Bewusstseinsgrade")}
-
-      <!-- Schaubilder: Die Dynamik des Bewusstseinszustandes (Typ 1–9) -->
-      <div style="margin-bottom:2rem;">
-        <h2 style="font-size:1.05rem;color:var(--gold-dark);margin-bottom:1rem;">Schaubilder: Bewusstseinsgrade der 9 Typen</h2>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;">
-          <div style="text-align:center;">
-            <p style="font-size:.85rem;font-weight:700;color:var(--ink);margin:0 0 .4rem;">Typ 1</p>
-            <img src="https://res.cloudinary.com/ymooybdl/image/upload/v1784042033/kompass/assets/bewusstseinsgrade-typ-1.jpg" alt="Bewusstseinsgrade Typ 1" style="width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);" loading="lazy" />
-          </div>
-          <div style="text-align:center;">
-            <p style="font-size:.85rem;font-weight:700;color:var(--ink);margin:0 0 .4rem;">Typ 2</p>
-            <img src="https://res.cloudinary.com/ymooybdl/image/upload/v1784042035/kompass/assets/bewusstseinsgrade-typ-2.jpg" alt="Bewusstseinsgrade Typ 2" style="width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);" loading="lazy" />
-          </div>
-          <div style="text-align:center;">
-            <p style="font-size:.85rem;font-weight:700;color:var(--ink);margin:0 0 .4rem;">Typ 3</p>
-            <img src="https://res.cloudinary.com/ymooybdl/image/upload/v1784042037/kompass/assets/bewusstseinsgrade-typ-3.jpg" alt="Bewusstseinsgrade Typ 3" style="width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);" loading="lazy" />
-          </div>
-          <div style="text-align:center;">
-            <p style="font-size:.85rem;font-weight:700;color:var(--ink);margin:0 0 .4rem;">Typ 4</p>
-            <img src="https://res.cloudinary.com/ymooybdl/image/upload/v1784042039/kompass/assets/bewusstseinsgrade-typ-4.jpg" alt="Bewusstseinsgrade Typ 4" style="width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);" loading="lazy" />
-          </div>
-          <div style="text-align:center;">
-            <p style="font-size:.85rem;font-weight:700;color:var(--ink);margin:0 0 .4rem;">Typ 5</p>
-            <img src="https://res.cloudinary.com/ymooybdl/image/upload/v1784042041/kompass/assets/bewusstseinsgrade-typ-5.jpg" alt="Bewusstseinsgrade Typ 5" style="width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);" loading="lazy" />
-          </div>
-          <div style="text-align:center;">
-            <p style="font-size:.85rem;font-weight:700;color:var(--ink);margin:0 0 .4rem;">Typ 6</p>
-            <img src="https://res.cloudinary.com/ymooybdl/image/upload/v1784042043/kompass/assets/bewusstseinsgrade-typ-6.jpg" alt="Bewusstseinsgrade Typ 6" style="width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);" loading="lazy" />
-          </div>
-          <div style="text-align:center;">
-            <p style="font-size:.85rem;font-weight:700;color:var(--ink);margin:0 0 .4rem;">Typ 7</p>
-            <img src="https://res.cloudinary.com/ymooybdl/image/upload/v1784042045/kompass/assets/bewusstseinsgrade-typ-7.jpg" alt="Bewusstseinsgrade Typ 7" style="width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);" loading="lazy" />
-          </div>
-          <div style="text-align:center;">
-            <p style="font-size:.85rem;font-weight:700;color:var(--ink);margin:0 0 .4rem;">Typ 8</p>
-            <img src="https://res.cloudinary.com/ymooybdl/image/upload/v1784042047/kompass/assets/bewusstseinsgrade-typ-8.jpg" alt="Bewusstseinsgrade Typ 8" style="width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);" loading="lazy" />
-          </div>
-          <div style="text-align:center;">
-            <p style="font-size:.85rem;font-weight:700;color:var(--ink);margin:0 0 .4rem;">Typ 9</p>
-            <img src="https://res.cloudinary.com/ymooybdl/image/upload/v1784042049/kompass/assets/bewusstseinsgrade-typ-9.jpg" alt="Bewusstseinsgrade Typ 9" style="width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.15);" loading="lazy" />
-          </div>
-        </div>
-      </div>
       <p class="psycho-intro">Jeder Enneagrammtyp durchläuft neun Bewusstseinsstufen — von vollkommen unbewusst (Stufe 1) bis vollkommen bewusst (Stufe 9). Diese Skala zeigt, wie sich das Verhalten und die innere Haltung eines Typs mit steigendem Bewusstsein wandelt: von destruktiven Mustern hin zu seiner höchsten Entfaltung.</p>
       <div style="background:var(--surface-2,rgba(0,0,0,0.03));border-radius:10px;padding:.8rem 1.2rem;margin-bottom:1.8rem;display:flex;gap:1.2rem;flex-wrap:wrap;font-size:.85rem;">
         <span>🟢 Stufe 7–9: bewusst · heilsam</span>
@@ -32217,28 +32245,32 @@ function freischaltPage() {
 
         <div class="freischalt-card__divider"><span>Bereits gekauft? Jetzt anmelden:</span></div>
 
-        <!-- E-Mail-Login (neue Kunden) -->
+        <!-- Tab-Umschalter -->
+        <div style="display:flex;gap:.5rem;margin-bottom:1rem;">
+          <button id="tabEmail" style="flex:1;padding:.55rem;border-radius:8px;border:2px solid var(--gold-dark);background:var(--gold-dark);color:var(--cream);font-family:inherit;font-size:.9rem;cursor:pointer;font-weight:700;">E-Mail-Login</button>
+          <button id="tabCode" style="flex:1;padding:.55rem;border-radius:8px;border:2px solid #ccc;background:transparent;color:var(--muted);font-family:inherit;font-size:.9rem;cursor:pointer;">Zugangscode</button>
+        </div>
+
+        <!-- E-Mail-Login (Firebase) -->
         <div id="panelEmail">
           <input id="fbEmail" type="email" placeholder="Ihre E-Mail-Adresse" autocomplete="email" spellcheck="false"
             style="width:100%;box-sizing:border-box;padding:0.7rem 1rem;border:1px solid #ddd;border-radius:8px;font-size:1rem;font-family:inherit;margin-bottom:0.5rem;" />
-          <input id="fbPass" type="password" placeholder="Ihr Passwort (aus der Bestätigungs-E-Mail)" autocomplete="current-password"
+          <input id="fbPass" type="password" placeholder="Ihr Passwort" autocomplete="current-password"
             style="width:100%;box-sizing:border-box;padding:0.7rem 1rem;border:1px solid #ddd;border-radius:8px;font-size:1rem;font-family:inherit;margin-bottom:0.75rem;" />
           <button id="fbLoginBtn" class="primary" style="width:100%;">Anmelden</button>
           <p id="fbMsg" class="freischalt-card__msg"></p>
         </div>
 
-        <!-- Zugangscode (alte Kunden, ausklappbar) -->
-        <div style="margin-top:1rem;text-align:center;">
-          <button id="toggleCode" style="background:none;border:none;color:var(--muted);font-size:.85rem;cursor:pointer;text-decoration:underline;font-family:inherit;">
-            Ich habe einen Zugangscode
-          </button>
-        </div>
-        <div id="panelCode" style="display:none;margin-top:.75rem;">
-          <input id="unlockName" type="text" placeholder="Ihr Vor- und Zuname" autocomplete="name" spellcheck="false"
-            style="width:100%;box-sizing:border-box;padding:0.7rem 1rem;border:1px solid #ddd;border-radius:8px;font-size:1rem;font-family:inherit;margin-bottom:0.5rem;" />
-          <input id="unlockCode" type="text" placeholder="Zugangscode eingeben" autocomplete="off" spellcheck="false"
-            style="width:100%;box-sizing:border-box;padding:0.7rem 1rem;border:1px solid #ddd;border-radius:8px;font-size:1rem;font-family:inherit;margin-bottom:.75rem;" />
-          <button id="unlockBtn" class="primary" style="width:100%;">Aktivieren</button>
+        <!-- Zugangscode (alter Weg) -->
+        <div id="panelCode" style="display:none;">
+          <div style="margin-bottom:0.75rem;">
+            <input id="unlockName" type="text" placeholder="Ihr Vor- und Zuname" autocomplete="name" spellcheck="false"
+              style="width:100%;box-sizing:border-box;padding:0.7rem 1rem;border:1px solid #ddd;border-radius:8px;font-size:1rem;font-family:inherit;margin-bottom:0.5rem;" />
+          </div>
+          <div class="freischalt-card__input-row">
+            <input id="unlockCode" type="text" placeholder="Zugangscode eingeben" autocomplete="off" spellcheck="false" style="width:100%;margin-bottom:.75rem;" />
+            <button id="unlockBtn" class="primary" style="width:100%;">Aktivieren</button>
+          </div>
           <p id="unlockMsg" class="freischalt-card__msg"></p>
         </div>
 
@@ -32609,22 +32641,6 @@ function stillePage() {
         </div>
       </div>
 
-      <div style="margin:0 auto 1.5rem;max-width:420px;text-align:center;">
-        <p style="font-size:0.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 .7rem;">Dauer wählen</p>
-        <div style="display:flex;gap:.4rem;justify-content:center;flex-wrap:wrap;">
-          <button class="stille-dauer-btn" data-min="2"  style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--ink);">2 min</button>
-          <button class="stille-dauer-btn" data-min="3"  style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--ink);">3 min</button>
-          <button class="stille-dauer-btn" data-min="5"  style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--ink);">5 min</button>
-          <button class="stille-dauer-btn active" data-min="9" style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--copper);background:var(--paper);cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--copper);font-weight:700;">9 min</button>
-          <button class="stille-dauer-btn" data-min="12" style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--ink);">12 min</button>
-          <button class="stille-dauer-btn" data-min="15" style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--ink);">15 min</button>
-          <button class="stille-dauer-btn" data-min="20" style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--ink);">20 min</button>
-          <button class="stille-dauer-btn" data-min="30" style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--ink);">30 min</button>
-          <button class="stille-dauer-btn" data-min="60" style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--ink);">1 Std</button>
-          <button class="stille-dauer-btn" data-min="0"  style="padding:.35rem .7rem;border-radius:20px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--ink);">∞ endlos</button>
-        </div>
-      </div>
-
       <div style="margin:0 auto 1.5rem;max-width:480px;">
         <p style="font-size:0.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 .7rem;text-align:center;">Klangbegleitung wählen</p>
         <div id="stille-klang-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:.45rem;">
@@ -32819,41 +32835,13 @@ function _syntheseFallback(animal) {
 
 
 function _stilleInit() {
-  let DAUER = 9 * 60;
-  let ENDLOS = false;
+  const DAUER = 9 * 60;
   const arc = document.getElementById("stille-arc");
   const zeitEl = document.getElementById("stille-zeit");
   const statusEl = document.getElementById("stille-status");
   const startBtn = document.getElementById("stille-start");
   const resetBtn = document.getElementById("stille-reset");
   if (!arc || !startBtn) return;
-
-  // Dauer-Buttons
-  document.querySelectorAll(".stille-dauer-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      if (laedt) return; // kein Wechsel während Sitzung
-      document.querySelectorAll(".stille-dauer-btn").forEach(b => {
-        b.style.borderColor = "var(--border)";
-        b.style.background = "transparent";
-        b.style.color = "var(--ink)";
-        b.style.fontWeight = "normal";
-      });
-      btn.style.borderColor = "var(--copper)";
-      btn.style.background = "var(--paper)";
-      btn.style.color = "var(--copper)";
-      btn.style.fontWeight = "700";
-      const min = parseInt(btn.dataset.min);
-      ENDLOS = min === 0;
-      DAUER = ENDLOS ? 0 : min * 60;
-      verbleibend = DAUER;
-      if (ENDLOS) {
-        zeitEl.textContent = "∞";
-        arc.style.strokeDashoffset = "0";
-      } else {
-        aktualisiere();
-      }
-    });
-  });
 
   const UMFANG = 2 * Math.PI * 136;
   let verbleibend = DAUER;
@@ -32903,17 +32891,15 @@ function _stilleInit() {
   }
 
   function tick() {
-    if (!ENDLOS) {
-      verbleibend--;
-      aktualisiere();
-      if (verbleibend <= 0) {
-        clearInterval(interval); interval = null;
-        stopKlang();
-        gong(160);
-        statusEl.textContent = "Willkommen zurück.";
-        startBtn.textContent = "✓ Fertig";
-        startBtn.disabled = true;
-      }
+    verbleibend--;
+    aktualisiere();
+    if (verbleibend <= 0) {
+      clearInterval(interval); interval = null;
+      stopKlang();
+      gong(160);
+      statusEl.textContent = "Willkommen zurück.";
+      startBtn.textContent = "✓ Fertig";
+      startBtn.disabled = true;
     }
   }
 
@@ -32944,7 +32930,7 @@ function _stilleInit() {
     clearInterval(interval); interval = null; laedt = false;
     stopKlang();
     verbleibend = DAUER;
-    if (ENDLOS) { zeitEl.textContent = "∞"; arc.style.strokeDashoffset = "0"; } else { aktualisiere(); }
+    aktualisiere();
     statusEl.textContent = "bereit";
     startBtn.id = "stille-start";
     startBtn.textContent = "▶ Starten";
@@ -32972,12 +32958,26 @@ function _stilleInit() {
     // Real CC0 recordings — played via AudioContext (works on all devices incl. iOS)
     const REAL_SOUNDS = new Set(["regen","meer","wasserfall","wind","gewitter","sommerregen","wald","voegel","bach","wiese","kuckuck","blizzard","trommel","eule","white","pink","brown","feuer","hoehle","chimes","zug","katze","wal","delfin","bienen","wolf","seehund","aquarium","gewaesser","herzschlag","regenwald","nachtmeer","tropfen","zikaden","savanne","unterwasser","klangschale","om","morgenkonzert"]);
     if (REAL_SOUNDS.has(id)) {
-      // HTML Audio statt AudioContext → funktioniert mit AirPlay/HomePod auf iOS
-      const audio = new Audio(klangCdnUrl(id));
-      audio.loop = true;
-      audio.volume = 0.7;
-      audio.play().catch(() => {});
-      klangStop = () => { audio.pause(); audio.src = ""; };
+      if (!audioCtx) return;
+      let cancelled = false;
+      klangStop = () => { cancelled = true; };
+      const bufPromise = klangFetchCache[id] || fetch(klangCdnUrl(id)).then(r => r.arrayBuffer());
+      delete klangFetchCache[id];
+      bufPromise
+        .then(ab => cancelled ? null : audioCtx.decodeAudioData(ab))
+        .then(decoded => {
+          if (!decoded || cancelled || !audioCtx || audioCtx.state === "closed") return;
+          const src = audioCtx.createBufferSource();
+          src.buffer = decoded;
+          src.loop = true;
+          const g = audioCtx.createGain();
+          g.gain.value = 0.7;
+          src.connect(g);
+          g.connect(audioCtx.destination);
+          src.start();
+          klangStop = () => { cancelled = true; try { src.stop(); } catch(e) {} };
+        })
+        .catch(() => {});
       return;
     }
 
@@ -34803,6 +34803,7 @@ function render() {
       "beruehmte-romy-schneider": romySchneiderPortraitPage,
       "beruehmte-angelina-jolie": angelinaJoliePortraitPage,
       "beruehmte-friedrich-merz": friedrichMerzPortraitPage,
+      "beruehmte-rasputin": rasputinPortraitPage,
       "beruehmte-leonardo-dicaprio": leonardoDiCaprioPortraitPage,
       "beruehmte-greta-thunberg": gretaThunbergPortraitPage,
       "beruehmte-jan-ullrich": janUllrichPortraitPage,
@@ -35138,23 +35139,6 @@ document.addEventListener("click", (e) => {
   _solfeggioCtx = ctx; _solfeggioOsc = osc;
   btn.innerHTML = "&#9646;&#9646; Stopp"; btn.style.background = "var(--copper,#8b5e3c)"; btn.style.color = "#fff";
 });
-
-// Automatischer Versions-Check: holt index.html frisch vom Server und lädt neu wenn Version veraltet
-(function() {
-  const MY_VERSION = 'inhalt-v436';
-  setTimeout(function() {
-    fetch('./index.html', { cache: 'no-store' })
-      .then(function(r) { return r.text(); })
-      .then(function(html) {
-        var m = html.match(/bundle\.js\?v=([^"']+)/);
-        if (m && m[1] !== MY_VERSION) {
-          console.log('[Kompass] Neue Version gefunden:', m[1], '– lade neu');
-          location.reload(true);
-        }
-      })
-      .catch(function() {});
-  }, 3000); // 3 Sek nach Start prüfen
-})();
 
 render();
 setTimeout(showTagesimpuls, 600);

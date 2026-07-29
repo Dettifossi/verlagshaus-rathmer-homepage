@@ -23,6 +23,11 @@ export const subtypeProfiles = {
       "Wie kann ich sicher sein, dass ich nicht bedroht bin und Unterstützung habe?",
     coreSentence:
       "Wenn du nicht kämpfen musst, um sicher zu sein, entsteht Mut und Vertrauen.",
+    title_en: "The Fighter",
+    subtitle_en: "Sexual Instinct / Relational Instinct",
+    coreSentence_en: "When you no longer have to fight to feel safe, courage and trust emerge naturally.",
+    archetype_en: "Wolf",
+    focus_en: "Courage instead of control",
     daily: {
       topic: "Vertrauen wächst im nächsten Schritt",
       impulse: [
@@ -181,7 +186,7 @@ export const subtypeProfiles = {
         text:
           "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp.",
       },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -208,6 +213,11 @@ export const subtypeProfiles = {
     focus: "Ordnung entsteht aus Präsenz, nicht aus Kontrolle.",
     organismQuestion: "Wie kann ich richtig sein und Fehler vermeiden?",
     coreSentence: "Wenn du Ordnung zulässt, ohne dich zu verhärten, entsteht innere Sicherheit und echte Stabilität.",
+    title_en: "The Perfectionist",
+    subtitle_en: "Self-Preservation Instinct",
+    coreSentence_en: "When you no longer need everything to be perfect, life becomes lighter and more trustworthy.",
+    archetype_en: "Eagle",
+    focus_en: "Trust instead of control",
     daily: {
       topic: "Integrität & Ordnung",
       impulse: [
@@ -338,7 +348,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Bewahrer", text: "Ordnung entsteht aus Präsenz, nicht aus Kontrolle." },
       { name: "Körperübung", label: "Körper spüren", text: "Kontrolle durch Wahrnehmung ersetzen" },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -365,6 +375,11 @@ export const subtypeProfiles = {
     focus: "Wahre Veränderung entsteht aus Weisheit, nicht aus Urteil.",
     organismQuestion: "Wie kann ich richtig sein und Fehler vermeiden?",
     coreSentence: "Wenn du Vorbild bist, ohne zu richten, entsteht Würde, Klarheit und natürliche Autorität.",
+    title_en: "The Principled One",
+    subtitle_en: "Social Instinct",
+    coreSentence_en: "When your standards serve connection rather than judgment, your values become a gift to the world.",
+    archetype_en: "Goose",
+    focus_en: "Principles as a gift, not a verdict",
     daily: {
       topic: "Integrität & Ordnung",
       impulse: [
@@ -495,7 +510,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Reformer", text: "Wahre Veränderung entsteht aus Weisheit, nicht aus Urteil." },
       { name: "Körperübung", label: "Körper spüren", text: "Bewertung in Verständnis wandeln" },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -522,6 +537,11 @@ export const subtypeProfiles = {
     focus: "Wahre Veränderung beginnt, wenn Leidenschaft einem höheren Zweck dient.",
     organismQuestion: "Wie kann ich richtig sein und Fehler vermeiden?",
     coreSentence: "Wenn du dein Feuer nicht bekämpfst, sondern bewusst führst, wird Leidenschaft klar und heilsam.",
+    title_en: "The Zealot",
+    subtitle_en: "Sexual Instinct / Relational Instinct",
+    coreSentence_en: "When your fire fuels creation rather than correction, your passion becomes a transformative force.",
+    archetype_en: "Black Mamba",
+    focus_en: "Fire that creates rather than corrects",
     daily: {
       topic: "Integrität & Ordnung",
       impulse: [
@@ -652,7 +672,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Vollender", text: "Wahre Veränderung beginnt, wenn Leidenschaft einem höheren Zweck dient." },
       { name: "Körperübung", label: "Körper spüren", text: "intensive Energie kanalisieren" },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -679,6 +699,11 @@ export const subtypeProfiles = {
     focus: "Ich bin eine Quelle der Fürsorge, die zuerst mich selbst nährt.",
     organismQuestion: "Bin ich liebenswert, wenn ich für andere da bin?",
     coreSentence: "Wenn du deine eigenen Bedürfnisse ernst nimmst, entsteht Nähe ohne Erwartung.",
+    title_en: "The Caretaker",
+    subtitle_en: "Self-Preservation Instinct",
+    coreSentence_en: "When you allow yourself to receive care, you discover that your needs matter just as much as others'.",
+    archetype_en: "Hippopotamus",
+    focus_en: "Receiving as well as giving",
     daily: {
       topic: "Liebe & Fürsorge",
       impulse: [
@@ -809,7 +834,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Die Nährende", text: "Ich bin eine Quelle der Fürsorge, die zuerst mich selbst nährt." },
       { name: "Körperübung", label: "Körper spüren", text: "Grenzen wahrnehmen und achten" },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -836,6 +861,11 @@ export const subtypeProfiles = {
     focus: "Ich gebe aus Liebe – und empfange mit offenem Herzen.",
     organismQuestion: "Bin ich liebenswert, wenn ich für andere da bin?",
     coreSentence: "Wenn du nicht gebraucht werden musst, wird deine Liebe frei, großzügig und liebevoll.",
+    title_en: "The Helper",
+    subtitle_en: "Social Instinct",
+    coreSentence_en: "When you give from fullness rather than need, your generosity becomes truly free.",
+    archetype_en: "Golden Retriever",
+    focus_en: "Generosity from fullness",
     daily: {
       topic: "Liebe & Fürsorge",
       impulse: [
@@ -966,7 +996,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Hilfreiche", text: "Ich gebe aus Liebe – und empfange mit offenem Herzen." },
       { name: "Körperübung", label: "Körper spüren", text: "Grenzen spüren und achten" },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -993,6 +1023,11 @@ export const subtypeProfiles = {
     focus: "Ich gebe mich ganz hin und empfange echte Verbindung.",
     organismQuestion: "Bin ich liebenswert, wenn ich für andere da bin?",
     coreSentence: "Wenn du Liebe nicht erobern musst, kann echte Verbundenheit dich wirklich erreichen.",
+    title_en: "The Passionate One",
+    subtitle_en: "Sexual Instinct / Relational Instinct",
+    coreSentence_en: "When you love without needing to be indispensable, your warmth becomes a gift rather than a claim.",
+    archetype_en: "Camel",
+    focus_en: "Love without conditions",
     daily: {
       topic: "Liebe & Fürsorge",
       impulse: [
@@ -1123,7 +1158,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Die Liebende", text: "Ich gebe mich ganz hin und empfange echte Verbindung." },
       { name: "Körperübung", label: "Körper spüren", text: "Eifersucht und Besitzdenken lösen" },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -1150,6 +1185,11 @@ export const subtypeProfiles = {
     focus: "Ich passe mich an, ohne mich zu verlieren, und finde Halt in mir selbst.",
     organismQuestion: "Wie kann ich erfolgreich sein und dabei meinen Wert beweisen?",
     coreSentence: "Wenn du aufhörst, nur zu funktionieren, erscheint dein Wert ohne Leistung und Anpassung.",
+    title_en: "The Pragmatist",
+    subtitle_en: "Self-Preservation Instinct",
+    coreSentence_en: "When you no longer need achievement to feel worthy, your competence becomes effortless.",
+    archetype_en: "Raccoon",
+    focus_en: "Worth without performance",
     daily: {
       topic: "Leistung & Erfolg",
       impulse: [
@@ -1280,7 +1320,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Macher", text: "Ich passe mich an, ohne mich zu verlieren, und finde Halt in mir selbst." },
       { name: "Körperübung", label: "Körper spüren", text: "sich selbst wahrnehmen" },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -1307,6 +1347,11 @@ export const subtypeProfiles = {
     focus: "Ich nutze meine Fähigkeiten zum Wohl des Ganzen und inspiriere andere durch …",
     organismQuestion: "Wie kann ich erfolgreich sein und dabei meinen Wert beweisen?",
     coreSentence: "Wenn du nicht glänzen musst, wird deine Wirkung wahrhaftig, menschlich und stark.",
+    title_en: "The Achiever",
+    subtitle_en: "Social Instinct",
+    coreSentence_en: "When your success serves the whole rather than your image, your effectiveness truly inspires.",
+    archetype_en: "Cheetah",
+    focus_en: "Success that serves the whole",
     daily: {
       topic: "Leistung & Erfolg",
       impulse: [
@@ -1437,7 +1482,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Die Strahlende", text: "Ich nutze meine Fähigkeiten zum Wohl des Ganzen und inspiriere andere durch mein echtes Sein." },
       { name: "Körperübung", label: "Körper spüren", text: "Erholung bewusst einplanen" },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -1464,6 +1509,11 @@ export const subtypeProfiles = {
     focus: "Ich bin genug, auch wenn ich nicht performe – meine echte Ausstrahlung zieht an.",
     organismQuestion: "Wie kann ich erfolgreich sein und dabei meinen Wert beweisen?",
     coreSentence: "Wenn du dich nicht inszenieren musst, entsteht echte Ausstrahlung aus innerem Wert.",
+    title_en: "The Radiant One",
+    subtitle_en: "Sexual Instinct / Relational Instinct",
+    coreSentence_en: "When you no longer need to perform to be seen, authentic charisma emerges from within.",
+    archetype_en: "Peacock",
+    focus_en: "Authentic radiance from within",
     daily: {
       topic: "Leistung & Erfolg",
       impulse: [
@@ -1594,7 +1644,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Verführer", text: "Ich bin genug, auch wenn ich nicht performe – meine echte Ausstrahlung zieht an." },
       { name: "Körperübung", label: "Körper spüren", text: "Erregung bewusst kanalisieren" },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -1621,6 +1671,11 @@ export const subtypeProfiles = {
     focus: "Frieden entsteht, wenn du aufhörst, dich selbst zu verleugnen.",
     organismQuestion: "Wer bin ich wirklich und was macht mich einzigartig?",
     coreSentence: "Wenn du Schmerz nicht still beweisen musst, entsteht würdevolle Lebendigkeit und innere Kraft.",
+    title_en: "The Quiet Endurer",
+    subtitle_en: "Self-Preservation Instinct",
+    coreSentence_en: "When you let your depth be seen without shame, your sensitivity becomes a source of strength.",
+    archetype_en: "Dove",
+    focus_en: "Depth as strength",
     daily: {
       topic: "Tiefe & Gefühl",
       impulse: [
@@ -1751,7 +1806,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Die Beständige", text: "Frieden entsteht, wenn du aufhörst, dich selbst zu verleugnen." },
       { name: "Körperübung", label: "Körper spüren", text: "kreativen Ausdruck pflegen" },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -1778,6 +1833,11 @@ export const subtypeProfiles = {
     focus: "Ich bin wertvoll, genau so, wie ich bin. In Echtheit inspiriere ich echte …",
     organismQuestion: "Wer bin ich wirklich und was macht mich einzigartig?",
     coreSentence: "Wenn du deinen Mangel nicht festhältst, entsteht Zugehörigkeit, Selbstannahme und stille Würde.",
+    title_en: "The Sufferer",
+    subtitle_en: "Social Instinct",
+    coreSentence_en: "When you allow joy without guilt, your emotional depth opens into genuine connection.",
+    archetype_en: "Armadillo",
+    focus_en: "Joy without guilt",
     daily: {
       topic: "Tiefe und Zugehörigkeit",
       impulse: [
@@ -1908,7 +1968,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Schöpfer", text: "Ich bin wertvoll, genau so, wie ich bin. In Echtheit inspiriere ich echte Verbindung." },
       { name: "Körperübung", label: "Körper spüren", text: "Steh auf, strecke dich, spüre deinen Körper von innen." },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -1935,6 +1995,11 @@ export const subtypeProfiles = {
     focus: "Ich bin einzigartig – und genau darin liegt meine Verbindung zur Welt.",
     organismQuestion: "Wer bin ich wirklich und was macht mich einzigartig?",
     coreSentence: "Wenn du Intensität nicht erzwingen musst, wird Tiefe zu Liebe ohne Drama.",
+    title_en: "The Passionate Individualist",
+    subtitle_en: "Sexual Instinct / Relational Instinct",
+    coreSentence_en: "When your longing becomes presence rather than pursuit, you find what you have always sought.",
+    archetype_en: "Chihuahua",
+    focus_en: "Longing becomes presence",
     daily: {
       topic: "Intensität und emotionale Tiefe",
       impulse: [
@@ -2065,7 +2130,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Leidenschaftliche", text: "Ich bin einzigartig – und genau darin liegt meine Verbindung zur Welt." },
       { name: "Körperübung", label: "Körper spüren", text: "kreativen Ausdruck kultivieren" },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -2092,6 +2157,11 @@ export const subtypeProfiles = {
     focus: "Ich vertraue auf mein Wissen und wähle, was mir wirklich dient.",
     organismQuestion: "Wie kann ich verstehen und sicher sein, dass ich kompetent bin?",
     coreSentence: "Wenn du dem Leben wieder Zugang gewährst, entsteht Sicherheit ohne ständigen Rückzug.",
+    title_en: "The Observer",
+    subtitle_en: "Self-Preservation Instinct",
+    coreSentence_en: "When you step into life rather than just watching it, your understanding becomes wisdom in action.",
+    archetype_en: "Owl",
+    focus_en: "Understanding through participation",
     daily: {
       topic: "Wissen & Weisheit",
       impulse: [
@@ -2222,7 +2292,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Beobachter", text: "Ich vertraue auf mein Wissen und wähle, was mir wirklich dient." },
       { name: "Körperübung", label: "Körper spüren", text: "Rückzug zur Regeneration" },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -2249,6 +2319,11 @@ export const subtypeProfiles = {
     focus: "Ich teile mein Wissen in Verbindung und stärke damit das Ganze.",
     organismQuestion: "Wie kann ich verstehen und sicher sein, dass ich kompetent bin?",
     coreSentence: "Wenn Wissen nicht über Menschen steht, entsteht wirkliche Weisheit und lebendiger Kontakt.",
+    title_en: "The Professor",
+    subtitle_en: "Social Instinct",
+    coreSentence_en: "When you share your knowledge as a bridge rather than a boundary, you become a true guide.",
+    archetype_en: "Octopus",
+    focus_en: "Knowledge as a bridge",
     daily: {
       topic: "Wissen & Weisheit",
       impulse: [
@@ -2379,7 +2454,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Weise", text: "Ich teile mein Wissen in Verbindung und stärke damit das Ganze." },
       { name: "Körperübung", label: "Körper spüren", text: "Rückzug zur Regeneration" },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -2406,6 +2481,11 @@ export const subtypeProfiles = {
     focus: "Ich darf mich zeigen und verbinden, ohne mich zu verlieren.",
     organismQuestion: "Wie kann ich verstehen und sicher sein, dass ich kompetent bin?",
     coreSentence: "Wenn du dich nicht nur im Geheimen öffnest, wird Nähe tragfähig und frei.",
+    title_en: "The Confidant",
+    subtitle_en: "Sexual Instinct / Relational Instinct",
+    coreSentence_en: "When you trust that connection nourishes rather than depletes you, intimacy becomes possible.",
+    archetype_en: "Hedgehog",
+    focus_en: "Intimacy that nourishes",
     daily: {
       topic: "Wissen & Weisheit",
       impulse: [
@@ -2536,7 +2616,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Verbundene", text: "Ich darf mich zeigen und verbinden, ohne mich zu verlieren." },
       { name: "Körperübung", label: "Körper spüren", text: "langsame, tiefe Atmung" },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -2563,6 +2643,11 @@ export const subtypeProfiles = {
     focus: "Ich wähle Vertrauen statt Angst und Mut statt Kontrolle.",
     organismQuestion: "Wie kann ich sicher sein, dass ich nicht bedroht bin und Unterstützung habe?",
     coreSentence: "Wenn du deinem Körper vertraust, entsteht Ruhe, auch wenn nicht alles sicher ist.",
+    title_en: "The Anxious One",
+    subtitle_en: "Self-Preservation Instinct",
+    coreSentence_en: "When you discover that safety can grow from within, anxiety loses its grip on your life.",
+    archetype_en: "Rabbit",
+    focus_en: "Safety grows from within",
     daily: {
       topic: "Angst & Treue",
       impulse: [
@@ -2693,7 +2778,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Hüter", text: "Ich wähle Vertrauen statt Angst und Mut statt Kontrolle." },
       { name: "Körperübung", label: "Körper spüren", text: "Steh auf, strecke dich, spüre deinen Körper von innen." },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -2720,6 +2805,11 @@ export const subtypeProfiles = {
     focus: "Ich wähle Vertrauen statt Angst und Verbundenheit statt Kontrolle.",
     organismQuestion: "Wie kann ich sicher sein, dass ich nicht bedroht bin und Unterstützung habe?",
     coreSentence: "Wenn Regeln nicht dein Gewissen ersetzen, entsteht innere Standfestigkeit und Freiheit.",
+    title_en: "The Loyalist",
+    subtitle_en: "Social Instinct",
+    coreSentence_en: "When your loyalty flows from trust rather than fear, your commitment becomes a conscious choice.",
+    archetype_en: "Meerkat",
+    focus_en: "Loyalty from trust, not fear",
     daily: {
       topic: "Angst & Zugehörigkeit",
       impulse: [
@@ -2850,7 +2940,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Loyale", text: "Ich wähle Vertrauen statt Angst und Verbundenheit statt Kontrolle." },
       { name: "Körperübung", label: "Körper spüren", text: "Steh auf, strecke dich, spüre deinen Körper von innen." },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -2877,6 +2967,11 @@ export const subtypeProfiles = {
     focus: "Ich wähle das Leben in seiner ganzen Tiefe und schenke meine Freude der Welt.",
     organismQuestion: "Wie kann ich mehr Möglichkeiten entdecken und Schwierigkeiten vermeiden?",
     coreSentence: "Wenn du genug hast, ohne mehr zu brauchen, entsteht wirklicher Genuss und innere Ruhe.",
+    title_en: "The Sensualist",
+    subtitle_en: "Self-Preservation Instinct",
+    coreSentence_en: "When you allow yourself to stay with what is, pleasure deepens into genuine satisfaction.",
+    archetype_en: "Gorilla",
+    focus_en: "Presence deepens pleasure",
     daily: {
       topic: "Begeisterung & Fülle",
       impulse: [
@@ -3003,7 +3098,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Genießer", text: "Ich wähle das Leben in seiner ganzen Tiefe und schenke meine Freude der Welt." },
       { name: "Körperübung", label: "Körper spüren", text: "Steh auf, strecke dich, spüre deinen Körper von innen." },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -3030,6 +3125,11 @@ export const subtypeProfiles = {
     focus: "Ich wähle das Leben in seiner ganzen Tiefe und schenke meine Freude der Welt.",
     organismQuestion: "Wie kann ich mehr Möglichkeiten entdecken und Schwierigkeiten vermeiden?",
     coreSentence: "Wenn du nicht gut sein musst, wird deine Freude ehrlich, frei und nahbar.",
+    title_en: "The Visionary",
+    subtitle_en: "Social Instinct",
+    coreSentence_en: "When your vision serves the whole rather than your own escape, your enthusiasm becomes truly inspiring.",
+    archetype_en: "Beaver",
+    focus_en: "Vision that serves the whole",
     daily: {
       topic: "Begeisterung & Fülle",
       impulse: [
@@ -3156,7 +3256,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Enthusiast", text: "Ich wähle das Leben in seiner ganzen Tiefe und schenke meine Freude der Welt." },
       { name: "Körperübung", label: "Körper spüren", text: "Steh auf, strecke dich, spüre deinen Körper von innen." },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -3183,6 +3283,11 @@ export const subtypeProfiles = {
     focus: "Ich tauche tief in das Leben ein und ermögliche mir echte Verbundenheit.",
     organismQuestion: "Wie kann ich mehr Möglichkeiten entdecken und Schwierigkeiten vermeiden?",
     coreSentence: "Wenn du Tiefe zulässt, statt das Besondere zu jagen, entsteht echte Erfüllung.",
+    title_en: "The Adventurer",
+    subtitle_en: "Sexual Instinct / Relational Instinct",
+    coreSentence_en: "When you meet depth without fleeing, your joy becomes real rather than restless.",
+    archetype_en: "Chimpanzee",
+    focus_en: "Joy through depth",
     daily: {
       topic: "Begeisterung & Fülle",
       impulse: [
@@ -3309,7 +3414,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Abenteurer", text: "Ich tauche tief in das Leben ein und ermögliche mir echte Verbundenheit." },
       { name: "Körperübung", label: "Körper spüren", text: "Steh auf, strecke dich, spüre deinen Körper von innen." },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -3336,6 +3441,11 @@ export const subtypeProfiles = {
     focus: "Ich nutze meine Kraft, um zu schützen, zu gestalten und das Leben zu stärken.",
     organismQuestion: "Wie kann ich meine Grenzen wahren, für mich einstehen und schützen, was mir wichtig ist?",
     coreSentence: "Wenn du Kontrolle loslässt, bleibt deine Kraft lebendig, klar und ohne Härte.",
+    title_en: "The Survivor",
+    subtitle_en: "Self-Preservation Instinct",
+    coreSentence_en: "When you no longer need to fight to feel powerful, your strength becomes a force for protection.",
+    archetype_en: "Orangutan",
+    focus_en: "Strength that protects",
     daily: {
       topic: "Macht & Kontrolle",
       impulse: [
@@ -3462,7 +3572,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Beschützer", text: "Ich nutze meine Kraft, um zu schützen, zu gestalten und das Leben zu stärken." },
       { name: "Körperübung", label: "Körper spüren", text: "Steh auf, strecke dich, spüre deinen Körper von innen." },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -3489,6 +3599,11 @@ export const subtypeProfiles = {
     focus: "Ich nutze meine Kraft weise, um zu schützen, zu führen und das Leben zu …",
     organismQuestion: "Wie kann ich meine Grenzen wahren, für mich einstehen und schützen, was mir wichtig ist?",
     coreSentence: "Wenn Schutz nicht Besitz wird, entsteht starke, gerechte und vertrauensvolle Führung.",
+    title_en: "The Protector",
+    subtitle_en: "Social Instinct",
+    coreSentence_en: "When your power serves justice rather than dominance, your strength becomes a true shelter.",
+    archetype_en: "Lion",
+    focus_en: "Power in service of justice",
     daily: {
       topic: "Macht & Kontrolle",
       impulse: [
@@ -3615,7 +3730,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Anführer", text: "Ich nutze meine Kraft weise, um zu schützen, zu führen und das Leben zu gestalten." },
       { name: "Körperübung", label: "Körper spüren", text: "Steh auf, strecke dich, spüre deinen Körper von innen." },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -3642,6 +3757,11 @@ export const subtypeProfiles = {
     focus: "Ich nutze meine magnetische Kraft, um zu lieben, zu schützen und das Leben in …",
     organismQuestion: "Wie kann ich meine Grenzen wahren, für mich einstehen und schützen, was mir wichtig ist?",
     coreSentence: "Wenn du Intensität nicht mit Kampf verwechselst, entsteht Nähe und Vertrauen ohne Machtprobe.",
+    title_en: "The Challenger",
+    subtitle_en: "Sexual Instinct / Relational Instinct",
+    coreSentence_en: "When your intensity meets tenderness, your power becomes the ground for genuine union.",
+    archetype_en: "Crocodile",
+    focus_en: "Intensity meets tenderness",
     daily: {
       topic: "Macht & Kontrolle",
       impulse: [
@@ -3768,7 +3888,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Die Mächtige", text: "Ich nutze meine magnetische Kraft, um zu lieben, zu schützen und das Leben in seiner Tiefe zu erfahren." },
       { name: "Körperübung", label: "Körper spüren", text: "Steh auf, strecke dich, spüre deinen Körper von innen." },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -3795,6 +3915,11 @@ export const subtypeProfiles = {
     focus: "Ich nutze meine Kraft, um in innerem Frieden zu leben und das Leben bewusst …",
     organismQuestion: "Wie kann ich in Frieden bleiben und Harmonie bewahren, in mir und um mich herum?",
     coreSentence: "Wenn du dich selbst wichtig nimmst und nicht betäubst, entsteht lebendige innere Präsenz.",
+    title_en: "The Comfort-Seeker",
+    subtitle_en: "Self-Preservation Instinct",
+    coreSentence_en: "When you discover that your presence matters, the need to disappear quietly fades away.",
+    archetype_en: "Elephant",
+    focus_en: "Your presence matters",
     daily: {
       topic: "Weisheit & Gerechtigkeit",
       impulse: [
@@ -3921,7 +4046,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Friedvolle", text: "Ich nutze meine Kraft, um in innerem Frieden zu leben und das Leben bewusst zu gestalten." },
       { name: "Körperübung", label: "Körper spüren", text: "Steh auf, strecke dich, spüre deinen Körper von innen." },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -3948,6 +4073,11 @@ export const subtypeProfiles = {
     focus: "Ich nutze meine Kraft, um in Verbindung zu leben und das Leben bewusst zu …",
     organismQuestion: "Wie kann ich in Frieden bleiben und Harmonie bewahren, in mir und um mich herum?",
     coreSentence: "Wenn Zugehörigkeit nicht Selbstvergessenheit bedeutet, entsteht echte und stabile Gemeinschaft.",
+    title_en: "The Benefactor",
+    subtitle_en: "Social Instinct",
+    coreSentence_en: "When you include yourself in the harmony you create, your peace becomes complete.",
+    archetype_en: "Buffalo",
+    focus_en: "Include yourself in the harmony",
     daily: {
       topic: "Harmonie & Ausgleich",
       impulse: [
@@ -4074,7 +4204,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Vermittler", text: "Ich nutze meine Kraft, um in Verbindung zu leben und das Leben bewusst zu gestalten." },
       { name: "Körperübung", label: "Körper spüren", text: "Steh auf, strecke dich, spüre deinen Körper von innen." },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -4101,6 +4231,11 @@ export const subtypeProfiles = {
     focus: "Ich nutze meine Kraft, um Liebe, Mitgefühl und Weisheit zu leben und das …",
     organismQuestion: "Wie kann ich in Frieden bleiben und Harmonie bewahren, in mir und um mich herum?",
     coreSentence: "Wenn Verschmelzung nicht zum Selbstverlust führt, kann Liebe wirklich zur Begegnung werden.",
+    title_en: "The Merging One",
+    subtitle_en: "Sexual Instinct / Relational Instinct",
+    coreSentence_en: "When you stay with yourself while opening to another, union becomes possible without losing yourself.",
+    archetype_en: "Sloth",
+    focus_en: "Union without losing yourself",
     daily: {
       topic: "Verschmelzung & Frieden",
       impulse: [
@@ -4227,7 +4362,7 @@ export const subtypeProfiles = {
       { name: "Merksatz", label: "Der Verbindende", text: "Ich nutze meine Kraft, um Liebe, Mitgefühl und Weisheit zu leben und das Leben in seiner Einheit zu ehren." },
       { name: "Körperübung", label: "Körper spüren", text: "Steh auf, strecke dich, spüre deinen Körper von innen." },
       { name: "Heilmittel-Impuls", label: "Dein Heilmittel", text: "Homöopathie, Bachblüten, Edelsteine und Tee – abgestimmt auf deinen Subtyp." },
-      { name: "Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
+      { name: "In Stille sitzen", label: "2 Minuten Stille", text: "Setze dich aufrecht hin, schließe die Augen, und tue zwei Minuten lang nichts. Lass den Körper seine eigene Intelligenz zeigen." },
       { name: "Aromatherapie", label: "Dein Öl-Impuls", text: "Wähle heute bewusst ein ätherisches Öl passend zu deinem Subtyp und atme es dreimal tief ein." },
       { name: "Blickqualität", label: "Selbst-Beobachtung", text: "Wie schaust du heute in die Welt? Beobachte deine Blickrichtung, Spannung in den Augen und die Qualität deiner Aufmerksamkeit." },
     ],
@@ -4983,7 +5118,7 @@ export const werkRegister = [
 // ---------------------------------------------------------------------------
 //  subtypeDetails — aufgeteilt in data/subtypes/<key>.js
 // ---------------------------------------------------------------------------
-export { subtypeDetails } from './subtypes/index.js?v=2026-06-29-burnout-v1';
+export { subtypeDetails } from './subtypes/index.js?v=2026-07-17-archetype-v1';
 
 
 export const uiText = {
@@ -5021,8 +5156,11 @@ export const uiText = {
       { route: "quiz", label: "Quiz" },
       { route: "zitate", label: "Zitate der Weisen" },
       { route: "beruehmte-persoenlichkeiten", label: "Ber\xfchmte Pers\xf6nlichkeiten" },
+      { route: "enneagramm-homoeopathie", label: "Enneagramm meets Hom\xf6opathie" },
+      { route: "enneagramm-astrologie", label: "Enneagramm meets Astrologie" },
       { route: "kriminalpsychologie", label: "Spannende Kriminalf\xe4lle (Kriminalpsychologie)" },
       { route: "tierlexikon", label: "Tierlexikon" },
+      { route: "tritypen", label: "Die 27 Tritypen des Enneagramms (f\xfcr Fortgeschrittene)" },
     ]},
     { route: "schaubilder", label: "Schaubilder", dropdown: [
       { route: "60-sekunden-scan", label: "60-Sekunden-Scan" },
@@ -5299,10 +5437,10 @@ export const uiText = {
     },
     tools: {
       suffix: "Werkzeuge",
-      headline: "Was hilft mir jetzt?",
+      headline: "Was hilft mir heute?",
       premiumLater: "Premium später",
       healingCompass: "Heilmittel-Kompass",
-      healingCompassText: "Akupressur, Bachblüten, Schüßler-Salze, Edelsteine und Kräutertees können hier modular ergänzt werden.",
+      healingCompassText: "Homöopathie, Bachblüten, Schüßler-Salze, Edelsteine und Kräutertees — abgestimmt auf Ihren Subtyp.",
     },
     healing: {
       eyebrow: "Heilmittel-Kompass",
@@ -5364,8 +5502,8 @@ export const uiText = {
     },
     practice: {
       eyebrow: "Praxis & Heilung",
-      headline: "Körperarbeit als Zugang",
-      lead: "Dieser Bereich sammelt 2-Punkte-Integration, Akupressur, Atemimpulse, stilles Sitzen und naturheilkundliche Praxisfelder.",
+      headline: "Deine Praxis-Werkzeuge",
+      lead: "2-Punkte-Integration · Atemimpuls · Merksatz · Körperübung · Heilmittel-Impuls · In Stille sitzen · Aromatherapie · Blickqualität · TCM-Profil",
       se1Pattern: "SE1 · Muster",
       twoPoint: "2-Punkte-Integration",
       twoPointText: "Solarplexus/Oberbauch und Unterbauch/Beckenbereich werden gleichzeitig gehalten. Die Praxis ist in der Wissensbasis vollständig angelegt.",
@@ -5499,15 +5637,15 @@ export const remedyGlossary = {
 };
 
 export const aetherischeOele = [
-  { typ: 1, typLabel: "Typ 1 · Der Perfektionist", name: "Mandarine", urWunde: "Ich bin fehlerhaft und unvollkommen.", wirkung: "Erlaubt Leichtigkeit und unperfekte Fröhlichkeit.", image: "https://res.cloudinary.com/ymooybdl/image/upload/f_auto,q_auto/kompass/assets/heilmittel/ätherische-Öle/typ-1.jpg", vertiefung: "Die Eins trägt einen unermüdlichen inneren Richter, der jeden Fehler und jede Unvollkommenheit sofort registriert. Genau hier wirkt die Mandarine: Ihr warmer, sonnig-süßer Duft zählt zu den unbeschwertesten, fast kindlichen Aromen überhaupt. Er entspannt die nach innen gerichtete Strenge, löst die verkrampfte Pflichthaltung und öffnet einen Raum, in dem Leichtigkeit wieder erlaubt ist. Wo der Anspruch herrscht, fehlerlos sein zu müssen, erinnert die Mandarine den Organismus daran, dass Freude und Spiel kein Versagen sind – sondern Heilung." },
-  { typ: 2, typLabel: "Typ 2 · Der Helfer", name: "Palmarosa", urWunde: "Ich bin wertlos ohne Nutzen.", wirkung: "Nährt die Selbstliebe und schenkt gesunde Abgrenzung.", image: "https://res.cloudinary.com/ymooybdl/image/upload/f_auto,q_auto/kompass/assets/heilmittel/ätherische-Öle/typ-2.jpg", vertiefung: "Die Zwei glaubt tief im Inneren, nur durch Nützlichkeit liebenswert zu sein, und gibt sich selbst auf, um gebraucht zu werden. Palmarosa, ein rosenähnliches Gras, gilt als großes Öl der Herzpflege: Es spendet Feuchtigkeit und Nährung auf allen Ebenen und richtet die Liebe wieder nach innen. So muss Zuwendung nicht länger durch Leistung verdient werden – sie darf aus der eigenen Quelle fließen. Palmarosa stärkt zugleich die Fähigkeit zur gesunden Abgrenzung, sodass die Zwei geben kann, ohne sich zu verlieren. Aus dem ‚Ich bin wertlos ohne Nutzen‘ wird ein stilles ‚Ich bin liebenswert, einfach weil ich bin‘." },
-  { typ: 3, typLabel: "Typ 3 · Der Leistungsträger", name: "Majoran", urWunde: "Ich bin nur wertvoll durch Leistung.", wirkung: "Zwingt das System sanft in die Ruhe und nimmt die Versagensangst.", image: "https://res.cloudinary.com/ymooybdl/image/upload/f_auto,q_auto/kompass/assets/heilmittel/ätherische-Öle/typ-3.jpg", vertiefung: "Die Drei läuft auf Hochtouren – Stillstand fühlt sich wie Versagen an, der eigene Wert scheint allein an der Leistung zu hängen. Majoran ist eines der am stärksten beruhigenden Öle der Aromatherapie: Es spricht den Parasympathikus an, drosselt das aufgedrehte System und dämpft den inneren Antreiber. Wo die Drei sonst nur über das Tun existieren kann, schenkt Majoran die Erfahrung, auch in der Ruhe wertvoll zu sein. Er nimmt der Versagensangst die Schärfe und lässt zu, dass der Organismus endlich loslässt. So wird körperlich spürbar: Du musst nichts leisten, um zu genügen." },
-  { typ: 4, typLabel: "Typ 4 · Der Individualist", name: "Zirbelkiefer", urWunde: "Ich bin anders, ich gehöre nicht dazu.", wirkung: "Schenkt schlichte Bodenhaftung und ein Gefühl von Heimat.", image: "https://res.cloudinary.com/ymooybdl/image/upload/f_auto,q_auto/kompass/assets/heilmittel/ätherische-Öle/typ-4.jpg", vertiefung: "Die Vier fühlt sich anders, fremd, innerlich nie ganz zugehörig – eine leise Sehnsucht nach Heimat begleitet sie. Die Zirbelkiefer, die ‚Königin der Alpen‘, verströmt einen erdig-warmen Waldduft, der nachweislich beruhigt und sogar die Herzfrequenz im Schlaf senkt. Sie schenkt schlichte Bodenhaftung und das körperliche Gefühl, gehalten und am richtigen Ort zu sein. Wo die Vier sich ins Besondere und Vermisste verliert, holt die Zirbel sie sanft in die einfache Gegenwart zurück. Aus ‚Ich gehöre nicht dazu‘ wird ein geerdetes ‚Ich bin daheim in mir selbst‘." },
-  { typ: 5, typLabel: "Typ 5 · Der Beobachter", name: "Orange süß", urWunde: "Die Welt saugt mich aus.", wirkung: "Schmilzt kühle Isolation mit Herzenswärme.", image: "https://res.cloudinary.com/ymooybdl/image/upload/f_auto,q_auto/kompass/assets/heilmittel/ätherische-Öle/typ-5.jpg", vertiefung: "Die Fünf zieht sich zurück, um ihre knappen Kräfte zu schützen – Nähe wirkt schnell wie ein Aussaugen der eigenen Reserven. Die süße Orange ist ein zutiefst herzöffnendes, geselliges Öl: warm, sonnig, sorgenlösend. Sie schmilzt die kühle Isolation und macht Kontakt wieder als etwas Nährendes statt Bedrohliches erfahrbar. Wo der Verstand der Fünf auf Distanz bleibt, lädt die Orange das Herz ein, sich behutsam zu wärmen und zu öffnen. So verwandelt sich ‚Die Welt saugt mich aus‘ in die Erfahrung, dass Verbindung auch füllen und beleben kann." },
-  { typ: 6, typLabel: "Typ 6 · Der Loyalist", name: "Zedernholz", urWunde: "Es gibt keinen sicheren Halt.", wirkung: "Gibt ein energetisches Rückgrat und Urvertrauen.", image: "https://res.cloudinary.com/ymooybdl/image/upload/f_auto,q_auto/kompass/assets/heilmittel/ätherische-Öle/typ-6.jpg", vertiefung: "Die Sechs lebt mit dem Grundgefühl, dass es keinen verlässlichen Halt gibt, und sucht Sicherheit beständig im Außen. Zedernholz ist ein kräftigendes, stabilisierendes Öl – es wirkt wie ein aufgerichtetes inneres Rückgrat. Sein tiefer, würziger Holzduft erdet, beruhigt die Ängstlichkeit und nährt Mut und Urvertrauen. Wo die Sechs zweifelt und sich ständig absichert, gibt Zedernholz die Erfahrung einer inneren Festigkeit, die nicht von Garantien abhängt. So darf Sicherheit von innen wachsen, statt mühsam von außen erbeten zu werden." },
-  { typ: 7, typLabel: "Typ 7 · Der Enthusiast", name: "Vetiver", urWunde: "Der Schmerz wird mich vernichten.", wirkung: "Radikale Erdung, die die Flucht nach oben stoppt.", image: "https://res.cloudinary.com/ymooybdl/image/upload/f_auto,q_auto/kompass/assets/heilmittel/ätherische-Öle/typ-7.jpg", vertiefung: "Die Sieben flieht vor dem Schmerz nach oben – in Pläne, Vorfreude und Möglichkeiten – aus der tiefen Angst, das Leid könnte sie vernichten. Vetiver gilt als ‚Öl der Ruhe‘ und ist eines der am stärksten erdenden Aromen überhaupt: schwer, dunkel, wurzeltief. Es verankert den aufgeregten Geist im Körper und stoppt die ständige Flucht in die Zukunft. Wo die Sieben sonst über jeden Schmerz hinwegspringt, hält Vetiver sie behutsam in der Gegenwart – auch im Unangenehmen, das dadurch erst tragbar und wandelbar wird. So entsteht radikale Erdung statt rastloser Zerstreuung." },
-  { typ: 8, typLabel: "Typ 8 · Der Beschützer", name: "Lavendel fein", urWunde: "Schwäche bedeutet Zerstörung.", wirkung: "Löst die Kampfspannung und erlaubt Milde und Weichheit.", image: "https://res.cloudinary.com/ymooybdl/image/upload/f_auto,q_auto/kompass/assets/heilmittel/ätherische-Öle/typ-8.jpg", vertiefung: "Die Acht panzert sich gegen jede Schwäche, denn Verletzlichkeit erscheint ihr wie eine Einladung zur Zerstörung – also herrschen Kontrolle und Härte. Feiner Lavendel ist das große Öl der Sanftheit: Es entspannt tief, löst Anspannung und beruhigt das überreizte Nervensystem. Genau die Kampfspannung, mit der die Acht ständig in Bereitschaft steht, darf unter seinem Duft endlich nachlassen. Wo Stärke nur als Härte galt, erlaubt Lavendel Milde, Weichheit und Berührbarkeit, ohne dass sie sich gefährlich anfühlen. So erfährt die Acht: Weichheit ist keine Niederlage, sondern eine andere Form von Kraft." },
-  { typ: 9, typLabel: "Typ 9 · Der Friedensstifter", name: "Grapefruit", urWunde: "Ich spiele keine Rolle.", wirkung: "Der bittere Weckruf für Willenskraft und Präsenz.", image: "https://res.cloudinary.com/ymooybdl/image/upload/f_auto,q_auto/kompass/assets/heilmittel/ätherische-Öle/typ-9.jpg", vertiefung: "Die Neun vergisst sich selbst, verschmilzt mit anderen und schläft der eigenen Bedeutung gegenüber leicht ein – ‚Ich spiele ohnehin keine Rolle‘. Grapefruit ist bitter-frisch, klärend und aktivierend; sie hebt Trägheit auf und weckt den Willen. Ihr spritziger Duft wirkt wie ein freundlicher, aber bestimmter Weckruf, der die Neun aus der inneren Dämmerung holt. Wo Selbstvergessenheit herrscht, schärft Grapefruit das Gespür für die eigene Präsenz und Willenskraft. So tritt die Neun spürbar ins Bild: Ich bin da, und ich zähle." },
+  { typ: 1, typLabel: "Typ 1 · Der Perfektionist", name: "Mandarine", urWunde: "Ich bin fehlerhaft und unvollkommen.", wirkung: "Erlaubt Leichtigkeit und unperfekte Fröhlichkeit.", image: "./assets/heilmittel/aetherische-oele/typ-1.jpg", vertiefung: "Die Eins trägt einen unermüdlichen inneren Richter, der jeden Fehler und jede Unvollkommenheit sofort registriert. Genau hier wirkt die Mandarine: Ihr warmer, sonnig-süßer Duft zählt zu den unbeschwertesten, fast kindlichen Aromen überhaupt. Er entspannt die nach innen gerichtete Strenge, löst die verkrampfte Pflichthaltung und öffnet einen Raum, in dem Leichtigkeit wieder erlaubt ist. Wo der Anspruch herrscht, fehlerlos sein zu müssen, erinnert die Mandarine den Organismus daran, dass Freude und Spiel kein Versagen sind – sondern Heilung." },
+  { typ: 2, typLabel: "Typ 2 · Der Helfer", name: "Palmarosa", urWunde: "Ich bin wertlos ohne Nutzen.", wirkung: "Nährt die Selbstliebe und schenkt gesunde Abgrenzung.", image: "./assets/heilmittel/aetherische-oele/typ-2.jpg", vertiefung: "Die Zwei glaubt tief im Inneren, nur durch Nützlichkeit liebenswert zu sein, und gibt sich selbst auf, um gebraucht zu werden. Palmarosa, ein rosenähnliches Gras, gilt als großes Öl der Herzpflege: Es spendet Feuchtigkeit und Nährung auf allen Ebenen und richtet die Liebe wieder nach innen. So muss Zuwendung nicht länger durch Leistung verdient werden – sie darf aus der eigenen Quelle fließen. Palmarosa stärkt zugleich die Fähigkeit zur gesunden Abgrenzung, sodass die Zwei geben kann, ohne sich zu verlieren. Aus dem ‚Ich bin wertlos ohne Nutzen‘ wird ein stilles ‚Ich bin liebenswert, einfach weil ich bin‘." },
+  { typ: 3, typLabel: "Typ 3 · Der Leistungsträger", name: "Majoran", urWunde: "Ich bin nur wertvoll durch Leistung.", wirkung: "Zwingt das System sanft in die Ruhe und nimmt die Versagensangst.", image: "./assets/heilmittel/aetherische-oele/typ-3.jpg", vertiefung: "Die Drei läuft auf Hochtouren – Stillstand fühlt sich wie Versagen an, der eigene Wert scheint allein an der Leistung zu hängen. Majoran ist eines der am stärksten beruhigenden Öle der Aromatherapie: Es spricht den Parasympathikus an, drosselt das aufgedrehte System und dämpft den inneren Antreiber. Wo die Drei sonst nur über das Tun existieren kann, schenkt Majoran die Erfahrung, auch in der Ruhe wertvoll zu sein. Er nimmt der Versagensangst die Schärfe und lässt zu, dass der Organismus endlich loslässt. So wird körperlich spürbar: Du musst nichts leisten, um zu genügen." },
+  { typ: 4, typLabel: "Typ 4 · Der Individualist", name: "Zirbelkiefer", urWunde: "Ich bin anders, ich gehöre nicht dazu.", wirkung: "Schenkt schlichte Bodenhaftung und ein Gefühl von Heimat.", image: "./assets/heilmittel/aetherische-oele/typ-4.jpg", vertiefung: "Die Vier fühlt sich anders, fremd, innerlich nie ganz zugehörig – eine leise Sehnsucht nach Heimat begleitet sie. Die Zirbelkiefer, die ‚Königin der Alpen‘, verströmt einen erdig-warmen Waldduft, der nachweislich beruhigt und sogar die Herzfrequenz im Schlaf senkt. Sie schenkt schlichte Bodenhaftung und das körperliche Gefühl, gehalten und am richtigen Ort zu sein. Wo die Vier sich ins Besondere und Vermisste verliert, holt die Zirbel sie sanft in die einfache Gegenwart zurück. Aus ‚Ich gehöre nicht dazu‘ wird ein geerdetes ‚Ich bin daheim in mir selbst‘." },
+  { typ: 5, typLabel: "Typ 5 · Der Beobachter", name: "Orange süß", urWunde: "Die Welt saugt mich aus.", wirkung: "Schmilzt kühle Isolation mit Herzenswärme.", image: "./assets/heilmittel/aetherische-oele/typ-5.jpg", vertiefung: "Die Fünf zieht sich zurück, um ihre knappen Kräfte zu schützen – Nähe wirkt schnell wie ein Aussaugen der eigenen Reserven. Die süße Orange ist ein zutiefst herzöffnendes, geselliges Öl: warm, sonnig, sorgenlösend. Sie schmilzt die kühle Isolation und macht Kontakt wieder als etwas Nährendes statt Bedrohliches erfahrbar. Wo der Verstand der Fünf auf Distanz bleibt, lädt die Orange das Herz ein, sich behutsam zu wärmen und zu öffnen. So verwandelt sich ‚Die Welt saugt mich aus‘ in die Erfahrung, dass Verbindung auch füllen und beleben kann." },
+  { typ: 6, typLabel: "Typ 6 · Der Loyalist", name: "Zedernholz", urWunde: "Es gibt keinen sicheren Halt.", wirkung: "Gibt ein energetisches Rückgrat und Urvertrauen.", image: "./assets/heilmittel/aetherische-oele/typ-6.jpg", vertiefung: "Die Sechs lebt mit dem Grundgefühl, dass es keinen verlässlichen Halt gibt, und sucht Sicherheit beständig im Außen. Zedernholz ist ein kräftigendes, stabilisierendes Öl – es wirkt wie ein aufgerichtetes inneres Rückgrat. Sein tiefer, würziger Holzduft erdet, beruhigt die Ängstlichkeit und nährt Mut und Urvertrauen. Wo die Sechs zweifelt und sich ständig absichert, gibt Zedernholz die Erfahrung einer inneren Festigkeit, die nicht von Garantien abhängt. So darf Sicherheit von innen wachsen, statt mühsam von außen erbeten zu werden." },
+  { typ: 7, typLabel: "Typ 7 · Der Enthusiast", name: "Vetiver", urWunde: "Der Schmerz wird mich vernichten.", wirkung: "Radikale Erdung, die die Flucht nach oben stoppt.", image: "./assets/heilmittel/aetherische-oele/typ-7.jpg", vertiefung: "Die Sieben flieht vor dem Schmerz nach oben – in Pläne, Vorfreude und Möglichkeiten – aus der tiefen Angst, das Leid könnte sie vernichten. Vetiver gilt als ‚Öl der Ruhe‘ und ist eines der am stärksten erdenden Aromen überhaupt: schwer, dunkel, wurzeltief. Es verankert den aufgeregten Geist im Körper und stoppt die ständige Flucht in die Zukunft. Wo die Sieben sonst über jeden Schmerz hinwegspringt, hält Vetiver sie behutsam in der Gegenwart – auch im Unangenehmen, das dadurch erst tragbar und wandelbar wird. So entsteht radikale Erdung statt rastloser Zerstreuung." },
+  { typ: 8, typLabel: "Typ 8 · Der Beschützer", name: "Lavendel fein", urWunde: "Schwäche bedeutet Zerstörung.", wirkung: "Löst die Kampfspannung und erlaubt Milde und Weichheit.", image: "./assets/heilmittel/aetherische-oele/typ-8.jpg", vertiefung: "Die Acht panzert sich gegen jede Schwäche, denn Verletzlichkeit erscheint ihr wie eine Einladung zur Zerstörung – also herrschen Kontrolle und Härte. Feiner Lavendel ist das große Öl der Sanftheit: Es entspannt tief, löst Anspannung und beruhigt das überreizte Nervensystem. Genau die Kampfspannung, mit der die Acht ständig in Bereitschaft steht, darf unter seinem Duft endlich nachlassen. Wo Stärke nur als Härte galt, erlaubt Lavendel Milde, Weichheit und Berührbarkeit, ohne dass sie sich gefährlich anfühlen. So erfährt die Acht: Weichheit ist keine Niederlage, sondern eine andere Form von Kraft." },
+  { typ: 9, typLabel: "Typ 9 · Der Friedensstifter", name: "Grapefruit", urWunde: "Ich spiele keine Rolle.", wirkung: "Der bittere Weckruf für Willenskraft und Präsenz.", image: "./assets/heilmittel/aetherische-oele/typ-9.jpg", vertiefung: "Die Neun vergisst sich selbst, verschmilzt mit anderen und schläft der eigenen Bedeutung gegenüber leicht ein – ‚Ich spiele ohnehin keine Rolle‘. Grapefruit ist bitter-frisch, klärend und aktivierend; sie hebt Trägheit auf und weckt den Willen. Ihr spritziger Duft wirkt wie ein freundlicher, aber bestimmter Weckruf, der die Neun aus der inneren Dämmerung holt. Wo Selbstvergessenheit herrscht, schärft Grapefruit das Gespür für die eigene Präsenz und Willenskraft. So tritt die Neun spürbar ins Bild: Ich bin da, und ich zähle." },
 ];
 
 export const tcmData = [
