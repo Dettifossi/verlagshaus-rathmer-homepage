@@ -1,5 +1,23 @@
 # CLAUDE.md — Enneagramm-Heilungskompass
 
+> ⚠️ **VERALTETE SPIEGELKOPIE — NICHT DIE LIVE-APP.**
+> Dieser Ordner ist keine deploy-relevante Quelle. Die tatsächlich unter
+> **kompass.verlagshausrathmer.com** laufende App liegt in einem **eigenen,
+> separaten GitHub-Repo: `Dettifossi/enneagramm-heilungskompass`**
+> (GitHub Pages, eigenes CNAME, eigener Firebase-Auth-Bereich).
+> Die englische Version liegt ebenfalls dort unter `en/` (eigenes `bundle.js`,
+> kein separates Repo mehr — `Dettifossi/enneagram-healing-compass` ist veraltet).
+>
+> Änderungen an Inhalten (Porträts, Schaubilder, Subtypen etc.) **immer im
+> Repo `Dettifossi/enneagramm-heilungskompass` vornehmen**, niemals hier.
+> `bundle.js` ist dort die eigentliche Quelle (nicht `app.js` — `app.js` wird
+> nur per `cp bundle.js app.js` synchron gehalten, rein für Lesbarkeit/Diffs).
+> Dieser Ordner hier wurde am 2026-07-29 versehentlich für ein Porträt-Update
+> bearbeitet, bevor das echte Repo gefunden wurde — die Änderung ist harmlos,
+> aber ignorierbar. Vor jeder inhaltlichen Änderung erst prüfen, ob man im
+> richtigen Repo arbeitet (`git remote -v` sollte `enneagramm-heilungskompass`
+> zeigen, nicht `verlagshaus-rathmer-homepage`).
+
 ## 1. Sparsamer Umgang mit Dateizugriffen
 
 - Lies niemals eine komplette Datei vollständig ein, wenn nur ein kleiner Abschnitt relevant ist. Nutze gezielte Suche (grep, Zeilenbereiche) statt vollständiger Dateilektüre.
