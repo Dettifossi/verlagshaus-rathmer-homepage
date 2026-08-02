@@ -142,6 +142,24 @@
       color: rgba(245,234,216,0.45);
     }
 
+    /* ── Video ── */
+    .kompass-video {
+      background: linear-gradient(160deg, #1a2e28 0%, #0f1e1a 55%, #1c2a24 100%);
+      padding: 0 1.5rem 4.5rem;
+      text-align: center;
+    }
+    .kompass-video__frame {
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 24px 70px rgba(0,0,0,0.35);
+      border: 1px solid rgba(201,168,76,0.25);
+    }
+    .kompass-video__frame video { display: block; width: 100%; height: auto; background: #000; }
+    .kompass-video__caption { margin-top: 1rem; font-size: 0.95rem; color: rgba(245,234,216,0.75); }
+    .kompass-video__caption a { color: var(--gold); }
+
     /* ── Was ist das? ── */
     .kompass-what {
       max-width: 780px;
@@ -465,6 +483,16 @@
   </a><br>
   <a href="https://kompass.verlagshausrathmer.com/" target="_blank" rel="noopener" style="display:inline-block;margin-top:0.6rem;font-size:0.9rem;color:var(--gold,#c4a456);text-decoration:none;border-bottom:1px solid rgba(196,164,86,0.4);">Lieber unverbindlich sprechen? → Persönliche Beratung vereinbaren</a>
   <p class="kompass-hero__hint">Sofortiger digitaler Zugang · Sicherer Kauf über Stripe · auch per PayPal</p>
+</section>
+
+<section class="kompass-video">
+  <div class="kompass-video__frame">
+    <video controls preload="metadata" poster="./images/kompass-trailer-poster.jpg" playsinline>
+      <source src="./images/kompass-trailer.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <p class="kompass-video__caption">Der Enneagramm-Heilungskompass in 2½ Minuten</p>
+  <p class="kompass-video__caption"><a href="./images/kompass-trailer.mp4" download>⬇ Video herunterladen</a></p>
 </section>
 
 <!-- Was ist das? -->
