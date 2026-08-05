@@ -891,5 +891,23 @@ function translateReviewIndex(btn) {
   });
 })();
 </script>
+<script>
+  // Gesprochene Begrüßung – einmal pro Browser-Session, ausgelöst durch die
+  // erste Nutzerinteraktion (Autoplay mit Ton wird sonst geblockt).
+  (function initWelcomeGreeting() {
+    const KEY = 'verlagshaus-welcome-played';
+    if (sessionStorage.getItem(KEY)) return;
+    const events = ['click', 'touchstart', 'keydown'];
+    let played = false;
+    const play = () => {
+      if (played) return;
+      played = true;
+      sessionStorage.setItem(KEY, '1');
+      events.forEach(ev => document.removeEventListener(ev, play));
+      try { new Audio('audio/willkommen.mp3').play().catch(() => {}); } catch (e) {}
+    };
+    events.forEach(ev => document.addEventListener(ev, play, { once: true }));
+  })();
+</script>
 </body>
 </html>
