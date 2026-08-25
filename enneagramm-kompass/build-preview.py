@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
-"""Regeneriert preview.html (Standalone-Vorschau mit eingebettetem CSS/JS) aus den Quelldateien."""
-import re, os, glob
+"""Regeneriert preview.html (Standalone-Vorschau mit eingebettetem CSS/JS) aus den Quelldateien.
+
+Spiegelt exakt die Script-Reihenfolge des echten index.html: bundle.js ist seit der
+Modularisierung bereits vollstaendig selbstenthaltend (keine import/export-Statements
+mehr, subtypeDetails/knowledgeSubtypes/registerEntries sind direkt inline enthalten).
+Die separaten data/subtypes/*.js und data/knowledge/*.js NICHT mehr zusaetzlich
+einbinden - das wuerde subtypeDetails/knowledgeSubtypes doppelt deklarieren
+(SyntaxError: Identifier 'subtypeDetails' has already been declared).
+"""
+import re, os
 
 base = os.path.dirname(os.path.abspath(__file__))
 
@@ -13,29 +21,12 @@ def strip_exports(content):
 
 parts = []
 
-subtype_parts = []
-for path in sorted(glob.glob(f"{base}/data/subtypes/s*.js")):
-    subtype_parts.append(f"// === data/subtypes/{os.path.basename(path)} ===\n" + strip_exports(open(path).read()))
-subtype_parts.append(strip_exports(open(f"{base}/data/subtypes/index.js").read()))
-parts.append("(function(){\n" + "\n\n".join(subtype_parts) + "\nwindow._subtypeDetails = subtypeDetails;\n})();")
-parts.append("const subtypeDetails = window._subtypeDetails;")
-
-know_parts = [strip_exports(open(f"{base}/data/knowledge/helpers.js").read())]
-for path in sorted(glob.glob(f"{base}/data/knowledge/s*.js")):
-    know_parts.append(strip_exports(open(path).read()))
-know_parts.append(strip_exports(open(f"{base}/data/knowledge/index.js").read()))
-parts.append("(function(){\n" + "\n\n".join(know_parts) + "\nwindow._knowledgeSubtypes = knowledgeSubtypes;\n})();")
-parts.append("const knowledgeSubtypes = window._knowledgeSubtypes;")
-
-for fname in [
-    "data/de.js", "data/impulse.js", "data/tagesimpulse.js",
-    "data/typentest.js", "data/motivtest.js", "data/diagnosetest.js",
-    "data/beziehungspaarungen.js", "data/differenzierungen.js",
-    "data/register.js", "data/tierentsprechungen.js", "data/verhalten.js",
-    "data/quiz.js",
-    "data/zitate.js",
-]:
-    parts.append(strip_exports(open(f"{base}/{fname}").read()))
+# bundle.js laeuft live als <script type="module"> mit eigenem Top-Level-Scope und
+# enthaelt bereits eigene inline Kopien von quizData/zitateData/subtypeDetails/
+# knowledgeSubtypes/registerEntries - quiz.js/zitate.js NICHT zusaetzlich einbinden
+# (sonst doppelte Deklaration im flachen <script>-Kontext von preview.html).
+# Nur changelog.js wird von bundle.js per "typeof CHANGELOG" erwartet, nicht inline.
+parts.append(strip_exports(open(f"{base}/data/changelog.js").read()))
 
 app_js = open(f"{base}/app.js").read()
 app_js = re.sub(r'^import[^\n]+;\n?', '', app_js, flags=re.MULTILINE)
@@ -56,7 +47,7 @@ html = f"""<!doctype html>
 </head>
 <body>
 <div id="app"></div>
-<script>
+<script type="module">
 {script_body}
 </script>
 </body>
