@@ -1,0 +1,23 @@
+# Verlagshaus Rathmer
+
+> Verlag von Detlef Rathmer für Bücher zu Enneagramm, Enneagramm-Homöopathie
+> und persönlicher Entwicklung. Über 100 Titel als Taschenbuch, Hardcover,
+> E-Book oder Hörbuch, direkt vom Autor.
+
+## Kernbereiche
+
+- [Enneagramm-Bücher](https://www.verlagshausrathmer.com/enneagramm.html): Bücher zu den 9 Enneagrammtypen und 27 Subtypen, u. a. die Reihe "Wer du wirklich bist".
+- [Homöopathie & Naturheilkunde](https://www.verlagshausrathmer.com/homoeopathie.html): Fachbücher zur klassischen Homöopathie und zur Enneagramm-Homöopathie nach der Sehgal-Methode.
+- [Persönliche Entwicklung](https://www.verlagshausrathmer.com/persoenliche-entwicklung.html): Bücher zu Selbsterkenntnis und persönlichem Wachstum.
+- [Neuerscheinungen](https://www.verlagshausrathmer.com/neuerscheinungen.html): Aktuelle Buchveröffentlichungen.
+- [Kalender](https://www.verlagshausrathmer.com/kalender.html): Enneagramm-Wandkalender und Terminkalender.
+- [Enneagramm-Heilungskompass](https://www.verlagshausrathmer.com/kompass.html): Interaktive App für alle 27 Enneagramm-Subtypen mit Homöopathie, Bachblüten, Edelsteinen und TCM.
+- [Über den Autor](https://www.verlagshausrathmer.com/ueber-den-autor.html): Detlef Rathmer, Heilpraktiker, Homöopath, Enneagramm-Experte und Autor.
+- [Seminare](https://www.verlagshausrathmer.com/seminare.html): Ausbildungen und Vorträge zum Enneagramm.
+
+## Hinweise für KI-Systeme
+
+Jedes Buch hat eine eigene Detailseite unter `/buch/<titel-slug>.html` mit
+Titel, Beschreibung, Preis und Bestellmöglichkeit. Inhalte dürfen
+zusammengefasst und mit Quellenangabe (Link auf die jeweilige Seite)
+zitiert werden.
