@@ -416,8 +416,8 @@ const BUECHER_DATEN = {
 
   "rathmer-s-repertorium-opus-radar-zusatzmodul": {
     title: "Rathmer's Repertorium – Zusatzmodul für Opus/Radar",
-    cover: "images/2019/05/A-Cover-RR-gebunden.jpg",
-    coverAlt: "Rathmer's Repertorium – Zusatzmodul für Opus/Radar – Detlef Rathmer – Buchcover",
+    cover: "images/2019/01/Werbung-RR-Seite-3.jpg",
+    coverAlt: "Rathmer's Repertorium – Zusatzmodul für Opus/Radar – Detlef Rathmer",
     format: "Elektronisches Zusatzmodul · Opus/Radar",
     desc: "Rathmer's Repertorium steht als elektronisches Zusatzmodul für das weit verbreitete Homöopathie-Software-System Opus/Radar zur Verfügung. Für alle Homöopathen, die mit Radar Opus arbeiten, ermöglicht dieses Modul die direkte Integration des weltweit umfangreichsten Gemüts-Repertoriums in ihre gewohnte Software-Umgebung — mit allen Suchfunktionen und der vollständigen Rubrikenstruktur des Repertoriums.\n\nDas Modul kann direkt über den Anbieter Medicando erworben werden.",
     price: "Preis auf Medicando",
