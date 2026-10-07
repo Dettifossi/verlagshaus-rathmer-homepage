@@ -566,6 +566,85 @@ function translateReviewIndex(btn) {
   </div>
 </section>
 
+<!-- ==================== WELCHES BUCH PASST ZU MIR? ==================== -->
+<section class="section" style="background:var(--cream,#faf6ee);">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Welches Buch passt zu mir?</h2>
+      <div class="divider"></div>
+      <p class="books-all-intro">Über fünfzig Bücher, Kalender und Fachwerke sind viel auf einmal. Hier finden Sie in einer Minute die Lektüre, die zu Ihrer Situation passt.</p>
+    </div>
+    <div class="cat-grid finder-grid">
+
+      <a href="buch/der-code-deiner-persoenlichkeit.html" class="cat-card finder-card">
+        <img src="images/2025/09/89ff581c-5628-41e8-9297-f9de3c22ac64.jpeg" alt="Der Code deiner Persönlichkeit – Buchcover" loading="lazy" class="finder-cover">
+        <p class="finder-fuer">Für Sie, wenn …</p>
+        <h3>Sie ganz neu beim Enneagramm sind</h3>
+        <p>… und zuerst Schritt für Schritt Ihren eigenen Typ finden möchten – verständlich, auch ohne Vorwissen.</p>
+        <p class="finder-titel">»Der Code deiner Persönlichkeit«</p>
+        <span class="btn">Zum Buch</span>
+      </a>
+
+      <a href="buch/enneagramm-zoo.html" class="cat-card finder-card">
+        <img src="images/2025/11/Enneagramm-Zoo.webp" alt="Enneagramm-Zoo – Buchcover" loading="lazy" class="finder-cover">
+        <p class="finder-fuer">Für Sie, wenn …</p>
+        <h3>Sie es gemeinsam entdecken möchten</h3>
+        <p>… zum Beispiel mit Enkelkindern oder der ganzen Familie: 27 Subtypen als Tiere, humorvoll und für jedes Alter zugänglich.</p>
+        <p class="finder-titel">»Enneagramm-Zoo«</p>
+        <span class="btn">Zum Buch</span>
+      </a>
+
+      <a href="buch/die-verborgene-dynamik-der-27-subtypen.html" class="cat-card finder-card">
+        <img src="images/2026/05/Die_verborgene_Dynamik_der_27_Subtypen.webp" alt="Die verborgene Dynamik der 27 Subtypen – Buchcover" loading="lazy" class="finder-cover">
+        <p class="finder-fuer">Für Sie, wenn …</p>
+        <h3>Sie Ihren Typ schon kennen</h3>
+        <p>… und jetzt tiefer in Ihren konkreten Subtypen eintauchen wollen – das Grundlagenwerk zu allen 27 Subtypen.</p>
+        <p class="finder-titel">»Die verborgene Dynamik der 27 Subtypen«</p>
+        <span class="btn">Zum Buch</span>
+      </a>
+
+      <a href="buch/wer-du-wirklich-bist-band-1.html" class="cat-card finder-card">
+        <img src="images/2019/05/A-Cover-Wer-du-wirklich-bist.jpg" alt="Wer du wirklich bist – Band 1 – Buchcover" loading="lazy" class="finder-cover">
+        <p class="finder-fuer">Für Sie, wenn …</p>
+        <h3>Sie lieber in Bildern lernen</h3>
+        <p>… statt viel Fließtext zu lesen: 272 farbige Schaubilder machen das ganze Enneagramm-Wissen auf einen Blick erfassbar.</p>
+        <p class="finder-titel">»Wer du wirklich bist – Band 1«</p>
+        <span class="btn">Zum Buch</span>
+      </a>
+
+      <a href="buch/gesichter-des-inneren-feuers-das-neue-enneagramm-buch.html" class="cat-card finder-card">
+        <img src="images/2025/07/Cover-Gesichter-des-inneren-Feuers.001.jpg" alt="Gesichter des inneren Feuers – Buchcover" loading="lazy" class="finder-cover">
+        <p class="finder-fuer">Für Sie, wenn …</p>
+        <h3>Sie lieber fühlen statt pauken</h3>
+        <p>… und das Enneagramm über berührende Geschichten statt über Theorie erfahren möchten: 27 literarische Porträts der Subtypen.</p>
+        <p class="finder-titel">»Gesichter des inneren Feuers«</p>
+        <span class="btn">Zum Buch</span>
+      </a>
+
+      <a href="homoeopathie.html" class="cat-card finder-card">
+        <img src="images/2019/05/A-Cover-Enneagramm-Lexikon-gebundene-Ausgabe.png" alt="Rathmer's großes Enneagramm-Lexikon – Buchcover" loading="lazy" class="finder-cover">
+        <p class="finder-fuer">Für Sie, wenn …</p>
+        <h3>Sie beruflich mit Menschen arbeiten</h3>
+        <p>… als Therapeut, Heilpraktiker, Coach oder Trainer: Lexika, Repertorien und Lehrbücher zu Enneagramm-Homöopathie und Typbestimmung.</p>
+        <p class="finder-titel">Fachbücher für die Praxis</p>
+        <span class="btn">Zur Fachbuch-Übersicht</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .finder-grid { grid-template-columns: repeat(3, 1fr); }
+  .finder-card { text-decoration: none; align-items: flex-start; }
+  .finder-cover { width: 64px; height: auto; border-radius: 4px; box-shadow: 0 3px 10px rgba(0,0,0,0.15); margin-bottom: 1rem; }
+  .finder-fuer { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-dark,#8a6f3a); margin: 0 0 0.3rem; }
+  .finder-card h3 { margin-bottom: 0.5rem; }
+  .finder-titel { font-style: italic; color: var(--anthracite); font-size: 0.9rem; margin-bottom: 1.2rem !important; flex: none !important; }
+  @media (max-width: 900px) { .finder-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .finder-grid { grid-template-columns: 1fr; } }
+</style>
+
 <!-- ==================== ALLE BÜCHER (GALERIE) ==================== -->
 <section class="section section--books-all">
   <div class="section-inner">
