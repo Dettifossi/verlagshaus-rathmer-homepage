@@ -1,4 +1,5 @@
 (function () {
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   // ── Scroll fade-in for book cards ─────────────────────────────────────
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
@@ -30,7 +31,7 @@
     document.body.appendChild(btn);
     btn.addEventListener('click', function (e) {
       e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
     });
 
     // ── Single rAF-throttled scroll handler ─────────────────────────────
@@ -40,7 +41,7 @@
         requestAnimationFrame(function () {
           var y = window.scrollY;
           if (nav)   nav.classList.toggle('scrolled', y > 40);
-          if (shelf) shelf.style.transform = 'translateY(' + (y * 0.12) + 'px)';
+          if (shelf && !reduceMotion) shelf.style.transform = 'translateY(' + (y * 0.12) + 'px)';
           btn.classList.toggle('visible', y > 300);
           ticking = false;
         });
