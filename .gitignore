@@ -20,3 +20,7 @@ old-links.json
 
 # Screenshots / Arbeitsfotos
 Foto Praxis-Homepage*.PNG
+
+# Lokale Dateien, die nicht ins Repo gehören
+/*.mp3
+/kompass-preview
