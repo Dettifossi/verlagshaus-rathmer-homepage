@@ -298,31 +298,16 @@
   </div>
 </header>
 
-<!-- ==================== REPERTORIUM-APP-TEASER ==================== -->
-<section style="background:linear-gradient(135deg,#5a1422,#3a0c16);padding:3.6rem 1.5rem 3.2rem;text-align:center;">
-  <div style="max-width:780px;margin:0 auto;">
-    <p style="font-size:0.74rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:#e1c88f;margin:0 0 1.4rem;">Neu · Die App für Homöopathen</p>
-    <a href="repertorium.html" style="display:block;"><img src="images/repertorium-buch.png" alt="Rathmer’s Repertorium" width="560" height="652" style="display:block;margin:0 auto 1.2rem;width:min(340px,78vw);height:auto;"></a>
-    <h2 style="font-family:'EB Garamond',Georgia,serif;font-size:clamp(2rem,6vw,3rem);color:#f5ead8;margin:0 0 0.7rem;font-weight:400;line-height:1.15;">Rathmer’s Repertorium</h2>
-    <p style="font-size:1.15rem;color:#e1c88f;margin:0 0 1.4rem;line-height:1.55;font-weight:600;">Das mit Abstand umfangreichste homöopathische Gemütsrepertorium der Welt: 28.076 Rubriken</p>
-    <div style="display:flex;justify-content:center;margin:0 0 1.8rem;">
-      <ul style="list-style:none;padding:0;margin:0;text-align:left;">
-        <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;margin-bottom:0.45rem;">✦ Zu jeder Rubrik Definition, Wortbedeutung und Anmerkung</li>
-        <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;margin-bottom:0.45rem;">✦ Anklickbare Querverweise: „siehe unter“ und „ähnliche Rubriken“</li>
-        <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;margin-bottom:0.45rem;">✦ Fälle anlegen, repertorisieren, als PDF drucken</li>
-        <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;margin-bottom:0.45rem;">✦ Arzneimittellehre zu 500 Mitteln</li>
-        <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;margin-bottom:0.45rem;">✦ Läuft auf jedem Gerät: Windows, Mac, iPhone, iPad, Android</li>
-        <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;">✦ Einmal kaufen, kein Ablaufdatum, mindestens 5 Jahre garantiert</li>
-      </ul>
-    </div>
-    <p style="font-size:1.05rem;color:#f5ead8;margin:0 0 1.4rem;"><strong>Einführungspreis € 119,50</strong> · danach € 149,50</p>
-    <div style="display:flex;flex-wrap:wrap;gap:0.8rem;justify-content:center;">
-      <a href="repertorium.html" style="display:inline-block;background:#e1c88f;color:#3a0c16;padding:0.95rem 2.4rem;border-radius:8px;font-size:1.05rem;font-weight:700;text-decoration:none;">Mehr erfahren →</a>
-      <a href="https://rathmer-repertorium-probe.9rathmer.workers.dev/" target="_blank" rel="noopener" style="display:inline-block;background:transparent;color:#f5ead8;border:1.5px solid rgba(245,234,216,0.5);padding:0.95rem 2rem;border-radius:8px;font-size:1.05rem;text-decoration:none;">Gratis ausprobieren</a>
-    </div>
-  </div>
-</section>
-
+<style>
+.app-teasers{display:grid;grid-template-columns:1fr}
+.app-teasers>section{display:flex;flex-direction:column;justify-content:flex-start;min-width:0}
+.app-teasers h2,.app-teasers p,.app-teasers li{overflow-wrap:break-word;hyphens:auto}
+.app-teasers>section>div{max-width:none!important;width:100%}
+.app-teasers>section>div>div[style*="max-width"]{margin-left:auto;margin-right:auto}
+@media (min-width:1000px){.app-teasers{grid-template-columns:repeat(3,1fr)}.app-teasers>section{padding-left:1.4rem!important;padding-right:1.4rem!important}}
+@media (min-width:700px) and (max-width:999px){.app-teasers>section>div{max-width:680px!important;margin:0 auto}}
+</style>
+<div class="app-teasers">
 <!-- ==================== KOMPASS-APP-TEASER ==================== -->
 <section style="background:linear-gradient(135deg,#1a2e28,#0f1e1a);padding:2.8rem 1.5rem;text-align:center;">
   <div style="max-width:680px;margin:0 auto;">
@@ -422,6 +407,56 @@ function translateReviewIndex(btn) {
     .catch(function() {});
 })();
 </script>
+
+<!-- ==================== REPERTORIUM-APP-TEASER ==================== -->
+<section style="background:linear-gradient(135deg,#5a1422,#3a0c16);padding:3.6rem 1.5rem 3.2rem;text-align:center;">
+  <div style="max-width:780px;margin:0 auto;">
+    <p style="font-size:0.74rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:#e1c88f;margin:0 0 1.4rem;">Neu · Die App für Homöopathen</p>
+    <a href="repertorium.html" style="display:block;"><img src="images/repertorium-buch.png" alt="Rathmer’s Repertorium" width="560" height="652" style="display:block;margin:0 auto 1.2rem;width:min(340px,78vw);height:auto;"></a>
+    <h2 style="font-family:'EB Garamond',Georgia,serif;font-size:clamp(2rem,6vw,3rem);color:#f5ead8;margin:0 0 0.7rem;font-weight:400;line-height:1.15;">Rathmer’s Repertorium</h2>
+    <p style="font-size:1.15rem;color:#e1c88f;margin:0 0 1.4rem;line-height:1.55;font-weight:600;">Das mit Abstand umfangreichste homöopathische Gemütsrepertorium der Welt: 28.076 Rubriken</p>
+    <div style="display:flex;justify-content:center;margin:0 0 1.8rem;">
+      <ul style="list-style:none;padding:0;margin:0;text-align:left;">
+        <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;margin-bottom:0.45rem;">✦ Zu jeder Rubrik Definition, Wortbedeutung und Anmerkung</li>
+        <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;margin-bottom:0.45rem;">✦ Anklickbare Querverweise: „siehe unter“ und „ähnliche Rubriken“</li>
+        <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;margin-bottom:0.45rem;">✦ Fälle anlegen, repertorisieren, als PDF drucken</li>
+        <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;margin-bottom:0.45rem;">✦ Arzneimittellehre zu 500 Mitteln</li>
+        <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;margin-bottom:0.45rem;">✦ Läuft auf jedem Gerät: Windows, Mac, iPhone, iPad, Android</li>
+        <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;">✦ Einmal kaufen, kein Ablaufdatum, mindestens 5 Jahre garantiert</li>
+      </ul>
+    </div>
+    <p style="font-size:1.05rem;color:#f5ead8;margin:0 0 1.4rem;"><strong>Einführungspreis € 119,50</strong> · danach € 149,50</p>
+    <div style="display:flex;flex-wrap:wrap;gap:0.8rem;justify-content:center;">
+      <a href="repertorium.html" style="display:inline-block;background:#e1c88f;color:#3a0c16;padding:0.95rem 2.4rem;border-radius:8px;font-size:1.05rem;font-weight:700;text-decoration:none;">Mehr erfahren →</a>
+      <a href="https://rathmer-repertorium-probe.9rathmer.workers.dev/" target="_blank" rel="noopener" style="display:inline-block;background:transparent;color:#f5ead8;border:1.5px solid rgba(245,234,216,0.5);padding:0.95rem 2rem;border-radius:8px;font-size:1.05rem;text-decoration:none;">Gratis ausprobieren</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ENNEAGRAMM-REPERTORIUM-APP-TEASER ==================== -->
+<section style="background:linear-gradient(135deg,#3a2a14,#24190a);padding:3.2rem 1.5rem 3rem;text-align:center;">
+  <div style="max-width:780px;margin:0 auto;">
+    <p style="font-size:0.74rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:#e1c88f;margin:0 0 1.4rem;">Neu · Nur für die Enneagramm-Homöopathie</p>
+    <a href="repertorium.html#ausgaben" style="display:block;"><img src="images/repertorium-ennea.png" alt="Rathmer’s Enneagramm-Homöopathie-Repertorium" width="1200" height="1200" loading="lazy" style="display:block;margin:0 auto 1.2rem;width:min(300px,70vw);height:auto;border-radius:10px;"></a>
+    <h2 style="font-family:'EB Garamond',Georgia,serif;font-size:clamp(1.8rem,5.5vw,2.6rem);color:#f5ead8;margin:0 0 0.7rem;font-weight:400;line-height:1.15;">Rathmer’s Enneagramm-Homöopathie-Repertorium</h2>
+    <p style="font-size:1.1rem;color:#e1c88f;margin:0 0 1.4rem;line-height:1.55;font-weight:600;">Die schlanke Ausgabe: 10.016 Rubriken mit den neun Enneagramm-Heilmitteln</p>
+    <div style="display:flex;justify-content:center;margin:0 0 1.8rem;">
+      <ul style="list-style:none;padding:0;margin:0;text-align:left;">
+        <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;margin-bottom:0.45rem;">✦ Mittelbilder zu Platina, Hyoscyamus, Tarentula, Ignatia, Stramonium, Opium, Belladonna, Veratrum und Cannabis indica</li>
+        <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;margin-bottom:0.45rem;">✦ Fallfunktion, Querverweise, Suche, PDF-Druck</li>
+        <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;margin-bottom:0.45rem;">✦ Gleiche Oberfläche wie das große Repertorium, auch auf Englisch</li>
+        <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;">✦ Einmal kaufen, kein Ablaufdatum, mindestens 5 Jahre garantiert</li>
+      </ul>
+    </div>
+    <p style="font-size:1.05rem;color:#f5ead8;margin:0 0 1.4rem;"><strong>Einführungspreis € 79,50</strong> · danach € 99,50</p>
+    <div style="display:flex;flex-wrap:wrap;gap:0.8rem;justify-content:center;">
+      <a href="repertorium.html#ausgaben" style="display:inline-block;background:#e1c88f;color:#3a0c16;padding:0.95rem 2.4rem;border-radius:8px;font-size:1.05rem;font-weight:700;text-decoration:none;">Beide Ausgaben vergleichen →</a>
+      <a href="https://buy.stripe.com/8x200jfRe5Ki79oeDF4gg3U" style="display:inline-block;background:transparent;color:#f5ead8;border:1.5px solid rgba(245,234,216,0.5);padding:0.95rem 2rem;border-radius:8px;font-size:1.05rem;text-decoration:none;">Zur Bestellung</a>
+    </div>
+  </div>
+</section>
+
+</div>
 
 <!-- ==================== SONDERANGEBOT-BANNER ==================== -->
 <section class="vr-sonderangebot-banner" aria-label="Sonderangebot Lagerräumung">
