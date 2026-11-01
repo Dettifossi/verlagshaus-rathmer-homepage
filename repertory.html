@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rathmer’s Repertory – the app for homeopaths – Verlagshaus Rathmer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+  <link rel="stylesheet" href="styles.css?v=24">
+  <meta name="description" content="Rathmer’s Repertory: by far the most comprehensive homeopathic repertory of the mind in the world. 28,076 rubrics with meaning, case function and materia medica. Try it free.">
+  <link rel="alternate" hreflang="de" href="https://www.verlagshausrathmer.com/repertorium.html">
+  <meta name="author" content="Detlef Rathmer">
+  <link rel="canonical" href="https://www.verlagshausrathmer.com/repertory.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Verlagshaus Rathmer">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Rathmer’s Repertory – the app for homeopaths – Verlagshaus Rathmer">
+  <meta property="og:description" content="Rathmer’s Repertory: by far the most comprehensive homeopathic repertory of the mind in the world. 28,076 rubrics with meaning, case function and materia medica. Try it free.">
+  <meta property="og:url" content="https://www.verlagshausrathmer.com/repertory.html">
+  <meta property="og:image" content="https://www.verlagshausrathmer.com/images/repertorium-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.verlagshausrathmer.com/images/repertorium-og.jpg">
+  <link rel="apple-touch-icon" href="images/repertorium-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Repertory">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img decoding="async" width="120" height="140" src="Logo-vr-klein.png" alt="VR" class="nav-logo-img"><span class="nav-logo-text">Verlagshaus <span class="nav-logo-name">Rathmer</span><span class="nav-logo-url">www.verlagshausrathmer.com</span></span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-has-dropdown">
+        <button class="nav-dropdown-toggle" id="buecher-toggle">Books <span class="nav-caret">▾</span></button>
+        <ul class="nav-dropdown">
+          <li><a href="neuerscheinungen.html">New releases</a></li>
+          <li><a href="enneagramm.html">Enneagram</a></li>
+          <li><a href="einzelstudien.html">Literary portraits (27)</a></li>
+          <li><a href="homoeopathie.html">Homeopathy &amp; natural medicine</a></li>
+          <li><a href="persoenliche-entwicklung.html">Personal development</a></li>
+          <li><a href="kalender.html">Calendars</a></li>
+        </ul>
+      </li>
+      <li><a href="repertorium.html" class="active">Repertory app</a></li>
+      <li><a href="geschenkideen.html">Gift ideas</a></li>
+      <li><a href="seminare.html">Seminars &amp; training</a></li>
+      <li><a href="ueber-den-autor.html">About the author</a></li>
+      <li><a href="kontakt.html">Contact</a></li>
+    </ul>
+    <div class="site-switcher">
+      <button class="site-switcher__btn">⇄&thinsp;Praxis</button>
+      <div class="site-switcher__card">
+        <p class="site-switcher__label">Other website</p>
+        <p class="site-switcher__name">Naturopathic practice Detlef Rathmer</p>
+        <p class="site-switcher__desc">Classical homeopathy, Enneagram &amp; psychological counseling in Billerbeck, Germany.</p>
+        <a href="https://psychologische-homoeopathie.de" class="site-switcher__link">&#8594;&ensp;To the practice</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+.rp-wrap{max-width:1100px;margin:0 auto;padding:0 1.2rem}
+.rp-top{display:grid;grid-template-columns:minmax(220px,360px) 1fr;gap:2.4rem;align-items:center;padding:2.6rem 0}
+.rp-top img{width:100%}
+.rp-lead{font-size:1.25rem;line-height:1.55;color:var(--anthracite)}
+.rp-lead strong{color:#7a1f2e}
+.rp-btns{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.2rem 0 .6rem}
+.rp-btn{display:inline-block;padding:.85rem 1.7rem;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem}
+.rp-btn--a{background:#7a1f2e;color:#fff} .rp-btn--b{border:1.5px solid #7a1f2e;color:#7a1f2e}
+.rp-price{margin:.4rem 0 0;font-size:.95rem;color:#555}
+.rp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.1rem;margin:1rem 0 2.4rem}
+.rp-card{background:#fff;border:1px solid #e6dcc6;border-radius:14px;padding:1.3rem 1.4rem}
+.rp-card h3{margin:0 0 .4rem;font-size:1.15rem;color:#7a1f2e} .rp-card p{margin:0;line-height:1.55;color:#333}
+.rp-h2{font-size:1.7rem;margin:2.2rem 0 .3rem;color:var(--anthracite)}
+.rp-shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.4rem;margin:1rem 0 2rem}
+.rp-shots figure{margin:0} .rp-shots img{width:100%;border-radius:12px;border:1px solid #e6dcc6;box-shadow:0 10px 26px rgba(0,0,0,.12)}
+.rp-shots figcaption{font-size:.9rem;color:#555;margin-top:.5rem;line-height:1.45}
+.rp-box{background:#f5efe3;border-radius:16px;padding:1.8rem;margin:2rem 0;text-align:center}
+.rp-box h2{margin:0 0 .4rem} .rp-faq dt{font-weight:700;margin-top:1rem} .rp-faq dd{margin:.2rem 0 0;line-height:1.55}
+@media(max-width:720px){.rp-top{grid-template-columns:1fr}.rp-top img{max-width:260px;margin:0 auto}}
+</style>
+<header class="page-hero">
+  <img class="hero-deco hero-deco-bl" src="deco-spines.svg" alt="" aria-hidden="true">
+  <img class="hero-deco hero-deco-br" src="deco-spines.svg" alt="" aria-hidden="true">
+  <p class="eyebrow">The app for homeopaths</p>
+  <h1>Rathmer’s Repertory</h1>
+  <p>By far the most comprehensive homeopathic repertory of the mind in the world – as an app that runs on every device: computer, tablet and phone.</p>
+</header>
+
+<section class="section"><div class="rp-wrap">
+  <div class="rp-top">
+    <img src="images/repertorium-buch.png" alt="Rathmer’s Repertory, the great repertory of mental and emotional rubrics">
+    <div>
+      <p class="rp-lead"><strong>28,076 rubrics</strong> of the mental and emotional symptoms, each with meaning, definition and comment. Plus cross-references, a case function for repertorizing and the materia medica of 500 remedies.</p>
+      <div class="rp-btns">
+        <a class="rp-btn rp-btn--a" href="https://rathmer-repertorium-probe.9rathmer.workers.dev/?lang=en" target="_blank" rel="noopener">Try it free →</a>
+        <a class="rp-btn rp-btn--b" href="https://buy.stripe.com/3cIbJ15cAa0y0L0dzB4gg3S">Order now</a>
+      </div>
+      <p class="rp-price"><strong>Introductory price € 119.50</strong> for the first months, then € 149.50. One-time payment, no subscription. Access without an expiry date, availability guaranteed for at least 5 years.</p>
+    </div>
+  </div>
+
+  <h2 class="rp-h2">What the app offers</h2>
+  <div class="rp-grid">
+    <div class="rp-card"><h3>The largest repertory of the mind</h3><p>28,076 rubrics, systematically arranged. Found in seconds by topic world, from A to Z or through search.</p></div>
+    <div class="rp-card"><h3>Meaning with every rubric</h3><p>Definition, word meaning and comment are right there. It becomes clear what a rubric really means before it is chosen.</p></div>
+    <div class="rp-card"><h3>Cross-references at a tap</h3><p>“See under” and “Similar rubrics” from the book are clickable. Never overlook a fitting rubric again.</p></div>
+    <div class="rp-card"><h3>Create a case and repertorize</h3><p>Choose rubrics and the remedies appear by frequency. Save cases, add name and notes, print as PDF.</p></div>
+    <div class="rp-card"><h3>Materia medica of 500 remedies</h3><p>Compiled from the rubrics: characteristic rubrics, king pin symptoms and all topic areas for each remedy.</p></div>
+    <div class="rp-card"><h3>Runs on every device</h3><p>In the browser on Windows, Mac, iPhone, iPad and Android, with no installation and no additional software. Light or dark, and placed on the home screen it opens like an app.</p></div>
+  </div>
+
+  <h2 class="rp-h2">What it looks like</h2>
+  <div class="rp-shots">
+    <figure><img src="images/repertorium-start.jpg" alt="Start page of Rathmer’s Repertory" loading="lazy"><figcaption>Start page with search, topic worlds and rubrics from A to Z.</figcaption></figure>
+    <figure><img src="images/repertorium-querverweise.jpg" alt="Rubric with clickable cross-references" loading="lazy"><figcaption>Rubric with remedies and clickable cross-references.</figcaption></figure>
+    <figure><img src="images/repertorium-fall-v2.jpg" alt="Fall mit Rubriken und Arznei-Ergebnis" loading="lazy" style="max-width:420px"><figcaption>Fall mit gewählten Rubriken und dem Ergebnis nach Arzneien.</figcaption></figure>
+  </div>
+
+  <div class="rp-box">
+    <h2>Gratis ausprobieren</h2>
+    <p>In der Probe-Version sind fünf große Rubriken freigeschaltet (Angst, Traurigkeit, Zorn, Reizbarkeit und Weinen) und zehn Polychreste in der Arzneimittellehre, mit allen Funktionen. Ohne Anmeldung, ohne Kosten.</p>
+    <div class="rp-btns" style="justify-content:center"><a class="rp-btn rp-btn--a" href="https://rathmer-repertorium-probe.9rathmer.workers.dev/?lang=en" target="_blank" rel="noopener">Open the trial version →</a></div>
+    <p style="font-size:.85rem;color:#666;margin:.6rem 0 0">Tip: in Safari tap “Share” → “Add to Home Screen”, then it opens like an app.</p>
+  </div>
+
+  <h2 class="rp-h2">Frequently asked questions</h2>
+  <dl class="rp-faq">
+    <dt>How do I get access?</dt><dd>After the purchase you sign in with your e-mail address. You receive a code by e-mail, after which your device stays signed in.</dd>
+    <dt>Which devices does the app run on?</dt><dd>On every device with a current browser: Windows, Mac, Linux, iPhone, iPad and Android. No installation and no additional software is needed.</dd>
+    <dt>How long does access last?</dt><dd>Access has no expiry date. Availability is guaranteed for at least 5 years.</dd>
+    <dt>Is this a subscription?</dt><dd>No, it is a one-time payment.</dd>
+    <dt>What does it cost?</dt><dd>Introductory price € 119.50 for the first months, then € 149.50. Final price; no VAT is shown under § 19 of the German VAT Act. The end of the introductory price is announced in the app beforehand.</dd>
+    <dt>Can I withdraw from the purchase?</dt><dd>Our <a href="agb.html">terms and conditions</a> and the <a href="widerruf.html">notice on the right of withdrawal</a> (German) apply. By purchasing you agree that the digital access begins immediately.</dd>
+  </dl>
+  <p style="font-size:.85rem;color:#666;margin-top:2rem">The repertory is a reference work for homeopathic professionals and does not replace medical diagnosis or treatment.</p>
+</div></section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-logo"><img decoding="async" width="120" height="140" src="Logo-vr-klein.png" alt="VR" class="footer-logo-img">Verlagshaus Rathmer</span>
+    <ul class="footer-links">
+      <li><a href="impressum.html">Legal notice</a></li>
+      <li><a href="agb.html">Terms</a></li>
+      <li><a href="widerruf.html">Withdrawal</a></li>
+      <li><a href="datenschutz.html">Privacy</a></li>
+      <li><a href="kontakt.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">© 2026 Verlagshaus Rathmer · Detlef Rathmer · Molkereiweg 9 · 48727 Billerbeck</div>
+</footer>
+
+
+
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open'); this.classList.toggle('open');
+  });
+  document.getElementById('buecher-toggle').addEventListener('click', function() {
+    this.closest('.nav-has-dropdown').classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-has-dropdown')) {
+      document.querySelectorAll('.nav-has-dropdown.open').forEach(function(el) {
+        el.classList.remove('open');
+      });
+    }
+  });
+</script>
+<script src="animations.js?v=4"></script>
+</body>
+</html>
