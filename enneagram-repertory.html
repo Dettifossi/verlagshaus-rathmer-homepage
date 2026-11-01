@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rathmer’s Enneagram Homeopathy Repertory – the app for Enneagram homeopathy – Verlagshaus Rathmer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+  <link rel="stylesheet" href="styles.css?v=24">
+  <meta name="description" content="Rathmer’s Enneagram Homeopathy Repertory: 10,016 rubrics with the nine Enneagram remedies, 2,806 with meaning, definition or comment. In German and English, introductory price € 79.50.">
+  <link rel="alternate" hreflang="de" href="https://www.verlagshausrathmer.com/repertorium.html">
+  <meta name="author" content="Detlef Rathmer">
+  <link rel="canonical" href="https://www.verlagshausrathmer.com/enneagram-repertory.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Verlagshaus Rathmer">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Rathmer’s Enneagram Homeopathy Repertory – the app for Enneagram homeopathy – Verlagshaus Rathmer">
+  <meta property="og:description" content="Rathmer’s Enneagram Homeopathy Repertory: 10,016 rubrics with the nine Enneagram remedies, 2,806 with meaning, definition or comment. In German and English, introductory price € 79.50.">
+  <meta property="og:url" content="https://www.verlagshausrathmer.com/enneagram-repertory.html">
+  <meta property="og:image" content="https://www.verlagshausrathmer.com/images/ennea-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.verlagshausrathmer.com/images/ennea-og.jpg">
+  <link rel="apple-touch-icon" href="images/repertorium-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Ennea-Repertorium">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img decoding="async" width="120" height="140" src="Logo-vr-klein.png" alt="VR" class="nav-logo-img"><span class="nav-logo-text">Verlagshaus <span class="nav-logo-name">Rathmer</span><span class="nav-logo-url">www.verlagshausrathmer.com</span></span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-has-dropdown">
+        <button class="nav-dropdown-toggle" id="buecher-toggle">Books <span class="nav-caret">▾</span></button>
+        <ul class="nav-dropdown">
+          <li><a href="neuerscheinungen.html">New releases</a></li>
+          <li><a href="enneagramm.html">Enneagram</a></li>
+          <li><a href="einzelstudien.html">Literary portraits (27)</a></li>
+          <li><a href="homoeopathie.html">Homeopathy &amp; natural medicine</a></li>
+          <li><a href="persoenliche-entwicklung.html">Personal development</a></li>
+          <li><a href="kalender.html">Calendars</a></li>
+        </ul>
+      </li>
+      <li><a href="repertorium.html" class="active">Repertory app</a></li>
+      <li><a href="geschenkideen.html">Gift ideas</a></li>
+      <li><a href="seminare.html">Seminars &amp; training</a></li>
+      <li><a href="ueber-den-autor.html">About the author</a></li>
+      <li><a href="kontakt.html">Contact</a></li>
+    </ul>
+    <div class="site-switcher">
+      <button class="site-switcher__btn">⇄&thinsp;Praxis</button>
+      <div class="site-switcher__card">
+        <p class="site-switcher__label">Other website</p>
+        <p class="site-switcher__name">Naturopathic practice Detlef Rathmer</p>
+        <p class="site-switcher__desc">Classical homeopathy, Enneagram &amp; psychological counseling in Billerbeck, Germany.</p>
+        <a href="https://psychologische-homoeopathie.de" class="site-switcher__link">&#8594;&ensp;To the practice</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+.rp-wrap{max-width:1100px;margin:0 auto;padding:0 1.2rem}
+.rp-top{display:grid;grid-template-columns:minmax(220px,360px) 1fr;gap:2.4rem;align-items:center;padding:2.6rem 0}
+.rp-top img{width:100%}
+.rp-lead{font-size:1.25rem;line-height:1.55;color:var(--anthracite)}
+.rp-lead strong{color:#7a1f2e}
+.rp-btns{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.2rem 0 .6rem}
+.rp-btn{display:inline-block;padding:.85rem 1.7rem;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem}
+.rp-btn--a{background:#7a1f2e;color:#fff} .rp-btn--b{border:1.5px solid #7a1f2e;color:#7a1f2e}
+.rp-price{margin:.4rem 0 0;font-size:.95rem;color:#555}
+.rp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.1rem;margin:1rem 0 2.4rem}
+.rp-card{background:#fff;border:1px solid #e6dcc6;border-radius:14px;padding:1.3rem 1.4rem}
+.rp-card h3{margin:0 0 .4rem;font-size:1.15rem;color:#7a1f2e} .rp-card p{margin:0;line-height:1.55;color:#333}
+.rp-h2{font-size:1.7rem;margin:2.2rem 0 .3rem;color:var(--anthracite)}
+.rp-shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.4rem;margin:1rem 0 2rem}
+.rp-shots figure{margin:0} .rp-shots img{width:100%;border-radius:12px;border:1px solid #e6dcc6;box-shadow:0 10px 26px rgba(0,0,0,.12)}
+.rp-shots figcaption{font-size:.9rem;color:#555;margin-top:.5rem;line-height:1.45}
+.rp-box{background:#f5efe3;border-radius:16px;padding:1.8rem;margin:2rem 0;text-align:center}
+.rp-box h2{margin:0 0 .4rem} .rp-faq dt{font-weight:700;margin-top:1rem} .rp-faq dd{margin:.2rem 0 0;line-height:1.55}
+@media(max-width:720px){.rp-top{grid-template-columns:1fr}.rp-top img{max-width:260px;margin:0 auto}}
+</style>
+<header class="page-hero">
+  <img class="hero-deco hero-deco-bl" src="deco-spines.svg" alt="" aria-hidden="true">
+  <img class="hero-deco hero-deco-br" src="deco-spines.svg" alt="" aria-hidden="true">
+  <p class="eyebrow">The app for Enneagram homeopathy</p>
+  <h1>Rathmer’s Enneagram Homeopathy Repertory</h1>
+  <p>The nine Enneagram remedies in the repertory of the mind – as an app that runs on every device: computer, tablet and phone.</p>
+</header>
+
+<section class="section"><div class="rp-wrap">
+  <div class="rp-top">
+    <img src="images/repertorium-ennea.png" alt="Rathmer’s Enneagram Homeopathy Repertory" style="filter:drop-shadow(0 10px 18px rgba(0,0,0,.35))">
+    <div>
+      <p class="rp-lead"><strong>10,016 rubrics</strong> with the nine Enneagram remedies Platina, Hyoscyamus, Tarentula, Ignatia, Stramonium, Opium, Belladonna, Veratrum and Cannabis indica. 2,806 of them with meaning, definition or comment, more than 700 with extensive commentary. Plus type pages, cross-references and a case function for repertorizing. Available in German and English.</p>
+      <div class="rp-btns">
+        <a class="rp-btn rp-btn--b" href="https://buy.stripe.com/8x200jfRe5Ki79oeDF4gg3U">Order now</a>
+        <a class="rp-btn rp-btn--a" href="https://rathmer-repertorium-probe.9rathmer.workers.dev/" target="_blank" rel="noopener">Try it free →</a>
+      </div>
+      <p class="rp-price"><strong>Introductory price € 79.50</strong> for the first months, then € 99.50. One-time payment, no subscription. Access without an expiry date, availability guaranteed for at least 5 years.</p>
+    </div>
+  </div>
+
+  <h2 class="rp-h2">What the app offers</h2>
+  <div class="rp-grid">
+    <div class="rp-card"><h3>The nine Enneagram remedies</h3><p>10,016 rubrics in which at least one of the nine Enneagram remedies appears, with the complete rubric structure. The remedy count in the lists counts only these nine.</p></div>
+    <div class="rp-card"><h3>Definitions and commentary</h3><p>2,806 rubrics come with meaning, definition or comment right there, more than 700 of them with extensive commentary. It becomes clear what a rubric really means before it is chosen.</p></div>
+    <div class="rp-card"><h3>Types and remedies</h3><p>The nine Enneagram types with three subtypes each, switchable by type or by remedy, plus remedy pictures for Platina, Hyoscyamus, Tarentula, Ignatia, Stramonium, Opium, Belladonna, Veratrum and Cannabis indica.</p></div>
+    <div class="rp-card"><h3>Cross-references at a tap</h3><p>“See under” and “Similar rubrics” from the book are clickable. Never overlook a fitting rubric again.</p></div>
+    <div class="rp-card"><h3>Create a case and repertorize</h3><p>Choose rubrics and the remedies appear by frequency. Save cases, add name and notes, print as PDF.</p></div>
+    <div class="rp-card"><h3>In German and English</h3><p>All rubrics, comments and type pages are available in both languages, switchable with a tap.</p></div>
+    <div class="rp-card"><h3>Runs on every device</h3><p>In the browser on Windows, Mac, iPhone, iPad and Android, without installation. Light or dark, and placed on the home screen it opens like an app.</p></div>
+  </div>
+
+  <h2 class="rp-h2">What it looks like</h2>
+  <div class="rp-shots">
+    <figure><img src="images/ennea-start-en.jpg" alt="Start page of the Enneagram edition" loading="lazy"><figcaption>Start page with search and case function.</figcaption></figure>
+    <figure><img src="images/ennea-typ-en.jpg" alt="Type page for Type 4 with remedy and subtypes" loading="lazy"><figcaption>Type page: type, remedy and the three subtypes.</figcaption></figure>
+    <figure><img src="images/ennea-rubrik-en.jpg" alt="Rubric with definition and cross-references" loading="lazy"><figcaption>Rubric with meaning, definition, comment and cross-references.</figcaption></figure>
+  </div>
+
+  <div class="rp-box">
+    <h2>Try it free</h2>
+    <p>To try it out there is the free trial of the large repertory with the same interface: five large rubrics (Anxiety, Sadness, Anger, Irritability and Weeping) and ten polychrests, with all functions. No sign-up, no cost.</p>
+    <div class="rp-btns" style="justify-content:center"><a class="rp-btn rp-btn--a" href="https://rathmer-repertorium-probe.9rathmer.workers.dev/" target="_blank" rel="noopener">Open trial version →</a></div>
+    <p style="font-size:.85rem;color:#666;margin:.6rem 0 0">Tip: In Safari tap “Share” → “Add to Home Screen”, and it opens like an app.</p>
+  </div>
+
+  <h2 class="rp-h2">More than the nine remedies?</h2>
+  <p style="line-height:1.55;margin:0 0 1rem">If you also want to repertorize other remedies, <a href="repertory.html#ausgaben">Rathmer’s Repertory</a> has all 27,981 rubrics with 500 remedies and a switch for Enneagram homeopathy.</p>
+
+  <h2 class="rp-h2">Frequently asked questions</h2>
+  <dl class="rp-faq">
+    <dt>How do I get access?</dt><dd>After the purchase you sign in with your e-mail address. You receive a code by e-mail, after that your device stays signed in.</dd>
+    <dt>Which devices does the app run on?</dt><dd>On any device with a current browser: Windows, Mac, Linux, iPhone, iPad and Android. No installation and no extra software needed.</dd>
+    <dt>What is the difference to the large repertory?</dt><dd>The Enneagram edition shows only the rubrics of the nine Enneagram remedies. The large repertory contains all 500 remedies and the materia medica. Both run in the browser and are built on the same rubrics.</dd>
+    <dt>How long does access last?</dt><dd>Access has no expiry date. Availability is guaranteed for at least 5 years.</dd>
+    <dt>Is it a subscription?</dt><dd>No, it is a one-time payment.</dd>
+    <dt>What does it cost?</dt><dd>Introductory price € 79.50 for the first months, then € 99.50. Final price; no VAT is shown under § 19 of the German VAT Act. The end of the introductory price is announced in the app beforehand.</dd>
+    <dt>Can I withdraw from the purchase?</dt><dd>Our <a href="agb-en.html">terms and conditions</a> and the <a href="widerruf-en.html">notice on the right of withdrawal</a> (courtesy translations; the German versions are binding) apply. By purchasing you agree that the digital access begins immediately.</dd>
+  </dl>
+  <p style="font-size:.85rem;color:#666;margin-top:2rem">The repertory is a reference work designed for homeopaths. It does not replace diagnosis or medical treatment.</p>
+</div></section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-logo"><img decoding="async" width="120" height="140" src="Logo-vr-klein.png" alt="VR" class="footer-logo-img">Verlagshaus Rathmer</span>
+    <ul class="footer-links">
+      <li><a href="impressum.html">Legal notice</a></li>
+      <li><a href="agb-en.html">Terms</a></li>
+      <li><a href="widerruf-en.html">Withdrawal</a></li>
+      <li><a href="datenschutz.html">Privacy</a></li>
+      <li><a href="kontakt.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">© 2026 Verlagshaus Rathmer · Detlef Rathmer · Molkereiweg 9 · 48727 Billerbeck</div>
+</footer>
+
+
+
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open'); this.classList.toggle('open');
+  });
+  document.getElementById('buecher-toggle').addEventListener('click', function() {
+    this.closest('.nav-has-dropdown').classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-has-dropdown')) {
+      document.querySelectorAll('.nav-has-dropdown.open').forEach(function(el) {
+        el.classList.remove('open');
+      });
+    }
+  });
+</script>
+<script src="animations.js?v=4"></script>
+</body>
+</html>
