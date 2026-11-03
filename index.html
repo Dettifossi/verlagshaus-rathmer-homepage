@@ -307,12 +307,17 @@
 @media (min-width:1000px){.app-teasers{grid-template-columns:repeat(3,1fr)}.app-teasers>section{padding-left:1.4rem!important;padding-right:1.4rem!important}}
 @media (min-width:700px) and (max-width:999px){.app-teasers>section>div{max-width:680px!important;margin:0 auto}}
 </style>
+<style>
+.ht-needle{transform-box:view-box;transform-origin:100px 100px;animation:htSettle 9s cubic-bezier(.25,.46,.45,.94) .6s infinite}
+@keyframes htSettle{0%{transform:rotate(-42deg)}6%{transform:rotate(28deg)}11%{transform:rotate(-16deg)}16%{transform:rotate(10deg)}20%{transform:rotate(-5deg)}23%{transform:rotate(2.5deg)}26%{transform:rotate(-1deg)}30%,100%{transform:rotate(0)}}
+@media (prefers-reduced-motion:reduce){.ht-needle{animation:none}}
+</style>
 <div class="app-teasers">
 <!-- ==================== KOMPASS-APP-TEASER ==================== -->
 <section style="background:linear-gradient(135deg,#1a2e28,#0f1e1a);padding:2.8rem 1.5rem;text-align:center;">
   <div style="max-width:680px;margin:0 auto;">
-    <div style="margin-bottom:1.1rem;">
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="60" height="60" aria-hidden="true">
+    <div style="margin-bottom:1.2rem;">
+      <a href="kompass.html" aria-label="Enneagramm-Heilungskompass"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="190" height="190" style="width:min(190px,52vw);height:auto;filter:drop-shadow(0 8px 18px rgba(0,0,0,0.45));" aria-hidden="true">
         <defs>
           <radialGradient id="ht-face" cx="42%" cy="36%" r="68%"><stop offset="0%" stop-color="#fff8e8"/><stop offset="40%" stop-color="#f5e8cc"/><stop offset="75%" stop-color="#ddc898"/><stop offset="100%" stop-color="#c4a870"/></radialGradient>
           <linearGradient id="ht-ring" x1="18%" y1="8%" x2="82%" y2="92%"><stop offset="0%" stop-color="#f0d88a"/><stop offset="18%" stop-color="#d4a050"/><stop offset="46%" stop-color="#6a4020"/><stop offset="74%" stop-color="#c89848"/><stop offset="100%" stop-color="#e8c860"/></linearGradient>
@@ -325,10 +330,10 @@
         <circle cx="100" cy="100" r="82" fill="url(#ht-face)"/>
         <g fill="none" stroke="rgba(80,50,20,0.35)" stroke-width="1"><polygon points="100,34 157,132 43,132"/><polyline points="143,50 122,162 166,88 57,50 78,162 34,88 143,50"/></g>
         <g fill="rgba(80,50,20,0.4)"><circle cx="100" cy="34" r="4"/><circle cx="143" cy="50" r="4"/><circle cx="166" cy="88" r="4"/><circle cx="157" cy="132" r="4"/><circle cx="122" cy="162" r="4"/><circle cx="78" cy="162" r="4"/><circle cx="43" cy="132" r="4"/><circle cx="34" cy="88" r="4"/><circle cx="57" cy="50" r="4"/></g>
-        <polygon points="100,21 104.5,100 100,94 95.5,100" fill="url(#ht-nn)"/>
+        <g class="ht-needle"><polygon points="100,21 104.5,100 100,94 95.5,100" fill="url(#ht-nn)"/>
         <polygon points="100,179 104.5,100 100,106 95.5,100" fill="url(#ht-ns)"/>
-        <circle cx="100" cy="100" r="10.5" fill="#150e08"/><circle cx="100" cy="100" r="8" fill="url(#ht-ring)"/><circle cx="100" cy="100" r="5" fill="#f8e8c0"/><circle cx="100" cy="100" r="2.2" fill="rgba(185,80,30,0.95)"/>
-      </svg>
+        <circle cx="100" cy="100" r="10.5" fill="#150e08"/><circle cx="100" cy="100" r="8" fill="url(#ht-ring)"/><circle cx="100" cy="100" r="5" fill="#f8e8c0"/><circle cx="100" cy="100" r="2.2" fill="rgba(185,80,30,0.95)"/></g>
+      </svg></a>
     </div>
     <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#c4a456;margin:0 0 0.5rem;">Die erste deutsche Enneagramm-App · Weltweit die umfangreichste</p>
     <a href="kompass-en.html" style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(245,234,216,0.08);border:1px solid rgba(245,234,216,0.3);border-radius:40px;padding:0.35rem 1rem;color:rgba(245,234,216,0.9);font-size:0.78rem;font-weight:600;text-decoration:none;margin-bottom:0.9rem;">🇬🇧 Also available in English →</a>
@@ -421,6 +426,7 @@ function translateReviewIndex(btn) {
         <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;margin-bottom:0.45rem;">✦ Anklickbare Querverweise: „siehe unter“ und „ähnliche Rubriken“</li>
         <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;margin-bottom:0.45rem;">✦ Rubriken wählen, Mittelergebnis sehen, Fälle speichern und als PDF drucken</li>
         <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;margin-bottom:0.45rem;">✦ Arzneimittellehre zu 500 Mitteln</li>
+        <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;margin-bottom:0.45rem;">✦ Rubriken gewichten oder als Pflicht markieren, Verordnungsjournal, Fotos zum Fall, Merkliste</li>
         <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;margin-bottom:0.45rem;">✦ Läuft auf jedem Gerät: Windows, Mac, iPhone, iPad, Android</li>
         <li style="color:rgba(245,234,216,0.85);font-size:0.95rem;">✦ Einmal kaufen, kein Ablaufdatum, mindestens 5 Jahre garantiert</li>
       </ul>
