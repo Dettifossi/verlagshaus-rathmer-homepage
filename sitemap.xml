@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.verlagshausrathmer.com/</loc><lastmod>2026-09-18</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.verlagshausrathmer.com/</loc><lastmod>2026-11-04</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://www.verlagshausrathmer.com/neuerscheinungen.html</loc><lastmod>2026-06-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.verlagshausrathmer.com/enneagramm.html</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.verlagshausrathmer.com/homoeopathie.html</loc><lastmod>2026-06-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -10,10 +10,11 @@
   <url><loc>https://www.verlagshausrathmer.com/seminare.html</loc><lastmod>2026-06-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.verlagshausrathmer.com/ueber-den-autor.html</loc><lastmod>2026-06-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.verlagshausrathmer.com/kontakt.html</loc><lastmod>2026-06-15</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.verlagshausrathmer.com/repertorium.html</loc><lastmod>2026-06-15</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.verlagshausrathmer.com/repertorium.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.verlagshausrathmer.com/einzelstudien.html</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.verlagshausrathmer.com/kompass.html</loc><lastmod>2026-10-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.verlagshausrathmer.com/kompass-en.html</loc><lastmod>2026-10-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.verlagshausrathmer.com/repertory.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.verlagshausrathmer.com/kompass.html</loc><lastmod>2026-11-04</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.verlagshausrathmer.com/kompass-en.html</loc><lastmod>2026-11-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.verlagshausrathmer.com/buch/hinter-der-leidenschaft.html</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.verlagshausrathmer.com/buch/wenn-die-stille-brennt.html</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.verlagshausrathmer.com/buch/bundle-gesichter.html</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -125,6 +126,6 @@
   <url><loc>https://www.verlagshausrathmer.com/buch/einzelstudie-sx7.html</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.verlagshausrathmer.com/buch/einzelstudie-sx8.html</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.verlagshausrathmer.com/buch/einzelstudie-sx9.html</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.verlagshausrathmer.com/enneagramm-repertorium.html</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.verlagshausrathmer.com/enneagram-repertory.html</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.verlagshausrathmer.com/enneagramm-repertorium.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.verlagshausrathmer.com/enneagram-repertory.html</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
