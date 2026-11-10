@@ -5,7 +5,7 @@
    "name_en": "Enneagram Healing Compass",
    "rolle": "Dein Typ im Detail",
    "rolle_en": "Your type in depth",
-   "text": "Das Wissen von mehr als 25 Büchern: strukturiert, durchsuchbar, in Farbe.",
+   "text": "Das Wissen von mehr als 28 Büchern: strukturiert, durchsuchbar, in Farbe.",
    "text_en": "The Healing Compass shows you what to actually do with your Enneagram type: subtype-specific shadow work, healing knowledge from more than 60 books, structured and searchable.",
    "href": "kompass.html",
    "href_en": "kompass-en.html"
@@ -60,6 +60,16 @@
    "href": "https://www.psychologische-homoeopathie.de/",
    "href_en": null,
    "extern": true
+  },
+  "portraits": {
+   "name": "Enneagramm-Porträts",
+   "name_en": "Enneagram Portraits",
+   "rolle": "Der günstige Einstieg",
+   "rolle_en": "The affordable start",
+   "text": "Alle Porträts des Kompass als Einstieg, ohne den Rest.",
+   "text_en": "The entry-level version of the Compass: living cases from practice — famous people, illness, criminal, astrology and biblical portraits.",
+   "href": "kompass.html#zwei-wege",
+   "href_en": "kompass-en.html#two-ways"
   }
  },
  "kategorien": {
