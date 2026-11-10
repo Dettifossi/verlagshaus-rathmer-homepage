@@ -63,3 +63,5 @@ section[style*="gradient"]{background:#14241f!important}
   .nav-inner .nav-links{grid-column:2}
 }
 .nav-links .lang-switch{display:none!important}
+
+@media(max-width:560px){.sw-card[style*="grid-template-columns"]{grid-template-columns:96px 1fr!important;gap:.9rem!important}}
