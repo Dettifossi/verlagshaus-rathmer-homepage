@@ -1,0 +1,469 @@
+{
+ "produkte": {
+  "kompass": {
+   "name": "Enneagramm-Heilungskompass",
+   "name_en": "Enneagram Healing Compass",
+   "rolle": "Dein Typ im Detail",
+   "rolle_en": "Your type in depth",
+   "text": "Das Wissen von mehr als 25 Büchern: strukturiert, durchsuchbar, in Farbe.",
+   "text_en": "The Healing Compass shows you what to actually do with your Enneagram type: subtype-specific shadow work, healing knowledge from more than 60 books, structured and searchable.",
+   "href": "kompass.html",
+   "href_en": "kompass-en.html"
+  },
+  "bluete": {
+   "name": "Neun Seelenblüten",
+   "name_en": "Nine Soul Blossoms",
+   "rolle": "Zu jedem Typ eine Bachblüte",
+   "rolle_en": "A Bach flower for every type",
+   "text": "Ihre App für die neun Blüten der neun Typen.",
+   "text_en": "The app for the nine Bach flowers of the nine Enneagram types: find your blossom, excerpts from the book, finder, journal. Free trial; the full version is coming soon, one-time purchase, no subscription.",
+   "href": "neun-seelenblueten.html",
+   "href_en": "nine-soul-blossoms.html"
+  },
+  "stille": {
+   "name": "Stille & Weite",
+   "name_en": "Stillness & Space",
+   "rolle": "Vertiefend im spirituellen Bereich",
+   "rolle_en": "Deeper into the spiritual",
+   "text": "Ihre App für Stille, Klänge und Bewusstheit im Alltag: Übungen, Wege und Musik.",
+   "text_en": "Your app for silence, sounds and awareness in everyday life: 68 sounds, exercises, paths in small steps, music. Free trial, full version one-time 19.99 €.",
+   "href": "stille-und-weite.html",
+   "href_en": "stille-and-space.html"
+  },
+  "repertorium": {
+   "name": "Rathmer’s Repertorium",
+   "name_en": "Rathmer’s Repertory",
+   "rolle": "Für klassische Homöopathen",
+   "rolle_en": "For classical homeopaths",
+   "text": "Repertorisations-Software für klassische Homöopathen, mit Arzneimittellehre zu rund 500 Mitteln.",
+   "text_en": "The repertory that explains its rubrics: meaning, definition and comment for over 5,900 rubrics. Select rubrics, see the remedy result, save the case.",
+   "href": "repertorium.html",
+   "href_en": "repertory.html"
+  },
+  "erepertorium": {
+   "name": "Enneagramm-Repertorium",
+   "name_en": "Enneagram Homeopathy Repertory",
+   "rolle": "Für die Enneagramm-Homöopathie",
+   "rolle_en": "For Enneagram homeopathy",
+   "text": "Das Repertorium für Enneagramm-Homöopathie: 10.016 Rubriken mit den neun Enneagramm-Mitteln.",
+   "text_en": "Over 2,800 rubrics with explanations. The nine Enneagram remedies in the repertory of the mind.",
+   "href": "enneagramm-repertorium.html",
+   "href_en": "enneagram-repertory.html"
+  },
+  "praxis": {
+   "name": "Naturheilpraxis Detlef Rathmer",
+   "name_en": null,
+   "rolle": "Behandlung und Termin",
+   "rolle_en": null,
+   "text": "Klassische Homöopathie, Enneagramm und psychologische Beratung in Billerbeck.",
+   "text_en": null,
+   "href": "https://www.psychologische-homoeopathie.de/",
+   "href_en": null,
+   "extern": true
+  }
+ },
+ "kategorien": {
+  "enneagramm": [
+   "kompass",
+   "bluete"
+  ],
+  "homoeopathie": [
+   "repertorium",
+   "erepertorium"
+  ],
+  "persoenliche-entwicklung": [
+   "stille",
+   "kompass"
+  ],
+  "kalender": [
+   "kompass"
+  ],
+  "neuerscheinungen": [
+   "kompass",
+   "stille"
+  ]
+ },
+ "buecher": {
+  "hinter-der-leidenschaft": "enneagramm",
+  "wenn-die-stille-brennt": "enneagramm",
+  "bundle-gesichter": "enneagramm",
+  "gesichter-des-inneren-feuers-das-neue-enneagramm-buch": "enneagramm",
+  "die-27-gesichter-der-seele-ein-psychologischer-subtypenroman": "enneagramm",
+  "die-verborgene-dynamik-der-27-subtypen": "enneagramm",
+  "wer-du-wirklich-bist-band-1": "enneagramm",
+  "wer-du-wirklich-bist-band-2": "enneagramm",
+  "wer-du-wirklich-bist-band-3": "enneagramm",
+  "die-praxis-der-typbestimmung-taschenbuch": "enneagramm",
+  "die-praxis-der-typbestimmung-gebundene-ausgabe": "enneagramm",
+  "rathmer-s-enneagramm-typentest": "enneagramm",
+  "motivationaler-enneagramm-typentest": "enneagramm",
+  "motivational-enneagram-type-test-english": "enneagramm",
+  "die-27-persoenlichkeiten-des-enneagramms": "enneagramm",
+  "der-code-deiner-persoenlichkeit": "enneagramm",
+  "rathmer-s-grosses-enneagramm-lexikon-von-a-z-hardcover": "enneagramm",
+  "rathmer-s-grosses-enneagramm-lexikon-von-a-z-taschenbuch": "enneagramm",
+  "the-hidden-dynamics-of-the-27-subtypes": "enneagramm",
+  "enneagramm-zoo": "enneagramm",
+  "archetypen-der-tiere-im-enneagramm": "enneagramm",
+  "chrono-ennea-typ-ernaehrung-im-rhythmus-der-organe": "enneagramm",
+  "rathmer-s-repertorium-gebundene-ausgabe": "homoeopathie",
+  "rathmer-s-repertorium-ebook-version": "homoeopathie",
+  "rathmer-s-repertorium-opus-radar-zusatzmodul": "homoeopathie",
+  "repertorium-der-hervorstechenden-gemuetsrubriken-gebundene-a": "homoeopathie",
+  "repertorium-der-hervorstechenden-gemuetsrubriken-ebook": "homoeopathie",
+  "homoeopathische-arzneimittellehre-der-single-rubriken-aus-de": "homoeopathie",
+  "der-kern-der-heilmittel-the-core-of-the-remedies-gebunden": "homoeopathie",
+  "enneagramm-homoeopathie-band-1": "homoeopathie",
+  "enneagramm-homoeopathie-band-2": "homoeopathie",
+  "enneagramm-homoeopathie-ebook-version": "homoeopathie",
+  "die-dynamik-der-9-enneagramm-heilmittel-gebundene-ausgabe": "homoeopathie",
+  "die-dynamik-der-9-enneagramm-heilmittel-ebook": "homoeopathie",
+  "enneagramm-homoeopathie-repertorium-ebook-version": "homoeopathie",
+  "das-grosse-eh-repertorium-gebunden": "homoeopathie",
+  "das-grosse-eh-repertorium-ebook": "homoeopathie",
+  "lehrbuch-der-enneagramm-homoeopathie-band-1-taschenbuch": "homoeopathie",
+  "lehrbuch-der-enneagramm-homoeopathie-band-2-taschenbuch": "homoeopathie",
+  "lehrbuch-der-enneagramm-homoeopathie-band-3-taschenbuch": "homoeopathie",
+  "lehrbuch-der-enneagramm-homoeopathie-band-1-ebook": "homoeopathie",
+  "lehrbuch-der-enneagramm-homoeopathie-band-2-ebook": "homoeopathie",
+  "lehrbuch-der-enneagramm-homoeopathie-band-3-ebook": "homoeopathie",
+  "das-unterrichtsskript-zur-sehgal-ausbildung-ebook": "homoeopathie",
+  "fallanalyse-in-der-homoeopathie-nach-sehgal": "homoeopathie",
+  "gesetzeskunde-fuer-heilpraktiker": "homoeopathie",
+  "die-enneagramm-homoeopathie-unterrichtsmaterial": "homoeopathie",
+  "die-enneagrammatische-homoeopathie-ebook": "homoeopathie",
+  "der-kern-der-heilmittel-the-core-of-the-remedies-ebook": "homoeopathie",
+  "enneagramm-biochemie": "homoeopathie",
+  "enneagramm-bachblueten-therapie": "homoeopathie",
+  "die-enneagramm-aromatherapie": "homoeopathie",
+  "du-bist-nicht-dein-zweifel": "persoenliche-entwicklung",
+  "nichts-und-alles": "persoenliche-entwicklung",
+  "der-raum-hinter-allem": "persoenliche-entwicklung",
+  "sei-still-und-wisse-ich-bin-gott": "persoenliche-entwicklung",
+  "heilung-als-erinnerung": "persoenliche-entwicklung",
+  "7-wege-zu-dir-selbst-lebenskunst-fuer-den-alltag": "persoenliche-entwicklung",
+  "die-sprache-unserer-beziehungen": "persoenliche-entwicklung",
+  "leidenschaft-und-heilung": "persoenliche-entwicklung",
+  "die-sprache-unserer-sexualitaet": "persoenliche-entwicklung",
+  "the-code-of-your-personality": "persoenliche-entwicklung",
+  "in-der-tiefe-der-zeit": "persoenliche-entwicklung",
+  "das-seminar-wenn-masken-fallen": "persoenliche-entwicklung",
+  "der-weltweit-erste-enneagramm-wandkalender-xxl-a3": "kalender",
+  "der-weltweit-erste-enneagramm-wandkalender": "kalender",
+  "der-weltweit-erste-enneagramm-tischkalender": "kalender",
+  "der-weltweit-erste-enneagramm-kuechenkalender": "kalender",
+  "the-eternal-enneagramm-wall-calendar": "kalender",
+  "typ-1-die-ewige-suche-nach-vollkommenheit": "kalender",
+  "typ-2-die-ewige-suche-nach-liebe": "kalender",
+  "typ-3-die-ewige-suche-nach-erfolg": "kalender",
+  "typ-4-die-ewige-suche-nach-individualitaet": "kalender",
+  "typ-5-die-ewige-suche-nach-wissen": "kalender",
+  "typ-6-die-ewige-suche-nach-sicherheit": "kalender",
+  "typ-7-die-ewige-suche-nach-lebensfreude": "kalender",
+  "typ-8-die-ewige-suche-nach-macht": "kalender",
+  "typ-9-die-ewige-suche-nach-harmonie": "kalender",
+  "der-ewige-kalender-der-selbsterkenntnis": "kalender",
+  "der-ewige-kalender-der-naturwunder": "kalender",
+  "der-ewige-kalender-der-liebe": "kalender",
+  "meta-intelligenz": "neuerscheinungen",
+  "meta-intelligenz-das-hoerbuch": "neuerscheinungen",
+  "fuehrung-mit-fundament": "neuerscheinungen",
+  "einzelstudie-se1": "enneagramm",
+  "einzelstudie-se2": "enneagramm",
+  "einzelstudie-se3": "enneagramm",
+  "einzelstudie-se4": "enneagramm",
+  "einzelstudie-se5": "enneagramm",
+  "einzelstudie-se6": "enneagramm",
+  "einzelstudie-se7": "enneagramm",
+  "einzelstudie-se8": "enneagramm",
+  "einzelstudie-se9": "enneagramm",
+  "einzelstudie-so1": "enneagramm",
+  "einzelstudie-so2": "enneagramm",
+  "einzelstudie-so3": "enneagramm",
+  "einzelstudie-so4": "enneagramm",
+  "einzelstudie-so5": "enneagramm",
+  "einzelstudie-so6": "enneagramm",
+  "einzelstudie-so7": "enneagramm",
+  "einzelstudie-so8": "enneagramm",
+  "einzelstudie-so9": "enneagramm",
+  "einzelstudie-sx1": "enneagramm",
+  "einzelstudie-sx2": "enneagramm",
+  "einzelstudie-sx3": "enneagramm",
+  "einzelstudie-sx4": "enneagramm",
+  "einzelstudie-sx5": "enneagramm",
+  "einzelstudie-sx6": "enneagramm",
+  "einzelstudie-sx7": "enneagramm",
+  "einzelstudie-sx8": "enneagramm",
+  "einzelstudie-sx9": "enneagramm"
+ },
+ "buch_ueberschreibungen": {
+  "enneagramm-bachblueten-therapie": [
+   "bluete",
+   "kompass"
+  ],
+  "wenn-die-stille-brennt": [
+   "stille",
+   "kompass"
+  ],
+  "nichts-und-alles": [
+   "stille",
+   "kompass"
+  ],
+  "der-raum-hinter-allem": [
+   "stille",
+   "kompass"
+  ],
+  "sei-still-und-wisse-ich-bin-gott": [
+   "stille",
+   "kompass"
+  ],
+  "in-der-tiefe-der-zeit": [
+   "stille",
+   "kompass"
+  ],
+  "du-bist-nicht-dein-zweifel": [
+   "stille",
+   "kompass"
+  ],
+  "rathmer-s-repertorium-gebundene-ausgabe": [
+   "erepertorium",
+   "praxis"
+  ],
+  "rathmer-s-repertorium-ebook-version": [
+   "erepertorium",
+   "praxis"
+  ],
+  "rathmer-s-repertorium-opus-radar-zusatzmodul": [
+   "erepertorium",
+   "praxis"
+  ],
+  "repertorium-der-hervorstechenden-gemuetsrubriken-gebundene-a": [
+   "erepertorium",
+   "praxis"
+  ],
+  "repertorium-der-hervorstechenden-gemuetsrubriken-ebook": [
+   "erepertorium",
+   "praxis"
+  ],
+  "enneagramm-homoeopathie-repertorium-ebook-version": [
+   "repertorium",
+   "praxis"
+  ],
+  "das-grosse-eh-repertorium-gebunden": [
+   "repertorium",
+   "praxis"
+  ],
+  "das-grosse-eh-repertorium-ebook": [
+   "repertorium",
+   "praxis"
+  ],
+  "homoeopathische-arzneimittellehre-der-single-rubriken-aus-de": [
+   "repertorium",
+   "praxis"
+  ],
+  "der-kern-der-heilmittel-the-core-of-the-remedies-gebunden": [
+   "erepertorium",
+   "kompass",
+   "praxis"
+  ],
+  "enneagramm-homoeopathie-band-1": [
+   "erepertorium",
+   "kompass",
+   "praxis"
+  ],
+  "enneagramm-homoeopathie-band-2": [
+   "erepertorium",
+   "kompass",
+   "praxis"
+  ],
+  "enneagramm-homoeopathie-ebook-version": [
+   "erepertorium",
+   "kompass",
+   "praxis"
+  ],
+  "die-dynamik-der-9-enneagramm-heilmittel-gebundene-ausgabe": [
+   "erepertorium",
+   "kompass",
+   "praxis"
+  ],
+  "die-dynamik-der-9-enneagramm-heilmittel-ebook": [
+   "erepertorium",
+   "kompass",
+   "praxis"
+  ],
+  "lehrbuch-der-enneagramm-homoeopathie-band-1-taschenbuch": [
+   "erepertorium",
+   "kompass",
+   "praxis"
+  ],
+  "lehrbuch-der-enneagramm-homoeopathie-band-2-taschenbuch": [
+   "erepertorium",
+   "kompass",
+   "praxis"
+  ],
+  "lehrbuch-der-enneagramm-homoeopathie-band-3-taschenbuch": [
+   "erepertorium",
+   "kompass",
+   "praxis"
+  ],
+  "lehrbuch-der-enneagramm-homoeopathie-band-1-ebook": [
+   "erepertorium",
+   "kompass",
+   "praxis"
+  ],
+  "lehrbuch-der-enneagramm-homoeopathie-band-2-ebook": [
+   "erepertorium",
+   "kompass",
+   "praxis"
+  ],
+  "lehrbuch-der-enneagramm-homoeopathie-band-3-ebook": [
+   "erepertorium",
+   "kompass",
+   "praxis"
+  ],
+  "das-unterrichtsskript-zur-sehgal-ausbildung-ebook": [
+   "erepertorium",
+   "kompass",
+   "praxis"
+  ],
+  "fallanalyse-in-der-homoeopathie-nach-sehgal": [
+   "repertorium",
+   "praxis"
+  ],
+  "gesetzeskunde-fuer-heilpraktiker": [
+   "praxis"
+  ],
+  "die-enneagramm-homoeopathie-unterrichtsmaterial": [
+   "erepertorium",
+   "kompass",
+   "praxis"
+  ],
+  "die-enneagrammatische-homoeopathie-ebook": [
+   "erepertorium",
+   "kompass",
+   "praxis"
+  ],
+  "der-kern-der-heilmittel-the-core-of-the-remedies-ebook": [
+   "erepertorium",
+   "kompass",
+   "praxis"
+  ],
+  "enneagramm-biochemie": [
+   "erepertorium",
+   "kompass"
+  ],
+  "die-enneagramm-aromatherapie": [
+   "kompass",
+   "bluete"
+  ],
+  "the-code-of-your-personality": [
+   "kompass",
+   "bluete"
+  ],
+  "das-seminar-wenn-masken-fallen": [
+   "kompass",
+   "bluete"
+  ]
+ },
+ "seiten": {
+  "enneagramm.html": [
+   "kompass",
+   "bluete"
+  ],
+  "homoeopathie.html": [
+   "repertorium",
+   "erepertorium",
+   "praxis"
+  ],
+  "persoenliche-entwicklung.html": [
+   "stille",
+   "kompass"
+  ],
+  "kalender.html": [
+   "kompass"
+  ],
+  "neuerscheinungen.html": [
+   "kompass",
+   "stille",
+   "bluete"
+  ],
+  "ueber-den-autor.html": [
+   "praxis",
+   "kompass"
+  ],
+  "kontakt.html": [
+   "praxis"
+  ],
+  "seminare.html": [
+   "praxis",
+   "erepertorium"
+  ],
+  "kompass.html": [
+   "bluete",
+   "stille"
+  ],
+  "kompass-en.html": [
+   "bluete",
+   "stille"
+  ],
+  "neun-seelenblueten.html": [
+   "kompass",
+   "stille"
+  ],
+  "nine-soul-blossoms.html": [
+   "kompass",
+   "stille"
+  ],
+  "stille-und-weite.html": [
+   "kompass",
+   "bluete"
+  ],
+  "stille-and-space.html": [
+   "kompass",
+   "bluete"
+  ],
+  "repertorium.html": [
+   "erepertorium",
+   "praxis"
+  ],
+  "repertory.html": [
+   "erepertorium"
+  ],
+  "enneagramm-repertorium.html": [
+   "repertorium",
+   "kompass",
+   "praxis"
+  ],
+  "enneagram-repertory.html": [
+   "repertorium",
+   "kompass"
+  ],
+  "books-en.html": [
+   "kompass",
+   "bluete"
+  ]
+ },
+ "praxis_seiten": {
+  "homoeopathie.html": [
+   "repertorium",
+   "erepertorium"
+  ],
+  "enneagramm.html": [
+   "kompass",
+   "bluete"
+  ],
+  "beratung.html": [
+   "stille",
+   "kompass"
+  ],
+  "enneagramm-foto-typisierung.html": [
+   "kompass",
+   "bluete"
+  ],
+  "ueber-mich.html": [
+   "kompass",
+   "repertorium",
+   "stille"
+  ]
+ }
+}
