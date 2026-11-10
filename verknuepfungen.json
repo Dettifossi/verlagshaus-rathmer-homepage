@@ -8,7 +8,10 @@
    "text": "Das Wissen von mehr als 28 Büchern: strukturiert, durchsuchbar, in Farbe.",
    "text_en": "The Healing Compass shows you what to actually do with your Enneagram type: subtype-specific shadow work, healing knowledge from more than 28 books, structured and searchable.",
    "href": "kompass.html",
-   "href_en": "kompass-en.html"
+   "href_en": "kompass-en.html",
+   "icon": "images/icons/kompass.svg",
+   "kurz": "Das Wissen von mehr als 28 Büchern",
+   "kurz_en": "The knowledge of more than 28 books"
   },
   "bluete": {
    "name": "Neun Seelenblüten",
@@ -18,7 +21,10 @@
    "text": "Ihre App für die neun Blüten der neun Typen.",
    "text_en": "Your app for the nine blossoms of the nine types.",
    "href": "neun-seelenblueten.html",
-   "href_en": "nine-soul-blossoms.html"
+   "href_en": "nine-soul-blossoms.html",
+   "icon": "images/neun-seelenblueten/emblem.png",
+   "kurz": "Zu jedem Typ eine Bachblüte",
+   "kurz_en": "A Bach flower for every type"
   },
   "stille": {
    "name": "Stille & Weite",
@@ -28,7 +34,10 @@
    "text": "Ihre App für Stille, Klänge und Bewusstheit im Alltag: Übungen, Wege und Musik.",
    "text_en": "Your app for silence, sounds and awareness in everyday life: 68 sounds, exercises, paths in small steps, music.",
    "href": "stille-und-weite.html",
-   "href_en": "stille-and-space.html"
+   "href_en": "stille-and-space.html",
+   "icon": "images/stille-weite-emblem.png",
+   "kurz": "Stille, Klänge und Bewusstheit",
+   "kurz_en": "Silence, sounds and awareness"
   },
   "repertorium": {
    "name": "Rathmer’s Repertorium",
@@ -38,7 +47,10 @@
    "text": "Repertorisations-Software für klassische Homöopathen, mit Arzneimittellehre zu rund 500 Mitteln.",
    "text_en": "The repertory that explains its rubrics: meaning, definition and comment for over 5,900 rubrics. Select rubrics, see the remedy result, save the case.",
    "href": "repertorium.html",
-   "href_en": "repertory.html"
+   "href_en": "repertory.html",
+   "icon": "images/icons/repertorium-app.png",
+   "kurz": "Für klassische Homöopathen",
+   "kurz_en": "For classical homeopaths"
   },
   "erepertorium": {
    "name": "Enneagramm-Repertorium",
@@ -48,7 +60,10 @@
    "text": "Das Repertorium für Enneagramm-Homöopathie: 10.016 Rubriken mit den neun Enneagramm-Mitteln.",
    "text_en": "Over 2,800 rubrics with explanations. The nine Enneagram remedies in the repertory of the mind.",
    "href": "enneagramm-repertorium.html",
-   "href_en": "enneagram-repertory.html"
+   "href_en": "enneagram-repertory.html",
+   "icon": "images/icons/erepertorium-app.png",
+   "kurz": "Für die Enneagramm-Homöopathie",
+   "kurz_en": "For Enneagram homeopathy"
   },
   "praxis": {
    "name": "Naturheilpraxis Detlef Rathmer",
@@ -69,7 +84,10 @@
    "text": "Alle Porträts des Kompass als Einstieg, ohne den Rest.",
    "text_en": "The entry-level version of the Compass: living cases from practice — famous people, illness, criminal, astrology and biblical portraits.",
    "href": "kompass.html#zwei-wege",
-   "href_en": "kompass-en.html#two-ways"
+   "href_en": "kompass-en.html#two-ways",
+   "icon": "images/icons/portraits.svg",
+   "kurz": "Alle Porträts, der günstige Einstieg",
+   "kurz_en": "All portraits, the affordable start"
   }
  },
  "kategorien": {
@@ -475,5 +493,13 @@
    "repertorium",
    "stille"
   ]
- }
+ },
+ "reihenfolge_apps": [
+  "kompass",
+  "portraits",
+  "bluete",
+  "stille",
+  "repertorium",
+  "erepertorium"
+ ]
 }

@@ -44,17 +44,16 @@
   function pos(){nav.style.top=(hdr?hdr.offsetHeight:60)+'px'}pos();addEventListener('resize',pos);
   if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){items.forEach(function(i){i.a.classList.toggle('aktiv',i.el===e.target)})}})},{rootMargin:'-20% 0px -70% 0px'});items.forEach(function(i){io.observe(i.el)})}
 })();
-/* App-Liste aus apps.json: Karten und Anzahl */
+/* App-Streifen aus verknuepfungen.json: neue Apps erscheinen automatisch (Eintrag mit icon und kurz) */
 (function(){
-  var box=document.querySelector('#apps');if(!box||!window.fetch)return;
+  var liste=document.getElementById('vr-apps-liste');if(!liste||!window.fetch)return;
   var Z=['Null','Eine','Zwei','Drei','Vier','Fünf','Sechs','Sieben','Acht','Neun','Zehn','Elf','Zwölf'];
-  fetch('apps.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(d){
-    var apps=d.apps;if(!apps||!apps.length)return;
-    var cards=box.querySelectorAll('a[href]');if(!cards.length)return;var wrap=cards[0].parentNode;var tpl=cards[0];
-    var frag=document.createDocumentFragment();
-    apps.forEach(function(a){var c=tpl.cloneNode(true);c.setAttribute('href',a.href);var sp=c.querySelectorAll('span');
-      if(sp.length>=4){sp[0].textContent=a.eyebrow;sp[1].textContent=a.name;sp[2].textContent=a.text;sp[3].textContent=a.sprachen}frag.appendChild(c)});
-    wrap.innerHTML='';wrap.appendChild(frag);
-    var h=box.querySelector('h2');if(h)h.textContent=(Z[apps.length]||apps.length)+' Apps, die tiefer gehen';
+  fetch('verknuepfungen.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(d){
+    var P=d.produkte,ids=(d.reihenfolge_apps||[]).filter(function(i){return P[i]&&P[i].icon});
+    Object.keys(P).forEach(function(i){if(P[i].icon&&!P[i].extern&&ids.indexOf(i)<0)ids.push(i)});
+    if(!ids.length)return;
+    function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+    liste.innerHTML=ids.map(function(i){var p=P[i];return '<li><a class="vr-app" href="'+p.href+'"><img src="'+p.icon+'" alt="" width="64" height="64" loading="lazy"><span class="vr-app__name">'+esc(p.name)+'</span><span class="vr-app__kurz">'+esc(p.kurz||p.text)+'</span></a></li>'}).join('');
+    liste.style.setProperty('--cols',ids.length<=6?ids.length:Math.ceil(ids.length/2));var h=document.getElementById('vr-apps-titel');if(h)h.textContent=(Z[ids.length]||ids.length)+' Apps, die tiefer gehen';
   }).catch(function(){});
 })();
