@@ -47,13 +47,28 @@
 /* App-Streifen aus verknuepfungen.json: neue Apps erscheinen automatisch (Eintrag mit icon und kurz) */
 (function(){
   var liste=document.getElementById('vr-apps-liste');if(!liste||!window.fetch)return;
-  var Z=['Null','Eine','Zwei','Drei','Vier','Fünf','Sechs','Sieben','Acht','Neun','Zehn','Elf','Zwölf'];
+  var EN=document.documentElement.lang==='en';
+  var Z=EN?['Zero','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve']:['Null','Eine','Zwei','Drei','Vier','Fünf','Sechs','Sieben','Acht','Neun','Zehn','Elf','Zwölf'];
   fetch('verknuepfungen.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(d){
-    var P=d.produkte,ids=(d.reihenfolge_apps||[]).filter(function(i){return P[i]&&P[i].icon});
-    Object.keys(P).forEach(function(i){if(P[i].icon&&!P[i].extern&&ids.indexOf(i)<0)ids.push(i)});
+    var P=d.produkte;function ok(i){var p=P[i];return p&&p.icon&&!p.extern&&(!EN||p.name_en)}
+    var ids=(d.reihenfolge_apps||[]).filter(ok);
+    Object.keys(P).forEach(function(i){if(ok(i)&&ids.indexOf(i)<0)ids.push(i)});
     if(!ids.length)return;
     function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
-    liste.innerHTML=ids.map(function(i){var p=P[i];return '<li><a class="vr-app" href="'+p.href+'"><img src="'+p.icon+'" alt="" width="64" height="64" loading="lazy"><span class="vr-app__name">'+esc(p.name)+'</span><span class="vr-app__kurz">'+esc(p.kurz||p.text)+'</span></a></li>'}).join('');
-    liste.style.setProperty('--cols',ids.length<=6?ids.length:Math.ceil(ids.length/2));var h=document.getElementById('vr-apps-titel');if(h)h.textContent=(Z[ids.length]||ids.length)+' Apps, die tiefer gehen';
+    liste.innerHTML=ids.map(function(i){var p=P[i];var href=EN?p.href_en:p.href,name=EN?p.name_en:p.name,kurz=EN?(p.kurz_en||p.text_en):(p.kurz||p.text);return '<li><a class="vr-app" href="'+href+'"><img src="'+p.icon+'" alt="" width="64" height="64" loading="lazy"><span class="vr-app__name">'+esc(name)+'</span><span class="vr-app__kurz">'+esc(kurz)+'</span></a></li>'}).join('');
+    liste.style.setProperty('--cols',ids.length<=6?ids.length:Math.ceil(ids.length/2));
+    var h=document.getElementById('vr-apps-titel');if(h)h.textContent=EN?((Z[ids.length]||ids.length)+' apps that go deeper'):((Z[ids.length]||ids.length)+' Apps, die tiefer gehen');
   }).catch(function(){});
+})();
+
+/* Sprachumschalter immer sichtbar (ohne Menü aufzuklappen) */
+(function(){
+  var a=document.querySelector('.lang-switch a'),inner=document.querySelector('.nav-inner');
+  if(!a||!inner||inner.querySelector('.lang-quick'))return;
+  var q=document.createElement('a');q.className='lang-quick';q.href=a.getAttribute('href');
+  var hl=a.getAttribute('hreflang')||'';if(hl){q.setAttribute('hreflang',hl);q.setAttribute('lang',hl)}
+  q.textContent=(a.textContent.match(/[A-Za-z]{2}/)||['EN'])[0].toUpperCase();
+  q.setAttribute('aria-label',hl==='en'?'English version':(hl==='de'?'Deutsche Version':'Language'));
+  var sw=inner.querySelector('.site-switcher');
+  if(sw)inner.insertBefore(q,sw);else inner.appendChild(q);
 })();
