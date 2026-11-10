@@ -127,3 +127,4 @@ section#apps.vr-apps h2{font-size:clamp(1.9rem,4.4vw,3rem)!important;color:#1b1a
 @media(max-width:700px){.vr-app__name{font-size:.95rem}}
 @media(min-width:1000px){.vr-apps__liste{grid-template-columns:repeat(var(--cols,6),1fr)}.vr-app__name{font-size:1.15rem}}
 @media(min-width:701px) and (max-width:999px){.vr-apps__liste{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.vr-app{padding:.7rem .5rem .9rem}.vr-app__name{font-size:.88rem;hyphens:manual;overflow-wrap:break-word;word-break:normal}}
