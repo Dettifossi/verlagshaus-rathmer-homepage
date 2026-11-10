@@ -90,3 +90,4 @@ p[style*="6b6055"]{color:#b8b0a6!important}
 .hero-home .hero-sub{max-width:none!important;text-wrap:balance}
 @media(min-width:700px){.hero-home .hero-sub{white-space:nowrap}}
 .site-nav a.active,.nav-links a.active{color:var(--gold-dark)!important}
+@media(max-width:699px){.hero-home .hero-sub{letter-spacing:.1em!important;font-size:.88rem!important;line-height:1.7!important}}
