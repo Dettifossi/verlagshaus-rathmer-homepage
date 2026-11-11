@@ -178,11 +178,12 @@
    "name": "Enneagramm-Biochemie",
    "name_en": "Enneagram Biochemistry",
    "icon": "images/icons/biochemie-app.png",
-   "kurz": "Biochemie nach Schüßler im Spiegel des Enneagramms",
-   "kurz_en": "Schüssler biochemistry in the mirror of the Enneagram",
+   "kurz": "Biochemie nach Schüßler im Spiegel des Enneagramms. Bald verfügbar.",
+   "kurz_en": "Schüßler biochemistry in the mirror of the Enneagram. Coming soon.",
    "schild": "Seesalz",
    "schild_en": "Sea Salt",
-   "bald": true
+   "href": "https://enneagramm-biochemie.9rathmer.workers.dev/start",
+   "href_en": "https://enneagramm-biochemie.9rathmer.workers.dev/start-en"
   }
  },
  "kategorien": {
