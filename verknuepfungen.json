@@ -582,9 +582,15 @@
  "reihenfolge_apps": [
   "kompass",
   "portraits",
+  "beziehungen",
+  "sexualitaet",
+  "code",
+  "burnout",
+  "aromatherapie",
   "bluete",
-  "stille",
   "repertorium",
-  "erepertorium"
+  "erepertorium",
+  "heilung",
+  "stille"
  ]
 }
