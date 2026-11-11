@@ -13,7 +13,9 @@
    "kurz": "Das Wissen von mehr als 28 Büchern",
    "kurz_en": "The knowledge of more than 28 books",
    "schild": "Flaggschiff",
-   "schild_en": "Flagship"
+   "schild_en": "Flagship",
+   "erkl": "Das größte Schiff der Flotte: das Wissen von mehr als 28 Büchern.",
+   "erkl_en": "The largest ship in the fleet: the knowledge of more than 28 books."
   },
   "bluete": {
    "name": "Neun Seelenblüten",
@@ -28,7 +30,9 @@
    "kurz": "Zu jedem Typ eine Bachblüte",
    "kurz_en": "A Bach flower for every type",
    "schild": "Schiffsapotheke",
-   "schild_en": "Ship’s Medicine Chest"
+   "schild_en": "Ship’s Medicine Chest",
+   "erkl": "Wie in einer Schiffsapotheke: zu jedem Typ eine Bachblüte.",
+   "erkl_en": "Like a ship’s medicine chest: one Bach flower for each type."
   },
   "stille": {
    "name": "Stille & Weite",
@@ -44,7 +48,9 @@
    "kurz_en": "Silence, sounds and awareness",
    "schild": "Ankerplatz",
    "schild_en": "Anchorage",
-   "glyph": "anker"
+   "glyph": "anker",
+   "erkl": "Ein Ort zum Ausruhen: Stille, Klänge und Bewusstheit.",
+   "erkl_en": "A place to rest: stillness, sounds and awareness."
   },
   "repertorium": {
    "name": "Rathmer’s Repertorium",
@@ -59,7 +65,9 @@
    "kurz": "Für klassische Homöopathen",
    "kurz_en": "For classical homeopaths",
    "schild": "Seekarte",
-   "schild_en": "Sea Chart"
+   "schild_en": "Sea Chart",
+   "erkl": "Zum Nachschlagen und Wegfinden, für klassische Homöopathen.",
+   "erkl_en": "For looking things up and finding the way, for classical homeopaths."
   },
   "erepertorium": {
    "name": "Enneagramm-Repertorium",
@@ -74,7 +82,9 @@
    "kurz": "Für die Enneagramm-Homöopathie",
    "kurz_en": "For Enneagram homeopathy",
    "schild": "Spezialkarte",
-   "schild_en": "Special Chart"
+   "schild_en": "Special Chart",
+   "erkl": "Eine besondere Karte für die Enneagramm-Homöopathie.",
+   "erkl_en": "A special chart for Enneagram homeopathy."
   },
   "praxis": {
    "name": "Naturheilpraxis Detlef Rathmer",
@@ -100,7 +110,9 @@
    "kurz": "Alle Porträts, der günstige Einstieg",
    "kurz_en": "All portraits, the affordable start",
    "schild": "Beiboot",
-   "schild_en": "Dinghy"
+   "schild_en": "Dinghy",
+   "erkl": "Klein und wendig: alle Porträts als günstiger Einstieg.",
+   "erkl_en": "Small and nimble: all portraits as an affordable start."
   },
   "beziehungen": {
    "name": "Die Sprache unserer Beziehungen",

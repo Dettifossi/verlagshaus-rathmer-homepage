@@ -162,7 +162,7 @@ html[data-farbe="nacht"] .vr-apps h2::after{filter:brightness(1.6)}
 
 .vr-apps__kopf{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .vr-apps__titelblock{flex:1 1 auto}
-.vr-apps__schiff{width:clamp(130px,18vw,220px);height:auto;color:#7f6119;opacity:.85;margin-left:auto;flex:none;animation:vr-schaukeln 7s ease-in-out infinite;transform-origin:50% 90%}
+.vr-apps__schiff{width:clamp(130px,18vw,220px);height:auto;color:#7f6119;opacity:.85;margin-left:auto;flex:none;animation:vr-schaukeln 8s ease-in-out infinite;transform-origin:50% 88%}
 html[data-farbe="nacht"] .vr-apps__schiff{color:#e1c88f}
 @keyframes vr-schaukeln{0%,100%{transform:rotate(-1.2deg) translateY(0)}50%{transform:rotate(1.2deg) translateY(-3px)}}
 @media(prefers-reduced-motion:reduce){.vr-apps__schiff{animation:none}}
@@ -173,3 +173,10 @@ html[data-farbe="nacht"] .vr-apps__schiff{color:#e1c88f}
 @media(min-width:701px){.vr-apps__kopf{justify-content:flex-start;gap:clamp(1.5rem,5vw,4rem)}.vr-apps__titelblock{flex:0 0 auto}.vr-apps__schiff{margin:0 0 .2rem 0!important}}
 .vr-app__name{hyphens:manual!important;-webkit-hyphens:manual!important;overflow-wrap:normal!important;word-break:normal!important}
 @media(min-width:701px) and (max-width:1250px){.vr-apps__liste .vr-app__name{font-size:1rem}}
+
+/* Kein seitliches Wackeln: Seite lässt sich nicht nach links/rechts schieben */
+html,body{max-width:100%;overflow-x:hidden;overscroll-behavior-x:none}
+@supports (overflow:clip){html,body{overflow-x:clip}}
+.vr-apps__spruch{font-family:"EB Garamond",Georgia,serif;font-style:italic;font-size:1.05rem;line-height:1.55;color:#5a5448;max-width:34rem;margin:.9rem 0 0}
+@media(max-width:700px){.vr-apps__spruch{font-size:1rem}}
+html[data-farbe="nacht"] .vr-apps__spruch{color:#c9c4bb}
