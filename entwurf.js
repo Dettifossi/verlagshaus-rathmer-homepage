@@ -55,10 +55,10 @@
     Object.keys(P).forEach(function(i){if(ok(i)&&ids.indexOf(i)<0)ids.push(i)});
     if(!ids.length)return;
     function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
-    liste.innerHTML=ids.map(function(i){var p=P[i];var href=EN?p.href_en:p.href,name=EN?p.name_en:p.name,kurz=EN?(p.kurz_en||p.text_en):(p.kurz||p.text);if(p.bald)return '<li><div class="vr-app vr-app--bald"><img src="'+p.icon+'" alt="" width="64" height="64" loading="lazy"><span class="vr-app__schild">'+esc(EN?p.schild_en:p.schild)+'</span><span class="vr-app__name">'+esc(name)+'</span><span class="vr-app__kurz">'+esc(kurz)+'</span><span class="vr-app__bald">'+(EN?'In preparation':'In Vorbereitung')+'</span></div></li>';
-    return '<li><a class="vr-app" href="'+href+'"><img src="'+p.icon+'" alt="" width="64" height="64" loading="lazy">'+((EN?p.schild_en:p.schild)?'<span class="vr-app__schild">'+esc(EN?p.schild_en:p.schild)+'</span>':'')+'<span class="vr-app__name">'+esc(name)+'</span><span class="vr-app__kurz">'+esc(kurz)+'</span></a></li>'}).join('');
+    liste.innerHTML=ids.map(function(i){var p=P[i];var href=EN?p.href_en:p.href,name=EN?p.name_en:p.name,kurz=EN?(p.kurz_en||p.text_en):(p.kurz||p.text);if(p.bald)return '<li><div class="vr-app vr-app--bald"><img src="'+p.icon+'" alt="" width="64" height="64" loading="lazy"><span class="vr-app__name">'+esc(name)+'</span><span class="vr-app__kurz">'+esc(kurz)+'</span><span class="vr-app__schild">'+esc(EN?p.schild_en:p.schild)+'</span><span class="vr-app__bald">'+(EN?'In preparation':'In Vorbereitung')+'</span></div></li>';
+    return '<li><a class="vr-app" href="'+href+'"><img src="'+p.icon+'" alt="" width="64" height="64" loading="lazy"><span class="vr-app__name">'+esc(name)+'</span><span class="vr-app__kurz">'+esc(kurz)+'</span>'+((EN?p.schild_en:p.schild)?'<span class="vr-app__schild">'+esc(EN?p.schild_en:p.schild)+'</span>':'')+'</a></li>'}).join('');
     var nLive=ids.filter(function(i){return !P[i].bald}).length;liste.style.setProperty('--cols',ids.length<=6?ids.length:Math.ceil(ids.length/2));
-    var h=document.getElementById('vr-apps-titel');if(h)h.textContent=EN?((Z[nLive]||nLive)+' apps that go deeper'):((Z[nLive]||nLive)+' Apps, die tiefer gehen');
+    var h=document.getElementById('vr-apps-titel');if(h)h.textContent=EN?((Z[ids.length]||ids.length)+' apps that go deeper'):((Z[ids.length]||ids.length)+' Apps, die tiefer gehen');
   }).catch(function(){});
 })();
 
