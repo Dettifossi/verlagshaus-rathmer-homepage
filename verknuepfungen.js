@@ -23,7 +23,7 @@
     return d.seiten[path]||[];
   }
   function render(d){
-    var list=ids(d).filter(function(id){var p=d.produkte[id];if(!p)return false;if(EN&&!p.name_en)return false;return true}).slice(0,3);
+    var list=ids(d).filter(function(id){var p=d.produkte[id];if(!p||p.bald||!(EN?p.href_en:p.href))return false;if(EN&&!p.name_en)return false;return true}).slice(0,3);
     if(!list.length||document.querySelector('.vk-weiter'))return;
     var sec=document.createElement('aside');sec.className='vk-weiter'+(isPraxis?' vk-praxis':'');sec.setAttribute('aria-label',EN?'Continue exploring':'Weiterführend');
     var self=path.replace(/\.html$/,'');
