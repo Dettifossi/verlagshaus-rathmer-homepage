@@ -19,7 +19,7 @@
   <meta property="og:image" content="https://www.verlagshausrathmer.com/Logo-vr.png">
   <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
-  <link rel="stylesheet" href="styles.css?v=24"><link rel="stylesheet" href="entwurf.css?v=23">
+  <link rel="stylesheet" href="styles.css?v=24"><link rel="stylesheet" href="entwurf.css?v=24">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -322,12 +322,12 @@
     <h2 id="vr-apps-titel">Sechs Apps, die tiefer gehen</h2>
   </div>
   <ul class="vr-apps__liste" id="vr-apps-liste">
-    <li><a class="vr-app" href="kompass.html"><img src="images/icons/kompass.svg" alt="" width="64" height="64"><span class="vr-app__name">Enneagramm-Heilungskompass</span><span class="vr-app__kurz">Das Wissen von mehr als 28 Büchern</span></a></li>
-    <li><a class="vr-app" href="kompass.html#zwei-wege"><img src="images/icons/portraits.svg" alt="" width="64" height="64"><span class="vr-app__name">Enneagramm-Porträts</span><span class="vr-app__kurz">Alle Porträts, der günstige Einstieg</span></a></li>
-    <li><a class="vr-app" href="neun-seelenblueten.html"><img src="images/neun-seelenblueten/emblem.png" alt="" width="64" height="64"><span class="vr-app__name">Neun Seelenblüten</span><span class="vr-app__kurz">Zu jedem Typ eine Bachblüte</span></a></li>
-    <li><a class="vr-app" href="stille-und-weite.html"><img src="images/stille-weite-emblem.png" alt="" width="64" height="64"><span class="vr-app__name">Stille &amp; Weite</span><span class="vr-app__kurz">Stille, Klänge und Bewusstheit</span></a></li>
-    <li><a class="vr-app" href="repertorium.html"><img src="images/icons/repertorium-app.png" alt="" width="64" height="64"><span class="vr-app__name">Rathmer’s Repertorium</span><span class="vr-app__kurz">Für klassische Homöopathen</span></a></li>
-    <li><a class="vr-app" href="enneagramm-repertorium.html"><img src="images/icons/erepertorium-app.png" alt="" width="64" height="64"><span class="vr-app__name">Enneagramm-Repertorium</span><span class="vr-app__kurz">Für die Enneagramm-Homöopathie</span></a></li>
+    <li><a class="vr-app" href="kompass.html"><img src="images/icons/kompass.svg" alt="" width="64" height="64"><span class="vr-app__schild">Flaggschiff</span><span class="vr-app__name">Enneagramm-Heilungskompass</span><span class="vr-app__kurz">Das Wissen von mehr als 28 Büchern</span></a></li>
+    <li><a class="vr-app" href="kompass.html#zwei-wege"><img src="images/icons/portraits.svg" alt="" width="64" height="64"><span class="vr-app__schild">Beiboot</span><span class="vr-app__name">Enneagramm-Porträts</span><span class="vr-app__kurz">Alle Porträts, der günstige Einstieg</span></a></li>
+    <li><a class="vr-app" href="neun-seelenblueten.html"><img src="images/neun-seelenblueten/emblem.png" alt="" width="64" height="64"><span class="vr-app__schild">Schiffsapotheke</span><span class="vr-app__name">Neun Seelenblüten</span><span class="vr-app__kurz">Zu jedem Typ eine Bachblüte</span></a></li>
+    <li><a class="vr-app" href="stille-und-weite.html"><img src="images/stille-weite-emblem.png" alt="" width="64" height="64"><span class="vr-app__schild">Ankerplatz</span><span class="vr-app__name">Stille &amp; Weite</span><span class="vr-app__kurz">Stille, Klänge und Bewusstheit</span></a></li>
+    <li><a class="vr-app" href="repertorium.html"><img src="images/icons/repertorium-app.png" alt="" width="64" height="64"><span class="vr-app__schild">Seekarte</span><span class="vr-app__name">Rathmer’s Repertorium</span><span class="vr-app__kurz">Für klassische Homöopathen</span></a></li>
+    <li><a class="vr-app" href="enneagramm-repertorium.html"><img src="images/icons/erepertorium-app.png" alt="" width="64" height="64"><span class="vr-app__schild">Spezialkarte</span><span class="vr-app__name">Enneagramm-Repertorium</span><span class="vr-app__kurz">Für die Enneagramm-Homöopathie</span></a></li>
   </ul>
 </section>
 
@@ -905,11 +905,17 @@
 <script>
 (function() {
   var btn = document.getElementById('music-btn');
-  var player;
-  var playing = false;
-  var apiReady = false;
+  var player = null, loading = false, wantPlay = false;
   var PLAYLIST_ID = 'PLTDzuuiVuaI8o1UyclkxRxbTSOSvyR7mi';
+  var L = { on: 'Musik läuft', off: 'Jazz-Musik', load: 'Lädt …', tap: 'Zum Abspielen tippen' };
+  var iconOn = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>';
+  var iconOff = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>';
 
+  function isPlaying() { try { return player && player.getPlayerState && player.getPlayerState() === 1; } catch (e) { return false; } }
+  function ui(state) {
+    btn.querySelector('svg').innerHTML = state === 'on' ? iconOn : iconOff;
+    btn.querySelector('.music-label').textContent = state === 'on' ? L.on : (state === 'tap' ? L.tap : (state === 'load' ? L.load : L.off));
+  }
   function loadApi() {
     if (document.getElementById('yt-api-script')) return;
     var s = document.createElement('script');
@@ -917,42 +923,27 @@
     s.src = 'https://www.youtube.com/iframe_api';
     document.head.appendChild(s);
   }
-
   window.onYouTubeIframeAPIReady = function() {
-    apiReady = true;
     player = new YT.Player('yt-player-wrap', {
       height: '1', width: '1',
-      playerVars: {
-        listType: 'playlist',
-        list: PLAYLIST_ID,
-        autoplay: 1,
-        controls: 0,
-        loop: 1
-      },
+      playerVars: { listType: 'playlist', list: PLAYLIST_ID, autoplay: 1, controls: 0, loop: 1, playsinline: 1 },
       events: {
-        onReady: function(e) { e.target.playVideo(); }
+        onReady: function(e) {
+          e.target.playVideo();
+          // Handy-Browser erlauben den Start oft nur direkt nach einem Tipp: dann zweiten Tipp anbieten
+          setTimeout(function() { ui(isPlaying() ? 'on' : 'tap'); }, 1800);
+        },
+        onStateChange: function(e) { if (e.data === 1) ui('on'); else if (e.data === 2) ui('off'); }
       }
     });
-    playing = true;
-    updateBtn();
   };
-
-  function updateBtn() {
-    var iconOn = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>';
-    var iconOff = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>';
-    btn.querySelector('svg').innerHTML = playing ? iconOn : iconOff;
-    btn.querySelector('.music-label').textContent = playing ? 'Musik läuft' : 'Jazz-Musik';
-  }
-
   btn.addEventListener('click', function() {
-    if (!player && !apiReady) {
-      loadApi();
+    if (!player) {
+      if (!loading) { loading = true; ui('load'); loadApi(); }
       return;
     }
-    if (!player) return;
-    if (playing) { player.pauseVideo(); playing = false; }
-    else         { player.playVideo();  playing = true;  }
-    updateBtn();
+    if (isPlaying()) { player.pauseVideo(); ui('off'); }
+    else { player.playVideo(); ui('on'); }
   });
 })();
 </script>
@@ -983,5 +974,5 @@
     });
   })();
 </script>
-<script src="entwurf.js?v=11"></script></body>
+<script src="entwurf.js?v=15"></script></body>
 </html>

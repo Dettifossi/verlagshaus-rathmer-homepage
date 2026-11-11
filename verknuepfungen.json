@@ -11,7 +11,9 @@
    "href_en": "kompass-en.html",
    "icon": "images/icons/kompass.svg",
    "kurz": "Das Wissen von mehr als 28 Büchern",
-   "kurz_en": "The knowledge of more than 28 books"
+   "kurz_en": "The knowledge of more than 28 books",
+   "schild": "Flaggschiff",
+   "schild_en": "Flagship"
   },
   "bluete": {
    "name": "Neun Seelenblüten",
@@ -24,7 +26,9 @@
    "href_en": "nine-soul-blossoms.html",
    "icon": "images/neun-seelenblueten/emblem.png",
    "kurz": "Zu jedem Typ eine Bachblüte",
-   "kurz_en": "A Bach flower for every type"
+   "kurz_en": "A Bach flower for every type",
+   "schild": "Schiffsapotheke",
+   "schild_en": "Ship’s Medicine Chest"
   },
   "stille": {
    "name": "Stille & Weite",
@@ -37,7 +41,9 @@
    "href_en": "stille-and-space.html",
    "icon": "images/stille-weite-emblem.png",
    "kurz": "Stille, Klänge und Bewusstheit",
-   "kurz_en": "Silence, sounds and awareness"
+   "kurz_en": "Silence, sounds and awareness",
+   "schild": "Ankerplatz",
+   "schild_en": "Anchorage"
   },
   "repertorium": {
    "name": "Rathmer’s Repertorium",
@@ -50,7 +56,9 @@
    "href_en": "repertory.html",
    "icon": "images/icons/repertorium-app.png",
    "kurz": "Für klassische Homöopathen",
-   "kurz_en": "For classical homeopaths"
+   "kurz_en": "For classical homeopaths",
+   "schild": "Seekarte",
+   "schild_en": "Sea Chart"
   },
   "erepertorium": {
    "name": "Enneagramm-Repertorium",
@@ -63,7 +71,9 @@
    "href_en": "enneagram-repertory.html",
    "icon": "images/icons/erepertorium-app.png",
    "kurz": "Für die Enneagramm-Homöopathie",
-   "kurz_en": "For Enneagram homeopathy"
+   "kurz_en": "For Enneagram homeopathy",
+   "schild": "Spezialkarte",
+   "schild_en": "Special Chart"
   },
   "praxis": {
    "name": "Naturheilpraxis Detlef Rathmer",
@@ -87,7 +97,59 @@
    "href_en": "kompass-en.html#two-ways",
    "icon": "images/icons/portraits.svg",
    "kurz": "Alle Porträts, der günstige Einstieg",
-   "kurz_en": "All portraits, the affordable start"
+   "kurz_en": "All portraits, the affordable start",
+   "schild": "Beiboot",
+   "schild_en": "Dinghy"
+  },
+  "beziehungen": {
+   "name": "Die Sprache unserer Beziehungen",
+   "name_en": "The Language of Our Relationships",
+   "icon": "images/icons/flotte.svg",
+   "kurz": "Eltern, Kinder, Freunde, Kollegen, Paare",
+   "kurz_en": "Parents, children, friends, colleagues, couples",
+   "schild": "Flotte",
+   "schild_en": "Fleet",
+   "bald": true
+  },
+  "sexualitaet": {
+   "name": "Die Sprache unserer Sexualität",
+   "name_en": "The Language of Our Sexuality",
+   "icon": "images/icons/kajuete.svg",
+   "kurz": "Nähe und Leidenschaft im Spiegel des Enneagramms",
+   "kurz_en": "Closeness and passion in the mirror of the Enneagram",
+   "schild": "Kajüte für zwei",
+   "schild_en": "Cabin for Two",
+   "bald": true
+  },
+  "code": {
+   "name": "Der Code deiner Persönlichkeit",
+   "name_en": "The Code of Your Personality",
+   "icon": "images/icons/peilung.svg",
+   "kurz": "Auf mehreren Wegen den eigenen Typ bestimmen",
+   "kurz_en": "Several ways to find your own type",
+   "schild": "Peilung",
+   "schild_en": "Bearing",
+   "bald": true
+  },
+  "burnout": {
+   "name": "Die Stille brennt",
+   "name_en": "Burnout App",
+   "icon": "images/icons/rettungsring.svg",
+   "kurz": "Burnout verstehen, Typ für Typ",
+   "kurz_en": "Understanding burnout, type by type",
+   "schild": "Rettungsring",
+   "schild_en": "Lifebuoy",
+   "bald": true
+  },
+  "aromatherapie": {
+   "name": "Enneagramm-Aromatherapie",
+   "name_en": "Enneagram Aromatherapy",
+   "icon": "images/icons/proviant.svg",
+   "kurz": "Düfte nach der Enneagramm-Lehre",
+   "kurz_en": "Scents according to the Enneagram",
+   "schild": "Proviant",
+   "schild_en": "Provisions",
+   "bald": true
   }
  },
  "kategorien": {
