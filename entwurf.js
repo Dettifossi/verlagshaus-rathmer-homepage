@@ -48,7 +48,7 @@
 (function(){
   var liste=document.getElementById('vr-apps-liste');if(!liste||!window.fetch)return;
   var EN=document.documentElement.lang==='en';
-  var Z=EN?['Zero','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen']:['Null','Eine','Zwei','Drei','Vier','Fünf','Sechs','Sieben','Acht','Neun','Zehn','Elf','Zwölf','Dreizehn'];
+  var Z=EN?['Zero','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen']:['Null','Eine','Zwei','Drei','Vier','Fünf','Sechs','Sieben','Acht','Neun','Zehn','Elf','Zwölf','Dreizehn','Vierzehn'];
   fetch('verknuepfungen.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(d){
     var P=d.produkte;function ok(i){var p=P[i];return p&&p.icon&&!p.extern&&(!EN||p.name_en)}
     var ids=(d.reihenfolge_apps||[]).filter(ok);

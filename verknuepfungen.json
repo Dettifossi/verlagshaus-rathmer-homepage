@@ -183,6 +183,16 @@
    "schild": "Bordgarten",
    "schild_en": "Ship’s Garden",
    "bald": true
+  },
+  "biochemie": {
+   "name": "Enneagramm-Biochemie",
+   "name_en": "Enneagram Biochemistry",
+   "icon": "images/icons/biochemie.svg",
+   "kurz": "Biochemie nach Schüßler im Spiegel des Enneagramms",
+   "kurz_en": "Schüssler biochemistry in the mirror of the Enneagram",
+   "schild": "Seesalz",
+   "schild_en": "Sea Salt",
+   "bald": true
   }
  },
  "kategorien": {
@@ -598,6 +608,7 @@
   "burnout",
   "bluete",
   "bachbluete",
+  "biochemie",
   "aromatherapie",
   "repertorium",
   "erepertorium",
