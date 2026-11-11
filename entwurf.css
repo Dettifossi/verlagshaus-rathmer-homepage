@@ -156,3 +156,6 @@ section#apps.vr-apps h2{font-size:clamp(1.9rem,4.4vw,3rem)!important;color:#1b1a
 .nav-links .lang-switch{display:none!important}
 
 @media(max-width:560px){.sw-card[style*="grid-template-columns"]{grid-template-columns:96px 1fr!important;gap:.9rem!important}}
+
+.vr-apps h2::after{content:'';display:block;width:144px;height:10px;margin-top:.7rem;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='10' viewBox='0 0 48 10'%3E%3Cpath d='M0 5c6-6 12-6 24 0s18 6 24 0' fill='none' stroke='%237f6119' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x 0 0;opacity:.8}
+html[data-farbe="nacht"] .vr-apps h2::after{filter:brightness(1.6)}
