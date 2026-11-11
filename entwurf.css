@@ -170,3 +170,4 @@ html[data-farbe="nacht"] .vr-apps__schiff{color:#e1c88f}
 @media(max-width:700px){.vr-app__schild{letter-spacing:.06em;font-size:.62rem;overflow-wrap:anywhere}}
 @media(min-width:701px) and (max-width:1100px){.vr-apps__schiff{margin-right:9vw}}
 @media(min-width:1101px){.vr-apps__schiff{margin-right:3vw}}
+@media(min-width:701px){.vr-apps__kopf{justify-content:flex-start;gap:clamp(1.5rem,5vw,4rem)}.vr-apps__titelblock{flex:0 0 auto}.vr-apps__schiff{margin:0 0 .2rem 0!important}}
