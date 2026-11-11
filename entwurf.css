@@ -167,7 +167,7 @@ html[data-farbe="nacht"] .vr-apps__schiff{color:#e1c88f}
 @keyframes vr-schaukeln{0%,100%{transform:rotate(-1.2deg) translateY(0)}50%{transform:rotate(1.2deg) translateY(-3px)}}
 @media(prefers-reduced-motion:reduce){.vr-apps__schiff{animation:none}}
 @media(max-width:700px){.vr-apps__schiff{width:110px;order:-1;margin:0 auto .5rem}.vr-apps__titelblock{flex-basis:100%}}
-@media(max-width:700px){.vr-app__schild{letter-spacing:.06em;font-size:.62rem;overflow-wrap:anywhere}}
+@media(max-width:700px){.vr-app__schild{letter-spacing:.02em;font-size:.58rem;overflow-wrap:normal;word-break:normal}}
 @media(min-width:701px) and (max-width:1100px){.vr-apps__schiff{margin-right:9vw}}
 @media(min-width:1101px){.vr-apps__schiff{margin-right:3vw}}
 @media(min-width:701px){.vr-apps__kopf{justify-content:flex-start;gap:clamp(1.5rem,5vw,4rem)}.vr-apps__titelblock{flex:0 0 auto}.vr-apps__schiff{margin:0 0 .2rem 0!important}}
