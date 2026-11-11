@@ -100,7 +100,7 @@ p[style*="6b6055"]{color:#b8b0a6!important}
 .vr-app{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem;min-height:100%;padding:1rem 1rem 1.1rem;border:1px solid #1b1a1633;background:#fffdf8;text-decoration:none;color:#1b1a16;transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .25s,background .25s}
 .vr-app:hover,.vr-app:focus-visible{transform:translateY(-3px);border-color:#7f6119;background:#fff}
 .vr-app img{width:56px;height:56px;border-radius:14px;margin-bottom:.4rem;box-shadow:0 2px 8px rgba(0,0,0,.18);object-fit:cover}
-.vr-app__schild{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#8a6d2f;margin-top:.35rem}
+.vr-flagge{margin-right:.4rem;vertical-align:-1px}.vr-app__schild{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#8a6d2f;margin-top:.35rem}
 .vr-app--bald{border-style:dashed;background:#f7f3ea;cursor:default}.vr-app--bald:hover{transform:none;border-color:#1b1a1633;background:#f7f3ea}.vr-app--bald img{filter:saturate(.75)}.vr-app__bald{margin-top:auto;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#7f6119;font-style:italic}
 .vr-app__name{font-family:"EB Garamond",Georgia,serif;font-size:1.25rem;line-height:1.2}
 .vr-app__kurz{font-size:.88rem;line-height:1.4;color:#4a463d}
