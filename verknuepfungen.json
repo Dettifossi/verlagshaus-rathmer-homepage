@@ -151,6 +151,16 @@
    "schild": "Proviant",
    "schild_en": "Provisions",
    "bald": true
+  },
+  "heilung": {
+   "name": "Heilungs-App",
+   "name_en": "Healing App",
+   "icon": "images/icons/heilung.svg",
+   "kurz": "Wege zur Heilung, Typ für Typ",
+   "kurz_en": "Paths to healing, type by type",
+   "schild": "Schiffsarzt",
+   "schild_en": "Ship’s Doctor",
+   "bald": true
   }
  },
  "kategorien": {
