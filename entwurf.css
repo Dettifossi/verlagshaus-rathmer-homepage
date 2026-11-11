@@ -181,3 +181,6 @@ html,body{max-width:100%;overflow-x:hidden;overscroll-behavior-x:none}
 @media(max-width:700px){.vr-apps__spruch{font-size:1rem}}
 html[data-farbe="nacht"] .vr-apps__spruch{color:#c9c4bb}
 @media(min-width:1000px) and (max-width:1299px){.vr-apps__liste{grid-template-columns:repeat(5,1fr)!important}}
+/* Nachtmodus: Zitat (Weltliteratur) hell */
+html[data-farbe="nacht"] #wl-mob-text,.hero-home[data-farbe="nacht"] #wl-mob-text{color:#f5ead8!important}
+html[data-farbe="nacht"] #wl-mob-autor,.hero-home[data-farbe="nacht"] #wl-mob-autor,html[data-farbe="nacht"] #wl-mob::before,.hero-home[data-farbe="nacht"] #wl-mob::before{color:#e1c88f!important;opacity:1}
