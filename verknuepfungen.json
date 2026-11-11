@@ -174,16 +174,6 @@
    "schild_en": "Ship’s Doctor",
    "bald": true
   },
-  "bachbluete": {
-   "name": "Bachblüten-App",
-   "name_en": "Bach Flowers App",
-   "icon": "images/icons/bachblueten.svg",
-   "kurz": "Bachblüten verstehen und finden",
-   "kurz_en": "Understanding and finding Bach flowers",
-   "schild": "Bordgarten",
-   "schild_en": "Ship’s Garden",
-   "bald": true
-  },
   "biochemie": {
    "name": "Enneagramm-Biochemie",
    "name_en": "Enneagram Biochemistry",
@@ -607,7 +597,6 @@
   "sexualitaet",
   "burnout",
   "bluete",
-  "bachbluete",
   "biochemie",
   "aromatherapie",
   "repertorium",
