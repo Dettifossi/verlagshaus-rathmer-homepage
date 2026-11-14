@@ -157,12 +157,13 @@
   "aromatherapie": {
    "name": "Enneagramm-Aromatherapie",
    "name_en": "Enneagram Aromatherapy",
-   "icon": "images/icons/proviant.svg",
-   "kurz": "Düfte nach der Enneagramm-Lehre",
-   "kurz_en": "Scents according to the Enneagram",
+   "icon": "images/icons/aromatherapie-app.png",
+   "kurz": "Düfte nach der Enneagramm-Lehre. Film ansehen, bald verfügbar.",
+   "kurz_en": "Scents according to the Enneagram. Watch the film, coming soon.",
    "schild": "Proviant",
    "schild_en": "Provisions",
-   "bald": true
+   "href": "https://aromatherapie-app.9rathmer.workers.dev/start",
+   "href_en": "https://aromatherapie-app.9rathmer.workers.dev/start-en"
   },
   "heilung": {
    "name": "Heilungs-App",
