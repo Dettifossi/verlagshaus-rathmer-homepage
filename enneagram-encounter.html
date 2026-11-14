@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enneagram Encounter – free app for friendship, exchange and partnership – Verlagshaus Rathmer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+  <link rel="stylesheet" href="styles.css?v=24">
+  <meta name="description" content="Enneagram Encounter: a free app for friendship, exchange and partnership for people who know or want to learn about the Enneagram. An offering of Verlagshaus Rathmer and the Enneagram Profiling Academy.">
+  <meta name="author" content="Detlef Rathmer">
+  <link rel="canonical" href="https://www.verlagshausrathmer.com/enneagram-encounter.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Verlagshaus Rathmer">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Enneagram Encounter – free app for friendship, exchange and partnership – Verlagshaus Rathmer">
+  <meta property="og:description" content="Enneagram Encounter: a free app for friendship, exchange and partnership for people who know or want to learn about the Enneagram. An offering of Verlagshaus Rathmer and the Enneagram Profiling Academy.">
+  <meta property="og:url" content="https://www.verlagshausrathmer.com/enneagram-encounter.html">
+  <!-- noindex bis zum öffentlichen Start der App; dann in "index, follow" ändern und in sitemap.xml aufnehmen -->
+  <meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="entwurf-unter.css?v=15"></head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img decoding="async" width="120" height="140" src="Logo-vr-klein.png" alt="VR" class="nav-logo-img"><span class="nav-logo-text">Verlagshaus <span class="nav-logo-name">Rathmer</span><span class="nav-logo-url">www.verlagshausrathmer.com</span></span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-has-dropdown">
+        <button class="nav-dropdown-toggle" id="buecher-toggle">Books <span class="nav-caret">▾</span></button>
+        <ul class="nav-dropdown">
+          <li><a href="neuerscheinungen.html">New releases</a></li>
+          <li><a href="enneagramm.html">Enneagram</a></li>
+          <li><a href="einzelstudien.html">Literary portraits (27)</a></li>
+          <li><a href="homoeopathie.html">Homeopathy &amp; natural medicine</a></li>
+          <li><a href="persoenliche-entwicklung.html">Personal development</a></li>
+          <li><a href="kalender.html">Calendars</a></li>
+        </ul>
+      </li>
+      <li><a href="repertorium.html" >Repertory app</a></li>
+      <li><a href="geschenkideen.html">Gift ideas</a></li>
+      <li><a href="seminare.html">Seminars &amp; training</a></li>
+      <li><a href="ueber-den-autor.html">About the author</a></li>
+      <li><a href="kontakt.html">Contact</a></li>
+    <li class="lang-switch"><a href="enneagrammbegegnung.html" hreflang="de" lang="de">🇩🇪 DE</a></li>
+    </ul>
+    <div class="site-switcher">
+      <button class="site-switcher__btn">⇄&thinsp;Praxis</button>
+      <div class="site-switcher__card">
+        <p class="site-switcher__label">Other website</p>
+        <p class="site-switcher__name">Naturopathic practice Detlef Rathmer</p>
+        <p class="site-switcher__desc">Classical homeopathy, Enneagram &amp; psychological counseling in Billerbeck, Germany.</p>
+        <a href="https://psychologische-homoeopathie.de" class="site-switcher__link">&#8594;&ensp;To the practice</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+.bg-wrap{max-width:1000px;margin:0 auto;padding:0 1.2rem}
+.bg-top{display:grid;grid-template-columns:minmax(140px,210px) 1fr;gap:2.2rem;align-items:center;padding:2.6rem 0}
+.bg-top img{width:100%;filter:drop-shadow(0 10px 20px rgba(0,0,0,.22))}
+.bg-lead{font-size:1.25rem;line-height:1.55;color:var(--anthracite)} .bg-lead strong{color:#5b2a4e}
+.bg-badge{display:inline-block;background:#5b2a4e;color:#fff;font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.78rem;padding:.3rem .85rem;border-radius:30px}
+.bg-btns{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.2rem 0 .6rem}
+.bg-btn{display:inline-block;padding:.85rem 1.7rem;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;background:#5b2a4e;color:#fff}
+.bg-free{margin:.4rem 0 0;font-size:.95rem;color:#555}
+.bg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.1rem;margin:1rem 0 2.4rem}
+.bg-card{background:#fff;border:1px solid #e6d3dc;border-radius:14px;padding:1.3rem 1.4rem}
+.bg-card h3{margin:0 0 .4rem;font-size:1.15rem;color:#5b2a4e} .bg-card p{margin:0;line-height:1.55;color:#333}
+.bg-h2{font-size:1.7rem;margin:2.2rem 0 .3rem;color:var(--anthracite)}
+.bg-box{background:#f4e6ec;border-radius:16px;padding:1.6rem 1.8rem;margin:2rem 0}
+.bg-box h2{margin:0 0 .4rem}.bg-faq dt{font-weight:700;margin-top:1rem}.bg-faq dd{margin:.2rem 0 0;line-height:1.55}
+.bg-note{font-size:.85rem;color:#666;line-height:1.5;margin:1.6rem 0 2rem}
+@media(max-width:720px){.bg-top{grid-template-columns:1fr}.bg-top img{max-width:160px;margin:0 auto}}
+</style>
+<header class="page-hero">
+  <img class="hero-deco hero-deco-bl" src="deco-spines.svg" alt="" aria-hidden="true">
+  <img class="hero-deco hero-deco-br" src="deco-spines.svg" alt="" aria-hidden="true">
+  <p class="eyebrow">An offering of Verlagshaus Rathmer<br>and the Enneagram Profiling Academy of David L. Rathmer</p>
+  <h1>Enneagram Encounter</h1>
+  <p>A place for friendship, exchange and partnership for people who know or want to learn about the Enneagram.</p>
+  <p style="margin:1rem 0 0"><span class="bg-badge">Free · no membership fee</span></p>
+</header>
+<section class="section"><div class="bg-wrap">
+  <div class="bg-top">
+    <img src="images/icons/begegnung.svg" alt="Enneagram Encounter" width="210" height="210">
+    <div>
+      <p class="bg-lead">Find out how you and another person fit together, listen to music, take inspiration from small daily impulses. <strong>Nothing has to be, everything can be.</strong></p>
+      <div class="bg-btns"><a class="bg-btn" href="https://enneagrammbegegnung.9rathmer.workers.dev/" target="_blank" rel="noopener">Open the app →</a></div>
+      <p class="bg-free">Free. No membership fee. Usable without signing up.</p>
+    </div>
+  </div>
+  <h2 class="bg-h2">What you will find in the app</h2>
+  <div class="bg-grid"><div class="bg-card"><h3>Relationship evaluation</h3><p>Choose two Enneagram subtypes and read what carries the relationship and where it gets difficult. From the relationship texts of Detlef Rathmer.</p></div><div class="bg-card"><h3>Type Seal</h3><p>People are often mistyped in the Enneagram. The seal shows who has been typed personally by Detlef Rathmer or David L. Rathmer. It is voluntary. Anyone who types themselves is equally welcome.</p></div><div class="bg-card"><h3>Library, music, impulses</h3><p>Books and apps from the publishing house, music by Detlef Rathmer that you can also share, and small impulses for every day. Note: the books are mostly available in German only.</p></div><div class="bg-card"><h3>Open to everyone aged 18 and over</h3><p>All genders and ways of living are welcome. There is no entrance exam and no interview.</p></div></div>
+  <h2 class="bg-h2">Who is behind it</h2>
+  <div class="bg-grid"><div class="bg-card"><h3>Detlef Rathmer</h3><p>Therapist, author and publisher. Naturopathic practice and Verlagshaus Rathmer in Billerbeck, Germany.</p><p style="margin-top:.5rem"><a href="https://psychologische-homoeopathie.de" target="_blank" rel="noopener">psychologische-homoeopathie.de</a></p></div><div class="bg-card"><h3>David L. Rathmer</h3><p>Founder of the Enneagram Profiling Academy (Ennea Scholars). As a child he developed the Rathmer Profiling Method together with his father. Group courses and live calls several times a week, for companies and individuals.</p><p style="margin-top:.5rem"><a href="https://enneascholars.de" target="_blank" rel="noopener">For companies: enneascholars.de</a> · <a href="https://calendly.com/enneascholars/dein-erstgesprach" target="_blank" rel="noopener">For individuals: introductory call</a></p></div></div>
+  <!-- Unterstützen: erst einschalten, wenn der PayPal.Me-Link feststeht (hidden entfernen und href setzen) -->
+  <div class="bg-box" id="unterstuetzen" hidden><h2>Support</h2><p style="margin:0 0 1rem">The app is free. If you like it and would like to give something back, we welcome your voluntary support. It is not a condition for anything.</p><a class="bg-btn" href="#" target="_blank" rel="noopener">Support →</a></div>
+  <h2 class="bg-h2">Frequently asked questions</h2>
+  <dl class="bg-faq"><dt>What does the app cost?</dt><dd>Nothing. We charge no membership fee.</dd><dt>Do I need to know the Enneagram?</dt><dd>No. The evaluation explains itself, and the library helps you get started.</dd><dt>Do I have to be typed?</dt><dd>No. The Type Seal is a voluntary offer for those who would like to be typed personally, for example by David L. Rathmer or Detlef Rathmer.</dd><dt>What happens to my data?</dt><dd>The current app stores nothing about you on a server. Your settings stay on your device. Details are in the privacy policy in the app under “More”.</dd><dt>Are there profiles and encounters yet?</dt><dd>The evaluation, library, music and impulses are available now. Profiles and the actual encounter will follow later.</dd></dl>
+  <p class="bg-note">Note: The evaluations are suggestions, not a diagnosis and not a substitute for medical, psychotherapeutic or medical advice. A Type Seal is a professional assessment without guarantee.</p>
+</div></section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-logo"><img decoding="async" width="120" height="140" src="Logo-vr-klein.png" alt="VR" class="footer-logo-img">Verlagshaus Rathmer</span>
+    <ul class="footer-links">
+      <li><a href="impressum.html">Legal notice</a></li>
+      <li><a href="agb-en.html">Terms</a></li>
+      <li><a href="widerruf-en.html">Withdrawal</a></li>
+      <li><a href="datenschutz.html">Privacy</a></li>
+      <li><a href="kontakt.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">© 2026 Verlagshaus Rathmer · Detlef Rathmer · Molkereiweg 9 · 48727 Billerbeck</div>
+</footer>
+
+
+
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open'); this.classList.toggle('open');
+  });
+  document.getElementById('buecher-toggle').addEventListener('click', function() {
+    this.closest('.nav-has-dropdown').classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-has-dropdown')) {
+      document.querySelectorAll('.nav-has-dropdown.open').forEach(function(el) {
+        el.classList.remove('open');
+      });
+    }
+  });
+</script>
+<script src="animations.js?v=6"></script>
+<script src="entwurf.js?v=11"></script><script src="verknuepfungen.js?v=2"></script></body>
+</html>
