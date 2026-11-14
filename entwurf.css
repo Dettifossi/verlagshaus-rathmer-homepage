@@ -184,3 +184,8 @@ html[data-farbe="nacht"] .vr-apps__spruch{color:#c9c4bb}
 /* Nachtmodus: Zitat (Weltliteratur) hell */
 html[data-farbe="nacht"] #wl-mob-text,.hero-home[data-farbe="nacht"] #wl-mob-text{color:#f5ead8!important}
 html[data-farbe="nacht"] #wl-mob-autor,.hero-home[data-farbe="nacht"] #wl-mob-autor,html[data-farbe="nacht"] #wl-mob::before,.hero-home[data-farbe="nacht"] #wl-mob::before{color:#e1c88f!important;opacity:1}
+
+/* Motto unter dem Verlagsnamen */
+.hero-motto{font-style:italic;font-size:1.15rem;letter-spacing:.02em;margin:.2rem 0 1.1rem;color:var(--gold-dark);text-wrap:balance}
+.hero-home[data-farbe="nacht"] .hero-motto{color:#e1c88f}
+@media(max-width:699px){.hero-motto{font-size:1.02rem}}
