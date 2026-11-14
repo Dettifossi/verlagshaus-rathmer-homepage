@@ -1,6 +1,6 @@
 /* Kleiner Hörtipp des Autors zu ausgewählten Büchern (eigene Stimme), nur auf Knopfdruck. */
 (function(){
-  var TIPS=['hinter-der-leidenschaft','wenn-die-stille-brennt','der-raum-hinter-allem'];
+  var TIPS=['hinter-der-leidenschaft','wenn-die-stille-brennt','der-raum-hinter-allem','du-bist-nicht-dein-zweifel','nichts-und-alles','heilung-als-erinnerung','sei-still-und-wisse-ich-bin-gott','in-der-tiefe-der-zeit','die-sprache-unserer-beziehungen'];
   var m=location.pathname.match(/\/buch\/([^\/]+)\.html$/),q=new URLSearchParams(location.search).get('slug');
   var slug=m?m[1]:q;if(!slug||TIPS.indexOf(slug)<0)return;
   var audio=null,btn=null,L1='\u{1F508} Der Autor zum Buch',L2='■ Beenden';
