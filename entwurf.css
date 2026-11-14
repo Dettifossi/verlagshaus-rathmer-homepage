@@ -189,3 +189,5 @@ html[data-farbe="nacht"] #wl-mob-autor,.hero-home[data-farbe="nacht"] #wl-mob-au
 .hero-motto{font-style:italic;font-size:1.15rem;letter-spacing:.02em;margin:.2rem 0 1.1rem;color:var(--gold-dark);text-wrap:balance}
 .hero-home[data-farbe="nacht"] .hero-motto{color:#e1c88f}
 @media(max-width:699px){.hero-motto{font-size:1.02rem}}
+
+.hero-motto-by{display:block;font-style:normal;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;margin-top:.3rem;opacity:.8}
