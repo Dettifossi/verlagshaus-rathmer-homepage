@@ -7,7 +7,7 @@
   function stop(){if(audio){audio.pause();audio=null}if(btn)btn.textContent=L1}
   function make(){
     var b=document.createElement('button');b.type='button';b.id='autor-tipp';b.textContent=L1;
-    b.style.cssText="font:inherit;font-size:.9rem;margin:.4rem 0 1rem;padding:.55rem 1.1rem;border-radius:999px;border:1px solid var(--gold,#b8963e);background:transparent;color:var(--gold,#b8963e);cursor:pointer";
+    b.style.cssText="font:inherit;font-size:1rem;font-weight:600;margin:.5rem 0 1.1rem;padding:.7rem 1.4rem;border-radius:999px;border:1px solid var(--gold,#b8963e);background:var(--gold,#b8963e);color:#fff;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15)";
     b.onclick=function(){if(audio){stop();return}audio=new Audio('/audio/buchtipps/'+slug+'-de.mp3?v=1');b.textContent=L2;audio.onended=stop;audio.onerror=stop;audio.play().catch(stop)};
     btn=b;return b;
   }
