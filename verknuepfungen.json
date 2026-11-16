@@ -185,6 +185,18 @@
    "schild_en": "Sea Salt",
    "href": "https://enneagramm-biochemie.9rathmer.workers.dev/start",
    "href_en": "https://enneagramm-biochemie.9rathmer.workers.dev/start-en"
+  },
+  "fuehrung": {
+   "name": "Führung mit Fundament",
+   "name_en": "Leadership with Foundation",
+   "icon": "images/icons/steuerrad.svg",
+   "kurz": "Für Führungskräfte: die neun Führungstypen, Gesprächsvorbereitung, Team-Kompass",
+   "kurz_en": "For leaders: the nine leadership types, conversation prep, team compass",
+   "schild": "Steuermann",
+   "schild_en": "Helmsman",
+   "erkl": "Das griechische Wort für Steuermann, kybernētēs, steckt im lateinischen gubernare und damit im Wort für Führen und Lenken.",
+   "erkl_en": "The Greek word for helmsman, kybernētēs, is the root of Latin gubernare, to steer and to govern.",
+   "bald": true
   }
  },
  "kategorien": {
@@ -599,6 +611,7 @@
   "beziehungen",
   "sexualitaet",
   "burnout",
+  "fuehrung",
   "repertorium",
   "erepertorium",
   "biochemie",
