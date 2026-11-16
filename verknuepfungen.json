@@ -190,15 +190,14 @@
    "name": "Führung mit Fundament",
    "name_en": "Leadership with Foundation",
    "icon": "images/icons/steuerrad.svg",
-   "kurz": "Für Führungskräfte: Führungs­typen, Gesprächs­vorbereitung, Team-Kompass. Bald erhältlich.",
-   "kurz_en": "For leaders: leadership types, conversation prep, team compass. Coming soon.",
+   "kurz": "Für Führungskräfte: Führungs­typen, Gesprächs­vorbereitung, Team-Kompass. Jetzt erhältlich.",
+   "kurz_en": "For leaders: leadership types, conversation prep, team compass. Now available.",
    "schild": "Steuermann",
    "schild_en": "Helmsman",
    "erkl": "Das griechische Wort für Steuermann, kybernētēs, steckt im lateinischen gubernare und damit im Wort für Führen und Lenken.",
    "erkl_en": "The Greek word for helmsman, kybernētēs, is the root of Latin gubernare, to steer and to govern.",
-   "bald": true,
    "href": "fuehrung-mit-fundament-app.html",
-   "href_en": "fuehrung-mit-fundament-app.html"
+   "href_en": "leadership-with-foundation-app.html"
   }
  },
  "kategorien": {
