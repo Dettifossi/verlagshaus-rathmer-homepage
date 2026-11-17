@@ -628,6 +628,16 @@
    "schild_uk": "Годинник",
    "kurz_zh": "随脏腑节律饮食：中国脏腑时钟与九型人格。筹备中。",
    "schild_zh": "时钟"
+  },
+  "meta": {
+   "name": "Meta-Intelligenz",
+   "name_en": "Meta-Intelligence",
+   "icon": "images/icons/meta-intelligenz-app.png",
+   "kurz": "Das eigene Denken beobachten: Übungen zum Selbermachen und Stille-Zeitgeber. In Vorbereitung.",
+   "kurz_en": "Observing your own thinking: practices to try yourself and a silence timer. In preparation.",
+   "schild": "Leuchtfeuer",
+   "schild_en": "Beacon",
+   "bald": true
   }
  },
  "kategorien": {
@@ -1041,6 +1051,7 @@
   "code",
   "beziehungen",
   "sexualitaet",
+  "meta",
   "burnout",
   "fuehrung",
   "repertorium",
