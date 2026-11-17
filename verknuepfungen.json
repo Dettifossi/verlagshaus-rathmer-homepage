@@ -631,5 +631,16 @@
   "aromatherapie",
   "stille",
   "heilung"
- ]
+ ],
+ "kostenlos": {
+  "name": "Enneagrammbegegnung",
+  "name_en": "Enneagram Encounter",
+  "icon": "images/icons/begegnung.svg",
+  "kurz": "Kostenlose App für Freundschaft, Austausch und Partnerschaft, für Menschen, die das Enneagramm kennen oder kennenlernen wollen.",
+  "kurz_en": "A free app for friendship, exchange and partnership, for people who know or want to learn about the Enneagram.",
+  "schild": "Hafen für alle",
+  "schild_en": "Harbour for All",
+  "href": "enneagrammbegegnung.html",
+  "href_en": "enneagram-encounter.html"
+ }
 }
