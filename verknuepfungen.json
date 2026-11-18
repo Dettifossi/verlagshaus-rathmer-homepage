@@ -369,7 +369,11 @@
    "schild": "Seekarte",
    "schild_en": "Sea Chart",
    "href": "die-verborgene-dynamik-der-27-subtypen-app.html",
-   "href_en": "the-hidden-dynamics-of-the-27-subtypes-app.html"
+   "href_en": "the-hidden-dynamics-of-the-27-subtypes-app.html",
+   "rolle": "Die App zum Buch",
+   "rolle_en": "The app for the book",
+   "text": "Das ganze Buch auf dem Handy: 27 Subtypen, Suche, Vorlesen und jeden Tag ein Subtyp.",
+   "text_en": "The whole book on your phone: 27 subtypes, search, read-aloud and a subtype every day."
   },
   "code": {
    "name": "Der Code deiner Persönlichkeit",
@@ -958,6 +962,16 @@
   "das-seminar-wenn-masken-fallen": [
    "kompass",
    "bluete"
+  ],
+  "die-verborgene-dynamik-der-27-subtypen": [
+   "subtypen",
+   "kompass",
+   "bluete"
+  ],
+  "the-hidden-dynamics-of-the-27-subtypes": [
+   "subtypen",
+   "kompass",
+   "bluete"
   ]
  },
  "seiten": {
@@ -1061,7 +1075,25 @@
    "stille"
   ]
  },
- "reihenfolge_apps": ["kompass", "portraits", "code", "subtypen", "beziehungen", "sexualitaet", "meta", "burnout", "fuehrung", "repertorium", "erepertorium", "chrono", "biochemie", "bluete", "aromatherapie", "stille", "heilung"],
+ "reihenfolge_apps": [
+  "kompass",
+  "portraits",
+  "code",
+  "subtypen",
+  "beziehungen",
+  "sexualitaet",
+  "meta",
+  "burnout",
+  "fuehrung",
+  "repertorium",
+  "erepertorium",
+  "chrono",
+  "biochemie",
+  "bluete",
+  "aromatherapie",
+  "stille",
+  "heilung"
+ ],
  "kostenlos": {
   "name": "Enneagrammbegegnung",
   "name_en": "Enneagram Encounter",
