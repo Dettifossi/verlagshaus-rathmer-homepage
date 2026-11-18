@@ -360,6 +360,17 @@
    "kurz_zh": "在九型人格的镜子中看亲密与激情",
    "schild_zh": "双人舱"
   },
+  "subtypen": {
+   "name": "Die verborgene Dynamik der 27 Subtypen",
+   "name_en": "The Hidden Dynamics of the 27 Subtypes",
+   "icon": "images/icons/subtypen-app.png",
+   "kurz": "Das Enneagramm neu verstehen",
+   "kurz_en": "Understanding the Enneagram anew",
+   "schild": "Seekarte",
+   "schild_en": "Sea Chart",
+   "href": "die-verborgene-dynamik-der-27-subtypen-app.html",
+   "href_en": "the-hidden-dynamics-of-the-27-subtypes-app.html"
+  },
   "code": {
    "name": "Der Code deiner Persönlichkeit",
    "name_en": "The Code of Your Personality",
@@ -1056,6 +1067,7 @@
   "code",
   "beziehungen",
   "sexualitaet",
+  "subtypen",
   "meta",
   "burnout",
   "fuehrung",
