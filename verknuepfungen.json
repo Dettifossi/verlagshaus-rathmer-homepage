@@ -1061,25 +1061,7 @@
    "stille"
   ]
  },
- "reihenfolge_apps": [
-  "kompass",
-  "portraits",
-  "code",
-  "beziehungen",
-  "sexualitaet",
-  "subtypen",
-  "meta",
-  "burnout",
-  "fuehrung",
-  "repertorium",
-  "erepertorium",
-  "chrono",
-  "biochemie",
-  "bluete",
-  "aromatherapie",
-  "stille",
-  "heilung"
- ],
+ "reihenfolge_apps": ["kompass", "portraits", "code", "subtypen", "beziehungen", "sexualitaet", "meta", "burnout", "fuehrung", "repertorium", "erepertorium", "chrono", "biochemie", "bluete", "aromatherapie", "stille", "heilung"],
  "kostenlos": {
   "name": "Enneagrammbegegnung",
   "name_en": "Enneagram Encounter",
