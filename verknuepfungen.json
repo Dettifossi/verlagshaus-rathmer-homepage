@@ -453,6 +453,16 @@
    "kurz_zh": "理解职业倦怠，逐型解读",
    "schild_zh": "救生圈"
   },
+  "hoerapp": {
+   "name": "In der Tiefe der Zeit – App-Hörbuch",
+   "name_en": "In der Tiefe der Zeit – app audiobook",
+   "icon": "images/icons/hoerapp.png",
+   "kurz": "27 Geschichten zum Hören und Mitlesen, mit der Stimme des Autors.",
+   "kurz_en": "27 stories to listen to and read along, in the author's voice.",
+   "schild": "Logbuch",
+   "schild_en": "Logbook",
+   "bald": true
+  },
   "aromatherapie": {
    "name": "Enneagramm-Aromatherapie",
    "name_en": "Enneagram Aromatherapy",
@@ -1093,6 +1103,7 @@
   "biochemie",
   "bluete",
   "aromatherapie",
+  "hoerapp",
   "stille",
   "heilung"
  ],
