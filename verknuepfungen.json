@@ -669,6 +669,16 @@
    "schild_en": "Beacon",
    "href": "meta-intelligenz-app.html",
    "href_en": "meta-intelligence-app.html"
+  },
+  "seminar": {
+   "name": "Das Seminar – App-Hörbuch",
+   "name_en": "The Seminar – app audiobook",
+   "icon": "images/icons/seminar.png",
+   "kurz": "Der Roman zum Hören und Mitlesen, mit der Stimme des Autors und den 27 Romanfiguren.",
+   "kurz_en": "The novel to listen to and read along, in the author's voice, with the 27 characters.",
+   "schild": "Roman",
+   "schild_en": "Novel",
+   "bald": true
   }
  },
  "kategorien": {
@@ -828,6 +838,7 @@
    "kompass"
   ],
   "in-der-tiefe-der-zeit": [
+   "hoerapp",
    "stille",
    "kompass"
   ],
@@ -972,6 +983,7 @@
    "bluete"
   ],
   "das-seminar-wenn-masken-fallen": [
+   "seminar",
    "kompass",
    "bluete"
   ],
@@ -1104,6 +1116,7 @@
   "bluete",
   "aromatherapie",
   "hoerapp",
+  "seminar",
   "stille",
   "heilung"
  ],
