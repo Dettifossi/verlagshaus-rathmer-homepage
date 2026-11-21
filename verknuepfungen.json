@@ -415,14 +415,15 @@
    "schild_zh": "保险箱"
   },
   "burnout": {
-   "name": "Die Stille brennt",
-   "name_en": "Burnout App",
+   "name": "Burnout – Wenn die Stille brennt",
+   "name_en": "Burnout – When Silence Burns",
    "icon": "images/icons/rettungsring.svg",
    "kurz": "Burnout verstehen, Typ für Typ",
    "kurz_en": "Understanding burnout, type by type",
    "schild": "Rettungsring",
    "schild_en": "Lifebuoy",
-   "bald": true,
+   "href": "burnout-wenn-die-stille-brennt-app.html",
+   "href_en": "burnout-when-silence-burns-app.html",
    "kurz_ar": "فهم الاحتراق النفسي، نمطًا بعد نمط",
    "schild_ar": "طوق النجاة",
    "kurz_es": "Comprender el burnout, tipo por tipo",
@@ -800,6 +801,7 @@
    "kompass"
   ],
   "wenn-die-stille-brennt": [
+   "burnout",
    "stille",
    "kompass"
   ],
