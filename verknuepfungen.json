@@ -503,9 +503,11 @@
    "schild_zh": "补给"
   },
   "heilung": {
-   "name": "Heilungs-App",
-   "name_en": "Healing App",
-   "icon": "images/icons/heilung.svg",
+   "name": "Heilung verstehen",
+   "name_en": "Understanding Healing",
+   "icon": "images/icons/heilung-app.png",
+   "href": "heilung-verstehen-app.html",
+   "href_en": "understanding-healing-app.html",
    "kurz": "Wege zur Heilung, Typ für Typ",
    "kurz_en": "Paths to healing, type by type",
    "schild": "Schiffsarzt",
