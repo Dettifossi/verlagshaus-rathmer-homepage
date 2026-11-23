@@ -684,17 +684,14 @@
   },
   "lexikon": {
    "name": "Enneagramm-Lexikon",
-   "name_en": "Enneagram Lexicon",
    "rolle": "Nachschlagen",
    "rolle_en": "Look things up",
    "icon": "images/icons/lexikon-app.png",
    "kurz": "Über 6.000 Stichwörter zu 9 Typen und 27 Subtypen: große Suche, Auswertung und Lebensmuster.",
-   "kurz_en": "Over 6,000 entries on 9 types and 27 subtypes: powerful search, evaluation and life patterns.",
    "schild": "A–Z",
    "schild_en": "A–Z",
    "bald": true,
-   "href": "",
-   "href_en": ""
+   "href": "enneagramm-lexikon-app.html"
   }
  },
  "kategorien": {
