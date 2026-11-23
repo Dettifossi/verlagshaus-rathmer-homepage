@@ -191,3 +191,5 @@ html[data-farbe="nacht"] #wl-mob-autor,.hero-home[data-farbe="nacht"] #wl-mob-au
 @media(max-width:699px){.hero-motto{font-size:1.02rem}}
 
 .hero-motto-by{display:block;font-style:normal;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;margin-top:.3rem;opacity:.8}
+
+.vr-apps__gruppe{max-width:1180px;margin:1.4rem auto .2rem;padding:0 1.2rem;font-family:"EB Garamond",Georgia,serif;font-weight:400;font-size:1.35rem;color:#1b1a16;display:flex;align-items:center;gap:.7rem}.vr-apps__gruppe::after{content:"";flex:1;height:1px;background:#1b1a1630}

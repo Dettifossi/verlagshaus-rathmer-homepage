@@ -681,6 +681,20 @@
    "schild": "Roman",
    "schild_en": "Novel",
    "bald": true
+  },
+  "lexikon": {
+   "name": "Enneagramm-Lexikon",
+   "name_en": "Enneagram Lexicon",
+   "rolle": "Nachschlagen",
+   "rolle_en": "Look things up",
+   "icon": "images/icons/lexikon-app.png",
+   "kurz": "Über 6.000 Stichwörter zu 9 Typen und 27 Subtypen: große Suche, Auswertung und Lebensmuster.",
+   "kurz_en": "Over 6,000 entries on 9 types and 27 subtypes: powerful search, evaluation and life patterns.",
+   "schild": "A–Z",
+   "schild_en": "A–Z",
+   "bald": true,
+   "href": "",
+   "href_en": ""
   }
  },
  "kategorien": {
@@ -1111,16 +1125,17 @@
   "meta",
   "burnout",
   "fuehrung",
-  "repertorium",
-  "erepertorium",
   "chrono",
-  "biochemie",
+  "heilung",
   "bluete",
   "aromatherapie",
-  "hoerapp",
-  "seminar",
   "stille",
-  "heilung"
+  "lexikon",
+  "repertorium",
+  "erepertorium",
+  "biochemie",
+  "hoerapp",
+  "seminar"
  ],
  "kostenlos": {
   "name": "Enneagrammbegegnung",
@@ -1160,5 +1175,55 @@
   "schild_uk": "Гавань для всіх",
   "kurz_zh": "一款关于友谊、交流与伴侣关系的免费应用，适合了解或想了解九型人格的人。",
   "schild_zh": "人人皆可的港湾"
- }
+ },
+ "gruppen": [
+  {
+   "id": "kompass",
+   "name": "Der Kompass",
+   "name_en": "The Compass",
+   "apps": [
+    "kompass",
+    "portraits"
+   ]
+  },
+  {
+   "id": "buecher",
+   "name": "Die Bücher als App",
+   "name_en": "The books as apps",
+   "apps": [
+    "code",
+    "subtypen",
+    "beziehungen",
+    "sexualitaet",
+    "meta",
+    "burnout",
+    "fuehrung",
+    "chrono",
+    "heilung",
+    "bluete",
+    "aromatherapie",
+    "stille"
+   ]
+  },
+  {
+   "id": "nachschlagen",
+   "name": "Nachschlagewerke",
+   "name_en": "Reference works",
+   "apps": [
+    "lexikon",
+    "repertorium",
+    "erepertorium",
+    "biochemie"
+   ]
+  },
+  {
+   "id": "hoeren",
+   "name": "Zum Hören",
+   "name_en": "To listen",
+   "apps": [
+    "hoerapp",
+    "seminar"
+   ]
+  }
+ ]
 }
