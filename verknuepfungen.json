@@ -461,7 +461,9 @@
    "kurz_en": "27 stories to listen to and read along, in the author's voice.",
    "schild": "Logbuch",
    "schild_en": "Logbook",
-   "bald": true
+   "bald": true,
+   "href": "in-der-tiefe-der-zeit-app.html",
+   "href_en": "in-the-depth-of-time-audio-app.html"
   },
   "aromatherapie": {
    "name": "Enneagramm-Aromatherapie",
@@ -692,6 +694,20 @@
    "schild_en": "A–Z",
    "bald": true,
    "href": "enneagramm-lexikon-app.html"
+  },
+  "weltreise": {
+   "name": "Enneagramm-Weltreise",
+   "name_en": "Enneagram World Tour",
+   "rolle": "Reisen",
+   "rolle_en": "Travel",
+   "icon": "images/icons/weltreise-app.png",
+   "kurz": "202 Länder nach Typ und Subtyp: Weltkarte, Globus und Reiseführer. Auf Deutsch und Englisch.",
+   "kurz_en": "202 countries by type and subtype: world map, globe and travel guide. In German and English.",
+   "schild": "Weltkarte",
+   "schild_en": "World map",
+   "bald": true,
+   "href": "enneagramm-weltreise-app.html",
+   "href_en": "enneagram-world-tour-app.html"
   }
  },
  "kategorien": {
@@ -1115,6 +1131,7 @@
  "reihenfolge_apps": [
   "kompass",
   "portraits",
+  "weltreise",
   "code",
   "subtypen",
   "beziehungen",
@@ -1180,7 +1197,8 @@
    "name_en": "The Compass",
    "apps": [
     "kompass",
-    "portraits"
+    "portraits",
+    "weltreise"
    ]
   },
   {
