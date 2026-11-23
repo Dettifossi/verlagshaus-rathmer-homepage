@@ -1125,12 +1125,12 @@
   "chrono",
   "heilung",
   "bluete",
+  "biochemie",
   "aromatherapie",
   "stille",
   "lexikon",
   "repertorium",
   "erepertorium",
-  "biochemie",
   "hoerapp",
   "seminar"
  ],
@@ -1198,6 +1198,7 @@
     "chrono",
     "heilung",
     "bluete",
+    "biochemie",
     "aromatherapie",
     "stille"
    ]
@@ -1209,8 +1210,7 @@
    "apps": [
     "lexikon",
     "repertorium",
-    "erepertorium",
-    "biochemie"
+    "erepertorium"
    ]
   },
   {
