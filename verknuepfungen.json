@@ -708,6 +708,20 @@
    "bald": true,
    "href": "enneagramm-weltreise-app.html",
    "href_en": "enneagram-world-tour-app.html"
+  },
+  "zoo": {
+   "name": "Enneagramm-Zoo",
+   "name_en": "Enneagram Zoo",
+   "rolle": "Mit Humor",
+   "rolle_en": "With humour",
+   "icon": "images/icons/zoo-app.png",
+   "kurz": "27 Tiere, 27 Subtypen: 270 Cartoons in Farbe mit Text und Deutung, Tier-Test und Vergleich.",
+   "kurz_en": "27 animals, 27 subtypes: 270 colour cartoons with text and interpretation, animal test and comparison.",
+   "schild": "Cartoons",
+   "schild_en": "Cartoons",
+   "bald": true,
+   "href": "enneagramm-zoo-app.html",
+   "href_en": "enneagram-zoo-app.html"
   }
  },
  "kategorien": {
@@ -1134,6 +1148,7 @@
   "weltreise",
   "code",
   "subtypen",
+  "zoo",
   "beziehungen",
   "sexualitaet",
   "meta",
@@ -1208,6 +1223,7 @@
    "apps": [
     "code",
     "subtypen",
+    "zoo",
     "beziehungen",
     "sexualitaet",
     "meta",
