@@ -722,6 +722,20 @@
    "bald": true,
    "href": "enneagramm-zoo-app.html",
    "href_en": "enneagram-zoo-app.html"
+  },
+  "klangkompass": {
+   "name": "Klangkompass",
+   "name_en": "Sound Compass",
+   "rolle": "Die Musik",
+   "rolle_en": "The music",
+   "icon": "images/icons/klangkompass.png",
+   "kurz": "Über 1.400 Lieder von Detlef Rathmer, geordnet nach Typ, Instinkt, Stimmung, Stil und Album. Mit pulsierender Kugel.",
+   "kurz_en": "Over 1,400 songs by Detlef Rathmer, sorted by type, instinct, mood, style and album. With a pulsing sphere.",
+   "schild": "Musik",
+   "schild_en": "Music",
+   "bald": true,
+   "href": "klangkompass-app.html",
+   "href_en": "sound-compass-app.html"
   }
  },
  "kategorien": {
@@ -1145,6 +1159,7 @@
  "reihenfolge_apps": [
   "kompass",
   "portraits",
+  "klangkompass",
   "weltreise",
   "code",
   "subtypen",
@@ -1213,6 +1228,7 @@
    "apps": [
     "kompass",
     "portraits",
+    "klangkompass",
     "weltreise"
    ]
   },
