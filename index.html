@@ -9,7 +9,6 @@
   <meta name="author" content="Detlef Rathmer">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="canonical" href="https://www.verlagshausrathmer.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Verlagshaus Rathmer">
   <meta property="og:locale" content="de_DE">
@@ -19,7 +18,8 @@
   <meta property="og:image" content="https://www.verlagshausrathmer.com/Logo-vr.png">
   <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
-  <link rel="stylesheet" href="styles.css?v=25"><link rel="stylesheet" href="entwurf.css?v=42">
+  <link rel="canonical" href="https://www.verlagshausrathmer.com/">
+  <link rel="stylesheet" href="styles.css?v=25"><link rel="stylesheet" href="entwurf.css?v=42"><link rel="stylesheet" href="buecherwand.css?v=1">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -104,6 +104,48 @@
     </div>
   </div>
 </nav>
+
+<!-- ==================== BÜCHERWAND ==================== -->
+<section class="ew-wand" id="ewWand" aria-label="Alle Buchcover">
+  <p class="ew-wand__zeile"><span id="ewTitel">110</span> Bücher, E-Books und Kalender, dazu <span id="ewApps">23</span> Apps – zum Enneagramm, zur Homöopathie und zur Heilkunde.</p>
+  <div class="ew-wand__reihen"></div>
+  <p class="ew-wand__mehr"><a href="#alle-buecher">Alle Bücher nach Themen geordnet</a></p>
+</section>
+
+<!-- ==================== WEGWEISER ==================== -->
+<nav class="ew-wege" aria-label="Wegweiser">
+  <div class="ew-weg">
+    <h2><a href="#buchfinder">Sich selbst verstehen</a></h2>
+    <p>Den eigenen Typ besser verstehen und die Muster dahinter kennenlernen.</p>
+    <ul><li><a href="enneagramm.html">Enneagramm</a></li><li><a href="persoenliche-entwicklung.html">Persönliche Entwicklung</a></li><li><a href="kompass.html">Heilungskompass</a></li></ul>
+  </div>
+  <div class="ew-weg">
+    <h2><a href="homoeopathie.html">Für Therapeuten und Homöopathen</a></h2>
+    <p>Repertorien, Arzneimittellehren und Lehrbücher für die Praxis.</p>
+    <ul><li><a href="repertorium.html">Rathmer’s Repertorium</a></li><li><a href="enneagramm-repertorium.html">Enneagramm-Repertorium</a></li><li><a href="seminare.html">Seminare</a></li></ul>
+  </div>
+  <div class="ew-weg">
+    <h2><a href="#interview">Hören und Erleben</a></h2>
+    <p>Ein Interview, ein Hörbuch, Musik und Stille.</p>
+    <ul><li><a href="klangkompass-app.html">Klangkompass</a></li><li><a href="stille-und-weite.html">Stille &amp; Weite</a></li><li><a href="buch/meta-intelligenz-das-hoerbuch.html">Meta-Intelligenz als Hörbuch</a></li></ul>
+  </div>
+</nav>
+
+<!-- ==================== NEU ERSCHIENEN ==================== -->
+<section class="ew-neu" aria-labelledby="ew-neu-titel">
+  <div class="ew-neu__in">
+    <div class="ew-neu__kopf">
+      <h2 id="ew-neu-titel">Neu erschienen</h2>
+      <a href="neuerscheinungen.html">Alle Neuerscheinungen →</a>
+    </div>
+    <ul class="ew-neu__liste">
+      <li><a href="buch/die-enneagramm-aromatherapie.html"><img src="images/2026/07/Die-Enneagramm-Aromatherapie-Cover.webp" alt="" width="316" height="500" loading="lazy"><span><span class="ew-neu__art">Buch</span><span class="ew-neu__titel">Die Enneagramm-Aromatherapie</span><span class="ew-neu__info">Taschenbuch · 116 Seiten · 2026</span></span></a></li>
+      <li><a href="buch/hinter-der-leidenschaft.html"><img src="images/2026/06/Hinter-der-Leidenschaft-Cover.webp" alt="" width="316" height="500" loading="lazy"><span><span class="ew-neu__art">Buch</span><span class="ew-neu__titel">Hinter der Leidenschaft – Die neun Wunden des Enneagramms</span><span class="ew-neu__info">Taschenbuch · 200 Seiten</span></span></a></li>
+      <li><a href="buch/wenn-die-stille-brennt.html"><img src="images/2026/06/Wenn-die-Stille-brennt-Cover.webp" alt="" width="316" height="500" loading="lazy"><span><span class="ew-neu__art">Buch</span><span class="ew-neu__titel">Wenn die Stille brennt – Burnout</span><span class="ew-neu__info">Taschenbuch · 92 Seiten</span></span></a></li>
+      <li><a href="fuehrung-mit-fundament-app.html"><img class="ew-neu__icon" src="images/icons/fuehrung-app.png" alt="" width="62" height="62" loading="lazy"><span><span class="ew-neu__art">App</span><span class="ew-neu__titel">Führung mit Fundament</span><span class="ew-neu__info">Für Führungskräfte: Führungstypen, Gesprächsvorbereitung, Team-Kompass.</span></span></a></li>
+    </ul>
+  </div>
+</section>
 
 <!-- ==================== HERO ==================== -->
 <header class="hero-home">
@@ -419,7 +461,7 @@
 </section>
 
 <!-- ==================== WELCHES BUCH PASST ZU MIR? ==================== -->
-<section class="section" style="background:var(--cream,#faf6ee);">
+<section id="buchfinder" class="section" style="background:var(--cream,#faf6ee);">
   <div class="section-inner">
     <div class="section-header">
       <h2>Welches Buch passt zu mir?</h2>
@@ -657,7 +699,7 @@
 </section>
 
 <!-- ==================== ALLE BÜCHER (GALERIE) ==================== -->
-<section class="section section--books-all">
+<section id="alle-buecher" class="section section--books-all">
   <div class="section-inner">
     <div class="section-header">
       <h2>Alle Bücher im Überblick</h2>
@@ -1024,5 +1066,8 @@
     });
   })();
 </script>
-<script src="entwurf.js?v=24"></script></body>
+<script src="entwurf.js?v=24"></script>
+<script src="buecher-daten.js"></script>
+<script src="buecherwand-bilder.js?v=1"></script><script src="buecherwand.js?v=1"></script>
+</body>
 </html>
