@@ -54,3 +54,26 @@
 .ew-neu__liste a:hover .ew-neu__titel{color:#f5e9d0;text-decoration:underline}
 @media (max-width:980px){.ew-neu__liste{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:520px){.ew-neu__liste{grid-template-columns:1fr}.ew-neu__in{padding:1.1rem 1rem}}
+
+/* ---- Kopf: Leitspruch zuerst ---- */
+.hero-home.hero-oben{padding:5.6rem 0 1.2rem!important}
+.hero-oben h1{font-size:clamp(2.4rem,6.4vw,5.6rem)!important;margin-bottom:.35em!important}
+.hero-oben #wl-mob{padding:.6rem 0 0}
+.hero-oben #wl-mob::before{display:none}
+.hero-home-center #wl-mob-text,.hero-home-center #wl-mob-autor{text-align:left}
+.hero-oben #wl-mob-autor{margin-bottom:0}
+.hero-oben .farbwahl{top:1.8rem;right:max(2rem,calc((100% - 1180px)/2 + 2rem))}
+@media (min-width:1100px){.hero-oben #wl-mob{display:block!important;max-width:44em}}
+.hero-home:not(.hero-oben){padding-top:3rem!important}
+@media (max-width:600px){
+  .hero-home.hero-oben{padding:4.3rem 0 .9rem!important}
+  .hero-oben h1{font-size:2.3rem!important;line-height:1.05!important}
+  .hero-oben .hero-home-center{padding:0 1.1rem!important}
+  .hero-oben .farbwahl{top:auto;bottom:auto;right:auto;left:1.1rem;position:relative;margin-top:.8rem}
+  .ew-wand{padding-top:1rem}
+  #music-btn,#greet-btn{padding:.3rem .65rem!important;font-size:.76rem!important;gap:.3rem!important;min-height:0!important;line-height:1.2!important}
+  #music-btn{top:4.9rem!important;left:.7rem!important;right:auto!important;bottom:auto!important}
+  #greet-btn{top:4.9rem!important;left:8.6rem!important}
+  #music-btn svg,#greet-btn svg{width:13px;height:13px}
+}
+.hero-oben .hero-home-center>*{animation:none!important;opacity:1!important}
