@@ -77,3 +77,8 @@
   #music-btn svg,#greet-btn svg{width:13px;height:13px}
 }
 .hero-oben .hero-home-center>*{animation:none!important;opacity:1!important}
+
+.hero-oben .hero-willkommen{margin:.6rem 0 0;font-size:1.1rem}
+/* Musik und Begrüßung bleiben oben auf der Seite, statt beim Scrollen über dem Text zu schweben */
+#music-btn,#greet-btn{position:absolute!important}
+.books-all-box .book-card{opacity:1!important;transform:none!important}
