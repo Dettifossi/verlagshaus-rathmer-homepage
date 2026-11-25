@@ -28,7 +28,7 @@
   <link rel="apple-touch-icon" href="Logo-vr.png">
   <meta name="apple-mobile-web-app-title" content="Verlagshaus Rathmer">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<link rel="stylesheet" href="entwurf-unter.css?v=15"><link rel="stylesheet" href="entwurf.css?v=42"></head>
+<link rel="stylesheet" href="entwurf-unter.css?v=15"><link rel="stylesheet" href="entwurf.css?v=42"><link rel="stylesheet" href="buecherwand.css?v=1"></head>
 <body>
 
 <nav class="site-nav">
@@ -56,6 +56,48 @@
 .sw-note{font-size:.85rem;color:#666;line-height:1.5;margin:1.6rem 0 2rem}
 @media(max-width:720px){.sw-top{grid-template-columns:1fr}.sw-top img{max-width:180px;margin:0 auto}}
 </style>
+<!-- ==================== BOOK WALL ==================== -->
+<section class="ew-wand" id="ewWand" aria-label="All book covers">
+  <p class="ew-wand__zeile"><span id="ewTitel">110</span> books, e-books and calendars, plus <span id="ewApps">23</span> apps – on the Enneagram, homeopathy and natural healing.</p>
+  <div class="ew-wand__reihen"></div>
+  <p class="ew-wand__mehr"><a href="books-en.html">All books by topic</a></p>
+</section>
+
+<!-- ==================== SIGNPOSTS ==================== -->
+<nav class="ew-wege" aria-label="Signposts">
+  <div class="ew-weg">
+    <h2><a href="kompass-en.html">Understanding yourself</a></h2>
+    <p>Getting to know your own type better and the patterns behind it.</p>
+    <ul><li><a href="kompass-en.html">Enneagram Healing Compass</a></li><li><a href="burnout-when-silence-burns-app.html">When Silence Burns – Burnout</a></li><li><a href="nine-soul-blossoms.html">Nine Soul Blossoms</a></li></ul>
+  </div>
+  <div class="ew-weg">
+    <h2><a href="repertory.html">For therapists and homeopaths</a></h2>
+    <p>Repertories, materia medica and textbooks for daily practice.</p>
+    <ul><li><a href="repertory.html">Rathmer’s Repertory</a></li><li><a href="enneagram-repertory.html">Enneagram Homeopathy Repertory</a></li><li><a href="books-en.html">Books</a></li></ul>
+  </div>
+  <div class="ew-weg">
+    <h2><a href="apps-en.html">Listening and experiencing</a></h2>
+    <p>Music, silence and a journey around the world.</p>
+    <ul><li><a href="sound-compass-app.html">Sound Compass</a></li><li><a href="stille-and-space.html">Stillness &amp; Space</a></li><li><a href="enneagram-world-tour-app.html">Enneagram World Tour</a></li></ul>
+  </div>
+</nav>
+
+<!-- ==================== NEW RELEASES ==================== -->
+<section class="ew-neu" aria-labelledby="ew-neu-titel">
+  <div class="ew-neu__in">
+    <div class="ew-neu__kopf">
+      <h2 id="ew-neu-titel">New releases</h2>
+      <a href="books-en.html">All books →</a>
+    </div>
+    <ul class="ew-neu__liste">
+      <li><a href="buch/die-enneagramm-aromatherapie.html"><img src="images/2026/07/Die-Enneagramm-Aromatherapie-Cover.webp" alt="" width="316" height="500" loading="lazy"><span><span class="ew-neu__art">Book</span><span class="ew-neu__titel">Die Enneagramm-Aromatherapie (German)</span><span class="ew-neu__info">Paperback · 116 pages · 2026</span></span></a></li>
+      <li><a href="buch/hinter-der-leidenschaft.html"><img src="images/2026/06/Hinter-der-Leidenschaft-Cover.webp" alt="" width="316" height="500" loading="lazy"><span><span class="ew-neu__art">Book</span><span class="ew-neu__titel">Hinter der Leidenschaft – Die neun Wunden des Enneagramms (German)</span><span class="ew-neu__info">Paperback · 200 pages</span></span></a></li>
+      <li><a href="buch/wenn-die-stille-brennt.html"><img src="images/2026/06/Wenn-die-Stille-brennt-Cover.webp" alt="" width="316" height="500" loading="lazy"><span><span class="ew-neu__art">Book</span><span class="ew-neu__titel">Wenn die Stille brennt – Burnout (German)</span><span class="ew-neu__info">Paperback · 92 pages</span></span></a></li>
+      <li><a href="leadership-with-foundation-app.html"><img class="ew-neu__icon" src="images/icons/fuehrung-app.png" alt="" width="62" height="62" loading="lazy"><span><span class="ew-neu__art">App</span><span class="ew-neu__titel">Leadership with Foundation</span><span class="ew-neu__info">For leaders: leadership types, conversation preparation, team compass.</span></span></a></li>
+    </ul>
+  </div>
+</section>
+
 <header class="hero-home">
   <img class="hero-deco hero-deco-bl" src="deco-spines.svg" alt="" aria-hidden="true">
   <img class="hero-deco hero-deco-br" src="deco-spines.svg" alt="" aria-hidden="true">
@@ -228,7 +270,9 @@
   }
 })();
 </script>
-<script src="entwurf.js?v=24"></script><!-- Musik-Player -->
+<script src="entwurf.js?v=24"></script>
+<script src="buecher-daten.js"></script>
+<script src="buecherwand-bilder.js?v=2"></script><script src="buecherwand.js?v=1"></script><!-- Musik-Player -->
 <div id="yt-player-wrap" style="display:none;"></div>
 <button id="music-btn" title="Jazz music by the author Detlef Rathmer" aria-label="Music on/off">
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
