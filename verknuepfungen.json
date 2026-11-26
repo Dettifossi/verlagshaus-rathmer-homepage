@@ -958,6 +958,19 @@
    "schild_sw": "Muziki",
    "kurz_ha": "Waƙoƙi fiye da 1,300 na Detlef Rathmer, an tsara su bisa nau’i, ilhami, yanayi, salo da kundi. Da ƙwallo mai bugawa.",
    "schild_ha": "Kiɗa"
+  },
+  "autogen": {
+   "name": "Autogenes Training",
+   "name_en": "Autogenic Training",
+   "rolle": "Die Übung",
+   "rolle_en": "The practice",
+   "icon": "images/icons/autogenes-training.png",
+   "schild": "Ruhepol",
+   "schild_en": "Still point",
+   "kurz": "Die sieben Übungen der Grundstufe und die Oberstufe, gesprochen in der Stimme des Autors.",
+   "kurz_en": "The seven basic exercises and the advanced level, spoken in the author’s voice.",
+   "href": "autogenes-training-app.html",
+   "href_en": "autogenic-training-app.html"
   }
  },
  "kategorien": {
@@ -1400,6 +1413,7 @@
   "lexikon",
   "repertorium",
   "erepertorium",
+  "autogen",
   "hoerapp",
   "seminar"
  ],
@@ -1490,6 +1504,7 @@
    "name": "Zum Hören",
    "name_en": "To listen",
    "apps": [
+    "autogen",
     "hoerapp",
     "seminar"
    ]
