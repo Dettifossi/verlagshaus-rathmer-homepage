@@ -44,6 +44,30 @@
   function pos(){nav.style.top=(hdr?hdr.offsetHeight:60)+'px'}pos();addEventListener('resize',pos);
   if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){items.forEach(function(i){i.a.classList.toggle('aktiv',i.el===e.target)})}})},{rootMargin:'-20% 0px -70% 0px'});items.forEach(function(i){io.observe(i.el)})}
 })();
+/* App-Regal: erst alle Apps in Fächern auf einen Blick, dann in ein Fach hinein. Alle Karten bleiben im Dokument. */
+function regal(liste,gruppen,ids,P,EN,esc){
+  var lis=[].slice.call(liste.children),pos=0,F=[];
+  gruppen.forEach(function(g){var a=(g.apps||[]).filter(function(x){return ids.indexOf(x)>=0});if(!a.length)return;F.push({name:EN?(g.name_en||g.name):g.name,apps:a,lis:a.map(function(x){return lis[ids.indexOf(x)]})});pos+=a.length});
+  if(pos!==ids.length)return;
+  function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h)e.innerHTML=h;return e}
+  var kasten=el('div','regal'),uebersicht=el('div','regal__faecher'),innen=el('div','regal__innen');
+  var zurueck=el('button','regal__zurueck',EN?'← All apps':'← Alle Apps'),reiter=el('div','regal__reiter');zurueck.type='button';
+  innen.appendChild(zurueck);innen.appendChild(reiter);innen.hidden=true;
+  var panels=[],tasten=[],faecher=[],offen=-1;
+  function zeig(n){var alt=offen;offen=n;uebersicht.hidden=n>=0;innen.hidden=n<0;
+    panels.forEach(function(p,i){p.hidden=i!==n;tasten[i].setAttribute('aria-pressed',i===n)});
+    var ziel=n<0?faecher[alt]:tasten[n];if(ziel)ziel.focus({preventScroll:true});
+    if(kasten.getBoundingClientRect().top<0)kasten.scrollIntoView()}
+  F.forEach(function(f,i){
+    var n=f.apps.length+' Apps';
+    var b=el('button','regal__fach','<span class="regal__kopf">'+esc(f.name)+'<small>'+n+'</small></span><span class="regal__icons">'+f.apps.map(function(x){var p=P[x],t=esc(EN?p.name_en:p.name).replace(/"/g,'&quot;');return '<img src="'+p.icon+'" alt="'+t+'" title="'+t+'" width="96" height="96" loading="lazy">'}).join('')+'</span><span class="regal__mehr">'+(EN?'Open compartment →':'Fach öffnen →')+'</span>');
+    b.type='button';if(f.apps.length>8)b.classList.add('regal__fach--gross');b.onclick=function(){zeig(i)};uebersicht.appendChild(b);faecher.push(b);
+    var r=el('button','',esc(f.name));r.type='button';r.onclick=function(){zeig(i)};reiter.appendChild(r);tasten.push(r);
+    var ul=el('ul',liste.className+' regal__karten');ul.setAttribute('aria-label',f.name);ul.hidden=true;f.lis.forEach(function(li){ul.appendChild(li)});innen.appendChild(ul);panels.push(ul)});
+  zurueck.onclick=function(){zeig(-1)};
+  kasten.addEventListener('keydown',function(e){if(e.key==='Escape'&&offen>=0)zeig(-1)});
+  kasten.appendChild(uebersicht);kasten.appendChild(innen);liste.parentNode.insertBefore(kasten,liste);liste.hidden=true;liste.style.display='none';
+}
 /* App-Streifen aus verknuepfungen.json: neue Apps erscheinen automatisch (Eintrag mit icon und kurz) */
 (function(){
   var liste=document.getElementById('vr-apps-liste');if(!liste||!window.fetch)return;
@@ -58,14 +82,8 @@
     liste.innerHTML=ids.map(function(i){var p=P[i];var href=EN?p.href_en:p.href,name=EN?p.name_en:p.name,kurz=EN?(p.kurz_en||p.text_en):(p.kurz||p.text);if(p.bald&&!p.href)return '<li><div class="vr-app vr-app--bald"><img src="'+p.icon+'" alt="" width="64" height="64" loading="lazy"><span class="vr-app__name">'+esc(name).replace(/-/g,'-<wbr>')+'</span><span class="vr-app__kurz">'+esc(kurz)+'</span><span class="vr-app__schild"'+((EN?p.erkl_en:p.erkl)?' title="'+esc(EN?p.erkl_en:p.erkl)+'"':'')+'>'+(p.glyph==='anker'?'<svg class="vr-flagge" width="11" height="13" viewBox="0 0 14 16" aria-hidden="true"><circle cx="7" cy="3" r="1.7" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M7 4.7V14M4.4 7.2h5.2M1.8 10.2c.3 2.5 2.6 3.8 5.2 3.8s4.9-1.3 5.2-3.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>':'<svg class="vr-flagge" width="11" height="13" viewBox="0 0 14 16" aria-hidden="true"><path d="M2 1v14" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M2.8 1.5L13 4.8 2.8 8.5z" fill="currentColor"/></svg>')+''+esc(EN?p.schild_en:p.schild)+'</span><span class="vr-app__bald">'+(EN?'In preparation':'In Vorbereitung')+'</span></div></li>';
     return '<li><a class="vr-app" href="'+href+'"><img src="'+p.icon+'" alt="" width="64" height="64" loading="lazy"><span class="vr-app__name">'+esc(name).replace(/-/g,'-<wbr>')+'</span><span class="vr-app__kurz">'+esc(kurz)+'</span>'+((EN?p.schild_en:p.schild)?'<span class="vr-app__schild"'+((EN?p.erkl_en:p.erkl)?' title="'+esc(EN?p.erkl_en:p.erkl)+'"':'')+'>'+(p.glyph==='anker'?'<svg class="vr-flagge" width="11" height="13" viewBox="0 0 14 16" aria-hidden="true"><circle cx="7" cy="3" r="1.7" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M7 4.7V14M4.4 7.2h5.2M1.8 10.2c.3 2.5 2.6 3.8 5.2 3.8s4.9-1.3 5.2-3.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>':'<svg class="vr-flagge" width="11" height="13" viewBox="0 0 14 16" aria-hidden="true"><path d="M2 1v14" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M2.8 1.5L13 4.8 2.8 8.5z" fill="currentColor"/></svg>')+''+esc(EN?p.schild_en:p.schild)+'</span>':'')+'</a></li>'}).join('');
     var nLive=ids.filter(function(i){return !P[i].bald}).length;liste.style.setProperty('--cols',ids.length<=6?ids.length:Math.ceil(ids.length/2));
-    if(d.gruppen&&d.gruppen.length){var lis=[].slice.call(liste.children),pos=0,par=liste.parentNode,idsSet=ids;
-      d.gruppen.forEach(function(g){var n=(g.apps||[]).filter(function(a){return idsSet.indexOf(a)>=0}).length;if(!n)return;
-        var h3=document.createElement('h3');h3.className='vr-apps__gruppe';h3.textContent=EN?(g.name_en||g.name):g.name;
-        var ul=document.createElement('ul');ul.className=liste.className;ul.style.setProperty('--cols',Math.min(n,6));
-        lis.slice(pos,pos+n).forEach(function(li){ul.appendChild(li)});pos+=n;
-        par.insertBefore(h3,liste);par.insertBefore(ul,liste)});
-      liste.style.display='none'}
-    var h=document.getElementById('vr-apps-titel');if(h)h.textContent=EN?((Z[ids.length]||ids.length)+' apps that go deeper'):((Z[ids.length]||ids.length)+' Apps, die tiefer gehen');
+    var h=document.getElementById('vr-apps-titel');if(h)h.textContent=EN?'Rathmer’s App Shelf':'Rathmers App-Regal';
+    if(d.gruppen&&d.gruppen.length)regal(liste,d.gruppen,ids,P,EN,esc);
   }).catch(function(){});
 })();
 

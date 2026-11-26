@@ -193,3 +193,29 @@ html[data-farbe="nacht"] #wl-mob-autor,.hero-home[data-farbe="nacht"] #wl-mob-au
 .hero-motto-by{display:block;font-style:normal;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;margin-top:.3rem;opacity:.8}
 
 .vr-apps__gruppe{max-width:1180px;margin:1.4rem auto .2rem;padding:0 1.2rem;font-family:"EB Garamond",Georgia,serif;font-weight:400;font-size:1.35rem;color:#1b1a16;display:flex;align-items:center;gap:.7rem}.vr-apps__gruppe::after{content:"";flex:1;height:1px;background:#1b1a1630}
+
+/* ---- App-Regal ---- */
+.regal{max-width:1180px;margin:0 auto;padding:clamp(.7rem,2vw,1.4rem);background:#e9dfca;border:10px solid #6b4a27;scroll-margin-top:7rem}
+@media(max-width:1210px){.regal{margin:0 .8rem}}
+.regal [hidden]{display:none!important}
+.regal button{font-family:"EB Garamond",Georgia,serif;cursor:pointer;color:#1b1a16}
+.regal button:focus-visible{outline:3px solid #7f6119;outline-offset:2px}
+.regal__faecher{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-flow:dense;gap:.9rem}
+.regal__fach{grid-column:span 4;display:flex;flex-direction:column;gap:.8rem;text-align:left;padding:1rem 1.1rem 1.1rem;background:#f7f3ea;border:0;border-bottom:12px solid #8a6335;box-shadow:0 5px 10px #3a251233}
+.regal__fach:hover{transform:translateY(-3px)}
+.regal__fach--gross{grid-column:span 8;grid-row:span 2}
+.regal__fach:nth-child(4){grid-column:span 12}
+.regal__kopf{display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;font-size:1.45rem}
+.regal__kopf small{font-size:.9rem;white-space:nowrap;color:#5a5448}
+.regal__icons{display:grid;grid-template-columns:repeat(auto-fill,minmax(54px,1fr));gap:.6rem}
+.regal__icons img{width:100%;max-width:96px;height:auto;aspect-ratio:1;object-fit:cover;border-radius:22%;justify-self:center}
+.regal__fach--gross .regal__icons{grid-template-columns:repeat(5,1fr);gap:1.1rem;flex:1;align-content:center}
+.regal__mehr{margin-top:auto;font-size:.95rem;color:#5a5448}
+.regal__zurueck{background:none;border:0;padding:0;margin-bottom:.9rem;font-size:1.05rem;text-decoration:underline}
+.regal__reiter{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+.regal__reiter button{background:none;border:1px solid #1b1a1666;padding:.35rem .9rem;font-size:1rem}
+.regal__reiter button[aria-pressed=true]{background:#c9a85c;border-color:#c9a85c}
+.regal ul.vr-apps__liste.regal__karten:not([hidden]){display:grid!important;grid-template-columns:repeat(auto-fill,minmax(190px,1fr))!important;gap:.9rem;padding:0;margin:0;overflow:visible;max-width:none}
+.regal ul.regal__karten li{min-width:0}
+@media(max-width:800px){.regal__faecher .regal__fach{grid-column:span 12;grid-row:auto}}
+@media(max-width:520px){.regal__fach--gross .regal__icons{grid-template-columns:repeat(4,1fr);gap:.6rem}.regal ul.vr-apps__liste.regal__karten{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
